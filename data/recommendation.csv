@@ -1,0 +1,3251 @@
+Temperature,Rainfall,Altitude,Soil_type,Soil_pH,label
+27.1,351,772,Loamy,5.9,Millet
+22.6,507,967,Sandy,6.1,Tomato
+24.2,1010,719,Sandy,6.1,Groundnut
+10.6,577,2750,Loamy,6.5,Carrot
+37.8,403,537,Sandy,6.3,Sorghum
+19.0,1430,1762,Loamy,6.1,Maize
+34.1,268,253,Sandy,7.1,Green Gram
+39.9,427,225,Clay,6.1,Sorghum
+15.9,522,1553,Sandy-Loam,6.8,Onion
+18.7,874,1189,Sandy,6.7,Maize
+11.2,1298,2758,Fertile,6.2,Irish Potato
+38.0,329,167,Sandy,6.2,Sorghum
+35.7,251,64,Sandy,6.0,Cowpea
+24.1,771,698,Sandy-Loam,6.1,Tomato
+11.1,617,2686,Fertile,6.2,Carrot
+32.6,483,590,Sandy,6.2,Millet
+32.5,281,493,Sandy-Loam,6.0,Cowpea
+34.8,414,317,Sandy,6.2,Cowpea
+13.3,596,2905,Sandy-Loam,6.9,Carrot
+21.1,488,739,Fertile,6.5,Tomato
+21.6,615,582,Clay,6.4,Tomato
+11.4,280,1951,Fertile,6.7,Onion
+17.8,1373,2028,Loamy,6.3,Beans
+13.6,771,2255,Sandy-Loam,6.4,Carrot
+23.9,919,2059,Fertile,6.6,Soybean
+7.9,659,2344,Sandy-Loam,6.4,Carrot
+19.3,1017,1264,Fertile,5.9,Maize
+29.7,195,374,Sandy-Loam,5.9,Cowpea
+9.4,611,1975,Clay,6.6,Carrot
+22.7,1440,945,Loamy,6.5,Maize
+39.9,300,312,Sandy,7.2,Green Gram
+32.5,324,343,Sandy,5.7,Cowpea
+35.0,375,289,Sandy,5.6,Cowpea
+11.4,1019,2244,Clay,6.3,Irish Potato
+6.2,1348,2180,Clay,5.8,Irish Potato
+11.1,1143,2994,Fertile,5.8,Irish Potato
+8.5,1328,2758,Loamy,5.6,Irish Potato
+21.4,930,1522,Fertile,6.0,Maize
+9.3,1044,2681,Loamy,5.9,Irish Potato
+16.9,292,1686,Sandy,6.9,Onion
+39.2,154,253,Fertile,7.0,Green Gram
+12.8,722,2198,Clay,6.7,Carrot
+10.4,1065,2014,Sandy-Loam,6.5,Kale
+8.2,827,2788,Fertile,6.7,Carrot
+13.9,1441,2467,Loamy,6.2,Beans
+11.2,756,2869,Sandy,7.0,Carrot
+20.7,497,579,Sandy,6.8,Tomato
+29.7,415,167,Sandy-Loam,5.6,Cowpea
+23.9,792,123,Sandy,5.6,Groundnut
+22.7,840,1098,Sandy-Loam,6.6,Tomato
+35.8,360,241,Sandy,6.1,Cowpea
+24.2,629,211,Sandy-Loam,5.8,Groundnut
+8.1,1047,3048,Fertile,5.6,Irish Potato
+20.9,1124,2086,Sandy-Loam,6.0,Soybean
+11.9,894,2729,Loamy,6.5,Carrot
+6.1,1055,2348,Fertile,5.5,Irish Potato
+13.1,602,2740,Loamy,6.8,Carrot
+23.8,955,449,Sandy-Loam,6.1,Groundnut
+5.6,1201,2345,Sandy-Loam,5.7,Irish Potato
+32.2,339,389,Fertile,5.8,Cowpea
+11.7,1489,2185,Loamy,6.8,Beans
+36.3,153,296,Sandy,6.2,Green Gram
+38.6,129,184,Sandy,6.2,Green Gram
+11.5,760,2681,Loamy,6.1,Carrot
+11.3,1293,2510,Sandy-Loam,6.7,Kale
+13.1,1207,2362,Loamy,7.1,Beans
+34.3,204,312,Loamy,6.5,Green Gram
+37.7,217,206,Sandy,6.0,Green Gram
+41.0,321,38,Clay,6.6,Green Gram
+16.8,381,1696,Sandy-Loam,6.8,Onion
+41.7,146,179,Sandy,6.4,Green Gram
+28.1,694,72,Sandy-Loam,6.0,Groundnut
+15.6,1449,1832,Loamy,6.8,Beans
+34.5,327,21,Sandy,6.0,Green Gram
+38.7,345,110,Sandy-Loam,6.1,Sorghum
+10.0,1335,2407,Fertile,6.2,Kale
+31.1,729,1097,Sandy-Loam,6.1,Millet
+29.9,306,146,Fertile,6.2,Cowpea
+7.3,1264,2737,Fertile,5.9,Irish Potato
+29.1,351,591,Sandy,6.3,Millet
+15.7,421,1424,Sandy,6.3,Onion
+10.1,1327,2930,Sandy-Loam,6.0,Irish Potato
+17.3,881,1650,Loamy,5.8,Maize
+27.6,475,882,Loamy,6.9,Tomato
+27.4,781,658,Loamy,6.3,Tomato
+13.2,1510,2468,Fertile,6.8,Beans
+11.2,1676,2529,Loamy,6.4,Beans
+38.2,341,250,Sandy,6.6,Green Gram
+7.6,1216,2733,Clay,5.6,Irish Potato
+14.0,1297,2201,Fertile,6.4,Beans
+24.6,538,615,Fertile,6.0,Tomato
+15.5,226,1450,Sandy,6.5,Onion
+7.6,1042,2968,Loamy,6.3,Irish Potato
+14.7,339,2065,Sandy,6.5,Onion
+14.9,485,2069,Clay,6.8,Onion
+9.3,1109,3032,Fertile,5.5,Irish Potato
+25.9,730,511,Fertile,6.4,Groundnut
+16.0,1265,2453,Loamy,6.4,Beans
+11.1,857,2425,Fertile,5.8,Kale
+29.3,712,362,Sandy-Loam,6.3,Groundnut
+5.8,1248,2728,Fertile,6.1,Irish Potato
+11.1,354,1384,Sandy,6.5,Onion
+13.7,1331,2408,Fertile,6.5,Kale
+11.5,990,2667,Fertile,5.5,Irish Potato
+17.5,380,1437,Sandy,6.3,Onion
+29.4,482,1084,Clay,5.8,Millet
+9.1,1193,2364,Fertile,6.8,Kale
+10.7,575,2781,Clay,6.1,Carrot
+27.0,879,458,Sandy,6.1,Groundnut
+20.9,1133,1341,Fertile,6.6,Maize
+36.0,222,344,Sandy-Loam,6.5,Green Gram
+31.7,599,851,Sandy,5.8,Millet
+5.5,1274,2309,Fertile,5.7,Irish Potato
+42.0,166,325,Sandy,5.8,Sorghum
+27.7,500,736,Sandy,6.4,Tomato
+15.1,886,2047,Sandy-Loam,6.7,Kale
+38.3,304,29,Sandy,6.9,Green Gram
+32.2,202,386,Loamy,6.0,Cowpea
+11.6,1037,1824,Sandy-Loam,5.8,Kale
+14.9,217,1382,Clay,6.6,Onion
+41.1,138,152,Sandy,6.2,Green Gram
+35.3,263,693,Sandy,6.3,Sorghum
+17.3,1684,1896,Fertile,6.6,Beans
+8.9,938,2281,Sandy,6.2,Carrot
+39.4,176,299,Sandy,5.9,Sorghum
+31.3,315,169,Loamy,5.5,Cowpea
+26.0,697,1042,Sandy-Loam,6.8,Tomato
+11.8,630,2485,Loamy,6.5,Carrot
+8.8,912,2620,Clay,6.1,Carrot
+7.2,576,2413,Fertile,6.5,Carrot
+21.6,758,1470,Sandy-Loam,6.7,Soybean
+12.7,1127,1807,Clay,6.8,Kale
+22.2,757,1108,Loamy,6.5,Tomato
+9.6,616,2380,Loamy,6.9,Carrot
+11.1,1386,3068,Fertile,5.6,Irish Potato
+25.2,805,752,Fertile,6.8,Tomato
+24.2,506,400,Fertile,6.1,Tomato
+36.3,214,106,Sandy,6.3,Sorghum
+17.4,1106,1322,Fertile,6.4,Maize
+32.2,391,115,Sandy,6.4,Cowpea
+25.0,604,226,Sandy-Loam,6.1,Groundnut
+16.3,1704,2149,Fertile,6.8,Beans
+10.6,585,2300,Loamy,6.1,Carrot
+40.9,364,347,Fertile,6.0,Green Gram
+38.0,169,197,Sandy,6.5,Green Gram
+36.6,163,589,Sandy-Loam,5.8,Sorghum
+7.9,1011,2219,Sandy-Loam,6.3,Irish Potato
+17.8,1185,2389,Loamy,6.9,Beans
+11.3,830,2509,Loamy,6.3,Carrot
+12.3,871,1968,Fertile,6.7,Carrot
+11.6,990,2166,Fertile,6.0,Irish Potato
+27.3,352,429,Sandy-Loam,5.6,Millet
+21.4,797,1744,Fertile,6.2,Soybean
+22.2,953,1685,Clay,6.0,Maize
+30.4,663,218,Sandy,6.2,Groundnut
+29.9,767,206,Sandy,5.9,Groundnut
+11.8,339,1602,Sandy,7.1,Onion
+20.0,1331,1291,Fertile,6.0,Maize
+13.5,825,2626,Loamy,6.7,Carrot
+36.5,211,423,Sandy,6.3,Cowpea
+17.5,272,1618,Loamy,6.7,Onion
+30.9,269,373,Sandy,5.7,Cowpea
+26.7,848,418,Loamy,6.6,Tomato
+20.5,1034,2083,Sandy-Loam,6.5,Soybean
+34.7,167,46,Sandy-Loam,6.2,Cowpea
+31.8,517,1086,Sandy-Loam,6.4,Millet
+21.8,852,1519,Clay,6.6,Soybean
+15.1,1751,2287,Sandy-Loam,7.0,Beans
+10.4,872,2500,Loamy,6.6,Carrot
+37.1,269,451,Sandy,5.7,Sorghum
+12.6,217,1551,Clay,6.7,Onion
+15.8,1132,1861,Loamy,6.8,Kale
+36.5,216,356,Fertile,6.4,Cowpea
+21.2,651,1041,Sandy-Loam,6.5,Tomato
+23.5,614,428,Sandy,6.6,Tomato
+10.1,1332,2157,Clay,6.0,Kale
+40.9,407,157,Sandy,6.1,Sorghum
+10.4,999,2105,Fertile,6.1,Irish Potato
+11.7,797,2413,Sandy-Loam,6.9,Carrot
+8.9,977,2281,Fertile,6.3,Irish Potato
+16.4,218,1359,Clay,6.7,Onion
+23.3,1271,1651,Loamy,6.5,Maize
+21.0,923,1260,Sandy-Loam,6.6,Maize
+10.3,912,2122,Sandy-Loam,5.9,Irish Potato
+31.5,726,864,Clay,6.3,Millet
+14.8,1207,1914,Fertile,6.6,Kale
+9.6,1184,2193,Sandy-Loam,5.7,Irish Potato
+34.1,301,465,Clay,6.0,Cowpea
+11.1,850,2279,Fertile,6.4,Kale
+40.8,316,487,Sandy,6.3,Sorghum
+27.4,877,405,Sandy-Loam,6.3,Groundnut
+15.1,433,2033,Sandy-Loam,6.8,Onion
+17.1,305,1420,Clay,6.8,Onion
+23.5,780,623,Fertile,5.9,Groundnut
+36.7,377,81,Loamy,6.0,Cowpea
+9.6,1368,2832,Loamy,5.5,Irish Potato
+13.2,1091,2237,Loamy,6.6,Beans
+21.1,1024,1322,Fertile,6.1,Maize
+26.6,539,961,Sandy,6.3,Millet
+16.9,1197,1850,Fertile,6.3,Beans
+14.8,416,1847,Fertile,6.4,Onion
+9.5,951,2445,Clay,6.3,Kale
+18.8,949,1199,Fertile,6.1,Maize
+36.2,474,151,Sandy,5.6,Sorghum
+33.7,355,272,Sandy,6.1,Cowpea
+37.4,214,282,Sandy,6.8,Green Gram
+21.0,731,915,Sandy-Loam,7.0,Tomato
+40.7,407,452,Sandy,6.2,Sorghum
+16.0,521,1656,Loamy,6.7,Onion
+30.1,843,534,Sandy-Loam,5.5,Groundnut
+15.2,1435,1980,Loamy,6.7,Beans
+30.7,426,806,Sandy,5.9,Millet
+28.7,618,339,Sandy-Loam,5.7,Groundnut
+29.7,162,82,Sandy-Loam,6.0,Cowpea
+16.4,272,1591,Sandy,7.1,Onion
+23.6,1016,1915,Sandy,6.1,Soybean
+15.2,1215,2250,Sandy,6.4,Beans
+16.9,1272,1811,Loamy,6.3,Beans
+28.0,980,272,Sandy-Loam,6.3,Groundnut
+21.2,1186,1053,Loamy,6.1,Maize
+9.8,1269,2151,Fertile,6.7,Kale
+21.8,796,1443,Loamy,6.4,Soybean
+13.9,803,2076,Fertile,6.3,Carrot
+30.2,304,97,Sandy,6.3,Cowpea
+13.3,233,2081,Sandy-Loam,6.6,Onion
+37.2,326,269,Sandy-Loam,6.1,Green Gram
+38.3,125,63,Sandy,6.9,Green Gram
+19.9,1169,1823,Clay,6.4,Soybean
+38.9,374,212,Sandy,6.5,Green Gram
+9.3,1395,2240,Clay,6.2,Irish Potato
+12.8,1714,2466,Loamy,6.4,Beans
+35.8,191,539,Clay,5.8,Sorghum
+33.9,678,704,Sandy,5.8,Millet
+8.9,1368,2796,Clay,5.6,Irish Potato
+11.7,1214,2534,Fertile,6.4,Kale
+14.8,539,1713,Loamy,6.8,Onion
+9.9,1104,2273,Loamy,5.7,Irish Potato
+11.6,384,1652,Sandy,6.3,Onion
+41.5,330,289,Sandy-Loam,6.2,Green Gram
+26.5,711,969,Sandy-Loam,6.5,Millet
+27.5,593,908,Sandy-Loam,6.3,Millet
+12.2,1690,1760,Sandy-Loam,7.0,Beans
+35.5,281,321,Sandy,6.1,Green Gram
+38.0,413,439,Sandy-Loam,6.1,Sorghum
+36.3,325,424,Loamy,6.3,Cowpea
+39.3,346,112,Fertile,5.6,Sorghum
+20.3,1361,1670,Loamy,5.9,Maize
+37.5,221,238,Sandy,6.1,Green Gram
+7.6,1035,2743,Sandy,5.5,Irish Potato
+9.4,1335,1980,Sandy-Loam,6.1,Kale
+6.2,1039,2277,Loamy,5.6,Irish Potato
+23.3,1155,1170,Loamy,6.1,Maize
+11.0,1241,2597,Loamy,6.7,Kale
+7.7,913,2619,Fertile,6.9,Carrot
+21.7,976,1004,Fertile,5.8,Maize
+37.4,178,426,Sandy,5.7,Sorghum
+36.0,175,158,Clay,5.5,Sorghum
+11.6,1208,2351,Loamy,6.7,Beans
+8.7,699,2177,Loamy,6.6,Carrot
+12.4,1401,2390,Loamy,6.3,Beans
+19.1,1081,1748,Clay,6.6,Maize
+29.5,546,877,Loamy,5.8,Millet
+7.1,1016,2142,Loamy,6.3,Irish Potato
+23.4,931,1779,Fertile,6.0,Maize
+22.4,785,1792,Sandy-Loam,6.2,Soybean
+38.5,354,178,Clay,7.1,Green Gram
+14.3,1241,2214,Loamy,6.5,Kale
+23.8,875,603,Sandy,6.3,Groundnut
+24.0,509,483,Loamy,6.1,Tomato
+26.5,732,87,Sandy-Loam,5.8,Groundnut
+14.2,515,2047,Sandy-Loam,6.7,Onion
+24.8,835,871,Sandy,6.6,Tomato
+25.0,746,676,Sandy,5.8,Groundnut
+6.7,1386,2493,Fertile,6.0,Irish Potato
+34.3,201,318,Sandy-Loam,6.1,Cowpea
+11.6,1224,2707,Clay,5.7,Irish Potato
+17.4,491,1573,Clay,6.2,Onion
+14.7,408,1624,Fertile,6.7,Onion
+16.7,213,2003,Sandy,6.6,Onion
+27.6,833,478,Loamy,6.2,Tomato
+22.7,1201,1343,Loamy,6.3,Maize
+38.8,175,218,Sandy,6.9,Green Gram
+10.0,630,2441,Loamy,6.6,Carrot
+12.3,1069,1977,Sandy-Loam,6.8,Beans
+12.8,958,2045,Sandy-Loam,6.4,Kale
+15.2,1703,2211,Loamy,7.0,Beans
+30.6,234,124,Sandy,6.1,Cowpea
+10.2,864,2842,Fertile,6.8,Carrot
+34.8,329,542,Clay,6.3,Sorghum
+41.0,268,308,Sandy-Loam,6.2,Green Gram
+29.3,427,921,Loamy,5.6,Millet
+22.9,752,605,Fertile,6.0,Tomato
+31.5,297,131,Clay,5.6,Cowpea
+30.6,957,80,Sandy-Loam,5.9,Groundnut
+9.1,799,2477,Sandy-Loam,6.1,Carrot
+7.6,1375,2831,Clay,5.6,Irish Potato
+9.5,852,2599,Sandy-Loam,6.5,Kale
+35.2,334,109,Sandy,7.1,Green Gram
+30.5,963,526,Sandy-Loam,6.4,Groundnut
+12.6,657,2775,Sandy,6.1,Carrot
+14.5,543,1423,Sandy-Loam,6.8,Onion
+13.2,810,2482,Sandy-Loam,6.3,Carrot
+34.8,324,247,Sandy,7.1,Green Gram
+20.9,907,1895,Sandy-Loam,6.6,Soybean
+7.5,1283,2501,Clay,6.0,Irish Potato
+11.2,880,2934,Sandy-Loam,7.0,Carrot
+13.1,781,2388,Fertile,6.5,Carrot
+27.2,608,1042,Sandy,6.3,Millet
+36.3,263,215,Sandy-Loam,5.9,Cowpea
+11.6,1319,2313,Fertile,6.4,Kale
+11.3,1091,2643,Fertile,6.0,Irish Potato
+12.3,757,2154,Fertile,6.9,Carrot
+30.8,734,869,Sandy-Loam,6.0,Millet
+34.3,250,116,Sandy-Loam,6.9,Green Gram
+29.2,952,439,Clay,5.9,Groundnut
+34.7,240,304,Sandy,6.1,Sorghum
+23.6,953,332,Sandy-Loam,6.1,Groundnut
+10.8,1060,2286,Loamy,6.0,Irish Potato
+6.4,1046,2996,Loamy,5.6,Irish Potato
+25.5,676,1086,Loamy,6.8,Tomato
+31.8,198,205,Sandy-Loam,5.8,Cowpea
+13.7,1255,2035,Loamy,6.5,Kale
+11.7,734,2361,Fertile,6.5,Carrot
+21.6,615,564,Fertile,6.2,Tomato
+31.5,320,117,Sandy,5.7,Cowpea
+23.6,1062,1490,Sandy-Loam,6.5,Maize
+28.6,846,507,Loamy,5.9,Groundnut
+41.2,193,232,Sandy,6.7,Green Gram
+12.4,1306,1832,Sandy-Loam,6.0,Kale
+18.6,1333,1067,Loamy,6.2,Maize
+24.6,879,1034,Sandy-Loam,6.4,Maize
+11.4,1499,2471,Sandy-Loam,6.4,Beans
+23.2,712,718,Sandy,5.6,Groundnut
+19.4,1169,1407,Clay,6.0,Maize
+29.5,242,138,Clay,5.5,Cowpea
+6.9,1177,2751,Fertile,5.7,Irish Potato
+17.5,453,1782,Sandy,6.2,Onion
+16.5,276,1857,Fertile,6.8,Onion
+11.9,871,1817,Sandy-Loam,6.6,Kale
+14.6,1328,2228,Clay,6.2,Kale
+29.8,709,635,Sandy-Loam,6.4,Millet
+19.1,764,1996,Clay,6.3,Soybean
+24.8,654,322,Sandy-Loam,6.0,Groundnut
+10.3,574,2512,Fertile,6.2,Carrot
+15.7,896,2254,Clay,6.3,Kale
+30.7,477,787,Sandy,5.5,Millet
+11.3,1014,2313,Loamy,6.0,Irish Potato
+13.4,1091,1913,Sandy-Loam,6.4,Beans
+20.8,841,1638,Sandy-Loam,6.3,Soybean
+18.4,1145,973,Loamy,6.7,Maize
+11.6,798,2302,Fertile,6.5,Carrot
+11.7,889,2428,Fertile,6.2,Kale
+37.5,289,145,Sandy,5.7,Sorghum
+22.3,1112,1149,Sandy,6.1,Maize
+15.7,1087,2039,Loamy,6.3,Kale
+40.7,468,419,Clay,6.3,Sorghum
+20.1,1228,1287,Sandy-Loam,6.1,Maize
+30.7,443,1058,Sandy,5.8,Millet
+37.4,339,283,Sandy,6.6,Green Gram
+35.0,384,86,Sandy,6.2,Sorghum
+34.7,321,113,Sandy-Loam,5.9,Cowpea
+38.4,181,240,Sandy,6.9,Green Gram
+10.1,734,2814,Clay,6.4,Carrot
+19.8,962,1873,Fertile,6.7,Soybean
+13.5,1649,2193,Fertile,6.8,Beans
+15.3,1230,2424,Clay,6.2,Kale
+19.5,1019,1585,Sandy,6.5,Soybean
+28.8,531,816,Fertile,5.8,Millet
+6.1,1257,2758,Loamy,5.7,Irish Potato
+11.2,1502,2277,Clay,6.3,Beans
+11.1,623,2312,Sandy-Loam,6.0,Carrot
+29.1,684,1064,Sandy,5.9,Millet
+25.9,653,737,Sandy-Loam,6.0,Tomato
+26.8,453,722,Fertile,6.7,Tomato
+40.7,243,345,Sandy,6.8,Green Gram
+24.5,1255,1227,Fertile,6.1,Maize
+35.8,254,70,Sandy,6.1,Sorghum
+34.2,267,42,Sandy,6.9,Green Gram
+30.3,445,995,Sandy,5.7,Millet
+10.3,1240,2242,Sandy-Loam,5.9,Kale
+42.0,446,44,Clay,6.4,Sorghum
+33.8,310,412,Sandy,6.3,Cowpea
+22.0,1123,1333,Fertile,6.1,Maize
+33.5,398,183,Loamy,5.9,Cowpea
+33.0,698,805,Sandy-Loam,6.1,Millet
+32.4,424,398,Clay,5.9,Cowpea
+41.1,203,14,Sandy,7.1,Green Gram
+13.5,1314,1851,Fertile,6.1,Kale
+40.4,241,264,Sandy-Loam,6.1,Sorghum
+32.5,352,1094,Sandy-Loam,6.0,Millet
+23.4,1141,1200,Loamy,6.0,Maize
+30.4,310,492,Sandy-Loam,6.2,Cowpea
+12.7,598,2494,Loamy,6.3,Carrot
+23.6,692,953,Sandy-Loam,6.9,Tomato
+14.5,1345,2235,Fertile,5.9,Kale
+33.9,612,779,Sandy,6.3,Millet
+10.9,837,2178,Fertile,7.0,Carrot
+29.6,672,513,Sandy-Loam,6.2,Millet
+7.3,1285,2206,Loamy,6.1,Irish Potato
+16.2,503,1819,Clay,6.3,Onion
+37.7,231,315,Sandy-Loam,6.3,Green Gram
+5.6,1393,2474,Sandy-Loam,6.2,Irish Potato
+8.7,579,2119,Clay,6.3,Carrot
+10.7,1328,1957,Fertile,6.8,Kale
+20.0,1211,971,Clay,6.7,Maize
+30.1,674,987,Clay,6.0,Millet
+23.5,1419,982,Loamy,6.8,Maize
+11.1,1663,1782,Fertile,7.2,Beans
+14.3,869,2418,Loamy,6.5,Kale
+25.0,563,702,Loamy,6.7,Tomato
+37.8,345,17,Sandy,6.7,Green Gram
+7.6,1332,2573,Fertile,5.6,Irish Potato
+13.0,774,2473,Loamy,6.9,Carrot
+12.1,1596,2230,Fertile,7.0,Beans
+9.6,722,2389,Clay,6.9,Carrot
+8.0,1309,2960,Loamy,5.9,Irish Potato
+25.7,937,1820,Fertile,7.0,Soybean
+18.1,1191,1681,Sandy,6.5,Maize
+27.3,815,217,Sandy,5.7,Groundnut
+19.3,1035,1573,Sandy-Loam,6.8,Soybean
+10.2,743,2115,Fertile,6.8,Carrot
+12.3,1284,1972,Fertile,6.4,Kale
+15.8,1761,1864,Sandy-Loam,6.8,Beans
+23.6,626,472,Fertile,6.2,Tomato
+9.3,619,2662,Fertile,6.1,Carrot
+24.8,617,745,Loamy,6.5,Tomato
+16.1,343,1821,Clay,6.9,Onion
+14.5,1598,2516,Loamy,7.1,Beans
+32.4,432,635,Loamy,5.6,Millet
+21.9,1177,1124,Sandy-Loam,6.7,Maize
+27.6,613,929,Sandy,6.6,Tomato
+22.1,782,1672,Fertile,6.4,Soybean
+13.9,364,1386,Loamy,7.0,Onion
+5.3,1327,2803,Clay,5.6,Irish Potato
+40.2,286,30,Loamy,6.0,Green Gram
+20.1,1058,1288,Fertile,6.3,Maize
+16.0,1253,2475,Loamy,6.4,Kale
+36.2,286,169,Clay,6.4,Green Gram
+11.6,318,1417,Fertile,7.0,Onion
+6.7,1236,2861,Loamy,6.1,Irish Potato
+14.4,224,1558,Sandy-Loam,7.1,Onion
+34.3,254,76,Sandy,6.8,Green Gram
+26.1,394,567,Sandy-Loam,6.5,Millet
+25.4,802,457,Sandy-Loam,6.3,Groundnut
+16.1,529,2011,Sandy,7.0,Onion
+12.0,824,1932,Sandy,6.0,Kale
+5.2,918,2922,Sandy-Loam,5.6,Irish Potato
+9.1,881,2231,Fertile,6.1,Carrot
+40.5,219,170,Clay,6.5,Green Gram
+8.1,726,2565,Loamy,6.9,Carrot
+14.0,573,2645,Fertile,6.2,Carrot
+26.8,626,414,Loamy,6.5,Tomato
+15.1,955,2560,Clay,6.2,Kale
+6.6,1126,2240,Loamy,5.9,Irish Potato
+6.3,1004,2470,Clay,6.0,Irish Potato
+16.8,1347,1875,Fertile,6.6,Beans
+17.5,1665,2203,Clay,7.1,Beans
+31.1,256,197,Sandy-Loam,5.8,Cowpea
+19.0,1398,1201,Fertile,6.3,Maize
+28.6,525,615,Fertile,6.3,Millet
+39.3,278,250,Sandy,6.1,Green Gram
+14.4,1790,2353,Loamy,6.7,Beans
+39.6,478,578,Sandy,6.0,Sorghum
+28.0,437,495,Sandy,6.1,Millet
+17.5,407,1634,Sandy,6.8,Onion
+40.8,319,138,Sandy,6.2,Green Gram
+27.1,647,693,Sandy-Loam,6.4,Groundnut
+19.2,917,1504,Sandy,6.9,Soybean
+15.0,460,1634,Sandy-Loam,6.7,Onion
+24.7,949,414,Sandy-Loam,5.7,Groundnut
+15.4,1346,1835,Fertile,6.2,Kale
+21.1,1420,1382,Sandy-Loam,6.6,Maize
+35.6,216,182,Sandy,6.0,Cowpea
+11.3,341,1836,Clay,6.8,Onion
+6.6,1235,2119,Loamy,6.1,Irish Potato
+41.0,264,277,Clay,6.0,Sorghum
+12.9,1755,1849,Fertile,7.2,Beans
+40.0,160,480,Sandy,6.4,Sorghum
+13.8,1088,2071,Clay,6.7,Beans
+13.5,1321,2394,Loamy,6.4,Beans
+17.6,382,1857,Clay,6.3,Onion
+24.9,1216,1233,Fertile,6.0,Maize
+27.0,527,478,Fertile,6.3,Tomato
+21.9,909,1685,Sandy-Loam,6.5,Soybean
+33.1,425,88,Sandy,6.0,Sorghum
+5.7,1351,2605,Fertile,5.8,Irish Potato
+41.0,285,278,Sandy-Loam,5.7,Sorghum
+28.3,705,1016,Sandy,6.1,Millet
+23.7,698,56,Sandy,5.8,Groundnut
+40.9,160,184,Sandy,6.5,Green Gram
+24.6,551,582,Loamy,6.1,Tomato
+33.5,671,698,Sandy,6.4,Millet
+27.6,913,743,Sandy,5.8,Groundnut
+6.2,1226,2338,Loamy,5.7,Irish Potato
+25.7,1136,1559,Loamy,6.2,Soybean
+11.4,1148,2234,Fertile,6.2,Beans
+24.3,1011,1637,Fertile,6.0,Maize
+25.0,912,627,Sandy-Loam,5.5,Groundnut
+19.1,1150,1571,Fertile,6.8,Soybean
+20.4,1189,918,Loamy,6.2,Maize
+21.3,1040,1996,Clay,6.9,Soybean
+9.0,876,2811,Fertile,6.9,Carrot
+7.2,575,2856,Loamy,6.5,Carrot
+29.8,371,481,Sandy-Loam,6.0,Cowpea
+21.9,874,1193,Sandy-Loam,5.9,Maize
+23.7,1376,1118,Sandy,6.0,Maize
+25.4,986,1907,Sandy-Loam,6.6,Soybean
+17.9,1782,2385,Clay,6.8,Beans
+27.4,598,417,Sandy-Loam,6.5,Millet
+30.1,708,260,Loamy,6.2,Groundnut
+34.7,306,56,Sandy-Loam,5.8,Cowpea
+41.1,361,90,Sandy,6.0,Green Gram
+10.8,805,2378,Clay,6.6,Kale
+21.4,754,412,Clay,6.4,Tomato
+11.4,1192,1781,Sandy-Loam,7.0,Beans
+11.9,1061,2909,Sandy-Loam,6.0,Irish Potato
+34.1,176,134,Sandy-Loam,6.0,Sorghum
+17.5,231,1733,Fertile,7.1,Onion
+24.0,733,599,Sandy-Loam,6.3,Tomato
+7.8,910,2016,Clay,6.1,Carrot
+11.8,1284,2391,Fertile,6.3,Beans
+13.9,1050,2334,Fertile,6.0,Kale
+15.5,925,2307,Loamy,6.1,Kale
+13.8,1295,1758,Fertile,7.0,Beans
+27.2,603,287,Sandy,5.9,Groundnut
+6.8,1197,2151,Clay,6.0,Irish Potato
+20.4,761,602,Fertile,6.7,Tomato
+20.2,751,1715,Sandy-Loam,6.6,Soybean
+36.3,174,144,Sandy-Loam,6.0,Green Gram
+30.9,621,645,Sandy-Loam,6.2,Millet
+27.4,841,408,Clay,6.4,Tomato
+28.5,579,750,Sandy-Loam,6.0,Millet
+26.8,801,631,Sandy-Loam,5.8,Groundnut
+36.1,258,300,Sandy,5.7,Cowpea
+11.9,1319,2224,Fertile,6.2,Irish Potato
+40.6,122,11,Sandy,6.9,Green Gram
+12.0,336,2063,Sandy-Loam,7.1,Onion
+36.4,167,219,Sandy-Loam,6.1,Green Gram
+24.6,981,1193,Fertile,6.2,Maize
+30.5,794,454,Sandy-Loam,6.0,Groundnut
+40.7,128,101,Sandy,6.1,Green Gram
+28.8,975,349,Sandy-Loam,6.3,Groundnut
+13.4,482,1534,Loamy,6.3,Onion
+34.0,195,427,Sandy,5.9,Cowpea
+33.4,373,307,Sandy-Loam,5.9,Sorghum
+21.7,451,593,Sandy,6.4,Tomato
+24.1,919,545,Loamy,6.3,Groundnut
+7.7,1380,3005,Loamy,5.6,Irish Potato
+11.6,1376,3014,Sandy-Loam,5.5,Irish Potato
+24.9,485,713,Fertile,6.7,Tomato
+10.1,1170,1943,Fertile,6.0,Kale
+33.7,335,39,Sandy,5.6,Sorghum
+41.2,248,666,Sandy-Loam,5.6,Sorghum
+14.5,229,1815,Sandy-Loam,7.1,Onion
+17.3,1197,1049,Fertile,6.0,Maize
+39.7,415,523,Clay,5.9,Sorghum
+12.1,929,2363,Fertile,6.3,Kale
+11.1,1546,2231,Loamy,6.4,Beans
+30.2,1039,726,Sandy-Loam,6.2,Groundnut
+38.6,240,234,Sandy,6.9,Green Gram
+26.0,968,324,Sandy,6.0,Groundnut
+18.9,944,1515,Sandy,6.6,Maize
+36.2,323,431,Sandy,6.2,Sorghum
+36.4,151,149,Loamy,6.3,Green Gram
+14.0,1612,2480,Sandy,6.4,Beans
+20.9,859,2094,Loamy,6.6,Soybean
+22.5,506,571,Loamy,6.7,Tomato
+13.3,382,1789,Loamy,7.0,Onion
+21.9,1152,1513,Fertile,6.1,Soybean
+35.0,328,278,Sandy,6.0,Sorghum
+32.9,396,882,Sandy-Loam,5.7,Millet
+34.5,363,209,Sandy,6.6,Green Gram
+30.7,352,411,Sandy-Loam,6.2,Cowpea
+40.8,173,616,Sandy,5.9,Sorghum
+33.8,523,505,Sandy-Loam,6.2,Millet
+34.7,311,195,Fertile,6.2,Green Gram
+11.3,1181,2416,Fertile,6.0,Kale
+28.0,704,50,Sandy,6.4,Groundnut
+36.6,298,83,Sandy,7.1,Green Gram
+22.2,742,593,Loamy,6.5,Tomato
+25.6,949,1819,Sandy-Loam,6.9,Soybean
+30.6,600,436,Sandy-Loam,5.6,Millet
+13.0,1266,2051,Sandy-Loam,6.7,Beans
+40.5,199,209,Clay,6.4,Green Gram
+26.4,508,659,Sandy-Loam,6.4,Millet
+30.4,303,256,Loamy,5.5,Cowpea
+11.7,1203,2328,Fertile,6.0,Irish Potato
+29.0,161,124,Sandy-Loam,5.7,Cowpea
+12.0,1197,1807,Clay,6.4,Kale
+11.8,946,2078,Loamy,6.7,Carrot
+13.8,1154,1758,Sandy-Loam,7.2,Beans
+15.1,1369,2242,Loamy,6.3,Beans
+28.4,568,556,Sandy-Loam,6.0,Millet
+24.0,1239,1709,Clay,5.9,Maize
+39.8,197,163,Sandy-Loam,7.0,Green Gram
+33.6,728,501,Sandy-Loam,6.4,Millet
+20.2,559,426,Sandy-Loam,6.9,Tomato
+21.3,1136,1250,Fertile,6.7,Maize
+23.5,1088,1874,Loamy,6.5,Soybean
+19.8,1122,1576,Fertile,7.0,Soybean
+37.1,411,545,Sandy,6.4,Sorghum
+16.2,1068,2033,Fertile,6.8,Beans
+26.6,757,877,Sandy-Loam,6.3,Tomato
+10.6,800,2383,Fertile,6.0,Kale
+23.5,615,986,Fertile,6.8,Tomato
+18.2,1030,1124,Sandy-Loam,6.1,Maize
+11.1,1455,2430,Fertile,6.8,Beans
+11.2,1068,2475,Loamy,6.0,Irish Potato
+24.8,798,1753,Clay,6.6,Soybean
+26.8,660,953,Fertile,6.5,Tomato
+26.1,1025,234,Sandy,6.2,Groundnut
+33.4,420,498,Loamy,6.3,Cowpea
+12.3,578,2030,Sandy-Loam,6.9,Carrot
+28.2,906,614,Sandy-Loam,6.3,Groundnut
+21.3,1017,2010,Loamy,6.4,Soybean
+11.0,1002,1846,Loamy,6.3,Kale
+34.1,387,283,Sandy-Loam,6.4,Cowpea
+16.1,269,1628,Sandy,6.9,Onion
+23.6,664,562,Loamy,6.9,Tomato
+29.4,652,823,Sandy,5.8,Millet
+20.0,824,531,Loamy,6.3,Tomato
+35.5,154,117,Sandy,5.8,Cowpea
+9.3,1217,2145,Sandy-Loam,6.0,Irish Potato
+33.2,170,625,Clay,5.9,Sorghum
+39.3,475,325,Sandy,6.0,Sorghum
+30.7,799,616,Sandy,5.7,Groundnut
+9.1,635,1983,Sandy-Loam,6.7,Carrot
+24.7,975,365,Sandy,6.3,Groundnut
+36.6,278,307,Clay,6.1,Green Gram
+8.8,1295,2418,Clay,6.2,Irish Potato
+17.4,242,1750,Fertile,6.6,Onion
+14.9,1200,1876,Sandy,5.8,Kale
+10.0,817,2045,Clay,6.5,Carrot
+14.8,1298,1809,Fertile,5.9,Kale
+10.7,1316,2607,Loamy,5.7,Irish Potato
+10.2,1075,2352,Fertile,6.4,Kale
+35.8,215,469,Fertile,6.4,Cowpea
+16.1,1305,2132,Fertile,6.5,Beans
+32.4,329,478,Sandy,5.9,Cowpea
+7.8,967,2128,Fertile,6.0,Irish Potato
+40.7,125,89,Sandy,6.7,Green Gram
+35.2,311,79,Loamy,6.0,Sorghum
+21.0,653,868,Sandy-Loam,6.5,Tomato
+39.7,447,63,Sandy,5.5,Sorghum
+17.5,1566,2408,Sandy,7.0,Beans
+7.1,718,2245,Sandy,6.6,Carrot
+11.6,1400,2135,Fertile,6.4,Beans
+25.4,538,427,Sandy-Loam,6.3,Tomato
+27.7,674,941,Loamy,6.0,Millet
+34.2,457,629,Sandy-Loam,5.8,Sorghum
+17.8,1458,1970,Fertile,6.5,Beans
+10.5,1033,2526,Clay,6.0,Kale
+34.1,159,41,Sandy-Loam,6.1,Green Gram
+20.4,854,1958,Sandy,6.0,Soybean
+20.3,990,917,Fertile,6.8,Maize
+14.7,1263,2188,Sandy-Loam,6.6,Kale
+40.5,261,20,Sandy,6.1,Green Gram
+12.4,814,2135,Loamy,6.1,Carrot
+11.9,956,2497,Fertile,6.2,Irish Potato
+17.8,384,1577,Sandy-Loam,6.3,Onion
+35.9,266,72,Fertile,5.5,Sorghum
+30.3,241,111,Sandy,6.1,Cowpea
+37.5,403,617,Sandy-Loam,5.9,Sorghum
+13.9,790,2532,Fertile,6.8,Carrot
+33.5,467,690,Sandy,6.0,Millet
+5.3,1204,2602,Loamy,5.7,Irish Potato
+34.4,313,289,Clay,5.6,Cowpea
+7.0,980,3029,Fertile,6.0,Irish Potato
+30.8,421,371,Sandy-Loam,5.6,Cowpea
+18.6,1345,1401,Loamy,6.8,Maize
+19.0,942,1538,Fertile,6.2,Soybean
+24.4,878,1990,Sandy-Loam,6.8,Soybean
+13.4,763,2107,Fertile,6.8,Carrot
+24.4,731,1034,Clay,6.2,Tomato
+12.6,778,2462,Sandy-Loam,6.9,Carrot
+6.7,1062,2846,Clay,6.2,Irish Potato
+9.9,936,2921,Fertile,5.6,Irish Potato
+20.2,1418,1265,Fertile,6.3,Maize
+38.3,343,43,Sandy-Loam,6.5,Green Gram
+23.7,1151,1962,Loamy,6.3,Soybean
+15.8,1216,1929,Clay,6.5,Kale
+8.4,594,2219,Loamy,6.5,Carrot
+16.7,1508,2048,Loamy,6.3,Beans
+20.1,1347,1020,Fertile,6.6,Maize
+25.4,1037,1938,Sandy-Loam,7.0,Soybean
+39.0,159,297,Sandy-Loam,7.1,Green Gram
+21.6,1341,1194,Sandy-Loam,6.4,Maize
+11.1,875,2321,Fertile,6.1,Kale
+13.5,389,1857,Clay,7.2,Onion
+36.7,396,220,Sandy-Loam,5.7,Cowpea
+20.2,951,1779,Fertile,6.3,Maize
+33.3,211,542,Sandy,6.4,Sorghum
+32.4,199,464,Sandy,5.9,Cowpea
+34.7,422,449,Sandy-Loam,6.4,Cowpea
+26.3,403,880,Sandy-Loam,6.4,Millet
+27.0,836,780,Fertile,5.6,Groundnut
+35.8,242,30,Sandy,6.5,Green Gram
+23.0,735,611,Sandy,5.7,Groundnut
+20.5,1289,1109,Fertile,6.4,Maize
+23.2,1334,1590,Loamy,6.4,Maize
+12.7,996,2083,Fertile,6.6,Kale
+19.8,1283,1187,Fertile,5.9,Maize
+21.4,885,1804,Sandy-Loam,6.6,Soybean
+30.1,928,745,Sandy-Loam,6.0,Groundnut
+29.9,436,518,Loamy,6.2,Millet
+28.4,376,1027,Sandy,5.6,Millet
+32.3,192,399,Loamy,5.7,Cowpea
+25.8,724,476,Fertile,6.6,Tomato
+32.1,661,734,Sandy-Loam,5.5,Millet
+6.2,1098,2858,Fertile,5.6,Irish Potato
+11.1,1155,2579,Fertile,5.8,Kale
+12.6,343,1935,Clay,6.4,Onion
+26.6,654,739,Sandy-Loam,5.9,Millet
+13.3,1109,2299,Fertile,6.4,Kale
+13.2,537,1831,Loamy,6.6,Onion
+36.9,153,51,Sandy-Loam,6.1,Green Gram
+23.0,1071,1476,Fertile,6.1,Soybean
+26.7,697,915,Loamy,6.8,Tomato
+39.6,237,41,Sandy,6.4,Sorghum
+17.0,520,1548,Fertile,6.5,Onion
+10.7,827,2379,Loamy,6.4,Kale
+19.3,976,1808,Fertile,6.0,Soybean
+25.2,734,542,Loamy,6.9,Tomato
+24.4,1116,1745,Loamy,6.7,Soybean
+13.4,634,2572,Clay,6.7,Carrot
+12.6,825,2020,Fertile,5.9,Kale
+14.9,802,1997,Fertile,6.1,Kale
+35.4,188,35,Sandy,6.1,Green Gram
+10.1,1067,2143,Clay,6.8,Kale
+36.4,264,499,Sandy,5.5,Cowpea
+10.7,636,1962,Loamy,7.0,Carrot
+18.5,1035,1777,Sandy-Loam,6.2,Maize
+26.6,500,1122,Fertile,6.5,Tomato
+24.5,964,1775,Fertile,6.7,Soybean
+32.9,187,166,Sandy,6.1,Cowpea
+10.0,1180,1965,Sandy-Loam,6.7,Kale
+29.3,880,286,Sandy-Loam,5.6,Groundnut
+24.4,646,509,Loamy,6.2,Groundnut
+36.1,366,40,Loamy,5.6,Sorghum
+34.9,461,42,Fertile,5.6,Sorghum
+23.8,799,1010,Sandy,6.7,Tomato
+11.1,381,1378,Sandy,7.1,Onion
+26.9,827,668,Clay,6.1,Tomato
+5.1,1231,2278,Fertile,5.6,Irish Potato
+32.4,213,244,Fertile,6.3,Cowpea
+24.8,889,1639,Clay,6.4,Maize
+17.7,1296,2279,Fertile,7.0,Beans
+21.0,1311,955,Sandy,5.9,Maize
+29.4,874,132,Sandy,5.7,Groundnut
+21.3,1024,2057,Clay,6.1,Soybean
+26.6,469,1081,Sandy,6.2,Tomato
+22.5,1037,954,Fertile,5.8,Maize
+37.2,296,312,Loamy,6.1,Green Gram
+26.9,639,587,Sandy,6.5,Millet
+6.2,1010,2286,Fertile,5.8,Irish Potato
+11.6,601,2288,Fertile,6.2,Carrot
+27.2,662,434,Sandy-Loam,5.7,Groundnut
+14.5,1118,1917,Fertile,6.4,Kale
+32.5,412,952,Loamy,5.7,Millet
+32.4,555,491,Sandy-Loam,6.2,Millet
+23.9,586,1139,Loamy,6.6,Tomato
+12.6,933,2437,Loamy,6.5,Carrot
+19.1,885,1804,Sandy-Loam,6.5,Soybean
+14.1,492,1779,Fertile,6.5,Onion
+33.7,688,616,Sandy-Loam,6.0,Millet
+8.9,936,2507,Sandy-Loam,6.6,Carrot
+36.0,347,152,Sandy-Loam,5.9,Sorghum
+33.7,241,196,Sandy-Loam,5.7,Sorghum
+9.0,631,2711,Sandy-Loam,6.5,Carrot
+24.5,846,1900,Fertile,6.3,Soybean
+11.1,1164,3039,Fertile,6.3,Irish Potato
+17.3,1139,2012,Fertile,6.8,Beans
+15.5,1127,2071,Fertile,7.0,Beans
+12.7,863,2284,Loamy,6.1,Kale
+5.5,1325,2595,Clay,6.0,Irish Potato
+10.7,566,2918,Fertile,6.3,Carrot
+14.3,414,2001,Clay,6.6,Onion
+8.1,706,2919,Sandy-Loam,6.7,Carrot
+28.2,940,138,Sandy,6.1,Groundnut
+28.3,485,1055,Sandy-Loam,5.5,Millet
+26.1,533,492,Sandy,5.7,Millet
+23.8,1021,1476,Sandy-Loam,6.8,Maize
+20.0,892,2083,Loamy,6.5,Soybean
+9.4,595,2101,Loamy,6.3,Carrot
+33.6,543,632,Sandy-Loam,5.7,Millet
+17.2,1268,1552,Fertile,6.8,Maize
+32.2,200,163,Sandy,5.8,Cowpea
+12.7,1105,2280,Sandy,6.6,Beans
+29.4,271,418,Loamy,6.1,Cowpea
+31.4,250,227,Loamy,5.5,Cowpea
+22.9,897,1904,Clay,6.3,Soybean
+10.7,1052,2197,Fertile,5.9,Irish Potato
+28.2,471,828,Sandy-Loam,6.2,Millet
+41.3,163,13,Loamy,6.3,Green Gram
+26.9,627,868,Fertile,6.5,Tomato
+13.1,645,2401,Fertile,6.8,Carrot
+30.9,553,1094,Fertile,6.1,Millet
+14.6,1503,2118,Fertile,7.0,Beans
+38.8,438,304,Sandy-Loam,6.3,Sorghum
+26.0,554,1105,Fertile,6.2,Tomato
+5.6,1358,2236,Fertile,5.9,Irish Potato
+22.9,1260,1090,Loamy,6.1,Maize
+33.0,440,733,Loamy,5.9,Millet
+12.9,1320,2076,Clay,6.3,Beans
+25.6,1199,1564,Fertile,6.4,Soybean
+27.9,606,463,Loamy,6.6,Tomato
+13.6,565,2072,Sandy,6.9,Carrot
+22.0,1118,1600,Loamy,6.0,Maize
+10.3,979,2980,Fertile,5.5,Irish Potato
+39.4,305,328,Loamy,6.2,Green Gram
+11.6,502,1590,Loamy,6.4,Onion
+9.4,1247,2554,Clay,6.0,Irish Potato
+41.5,316,278,Sandy-Loam,7.0,Green Gram
+36.4,454,54,Clay,5.7,Sorghum
+20.7,523,1006,Loamy,6.8,Tomato
+22.8,973,1494,Sandy-Loam,6.2,Soybean
+11.6,344,1912,Clay,7.2,Onion
+15.6,289,1623,Fertile,6.4,Onion
+40.5,341,36,Sandy-Loam,6.8,Green Gram
+34.5,164,344,Sandy,7.0,Green Gram
+22.5,562,824,Loamy,6.2,Tomato
+21.4,934,1904,Sandy,6.9,Soybean
+9.2,1090,3069,Fertile,6.2,Irish Potato
+28.2,447,495,Sandy,6.1,Millet
+23.4,1322,1167,Loamy,5.9,Maize
+11.0,1736,2425,Fertile,6.4,Beans
+36.6,195,490,Fertile,5.9,Sorghum
+18.1,1406,1680,Fertile,5.9,Maize
+24.8,834,1890,Loamy,6.3,Soybean
+15.6,281,1998,Sandy-Loam,6.9,Onion
+33.3,181,288,Loamy,5.8,Cowpea
+11.4,1259,2548,Loamy,6.2,Kale
+10.1,1147,2181,Loamy,6.0,Irish Potato
+24.9,985,1496,Clay,6.7,Maize
+18.2,945,1611,Clay,5.8,Maize
+17.7,1055,1783,Clay,6.2,Maize
+41.6,279,311,Fertile,6.2,Sorghum
+24.2,1102,1934,Fertile,6.2,Soybean
+34.2,162,61,Sandy,5.6,Cowpea
+19.3,993,1092,Sandy-Loam,6.5,Maize
+38.5,311,101,Sandy,7.0,Green Gram
+41.4,399,99,Sandy-Loam,5.9,Sorghum
+29.8,205,255,Clay,6.0,Cowpea
+12.4,1340,1790,Sandy-Loam,6.7,Beans
+24.4,537,743,Fertile,6.7,Tomato
+14.0,334,2036,Clay,6.7,Onion
+13.0,1312,2375,Fertile,6.4,Beans
+41.8,459,212,Sandy,5.7,Sorghum
+39.3,346,313,Sandy,6.6,Green Gram
+22.5,769,1643,Loamy,6.6,Soybean
+13.4,835,2557,Sandy-Loam,6.8,Carrot
+29.2,487,680,Sandy,6.0,Millet
+13.9,1393,1955,Fertile,6.7,Beans
+23.7,993,1990,Fertile,6.1,Soybean
+25.9,729,425,Sandy-Loam,5.8,Groundnut
+25.5,1133,1942,Sandy-Loam,6.5,Soybean
+13.1,1157,1871,Sandy-Loam,6.8,Beans
+19.3,1186,1901,Sandy-Loam,6.3,Soybean
+17.5,1202,1656,Loamy,5.8,Maize
+11.1,1392,2868,Sandy,5.8,Irish Potato
+7.7,1035,2928,Sandy-Loam,5.7,Irish Potato
+41.1,125,267,Sandy,6.9,Green Gram
+8.0,630,2134,Fertile,6.7,Carrot
+33.6,359,663,Clay,5.8,Millet
+29.8,604,752,Sandy,5.8,Groundnut
+17.3,1067,1643,Fertile,6.3,Maize
+19.8,815,1423,Sandy-Loam,7.0,Soybean
+23.6,462,1103,Loamy,6.9,Tomato
+15.2,1206,2021,Sandy-Loam,6.8,Kale
+39.2,173,606,Sandy,5.7,Sorghum
+18.7,1070,1251,Fertile,6.8,Maize
+22.0,500,446,Sandy-Loam,6.2,Tomato
+22.5,1254,1781,Fertile,6.5,Maize
+20.3,698,1022,Sandy,6.4,Tomato
+32.0,359,459,Sandy,5.7,Cowpea
+12.4,842,2126,Sandy,5.9,Kale
+12.6,888,1866,Loamy,6.0,Kale
+15.8,828,2203,Fertile,6.7,Kale
+39.5,468,653,Sandy,6.0,Sorghum
+20.9,1094,1787,Loamy,5.9,Maize
+13.0,255,1473,Sandy-Loam,7.0,Onion
+33.3,316,285,Loamy,5.8,Cowpea
+38.9,198,154,Sandy-Loam,5.7,Sorghum
+14.8,1242,2242,Clay,5.9,Kale
+13.7,1760,1862,Fertile,6.3,Beans
+22.0,722,497,Loamy,6.4,Tomato
+13.1,1084,2407,Sandy-Loam,6.2,Kale
+35.4,292,63,Clay,6.3,Green Gram
+41.0,345,569,Sandy,5.6,Sorghum
+11.6,395,1727,Loamy,6.6,Onion
+27.0,768,519,Sandy,5.8,Groundnut
+35.8,428,268,Sandy-Loam,5.7,Cowpea
+16.6,458,1669,Sandy-Loam,6.5,Onion
+26.1,486,811,Loamy,6.2,Tomato
+11.4,930,2376,Fertile,6.1,Irish Potato
+13.1,350,1703,Loamy,6.2,Onion
+29.5,200,88,Clay,5.6,Cowpea
+5.4,1384,2983,Fertile,6.3,Irish Potato
+14.3,1060,1815,Loamy,6.2,Beans
+37.2,305,322,Sandy,6.6,Green Gram
+8.1,844,2462,Fertile,6.0,Carrot
+24.8,1369,1440,Fertile,6.1,Maize
+39.9,154,175,Loamy,6.3,Sorghum
+11.0,1058,2512,Fertile,5.9,Kale
+22.6,807,1917,Sandy-Loam,6.3,Soybean
+25.2,1088,1696,Sandy,6.4,Soybean
+8.4,616,2054,Clay,6.7,Carrot
+38.0,314,201,Loamy,6.2,Green Gram
+34.4,351,190,Clay,5.8,Sorghum
+38.8,301,609,Clay,5.5,Sorghum
+29.0,157,417,Sandy-Loam,5.6,Cowpea
+17.9,1239,1681,Fertile,6.4,Maize
+28.5,866,709,Sandy-Loam,5.8,Groundnut
+18.7,992,1465,Fertile,6.2,Maize
+34.4,300,238,Sandy,6.2,Cowpea
+35.6,339,112,Sandy,6.2,Sorghum
+20.9,972,1992,Sandy,6.7,Soybean
+24.8,1102,1351,Fertile,6.5,Maize
+39.1,353,224,Sandy,7.0,Green Gram
+28.8,1028,676,Fertile,6.2,Groundnut
+41.1,153,677,Sandy,6.3,Sorghum
+8.8,694,2422,Loamy,6.1,Carrot
+10.6,899,2443,Fertile,7.0,Carrot
+33.6,667,805,Sandy,6.4,Millet
+22.5,989,1963,Fertile,6.6,Soybean
+22.4,981,1980,Sandy-Loam,6.6,Soybean
+23.6,525,806,Sandy,6.8,Tomato
+8.4,933,2317,Sandy-Loam,6.1,Carrot
+34.9,127,103,Sandy-Loam,7.0,Green Gram
+14.1,331,1625,Sandy,7.0,Onion
+23.8,1106,1614,Loamy,6.9,Soybean
+16.2,1558,1951,Fertile,6.4,Beans
+15.8,347,2071,Sandy,7.0,Onion
+42.0,304,268,Clay,6.1,Green Gram
+27.8,557,432,Fertile,6.5,Tomato
+26.3,553,966,Loamy,6.0,Tomato
+14.1,1161,2367,Loamy,6.0,Kale
+8.7,1284,2315,Clay,5.6,Irish Potato
+21.4,1029,2023,Sandy-Loam,6.8,Soybean
+36.7,167,398,Sandy-Loam,6.0,Sorghum
+24.0,850,295,Sandy-Loam,6.1,Groundnut
+38.0,277,112,Sandy-Loam,6.7,Green Gram
+35.0,280,468,Sandy,6.3,Sorghum
+37.6,329,346,Sandy-Loam,5.6,Sorghum
+26.6,367,552,Fertile,6.5,Millet
+17.3,1296,1550,Loamy,6.6,Maize
+9.5,1013,2442,Fertile,6.0,Kale
+12.8,482,1559,Loamy,6.7,Onion
+16.1,1323,2262,Sandy-Loam,6.4,Beans
+14.4,1084,2078,Sandy-Loam,5.8,Kale
+12.1,1568,1884,Loamy,6.7,Beans
+32.9,161,388,Sandy-Loam,6.1,Cowpea
+17.6,284,1529,Loamy,7.1,Onion
+29.6,914,111,Sandy-Loam,6.0,Groundnut
+19.4,1134,1051,Sandy-Loam,6.2,Maize
+32.0,375,900,Sandy,6.4,Millet
+38.4,376,279,Fertile,7.2,Green Gram
+30.8,297,72,Sandy-Loam,6.0,Cowpea
+25.4,961,1420,Clay,6.5,Soybean
+20.1,642,666,Sandy-Loam,6.6,Tomato
+25.3,1144,1960,Fertile,6.1,Soybean
+38.0,245,584,Sandy,6.5,Sorghum
+36.4,148,176,Sandy,6.8,Green Gram
+25.2,691,381,Loamy,6.4,Groundnut
+22.2,707,954,Fertile,6.3,Tomato
+34.1,258,457,Fertile,5.7,Cowpea
+32.9,158,60,Sandy,6.1,Cowpea
+29.3,451,1008,Sandy-Loam,6.3,Millet
+27.6,728,639,Sandy-Loam,6.2,Millet
+17.8,1396,1638,Fertile,5.8,Maize
+23.1,518,581,Clay,6.4,Tomato
+12.9,661,2592,Fertile,6.5,Carrot
+30.9,459,591,Loamy,5.6,Millet
+11.6,1243,2167,Sandy-Loam,6.1,Irish Potato
+22.8,989,1453,Clay,6.6,Soybean
+17.3,273,1520,Sandy-Loam,6.3,Onion
+7.5,956,2771,Clay,6.1,Irish Potato
+23.6,1001,685,Fertile,6.1,Groundnut
+14.4,1435,1996,Sandy,6.5,Beans
+28.4,811,310,Clay,6.3,Groundnut
+8.6,1195,2499,Loamy,5.8,Irish Potato
+13.8,587,2622,Sandy-Loam,6.9,Carrot
+17.4,1225,949,Fertile,6.3,Maize
+8.9,869,2260,Sandy,6.0,Carrot
+28.2,527,460,Sandy-Loam,6.3,Millet
+11.5,363,1530,Sandy,6.7,Onion
+34.1,280,211,Sandy-Loam,5.6,Sorghum
+24.8,775,504,Sandy,6.3,Groundnut
+13.1,1749,1844,Fertile,6.9,Beans
+36.1,376,319,Loamy,6.9,Green Gram
+14.8,1362,1878,Loamy,6.6,Beans
+27.6,539,1137,Sandy-Loam,7.0,Tomato
+24.5,840,1491,Clay,6.6,Soybean
+11.4,1588,2130,Fertile,6.6,Beans
+13.0,536,1584,Loamy,6.7,Onion
+28.1,351,746,Loamy,6.3,Millet
+17.6,338,1870,Sandy,6.7,Onion
+40.3,299,369,Loamy,5.6,Sorghum
+32.3,196,125,Sandy,6.3,Cowpea
+25.1,1160,1586,Sandy-Loam,6.5,Soybean
+41.6,157,317,Loamy,7.0,Green Gram
+13.1,337,1484,Sandy,7.2,Onion
+24.8,529,795,Fertile,6.8,Tomato
+17.8,255,1715,Sandy-Loam,6.8,Onion
+13.2,1092,2363,Fertile,6.5,Beans
+30.5,249,109,Loamy,6.3,Cowpea
+36.5,344,437,Sandy-Loam,5.5,Cowpea
+9.8,584,2567,Loamy,6.3,Carrot
+30.8,475,792,Sandy,6.3,Millet
+17.7,1316,1662,Loamy,6.2,Maize
+33.0,425,783,Loamy,6.3,Millet
+11.4,1191,2500,Clay,6.3,Irish Potato
+11.2,1343,2307,Loamy,6.8,Beans
+33.9,369,1020,Sandy,5.8,Millet
+20.4,1171,1412,Sandy-Loam,6.0,Soybean
+15.2,933,2245,Loamy,6.5,Kale
+23.9,1031,118,Sandy-Loam,5.5,Groundnut
+18.6,1058,1458,Sandy-Loam,5.9,Maize
+5.5,1191,2445,Clay,5.5,Irish Potato
+22.0,1063,1610,Loamy,6.4,Maize
+24.6,658,781,Clay,6.3,Groundnut
+6.5,941,2780,Fertile,5.7,Irish Potato
+9.9,1168,2409,Fertile,6.0,Irish Potato
+7.7,559,2591,Clay,6.5,Carrot
+35.7,254,441,Sandy-Loam,5.8,Cowpea
+20.7,1066,997,Fertile,6.6,Maize
+17.1,1265,1495,Loamy,6.2,Maize
+13.1,835,2751,Sandy-Loam,6.8,Carrot
+19.6,950,2099,Fertile,6.9,Soybean
+12.2,1790,2105,Sandy-Loam,7.1,Beans
+35.2,219,348,Clay,5.8,Cowpea
+40.9,255,422,Loamy,5.8,Sorghum
+21.1,707,705,Fertile,6.3,Tomato
+23.4,1195,1207,Fertile,6.0,Maize
+13.8,722,2261,Clay,6.4,Carrot
+27.1,838,707,Sandy-Loam,5.8,Groundnut
+15.3,1249,2405,Loamy,5.8,Kale
+27.1,548,474,Sandy-Loam,5.6,Millet
+9.4,578,2359,Sandy-Loam,6.7,Carrot
+26.9,553,725,Fertile,6.4,Millet
+22.8,706,596,Loamy,6.8,Tomato
+13.0,395,1578,Loamy,6.2,Onion
+13.8,1596,2026,Clay,7.0,Beans
+34.4,242,92,Sandy-Loam,5.7,Sorghum
+32.2,521,930,Sandy-Loam,5.7,Millet
+34.0,378,337,Sandy,6.4,Cowpea
+37.5,191,210,Sandy-Loam,6.3,Green Gram
+26.3,703,223,Fertile,6.3,Groundnut
+18.5,913,1631,Sandy,6.4,Maize
+24.3,949,221,Sandy-Loam,5.9,Groundnut
+41.7,417,660,Sandy-Loam,5.6,Sorghum
+31.1,176,193,Loamy,5.7,Cowpea
+16.4,226,1970,Sandy-Loam,6.8,Onion
+14.6,1252,2546,Clay,6.0,Kale
+13.2,729,2144,Sandy-Loam,6.4,Carrot
+24.4,725,169,Sandy-Loam,6.4,Groundnut
+29.2,417,668,Clay,5.9,Millet
+11.6,1160,1988,Loamy,7.1,Beans
+33.7,179,466,Sandy,6.3,Sorghum
+11.4,473,1984,Clay,6.7,Onion
+15.0,1547,2293,Fertile,7.2,Beans
+29.2,813,313,Sandy-Loam,6.3,Groundnut
+12.1,812,2040,Clay,5.9,Kale
+26.9,447,608,Sandy,5.9,Millet
+10.3,670,2548,Sandy-Loam,6.3,Carrot
+13.8,1024,1812,Clay,6.1,Kale
+15.0,218,1455,Sandy,6.4,Onion
+17.8,389,1693,Fertile,6.9,Onion
+20.6,802,605,Clay,6.9,Tomato
+23.3,724,599,Clay,6.9,Tomato
+35.3,235,357,Sandy,5.6,Sorghum
+25.0,794,550,Sandy-Loam,5.9,Groundnut
+18.0,412,1653,Sandy-Loam,6.5,Onion
+9.3,844,2426,Sandy-Loam,6.4,Carrot
+10.9,808,2572,Sandy-Loam,6.5,Kale
+21.4,1083,1929,Clay,6.2,Soybean
+31.4,372,486,Sandy-Loam,5.8,Millet
+28.7,860,116,Sandy,5.6,Groundnut
+5.3,1132,2642,Sandy-Loam,6.0,Irish Potato
+14.4,382,2081,Fertile,6.4,Onion
+14.2,259,1550,Sandy,6.3,Onion
+26.5,739,876,Sandy-Loam,6.2,Millet
+30.9,268,462,Clay,5.9,Cowpea
+33.2,445,544,Fertile,5.5,Millet
+23.8,1076,1888,Sandy-Loam,6.1,Soybean
+42.0,261,171,Fertile,6.2,Green Gram
+35.7,215,309,Sandy-Loam,6.1,Green Gram
+26.5,819,745,Sandy-Loam,5.9,Groundnut
+20.0,1303,1385,Loamy,5.8,Maize
+14.5,1299,2554,Fertile,6.3,Kale
+9.9,941,2084,Fertile,5.9,Kale
+17.3,1233,973,Sandy-Loam,6.1,Maize
+12.6,752,2917,Sandy-Loam,7.0,Carrot
+21.0,1316,1672,Fertile,6.2,Maize
+10.6,920,2567,Fertile,6.4,Kale
+29.5,807,727,Sandy-Loam,6.0,Groundnut
+13.6,351,1817,Loamy,6.7,Onion
+15.3,378,1759,Sandy-Loam,6.3,Onion
+36.2,301,687,Sandy-Loam,5.6,Sorghum
+21.2,1005,947,Fertile,5.9,Maize
+9.6,1211,2531,Sandy,6.1,Kale
+16.0,463,1514,Sandy-Loam,6.8,Onion
+15.7,1091,1993,Clay,6.5,Kale
+38.7,392,445,Fertile,5.7,Sorghum
+23.7,826,789,Sandy,6.8,Tomato
+17.8,1480,2023,Clay,6.3,Beans
+23.1,1006,1738,Sandy,6.5,Soybean
+23.3,811,348,Sandy-Loam,5.9,Groundnut
+40.5,390,532,Sandy-Loam,6.0,Sorghum
+38.3,276,216,Sandy,6.5,Green Gram
+37.8,198,400,Sandy,5.9,Sorghum
+13.8,594,2372,Loamy,6.7,Carrot
+13.6,1221,2476,Fertile,5.9,Kale
+21.1,880,1109,Sandy-Loam,6.1,Maize
+9.7,1082,2207,Sandy-Loam,6.7,Kale
+27.1,748,695,Sandy-Loam,6.2,Groundnut
+10.2,1075,2129,Fertile,6.4,Kale
+40.1,270,692,Sandy,5.9,Sorghum
+22.7,767,1830,Fertile,6.2,Soybean
+15.7,299,1789,Sandy,6.6,Onion
+13.0,361,1853,Loamy,6.7,Onion
+27.9,382,838,Sandy-Loam,6.2,Millet
+13.4,936,2364,Sandy,6.2,Kale
+11.5,225,1987,Sandy-Loam,6.9,Onion
+11.8,606,2435,Loamy,6.5,Carrot
+27.9,669,205,Sandy,5.6,Groundnut
+33.6,320,261,Sandy,6.5,Sorghum
+15.2,304,1658,Sandy-Loam,7.2,Onion
+30.2,316,147,Sandy-Loam,5.9,Cowpea
+26.4,748,117,Sandy,5.9,Groundnut
+35.4,458,336,Sandy-Loam,5.9,Sorghum
+12.1,1600,1917,Loamy,6.8,Beans
+20.8,733,424,Fertile,6.1,Tomato
+10.5,1002,2095,Loamy,6.6,Kale
+24.0,788,308,Sandy-Loam,5.9,Groundnut
+11.5,1114,3066,Fertile,6.2,Irish Potato
+14.8,1109,2202,Fertile,6.6,Beans
+21.8,986,1389,Clay,6.3,Maize
+13.5,926,2242,Sandy-Loam,6.5,Kale
+41.5,340,322,Sandy,6.6,Green Gram
+20.4,632,839,Fertile,6.1,Tomato
+28.5,667,491,Sandy,5.6,Millet
+20.9,996,1501,Loamy,6.9,Soybean
+21.4,747,601,Sandy,6.4,Tomato
+29.4,553,1061,Sandy,6.5,Millet
+23.4,752,1530,Loamy,6.4,Soybean
+32.8,653,607,Sandy-Loam,5.7,Millet
+27.5,661,891,Sandy,6.1,Tomato
+28.8,1007,646,Sandy,6.1,Groundnut
+11.5,441,1779,Sandy-Loam,6.6,Onion
+34.4,244,255,Sandy,6.3,Green Gram
+22.2,860,1764,Loamy,5.9,Maize
+32.3,478,426,Clay,5.6,Millet
+11.4,238,1514,Sandy,6.6,Onion
+33.9,382,167,Clay,6.4,Sorghum
+21.1,1042,1630,Sandy-Loam,6.3,Soybean
+9.6,708,2645,Sandy-Loam,6.4,Carrot
+35.8,196,154,Sandy-Loam,6.1,Cowpea
+17.4,481,1399,Clay,6.8,Onion
+11.7,1765,1798,Loamy,6.5,Beans
+26.6,534,715,Sandy-Loam,6.4,Tomato
+37.4,303,468,Sandy-Loam,5.8,Sorghum
+12.9,440,2061,Sandy-Loam,7.0,Onion
+38.7,307,272,Sandy-Loam,6.5,Green Gram
+10.4,557,2209,Fertile,6.1,Carrot
+35.0,327,251,Sandy,6.6,Green Gram
+9.8,890,1801,Fertile,6.5,Kale
+23.4,1274,1071,Sandy-Loam,5.9,Maize
+30.7,374,323,Sandy,5.7,Cowpea
+14.0,949,1961,Sandy-Loam,6.0,Kale
+30.3,696,203,Sandy-Loam,5.5,Groundnut
+35.7,162,174,Sandy,6.0,Cowpea
+24.8,1075,1730,Sandy-Loam,6.1,Maize
+29.6,821,685,Sandy,6.1,Groundnut
+30.9,744,1017,Fertile,5.8,Millet
+34.7,396,204,Loamy,6.4,Cowpea
+23.8,558,423,Clay,6.4,Tomato
+24.7,1134,1520,Loamy,6.3,Soybean
+17.6,1185,2248,Loamy,6.5,Beans
+34.7,460,386,Clay,5.8,Sorghum
+8.7,925,2436,Loamy,5.6,Irish Potato
+16.3,1723,1817,Sandy-Loam,6.3,Beans
+19.7,1015,1772,Loamy,6.9,Soybean
+41.7,405,193,Loamy,6.5,Sorghum
+11.2,1095,2472,Fertile,6.7,Kale
+34.3,157,450,Sandy,6.5,Sorghum
+19.8,1175,1913,Clay,6.6,Soybean
+25.8,611,571,Sandy-Loam,6.3,Tomato
+14.1,462,1970,Clay,6.2,Onion
+24.3,817,1119,Sandy-Loam,6.3,Tomato
+30.3,949,221,Loamy,5.8,Groundnut
+12.2,1326,2119,Fertile,6.0,Kale
+8.4,776,2413,Fertile,6.6,Carrot
+15.9,358,1755,Fertile,6.7,Onion
+33.4,457,1092,Sandy,6.0,Millet
+12.7,425,1838,Fertile,6.6,Onion
+13.5,368,1727,Sandy-Loam,6.9,Onion
+34.4,197,119,Clay,5.5,Cowpea
+13.9,743,2813,Clay,6.4,Carrot
+8.1,574,2730,Sandy,6.1,Carrot
+28.6,982,375,Fertile,6.0,Groundnut
+33.6,585,641,Sandy,6.4,Millet
+11.3,1253,1755,Fertile,7.2,Beans
+22.5,751,576,Sandy-Loam,6.9,Tomato
+7.1,808,2848,Loamy,6.9,Carrot
+37.1,396,218,Loamy,6.0,Sorghum
+26.8,585,944,Loamy,5.7,Millet
+12.8,836,2413,Clay,6.6,Kale
+20.9,1189,1725,Fertile,6.3,Maize
+22.2,878,1608,Sandy-Loam,6.8,Soybean
+24.7,576,469,Loamy,6.2,Tomato
+35.8,286,165,Sandy,6.7,Green Gram
+26.4,565,931,Sandy-Loam,6.9,Tomato
+10.5,1294,2191,Clay,5.5,Irish Potato
+33.4,521,1008,Sandy-Loam,6.5,Millet
+14.0,1638,1906,Fertile,6.8,Beans
+14.8,1108,2514,Loamy,7.1,Beans
+14.3,1489,2183,Loamy,6.3,Beans
+19.7,1072,1875,Fertile,6.0,Soybean
+29.7,245,176,Fertile,6.2,Cowpea
+24.1,1169,1860,Sandy-Loam,6.0,Soybean
+30.8,877,786,Sandy-Loam,6.1,Groundnut
+10.5,797,2818,Clay,6.0,Carrot
+30.5,205,252,Sandy,5.5,Cowpea
+25.6,987,1778,Sandy-Loam,6.3,Soybean
+11.0,1038,2348,Sandy-Loam,5.9,Kale
+23.7,622,301,Sandy-Loam,6.0,Groundnut
+17.5,1277,2375,Fertile,6.9,Beans
+14.8,306,1486,Loamy,6.9,Onion
+23.2,1058,1412,Sandy-Loam,6.6,Soybean
+19.7,1197,1700,Sandy,6.4,Maize
+20.7,980,1020,Fertile,5.9,Maize
+28.0,655,881,Sandy-Loam,6.0,Millet
+22.6,760,1619,Fertile,6.6,Soybean
+15.6,1773,1790,Fertile,6.8,Beans
+35.8,219,38,Sandy,5.9,Cowpea
+20.1,1134,1669,Sandy-Loam,6.7,Maize
+26.7,629,909,Loamy,6.7,Tomato
+5.8,1256,2860,Clay,6.1,Irish Potato
+8.4,708,1989,Sandy,6.5,Carrot
+23.7,1112,1208,Sandy-Loam,5.9,Maize
+17.6,285,1448,Sandy-Loam,7.1,Onion
+24.4,902,1522,Sandy-Loam,6.8,Soybean
+21.4,1073,1919,Loamy,6.2,Soybean
+30.7,858,717,Sandy,5.9,Groundnut
+24.0,1077,1400,Fertile,6.8,Soybean
+34.8,211,357,Sandy,6.1,Sorghum
+24.2,771,1553,Fertile,6.8,Soybean
+36.9,261,175,Sandy,6.9,Green Gram
+37.9,225,231,Sandy,7.2,Green Gram
+35.0,268,184,Sandy,6.3,Sorghum
+20.5,608,1171,Sandy,6.3,Tomato
+21.8,1143,1375,Sandy-Loam,6.3,Maize
+37.0,195,55,Sandy-Loam,5.9,Cowpea
+13.7,845,2303,Sandy-Loam,6.3,Carrot
+34.2,318,216,Sandy-Loam,5.9,Sorghum
+28.7,777,557,Sandy-Loam,6.4,Groundnut
+20.1,712,692,Clay,6.7,Tomato
+13.5,443,1770,Sandy-Loam,6.6,Onion
+27.0,382,414,Sandy,6.1,Millet
+27.0,695,745,Sandy,6.1,Millet
+8.0,598,2253,Loamy,6.7,Carrot
+14.0,1306,2519,Sandy-Loam,6.7,Beans
+25.6,765,680,Sandy-Loam,6.4,Tomato
+27.4,639,968,Sandy,6.1,Millet
+38.5,184,92,Fertile,6.9,Green Gram
+17.1,528,1953,Fertile,6.8,Onion
+9.1,1096,2537,Fertile,5.8,Irish Potato
+12.9,207,1892,Loamy,6.8,Onion
+24.6,1005,1203,Sandy-Loam,5.9,Maize
+18.3,1430,1307,Fertile,6.5,Maize
+34.5,263,540,Fertile,5.9,Sorghum
+20.6,1429,1239,Loamy,6.0,Maize
+17.1,1175,1313,Sandy-Loam,5.9,Maize
+8.8,1120,2987,Sandy-Loam,5.6,Irish Potato
+32.3,218,90,Clay,6.0,Cowpea
+15.2,1118,2305,Loamy,6.3,Kale
+21.4,1294,1336,Loamy,6.8,Maize
+5.1,1061,2311,Sandy-Loam,5.6,Irish Potato
+35.2,245,113,Sandy,6.1,Cowpea
+12.6,526,2031,Clay,6.2,Onion
+11.4,1569,1861,Sandy-Loam,6.7,Beans
+29.5,737,498,Sandy,5.7,Millet
+7.9,622,2631,Loamy,6.5,Carrot
+12.1,904,2543,Sandy-Loam,6.4,Carrot
+5.8,1369,2727,Sandy-Loam,5.6,Irish Potato
+36.6,427,409,Sandy-Loam,5.7,Cowpea
+30.5,972,683,Sandy,5.8,Groundnut
+8.1,555,2509,Clay,6.7,Carrot
+8.6,935,2859,Fertile,6.5,Carrot
+18.9,1278,1686,Loamy,6.7,Maize
+40.7,436,346,Sandy,6.3,Sorghum
+24.5,1125,1513,Fertile,6.7,Soybean
+21.7,926,1284,Loamy,6.5,Maize
+33.3,271,212,Sandy,5.7,Cowpea
+33.6,327,137,Loamy,5.9,Sorghum
+17.1,467,1535,Loamy,6.3,Onion
+18.2,996,1657,Loamy,5.9,Maize
+42.0,153,392,Sandy,6.4,Sorghum
+20.4,529,407,Clay,6.3,Tomato
+13.1,728,2464,Sandy-Loam,6.6,Carrot
+9.1,653,2144,Loamy,6.3,Carrot
+12.3,288,1654,Sandy-Loam,7.0,Onion
+18.3,1157,1338,Clay,6.7,Maize
+12.2,1171,2342,Sandy-Loam,6.7,Kale
+24.9,782,795,Loamy,6.0,Tomato
+20.8,921,2009,Clay,6.3,Soybean
+21.5,710,970,Fertile,6.3,Tomato
+11.5,209,1533,Fertile,6.6,Onion
+28.2,706,784,Sandy-Loam,5.6,Millet
+28.1,448,1076,Loamy,6.4,Millet
+19.3,960,935,Loamy,6.6,Maize
+6.0,1220,2281,Sandy-Loam,6.2,Irish Potato
+19.5,1404,950,Sandy-Loam,6.7,Maize
+40.1,275,325,Sandy,6.4,Green Gram
+10.3,887,2755,Clay,6.9,Carrot
+22.2,925,2004,Fertile,6.3,Soybean
+17.2,529,1904,Loamy,6.9,Onion
+30.9,356,33,Sandy,6.2,Cowpea
+17.7,1765,2031,Loamy,6.4,Beans
+19.8,881,1829,Fertile,6.9,Soybean
+24.3,837,492,Sandy-Loam,5.5,Groundnut
+24.0,747,802,Loamy,6.7,Tomato
+24.8,782,1883,Sandy,6.4,Soybean
+6.0,1014,2822,Fertile,6.0,Irish Potato
+7.4,923,2301,Loamy,6.5,Carrot
+25.6,633,721,Sandy,5.6,Groundnut
+40.3,153,239,Sandy-Loam,6.1,Sorghum
+26.2,693,1176,Sandy-Loam,6.7,Tomato
+19.5,796,1969,Loamy,6.7,Soybean
+31.2,361,410,Loamy,5.8,Millet
+12.8,434,2016,Sandy,6.8,Onion
+30.0,210,47,Loamy,6.3,Cowpea
+12.3,1073,1963,Clay,6.0,Kale
+32.2,484,843,Loamy,6.1,Millet
+34.6,165,195,Sandy-Loam,6.1,Sorghum
+33.6,200,542,Sandy,6.1,Sorghum
+11.9,330,1369,Sandy-Loam,7.0,Onion
+21.8,562,754,Loamy,6.9,Tomato
+24.3,711,709,Clay,6.0,Tomato
+11.8,480,1535,Fertile,7.1,Onion
+16.7,1081,2148,Clay,6.5,Beans
+26.6,564,591,Fertile,6.1,Tomato
+10.0,688,2321,Fertile,6.0,Carrot
+11.6,1292,2333,Fertile,6.3,Kale
+24.9,975,1017,Loamy,6.6,Maize
+10.2,756,2438,Fertile,6.1,Carrot
+13.9,248,1849,Sandy,6.8,Onion
+26.0,699,615,Clay,5.8,Millet
+10.6,741,1975,Sandy-Loam,6.4,Carrot
+26.3,589,998,Sandy-Loam,6.2,Millet
+32.7,398,967,Sandy-Loam,6.0,Millet
+20.3,968,1981,Fertile,6.6,Soybean
+30.1,548,1051,Clay,6.3,Millet
+10.2,1177,2711,Sandy,5.7,Irish Potato
+31.0,493,991,Sandy-Loam,6.2,Millet
+13.9,1483,2416,Fertile,7.1,Beans
+21.6,1160,1946,Fertile,6.6,Soybean
+39.3,392,224,Sandy-Loam,6.3,Sorghum
+27.5,420,1011,Sandy,6.2,Millet
+14.5,390,1562,Fertile,7.0,Onion
+10.0,1318,2797,Fertile,6.0,Irish Potato
+15.5,810,2181,Fertile,6.5,Kale
+32.7,237,342,Sandy,5.8,Cowpea
+26.5,845,711,Loamy,6.8,Tomato
+24.8,560,1089,Sandy-Loam,6.7,Tomato
+35.2,352,57,Sandy,5.6,Cowpea
+22.3,1111,1757,Fertile,6.7,Maize
+13.8,1554,2295,Loamy,6.3,Beans
+25.4,1173,1445,Sandy-Loam,6.0,Soybean
+12.7,635,2455,Fertile,6.7,Carrot
+37.0,332,320,Sandy-Loam,6.7,Green Gram
+26.8,519,615,Clay,6.4,Millet
+26.5,649,795,Sandy-Loam,5.8,Millet
+17.2,1429,2156,Loamy,7.2,Beans
+11.8,245,1752,Fertile,6.5,Onion
+24.8,993,178,Sandy-Loam,5.7,Groundnut
+12.3,1188,2023,Sandy-Loam,7.0,Beans
+7.5,1191,2177,Fertile,6.3,Irish Potato
+28.6,713,80,Sandy-Loam,6.3,Groundnut
+13.0,1149,2101,Clay,6.6,Beans
+17.5,1065,1873,Fertile,6.7,Beans
+27.0,615,829,Loamy,6.0,Tomato
+11.5,1326,2200,Sandy,6.3,Kale
+16.5,354,1713,Clay,6.6,Onion
+33.7,226,45,Sandy,5.7,Cowpea
+9.8,959,2047,Loamy,6.3,Kale
+11.5,295,2085,Sandy,6.9,Onion
+5.2,1034,2641,Clay,5.7,Irish Potato
+15.1,492,1382,Sandy-Loam,7.1,Onion
+23.9,840,666,Clay,6.1,Tomato
+12.2,1677,2189,Loamy,6.9,Beans
+26.9,550,1184,Clay,6.8,Tomato
+31.2,172,338,Sandy,5.6,Cowpea
+32.9,749,840,Sandy,6.3,Millet
+36.8,154,475,Sandy-Loam,5.5,Cowpea
+15.1,324,1473,Sandy,7.0,Onion
+26.4,916,757,Sandy-Loam,5.9,Groundnut
+10.9,1037,2584,Loamy,6.3,Kale
+25.1,552,1158,Loamy,7.0,Tomato
+10.6,1210,2633,Fertile,6.1,Irish Potato
+26.1,748,649,Sandy-Loam,6.8,Tomato
+35.4,297,190,Loamy,6.3,Green Gram
+24.2,637,531,Sandy-Loam,6.3,Groundnut
+10.4,987,2208,Fertile,6.7,Kale
+34.0,180,507,Loamy,6.0,Sorghum
+22.1,1035,1942,Loamy,6.6,Soybean
+38.1,441,41,Sandy,6.4,Sorghum
+11.1,1301,2286,Fertile,5.9,Irish Potato
+40.5,440,436,Clay,5.5,Sorghum
+6.1,1193,2605,Clay,5.5,Irish Potato
+11.6,1407,2254,Fertile,7.0,Beans
+20.0,1136,1616,Clay,6.6,Soybean
+12.2,1403,1823,Clay,6.8,Beans
+27.3,486,918,Sandy-Loam,6.4,Tomato
+21.6,1174,945,Loamy,6.0,Maize
+33.7,658,1028,Sandy-Loam,6.5,Millet
+11.9,766,2046,Loamy,6.0,Carrot
+36.6,180,100,Sandy-Loam,6.2,Green Gram
+14.8,1726,2025,Fertile,6.9,Beans
+13.2,1656,2450,Loamy,7.1,Beans
+40.7,268,306,Sandy,7.1,Green Gram
+28.4,720,662,Sandy,6.0,Millet
+8.5,794,2361,Fertile,6.9,Carrot
+14.0,267,1493,Clay,6.5,Onion
+11.6,923,1956,Loamy,6.4,Kale
+29.8,812,701,Sandy-Loam,5.6,Groundnut
+23.4,713,611,Loamy,6.5,Tomato
+9.2,794,2666,Sandy-Loam,6.4,Carrot
+7.2,673,2654,Loamy,6.7,Carrot
+9.1,1228,2287,Fertile,6.6,Kale
+12.0,592,2517,Sandy-Loam,7.0,Carrot
+31.8,159,284,Sandy-Loam,5.6,Cowpea
+33.4,591,542,Clay,6.4,Millet
+10.5,1164,2128,Sandy,6.7,Kale
+23.1,605,629,Sandy-Loam,6.9,Tomato
+29.6,176,303,Loamy,5.8,Cowpea
+24.0,798,1992,Fertile,6.2,Soybean
+25.4,616,984,Sandy,6.1,Tomato
+12.2,1438,1921,Loamy,6.6,Beans
+6.0,1280,2718,Loamy,5.6,Irish Potato
+29.9,288,440,Clay,5.5,Cowpea
+28.4,926,773,Sandy-Loam,5.5,Groundnut
+37.2,443,543,Sandy,6.3,Sorghum
+17.9,1336,2370,Loamy,6.8,Beans
+8.8,970,2902,Loamy,6.3,Irish Potato
+15.7,1110,2103,Loamy,6.4,Beans
+17.1,1267,2124,Clay,6.6,Beans
+38.5,181,346,Sandy,6.2,Green Gram
+11.8,1298,2057,Clay,6.0,Kale
+35.9,210,125,Clay,6.5,Sorghum
+12.1,577,2657,Clay,6.1,Carrot
+36.2,387,326,Sandy,5.8,Sorghum
+11.1,330,1613,Sandy,6.3,Onion
+15.2,212,1723,Loamy,6.4,Onion
+29.0,365,654,Sandy,5.6,Millet
+24.1,551,1152,Fertile,6.6,Tomato
+28.2,578,940,Clay,5.8,Millet
+23.2,584,587,Sandy,6.6,Tomato
+39.4,242,140,Sandy-Loam,6.3,Green Gram
+9.1,900,2946,Sandy-Loam,6.4,Carrot
+28.2,552,1071,Sandy-Loam,6.2,Millet
+33.9,509,632,Sandy,6.3,Millet
+12.4,275,1903,Loamy,6.8,Onion
+23.3,735,1088,Loamy,6.5,Tomato
+34.8,347,252,Loamy,5.7,Sorghum
+31.0,748,336,Sandy,6.1,Groundnut
+22.3,701,494,Fertile,6.3,Tomato
+11.9,494,1621,Clay,6.7,Onion
+10.0,804,2304,Sandy,5.9,Kale
+24.5,836,1435,Fertile,6.1,Soybean
+10.7,1012,2323,Clay,6.0,Irish Potato
+39.9,320,438,Sandy,5.5,Sorghum
+23.5,1026,1301,Fertile,6.5,Maize
+42.0,312,169,Sandy-Loam,5.5,Sorghum
+5.9,1147,2134,Fertile,5.7,Irish Potato
+24.0,1013,1650,Sandy,6.3,Soybean
+8.6,706,2544,Sandy,7.0,Carrot
+16.3,477,1720,Fertile,6.5,Onion
+13.2,581,2681,Loamy,6.9,Carrot
+26.8,490,682,Loamy,6.3,Millet
+8.3,1107,2373,Loamy,6.2,Irish Potato
+26.8,478,671,Sandy,5.7,Millet
+10.3,1197,2571,Sandy,5.8,Irish Potato
+8.2,1003,2464,Clay,6.1,Irish Potato
+30.8,265,442,Sandy,5.8,Cowpea
+36.5,262,248,Fertile,6.5,Green Gram
+19.7,1053,906,Clay,6.6,Maize
+28.4,703,431,Clay,6.1,Groundnut
+40.9,468,247,Sandy,5.7,Sorghum
+21.2,546,1148,Sandy,6.4,Tomato
+11.6,973,3026,Clay,5.7,Irish Potato
+35.8,248,234,Clay,6.2,Sorghum
+41.8,265,202,Sandy-Loam,6.7,Green Gram
+39.9,383,56,Sandy,5.6,Sorghum
+39.7,375,251,Sandy,6.8,Green Gram
+38.4,325,205,Sandy-Loam,6.8,Green Gram
+22.2,1150,1466,Fertile,6.9,Soybean
+37.5,198,32,Sandy-Loam,6.2,Green Gram
+14.6,949,2353,Sandy-Loam,6.7,Kale
+34.2,300,212,Sandy,5.6,Sorghum
+29.1,1023,212,Sandy,5.5,Groundnut
+19.2,928,1799,Fertile,6.5,Soybean
+13.9,1200,2489,Sandy-Loam,6.6,Kale
+37.6,170,313,Fertile,6.6,Green Gram
+21.3,624,717,Fertile,6.6,Tomato
+17.1,1672,1929,Sandy-Loam,6.6,Beans
+34.0,120,170,Loamy,7.2,Green Gram
+38.1,199,555,Sandy-Loam,6.1,Sorghum
+24.7,891,703,Sandy,6.3,Groundnut
+10.2,1019,2210,Sandy-Loam,5.7,Irish Potato
+16.3,1448,2291,Sandy-Loam,6.9,Beans
+27.8,473,831,Sandy,5.7,Millet
+16.7,516,1439,Sandy,6.5,Onion
+26.0,636,340,Sandy,6.0,Groundnut
+15.0,1654,2358,Loamy,6.3,Beans
+36.7,243,395,Clay,5.9,Cowpea
+26.5,770,765,Clay,6.6,Tomato
+23.0,1106,1627,Fertile,6.1,Soybean
+27.6,652,715,Fertile,5.8,Millet
+33.3,163,440,Sandy,5.9,Sorghum
+21.5,785,979,Fertile,6.1,Tomato
+35.2,215,382,Sandy,5.9,Sorghum
+37.5,438,102,Sandy,5.7,Sorghum
+13.9,231,1678,Sandy-Loam,6.5,Onion
+7.9,836,2859,Loamy,6.2,Carrot
+9.5,913,2685,Fertile,6.0,Irish Potato
+10.0,1113,1948,Sandy-Loam,6.0,Kale
+22.9,976,1657,Loamy,6.6,Maize
+7.2,882,2223,Clay,6.3,Carrot
+13.6,1208,2478,Sandy,6.1,Kale
+36.8,201,199,Sandy,6.1,Cowpea
+39.6,377,106,Sandy,5.8,Sorghum
+29.9,170,379,Sandy,5.6,Cowpea
+14.8,1220,2258,Fertile,6.0,Kale
+25.2,601,361,Sandy,6.2,Groundnut
+30.1,674,705,Loamy,6.1,Millet
+40.0,361,318,Loamy,6.2,Green Gram
+34.2,317,493,Sandy,6.3,Sorghum
+20.8,868,1789,Sandy-Loam,6.9,Soybean
+17.2,322,1412,Clay,6.5,Onion
+26.9,450,1026,Sandy,6.1,Millet
+30.8,993,319,Loamy,6.3,Groundnut
+8.3,1331,2944,Sandy-Loam,6.2,Irish Potato
+12.1,1261,1928,Loamy,6.2,Kale
+30.2,323,227,Sandy,6.2,Cowpea
+13.4,1187,1803,Loamy,6.5,Kale
+33.7,153,30,Sandy,5.7,Cowpea
+12.8,1571,2203,Fertile,6.9,Beans
+10.2,553,2196,Fertile,7.0,Carrot
+40.0,159,146,Sandy,6.4,Green Gram
+37.2,442,272,Clay,6.1,Sorghum
+25.7,783,311,Sandy,5.6,Groundnut
+11.1,774,2510,Clay,6.7,Carrot
+10.6,1247,2372,Clay,5.8,Irish Potato
+20.1,1430,1527,Loamy,6.7,Maize
+14.8,1183,2371,Clay,6.7,Kale
+14.4,949,2197,Sandy-Loam,5.9,Kale
+26.6,1021,602,Sandy-Loam,6.0,Groundnut
+27.2,783,255,Sandy-Loam,6.2,Groundnut
+12.8,733,2307,Sandy,6.8,Carrot
+20.1,1062,1184,Sandy-Loam,6.1,Maize
+22.9,706,1121,Loamy,6.4,Tomato
+9.9,1069,2824,Loamy,5.8,Irish Potato
+8.0,727,2576,Sandy,6.4,Carrot
+40.0,394,390,Loamy,6.4,Sorghum
+24.4,790,1547,Sandy,6.0,Soybean
+34.3,250,300,Sandy,6.3,Green Gram
+15.0,1344,1772,Sandy,6.2,Beans
+30.8,333,107,Loamy,5.6,Cowpea
+17.6,1048,1123,Fertile,6.2,Maize
+22.7,1316,1506,Clay,6.7,Maize
+37.7,174,304,Sandy,6.9,Green Gram
+26.0,790,320,Sandy,6.0,Groundnut
+21.0,520,1168,Fertile,6.8,Tomato
+29.3,454,1085,Sandy,5.8,Millet
+31.9,561,687,Sandy-Loam,6.5,Millet
+17.1,384,2047,Sandy,6.7,Onion
+14.0,261,2090,Sandy,6.9,Onion
+8.1,1046,2428,Fertile,6.1,Irish Potato
+34.6,365,43,Clay,6.0,Green Gram
+29.7,516,504,Fertile,5.9,Millet
+5.2,1218,2414,Clay,6.2,Irish Potato
+41.7,191,137,Sandy,6.0,Sorghum
+36.4,377,419,Sandy,5.8,Cowpea
+20.5,1148,1831,Sandy-Loam,6.2,Soybean
+14.5,214,2088,Sandy-Loam,6.4,Onion
+36.9,336,479,Sandy-Loam,6.3,Cowpea
+21.8,472,482,Sandy-Loam,6.2,Tomato
+38.5,131,326,Sandy,7.2,Green Gram
+34.3,475,625,Sandy,5.9,Sorghum
+27.0,624,765,Sandy-Loam,6.1,Groundnut
+15.4,1316,1868,Sandy,7.0,Beans
+37.7,134,73,Sandy,7.0,Green Gram
+14.4,1361,1769,Loamy,6.4,Beans
+18.3,1301,1411,Loamy,6.3,Maize
+9.9,1171,2351,Sandy-Loam,5.6,Irish Potato
+31.2,691,576,Sandy-Loam,6.0,Millet
+15.7,1460,2130,Fertile,6.3,Beans
+38.4,148,326,Sandy,6.9,Green Gram
+20.5,1035,1932,Fertile,6.2,Soybean
+25.9,715,490,Fertile,6.5,Tomato
+35.4,247,393,Sandy-Loam,5.8,Cowpea
+25.0,1101,2051,Loamy,6.6,Soybean
+34.3,342,689,Loamy,5.8,Sorghum
+34.2,202,81,Sandy-Loam,6.2,Sorghum
+26.7,713,327,Loamy,6.0,Groundnut
+11.6,267,1639,Sandy,6.6,Onion
+24.9,684,838,Clay,6.3,Tomato
+25.5,816,2079,Fertile,6.9,Soybean
+41.7,340,691,Sandy,6.0,Sorghum
+11.3,662,2156,Clay,6.0,Carrot
+24.5,799,174,Fertile,5.6,Groundnut
+11.9,1106,2472,Fertile,5.8,Irish Potato
+37.0,145,86,Clay,7.2,Green Gram
+24.9,1141,1061,Fertile,6.3,Maize
+12.9,1198,1947,Loamy,6.8,Beans
+26.0,1088,2004,Clay,6.9,Soybean
+33.7,481,1020,Sandy,5.7,Millet
+37.3,164,339,Sandy,6.3,Sorghum
+10.9,552,2710,Loamy,6.7,Carrot
+11.8,1434,2029,Sandy-Loam,6.8,Beans
+28.4,355,454,Sandy-Loam,5.7,Millet
+26.3,813,360,Sandy,5.7,Groundnut
+11.6,907,2191,Fertile,6.3,Kale
+27.5,918,150,Sandy,6.0,Groundnut
+13.1,1344,2405,Sandy,6.5,Kale
+34.8,329,55,Sandy,6.4,Green Gram
+11.4,388,1402,Fertile,7.0,Onion
+8.8,663,2257,Fertile,6.5,Carrot
+9.3,1016,2124,Fertile,5.5,Irish Potato
+26.8,412,1072,Loamy,6.5,Millet
+26.8,508,1088,Sandy,5.7,Millet
+37.2,179,124,Fertile,7.0,Green Gram
+19.7,1082,2071,Clay,6.6,Soybean
+13.8,1227,1827,Loamy,7.0,Beans
+36.6,445,362,Sandy,6.5,Sorghum
+17.8,1345,1854,Clay,6.9,Beans
+25.6,774,1408,Clay,6.3,Soybean
+40.3,313,27,Clay,6.3,Green Gram
+7.7,1159,2146,Loamy,6.1,Irish Potato
+27.4,713,766,Loamy,5.7,Groundnut
+25.8,869,752,Sandy-Loam,6.1,Groundnut
+12.4,532,1656,Sandy,6.3,Onion
+13.7,703,1988,Loamy,6.4,Carrot
+13.2,1358,1917,Fertile,6.8,Beans
+39.9,468,374,Sandy,6.3,Sorghum
+9.3,859,2080,Fertile,6.5,Carrot
+13.4,1375,2428,Sandy-Loam,7.0,Beans
+20.1,773,540,Clay,6.3,Tomato
+22.0,922,1787,Fertile,6.2,Maize
+25.8,947,1675,Fertile,6.4,Soybean
+12.5,921,1831,Loamy,6.0,Kale
+14.3,547,1927,Sandy-Loam,6.7,Onion
+12.5,1775,2322,Fertile,6.6,Beans
+34.8,273,189,Sandy-Loam,5.7,Cowpea
+24.3,866,1736,Fertile,6.7,Soybean
+15.3,1243,2587,Fertile,6.2,Kale
+37.3,188,205,Sandy,6.9,Green Gram
+23.8,882,1791,Sandy-Loam,6.2,Soybean
+34.6,363,108,Sandy,6.4,Green Gram
+18.0,437,1405,Fertile,6.6,Onion
+20.0,1220,1772,Fertile,6.7,Maize
+10.5,1127,2011,Fertile,6.6,Kale
+27.7,850,541,Sandy-Loam,5.5,Groundnut
+15.1,1351,2020,Loamy,6.6,Beans
+11.2,906,2135,Loamy,6.2,Carrot
+36.9,300,399,Sandy-Loam,6.5,Sorghum
+33.4,612,705,Sandy,6.3,Millet
+20.1,1062,1474,Clay,6.3,Soybean
+33.9,514,934,Loamy,6.3,Millet
+41.0,477,88,Clay,5.9,Sorghum
+36.0,209,230,Clay,5.9,Cowpea
+30.8,749,138,Sandy,6.3,Groundnut
+41.0,205,347,Fertile,5.9,Sorghum
+34.6,152,319,Loamy,6.2,Cowpea
+23.7,1236,1485,Fertile,6.7,Maize
+11.0,845,2828,Sandy-Loam,6.3,Carrot
+25.1,815,566,Fertile,6.1,Tomato
+10.9,1130,2037,Fertile,6.6,Kale
+17.2,315,1585,Sandy,7.1,Onion
+28.8,579,983,Sandy,5.5,Millet
+27.3,905,705,Sandy-Loam,5.9,Groundnut
+30.5,332,55,Sandy-Loam,5.6,Cowpea
+29.6,670,940,Clay,6.0,Millet
+27.3,457,845,Fertile,6.5,Tomato
+30.9,740,477,Sandy-Loam,6.0,Millet
+11.1,428,1813,Sandy-Loam,6.3,Onion
+11.7,803,2115,Fertile,6.4,Carrot
+13.5,1017,2370,Loamy,6.7,Kale
+18.5,927,1168,Fertile,6.3,Maize
+32.1,655,604,Loamy,5.5,Millet
+29.5,249,312,Sandy,5.9,Cowpea
+22.0,832,1138,Sandy,6.8,Tomato
+7.5,1393,2705,Loamy,5.6,Irish Potato
+9.3,985,2165,Fertile,6.3,Irish Potato
+33.3,291,72,Sandy,6.0,Sorghum
+9.2,892,2856,Sandy-Loam,7.0,Carrot
+25.4,496,955,Sandy-Loam,6.9,Tomato
+40.5,418,462,Sandy,5.8,Sorghum
+29.0,640,695,Sandy,5.5,Groundnut
+20.1,1051,1927,Loamy,6.5,Soybean
+17.4,258,1440,Loamy,7.1,Onion
+9.3,1264,2584,Fertile,6.7,Kale
+30.9,178,99,Sandy,6.2,Cowpea
+19.8,792,1633,Sandy-Loam,6.2,Soybean
+34.9,352,22,Clay,6.4,Green Gram
+40.8,396,176,Loamy,6.2,Sorghum
+22.3,864,1753,Loamy,6.1,Soybean
+13.6,932,1953,Fertile,5.9,Kale
+10.2,887,2048,Sandy,6.2,Carrot
+8.4,905,2568,Loamy,5.6,Irish Potato
+31.0,500,498,Sandy,6.4,Millet
+30.7,305,399,Sandy-Loam,5.6,Cowpea
+18.3,1425,1666,Fertile,6.2,Maize
+20.0,894,1805,Loamy,6.9,Soybean
+12.1,531,1925,Sandy-Loam,6.8,Onion
+23.3,811,743,Sandy-Loam,6.1,Groundnut
+19.1,1052,1766,Fertile,6.2,Soybean
+26.6,620,620,Sandy-Loam,6.5,Tomato
+24.2,717,1065,Loamy,6.0,Tomato
+19.6,1196,1489,Loamy,6.9,Soybean
+13.1,995,1841,Loamy,6.2,Kale
+30.2,158,468,Sandy,6.0,Cowpea
+12.8,843,2719,Loamy,6.4,Carrot
+23.9,1094,1708,Fertile,6.4,Soybean
+30.3,196,341,Sandy,5.6,Cowpea
+29.4,260,118,Sandy,6.1,Cowpea
+31.1,452,436,Loamy,5.5,Millet
+23.1,1150,1720,Loamy,6.4,Maize
+24.5,801,500,Sandy-Loam,6.2,Groundnut
+27.4,495,661,Fertile,6.5,Millet
+39.6,222,102,Loamy,6.9,Green Gram
+39.4,336,205,Sandy,6.8,Green Gram
+25.4,476,874,Fertile,6.8,Tomato
+16.2,431,1616,Fertile,6.5,Onion
+36.9,298,350,Sandy-Loam,5.9,Cowpea
+11.4,786,2652,Loamy,6.5,Carrot
+17.3,1242,1926,Loamy,7.1,Beans
+28.4,626,746,Sandy-Loam,6.4,Groundnut
+22.5,1151,1588,Sandy-Loam,5.9,Maize
+15.6,318,2051,Fertile,6.4,Onion
+27.1,1018,705,Sandy-Loam,5.7,Groundnut
+9.6,1308,2655,Clay,5.7,Irish Potato
+13.7,1149,1907,Loamy,6.5,Beans
+39.4,184,214,Sandy-Loam,6.4,Green Gram
+17.4,1295,2047,Fertile,6.5,Beans
+21.9,950,1617,Fertile,5.9,Maize
+23.6,647,421,Sandy,5.7,Groundnut
+11.6,523,1866,Loamy,6.6,Onion
+17.9,362,1393,Sandy-Loam,6.6,Onion
+24.5,1082,1837,Fertile,6.5,Soybean
+7.4,1262,2997,Fertile,6.1,Irish Potato
+13.0,361,1495,Sandy-Loam,6.2,Onion
+33.3,355,966,Clay,6.3,Millet
+7.9,942,3096,Clay,6.0,Irish Potato
+13.0,457,1690,Fertile,6.3,Onion
+13.0,1311,2109,Loamy,5.8,Kale
+28.9,390,871,Loamy,6.0,Millet
+34.4,233,89,Sandy-Loam,6.3,Sorghum
+26.5,503,586,Sandy,6.5,Tomato
+22.8,602,729,Fertile,6.5,Tomato
+32.0,409,74,Sandy-Loam,6.1,Cowpea
+13.6,943,1927,Loamy,5.9,Kale
+34.2,193,106,Sandy-Loam,5.8,Sorghum
+28.0,864,315,Sandy-Loam,6.0,Groundnut
+21.5,612,1149,Sandy-Loam,6.7,Tomato
+16.9,548,1672,Sandy-Loam,7.1,Onion
+31.8,384,386,Sandy-Loam,5.6,Cowpea
+12.6,269,1378,Sandy,6.5,Onion
+15.1,1096,2025,Sandy,5.8,Kale
+10.8,886,2470,Clay,6.1,Carrot
+35.3,329,525,Sandy,5.9,Sorghum
+13.8,1439,2547,Loamy,6.9,Beans
+19.4,962,1173,Loamy,5.9,Maize
+14.0,1334,2482,Loamy,7.0,Beans
+26.1,865,590,Sandy-Loam,5.7,Groundnut
+11.1,1366,2665,Fertile,6.2,Irish Potato
+25.4,970,1715,Loamy,6.3,Soybean
+24.9,984,2053,Fertile,6.7,Soybean
+38.5,157,653,Sandy,5.5,Sorghum
+11.8,1158,2422,Fertile,5.7,Irish Potato
+17.5,1238,1846,Sandy,7.2,Beans
+34.7,414,681,Sandy-Loam,5.7,Sorghum
+34.2,181,273,Sandy-Loam,6.9,Green Gram
+41.0,233,285,Sandy,6.0,Sorghum
+21.6,534,950,Loamy,6.4,Tomato
+23.1,949,1423,Sandy-Loam,6.8,Soybean
+21.9,1116,1568,Loamy,5.9,Maize
+39.9,245,304,Sandy,5.6,Sorghum
+24.4,822,404,Fertile,6.9,Tomato
+27.6,1000,575,Sandy-Loam,5.9,Groundnut
+23.7,1102,1771,Sandy,6.2,Soybean
+22.9,1447,1158,Sandy-Loam,6.3,Maize
+10.2,1248,2802,Sandy-Loam,5.7,Irish Potato
+30.9,265,366,Loamy,5.7,Cowpea
+9.8,603,2517,Fertile,6.8,Carrot
+11.0,915,2565,Loamy,6.8,Kale
+11.8,1601,2175,Loamy,6.7,Beans
+32.2,590,718,Sandy-Loam,6.4,Millet
+8.3,1206,2267,Fertile,5.7,Irish Potato
+13.1,1444,2308,Fertile,7.0,Beans
+22.0,781,1741,Fertile,6.5,Soybean
+35.2,129,254,Sandy-Loam,6.9,Green Gram
+26.8,425,750,Sandy,5.7,Millet
+16.3,247,1521,Fertile,6.2,Onion
+31.8,300,411,Sandy-Loam,6.2,Cowpea
+11.3,451,1753,Sandy,6.4,Onion
+34.8,159,498,Clay,5.8,Cowpea
+27.0,982,706,Sandy-Loam,5.6,Groundnut
+25.2,541,619,Sandy-Loam,6.1,Tomato
+32.9,222,384,Sandy,5.6,Cowpea
+20.8,558,1084,Sandy-Loam,7.0,Tomato
+21.6,926,1886,Fertile,6.5,Soybean
+11.5,1315,2190,Sandy-Loam,7.0,Beans
+35.4,148,264,Sandy-Loam,7.1,Green Gram
+34.1,315,406,Sandy-Loam,5.6,Sorghum
+18.6,1226,1222,Fertile,6.3,Maize
+41.8,248,142,Sandy,7.0,Green Gram
+21.6,1440,1117,Clay,6.5,Maize
+27.4,918,642,Sandy-Loam,5.7,Groundnut
+29.2,729,292,Sandy,6.0,Groundnut
+12.2,482,1869,Sandy,6.9,Onion
+41.4,343,229,Sandy-Loam,6.3,Sorghum
+20.0,863,1912,Loamy,6.4,Soybean
+31.5,357,551,Loamy,6.1,Millet
+23.9,1018,1722,Sandy-Loam,6.4,Soybean
+17.1,284,1408,Sandy-Loam,6.9,Onion
+23.1,603,230,Sandy-Loam,5.7,Groundnut
+24.4,612,731,Loamy,6.2,Groundnut
+34.9,133,216,Sandy,6.4,Green Gram
+40.5,317,174,Sandy,6.1,Green Gram
+17.5,922,1422,Fertile,6.3,Maize
+17.5,1731,2405,Fertile,6.4,Beans
+37.5,228,25,Sandy,6.7,Green Gram
+25.6,805,1548,Loamy,6.4,Soybean
+12.4,613,2560,Loamy,6.8,Carrot
+11.3,1191,2453,Loamy,6.2,Kale
+16.0,1132,1778,Fertile,6.4,Beans
+10.6,1058,2014,Loamy,6.0,Kale
+8.7,606,2297,Sandy,6.7,Carrot
+22.2,532,923,Sandy-Loam,6.2,Tomato
+9.8,810,2056,Fertile,7.0,Carrot
+10.9,969,2895,Loamy,5.6,Irish Potato
+11.7,947,2611,Clay,6.7,Carrot
+40.5,450,200,Sandy,5.8,Sorghum
+32.7,708,690,Loamy,6.4,Millet
+19.9,1232,963,Sandy-Loam,6.3,Maize
+12.8,266,1852,Loamy,7.0,Onion
+5.1,1384,2932,Loamy,5.6,Irish Potato
+21.4,808,924,Fertile,6.5,Tomato
+11.3,1270,1965,Loamy,5.9,Kale
+28.8,435,662,Sandy-Loam,5.6,Millet
+7.5,560,2085,Fertile,6.5,Carrot
+13.9,542,1500,Sandy-Loam,6.5,Onion
+22.3,1060,2018,Loamy,6.9,Soybean
+15.8,1298,2150,Clay,6.7,Beans
+9.4,622,2739,Fertile,6.5,Carrot
+11.8,899,2586,Fertile,6.2,Carrot
+36.0,200,404,Sandy,5.8,Cowpea
+19.9,846,1445,Sandy,6.6,Soybean
+17.9,213,1841,Sandy-Loam,7.1,Onion
+13.1,910,2371,Sandy-Loam,6.6,Carrot
+10.1,1114,2021,Fertile,6.4,Kale
+39.2,131,194,Loamy,6.9,Green Gram
+11.7,975,2532,Fertile,5.8,Irish Potato
+34.4,158,128,Sandy,7.1,Green Gram
+12.8,893,2866,Sandy-Loam,6.3,Carrot
+24.8,672,328,Sandy,6.2,Groundnut
+37.0,297,273,Loamy,6.0,Sorghum
+11.7,1144,2533,Clay,7.0,Beans
+25.0,1153,2062,Sandy-Loam,6.2,Soybean
+25.1,616,578,Sandy-Loam,5.6,Groundnut
+36.1,268,337,Clay,7.1,Green Gram
+41.5,178,218,Loamy,7.1,Green Gram
+36.7,374,118,Sandy,6.6,Green Gram
+23.7,1117,1537,Fertile,6.0,Maize
+20.9,1142,1739,Sandy-Loam,6.5,Soybean
+28.4,400,781,Clay,6.2,Millet
+12.6,742,2067,Loamy,6.7,Carrot
+12.5,630,2208,Loamy,6.3,Carrot
+11.1,836,1982,Loamy,6.3,Kale
+24.2,1394,978,Fertile,6.6,Maize
+14.8,1088,2420,Loamy,6.1,Kale
+13.7,790,2769,Fertile,6.2,Carrot
+25.1,616,487,Sandy-Loam,5.6,Groundnut
+13.8,1149,1876,Fertile,7.1,Beans
+18.0,1255,1672,Fertile,6.4,Maize
+11.3,433,1997,Loamy,7.0,Onion
+36.9,186,265,Sandy-Loam,6.5,Green Gram
+10.1,1285,2174,Sandy-Loam,5.6,Irish Potato
+30.6,752,131,Sandy-Loam,5.6,Groundnut
+10.3,1254,2028,Fertile,6.8,Kale
+11.1,270,2069,Sandy,6.5,Onion
+33.9,432,351,Sandy,6.3,Sorghum
+12.1,1774,1914,Fertile,6.7,Beans
+31.6,454,1059,Sandy,6.3,Millet
+25.4,615,951,Sandy-Loam,6.3,Tomato
+36.6,349,378,Sandy,5.9,Cowpea
+21.3,725,502,Sandy-Loam,6.2,Tomato
+33.2,242,284,Fertile,5.7,Cowpea
+13.8,668,2719,Clay,6.4,Carrot
+17.2,1465,2177,Loamy,6.4,Beans
+9.1,1034,2724,Sandy,5.9,Irish Potato
+12.8,1398,1931,Fertile,7.1,Beans
+33.3,286,320,Sandy,6.2,Sorghum
+23.3,970,1624,Fertile,6.1,Maize
+36.1,281,271,Sandy,6.0,Sorghum
+29.5,429,783,Loamy,5.5,Millet
+21.8,1371,1701,Sandy-Loam,6.3,Maize
+40.1,313,317,Loamy,6.3,Green Gram
+6.9,909,3014,Loamy,6.0,Irish Potato
+13.7,1337,1881,Loamy,6.2,Kale
+23.9,860,2032,Loamy,7.0,Soybean
+19.1,1370,1502,Sandy-Loam,6.3,Maize
+20.3,1405,1539,Sandy-Loam,6.3,Maize
+33.0,258,318,Loamy,6.0,Cowpea
+35.3,233,451,Sandy,6.4,Sorghum
+13.9,1135,2050,Sandy-Loam,6.4,Kale
+27.2,817,444,Fertile,6.0,Tomato
+12.5,501,2056,Sandy,6.6,Onion
+12.3,729,2726,Loamy,6.5,Carrot
+14.3,1723,2170,Fertile,6.5,Beans
+13.5,1709,2330,Loamy,6.6,Beans
+8.8,852,2410,Fertile,6.7,Carrot
+26.8,914,375,Sandy-Loam,5.7,Groundnut
+30.3,693,915,Sandy-Loam,5.9,Millet
+13.9,1199,2249,Fertile,6.3,Kale
+27.6,994,700,Sandy-Loam,5.5,Groundnut
+14.3,883,2166,Sandy-Loam,5.9,Kale
+12.9,1213,2279,Clay,6.8,Beans
+34.2,199,293,Fertile,6.0,Cowpea
+23.2,660,540,Sandy,6.4,Groundnut
+11.7,925,2277,Fertile,6.7,Kale
+31.0,379,985,Sandy-Loam,5.6,Millet
+10.7,1028,2270,Fertile,6.2,Irish Potato
+29.2,414,109,Loamy,5.7,Cowpea
+11.6,1306,2267,Clay,6.1,Kale
+9.7,901,2818,Fertile,6.8,Carrot
+21.7,1003,1480,Fertile,6.4,Soybean
+7.6,638,2548,Fertile,7.0,Carrot
+29.3,344,236,Sandy,6.0,Cowpea
+17.6,917,944,Loamy,5.9,Maize
+40.4,428,480,Sandy-Loam,5.5,Sorghum
+20.0,929,2085,Loamy,6.6,Soybean
+32.8,712,754,Sandy,6.2,Millet
+39.2,304,92,Sandy,5.6,Sorghum
+14.6,875,2264,Clay,5.9,Kale
+23.4,1293,957,Sandy-Loam,6.1,Maize
+39.5,201,319,Sandy,6.8,Green Gram
+24.5,693,545,Fertile,5.9,Groundnut
+33.2,200,449,Loamy,5.7,Sorghum
+20.9,737,1083,Sandy-Loam,6.0,Tomato
+27.3,627,206,Sandy-Loam,5.6,Groundnut
+39.6,449,647,Sandy,6.0,Sorghum
+25.8,1119,1543,Loamy,6.1,Soybean
+27.9,704,529,Fertile,6.5,Tomato
+36.0,310,106,Sandy-Loam,6.4,Green Gram
+32.6,217,30,Sandy,6.0,Cowpea
+19.7,1448,1137,Loamy,6.7,Maize
+13.7,878,1951,Clay,6.1,Carrot
+20.3,499,1189,Sandy-Loam,6.1,Tomato
+22.6,1245,1790,Loamy,6.5,Maize
+23.5,879,488,Sandy-Loam,6.3,Groundnut
+39.5,139,79,Loamy,6.1,Green Gram
+41.6,327,480,Loamy,5.9,Sorghum
+21.5,474,872,Fertile,6.2,Tomato
+23.3,838,1576,Loamy,7.0,Soybean
+23.7,1196,1481,Sandy-Loam,6.3,Maize
+12.0,1348,2247,Sandy-Loam,6.0,Kale
+37.7,474,70,Sandy,6.3,Sorghum
+8.2,751,2348,Loamy,6.4,Carrot
+8.0,1092,2779,Loamy,6.3,Irish Potato
+22.0,693,868,Sandy-Loam,6.5,Tomato
+16.7,525,1758,Clay,7.1,Onion
+32.9,233,427,Sandy,5.9,Cowpea
+33.4,325,469,Sandy-Loam,5.8,Cowpea
+34.9,165,273,Sandy,6.0,Green Gram
+22.3,805,2049,Sandy-Loam,6.7,Soybean
+27.0,575,503,Sandy,6.6,Tomato
+26.5,780,481,Sandy,6.2,Groundnut
+27.4,934,214,Sandy-Loam,5.8,Groundnut
+35.2,219,316,Sandy,5.9,Cowpea
+15.8,1224,2250,Fertile,6.4,Beans
+24.0,787,1968,Fertile,6.7,Soybean
+24.6,1050,1413,Fertile,5.8,Maize
+27.1,904,770,Sandy-Loam,6.3,Groundnut
+13.8,622,2804,Sandy,6.2,Carrot
+31.7,631,829,Sandy,5.9,Millet
+17.7,1066,2536,Loamy,7.0,Beans
+6.1,1355,2922,Fertile,6.1,Irish Potato
+27.6,615,661,Clay,6.9,Tomato
+28.7,407,563,Clay,5.5,Millet
+6.3,918,2572,Clay,5.6,Irish Potato
+11.6,1324,2347,Clay,5.6,Irish Potato
+27.0,516,450,Loamy,5.9,Millet
+25.4,525,899,Sandy-Loam,6.2,Tomato
+34.4,289,299,Clay,7.2,Green Gram
+20.7,1085,1764,Loamy,6.8,Soybean
+33.9,402,434,Sandy,6.3,Millet
+28.6,624,263,Sandy,5.6,Groundnut
+5.1,950,2763,Loamy,5.6,Irish Potato
+37.0,412,32,Clay,5.6,Cowpea
+28.7,867,293,Loamy,6.2,Groundnut
+32.3,289,49,Clay,6.4,Cowpea
+34.8,359,216,Sandy-Loam,6.0,Cowpea
+34.7,374,541,Sandy,6.4,Sorghum
+19.4,1439,1478,Fertile,6.8,Maize
+11.7,873,2712,Fertile,6.4,Carrot
+11.1,1252,1845,Sandy,6.3,Kale
+7.7,1221,2558,Clay,6.3,Irish Potato
+26.9,676,525,Fertile,6.5,Tomato
+27.7,517,531,Loamy,6.5,Millet
+39.4,287,92,Loamy,7.0,Green Gram
+35.7,323,243,Sandy,6.7,Green Gram
+11.2,695,2167,Fertile,6.5,Carrot
+30.0,485,929,Sandy,6.4,Millet
+20.6,508,458,Fertile,6.8,Tomato
+34.6,231,682,Sandy,6.1,Sorghum
+22.6,1123,1693,Loamy,6.3,Soybean
+22.9,666,518,Fertile,6.0,Tomato
+38.0,302,263,Sandy-Loam,7.1,Green Gram
+20.4,930,1992,Sandy-Loam,6.7,Soybean
+14.8,353,1550,Sandy,7.1,Onion
+23.1,936,907,Loamy,6.4,Maize
+35.2,168,321,Sandy-Loam,6.0,Cowpea
+29.0,941,764,Loamy,6.0,Groundnut
+38.2,258,579,Sandy-Loam,6.0,Sorghum
+30.4,637,1027,Clay,5.8,Millet
+29.2,580,998,Fertile,5.9,Millet
+32.3,663,478,Clay,5.7,Millet
+8.8,842,2931,Sandy-Loam,6.7,Carrot
+11.7,1482,2121,Loamy,7.2,Beans
+29.8,641,675,Sandy-Loam,6.1,Groundnut
+27.0,562,649,Sandy,6.3,Millet
+26.8,621,711,Sandy-Loam,6.0,Groundnut
+11.3,922,2380,Fertile,6.2,Irish Potato
+16.3,316,1908,Loamy,6.3,Onion
+31.3,338,38,Sandy,5.7,Cowpea
+11.2,986,1863,Sandy,6.1,Kale
+15.7,1252,1814,Fertile,6.4,Beans
+41.5,341,189,Sandy,6.3,Sorghum
+29.9,745,549,Sandy-Loam,5.8,Millet
+31.0,254,405,Sandy,5.8,Cowpea
+24.6,749,1171,Loamy,6.1,Tomato
+30.0,1017,446,Sandy,5.9,Groundnut
+39.1,359,61,Sandy,6.9,Green Gram
+36.7,156,377,Fertile,6.3,Cowpea
+8.2,1050,2847,Clay,5.7,Irish Potato
+11.7,1025,2597,Sandy-Loam,5.7,Irish Potato
+24.3,739,724,Sandy,6.4,Groundnut
+26.8,394,801,Sandy,5.9,Millet
+10.9,885,2308,Clay,6.0,Kale
+13.2,232,1670,Loamy,7.1,Onion
+25.5,931,2023,Sandy-Loam,6.7,Soybean
+23.2,874,325,Sandy-Loam,6.2,Groundnut
+22.2,533,764,Fertile,6.1,Tomato
+13.4,1335,2172,Fertile,5.9,Kale
+24.7,719,1043,Fertile,6.4,Tomato
+7.7,703,2437,Fertile,7.0,Carrot
+27.2,677,279,Sandy-Loam,5.6,Groundnut
+33.5,446,958,Sandy-Loam,6.4,Millet
+13.9,1032,2077,Sandy-Loam,6.1,Kale
+7.9,1357,2462,Clay,6.0,Irish Potato
+14.4,1018,2462,Loamy,5.8,Kale
+37.5,185,123,Sandy-Loam,7.2,Green Gram
+23.7,731,329,Sandy,6.0,Groundnut
+24.0,572,1178,Fertile,6.4,Tomato
+10.2,1229,2267,Fertile,5.8,Kale
+13.6,386,1350,Sandy-Loam,6.4,Onion
+23.4,573,624,Fertile,6.2,Tomato
+34.3,407,218,Sandy-Loam,5.7,Cowpea
+17.3,482,1352,Sandy-Loam,6.6,Onion
+31.7,433,614,Sandy-Loam,5.9,Millet
+31.3,479,638,Sandy,6.0,Millet
+13.4,662,2808,Sandy-Loam,6.9,Carrot
+23.1,864,426,Clay,5.6,Groundnut
+16.7,470,2036,Fertile,6.9,Onion
+31.6,427,348,Sandy,5.7,Cowpea
+12.6,274,1944,Loamy,6.3,Onion
+11.7,1070,2732,Fertile,5.6,Irish Potato
+13.4,829,2398,Sandy-Loam,5.8,Kale
+11.0,895,2103,Fertile,6.2,Kale
+41.6,410,471,Clay,5.6,Sorghum
+10.4,989,2068,Fertile,6.7,Kale
+12.6,495,1895,Fertile,6.4,Onion
+14.3,311,1924,Sandy,6.5,Onion
+29.2,881,356,Sandy-Loam,6.3,Groundnut
+28.3,600,796,Sandy,6.0,Millet
+37.9,198,200,Sandy,6.0,Green Gram
+17.0,1482,2462,Sandy,7.0,Beans
+38.1,418,544,Sandy,6.4,Sorghum
+12.9,374,1597,Sandy-Loam,7.1,Onion
+34.5,424,483,Sandy-Loam,5.7,Cowpea
+35.9,253,119,Sandy-Loam,6.5,Green Gram
+32.6,378,280,Sandy-Loam,6.1,Cowpea
+36.2,223,437,Sandy,5.5,Cowpea
+36.1,226,48,Sandy,6.3,Cowpea
+10.9,1239,2061,Sandy-Loam,6.0,Kale
+39.8,418,33,Sandy,6.2,Sorghum
+15.5,833,1873,Loamy,6.4,Kale
+22.9,853,1920,Sandy,6.8,Soybean
+28.8,630,766,Sandy-Loam,6.3,Groundnut
+11.1,927,2024,Fertile,6.7,Kale
+11.3,1094,2110,Fertile,5.6,Irish Potato
+12.3,481,2075,Sandy-Loam,6.7,Onion
+33.0,414,381,Sandy,5.5,Cowpea
+14.5,1556,1941,Fertile,7.0,Beans
+37.4,216,113,Sandy-Loam,5.6,Sorghum
+13.8,1186,1875,Fertile,6.2,Beans
+12.3,601,2776,Fertile,6.7,Carrot
+26.1,794,784,Loamy,6.3,Groundnut
+29.9,614,532,Sandy,6.2,Groundnut
+13.2,1497,2546,Sandy-Loam,7.1,Beans
+14.9,1425,1805,Loamy,6.8,Beans
+16.7,1060,2269,Clay,7.0,Beans
+11.2,1308,2441,Sandy-Loam,5.8,Irish Potato
+10.6,902,2433,Sandy-Loam,5.9,Irish Potato
+23.6,578,995,Fertile,6.4,Tomato
+11.0,756,2380,Sandy-Loam,6.4,Carrot
+16.0,328,1389,Clay,7.2,Onion
+22.7,917,1562,Loamy,6.4,Maize
+14.9,393,1436,Loamy,6.7,Onion
+8.6,709,2102,Fertile,6.9,Carrot
+20.9,1120,1403,Sandy,6.3,Soybean
+40.9,383,539,Sandy,6.4,Sorghum
+25.8,1002,268,Sandy,5.6,Groundnut
+22.6,996,1776,Sandy,6.9,Soybean
+9.5,644,2730,Sandy-Loam,6.8,Carrot
+14.6,1113,2189,Sandy-Loam,6.8,Beans
+24.7,1161,965,Clay,6.1,Maize
+29.8,319,349,Sandy,6.3,Cowpea
+32.3,490,516,Loamy,5.9,Millet
+36.9,301,679,Sandy-Loam,6.1,Sorghum
+12.5,434,2078,Loamy,6.8,Onion
+17.5,1737,2258,Clay,6.6,Beans
+14.1,1300,2065,Sandy-Loam,6.4,Beans
+10.7,1305,2967,Fertile,5.9,Irish Potato
+19.1,1097,1519,Loamy,6.7,Soybean
+33.7,345,156,Sandy,6.4,Sorghum
+28.7,535,1049,Clay,5.6,Millet
+25.9,450,876,Fertile,6.3,Tomato
+41.8,139,106,Sandy-Loam,6.3,Green Gram
+13.5,1732,2205,Fertile,7.0,Beans
+29.7,373,910,Sandy-Loam,6.2,Millet
+12.4,410,1395,Sandy-Loam,6.7,Onion
+14.7,1074,2130,Sandy-Loam,6.4,Beans
+36.9,474,250,Clay,6.3,Sorghum
+13.8,551,2901,Clay,6.9,Carrot
+41.0,360,491,Sandy,5.9,Sorghum
+12.7,766,2660,Sandy-Loam,6.5,Carrot
+29.0,827,535,Sandy-Loam,5.9,Groundnut
+13.0,878,2099,Fertile,6.2,Kale
+17.1,1057,2372,Sandy-Loam,7.2,Beans
+17.6,1517,2343,Fertile,7.0,Beans
+40.6,294,314,Loamy,6.7,Green Gram
+30.4,901,748,Sandy-Loam,6.4,Groundnut
+12.3,689,2614,Fertile,6.9,Carrot
+12.2,332,2033,Sandy,6.6,Onion
+28.0,521,802,Fertile,6.0,Tomato
+21.9,903,1509,Loamy,6.4,Maize
+7.7,806,2166,Clay,6.7,Carrot
+11.1,1096,2916,Sandy,5.8,Irish Potato
+35.0,232,388,Sandy,5.7,Cowpea
+17.8,937,1689,Sandy-Loam,6.3,Maize
+15.7,1346,2355,Sandy-Loam,6.6,Beans
+16.6,1604,2266,Loamy,6.7,Beans
+32.5,301,122,Sandy-Loam,6.0,Cowpea
+11.5,1004,1854,Sandy-Loam,6.3,Kale
+18.3,1273,1381,Clay,6.0,Maize
+34.4,364,86,Sandy-Loam,6.0,Sorghum
+30.5,183,97,Sandy,6.1,Cowpea
+37.2,476,545,Fertile,6.3,Sorghum
+19.1,754,1722,Sandy-Loam,6.0,Soybean
+35.5,330,98,Sandy,6.3,Green Gram
+23.0,929,1392,Sandy-Loam,5.9,Maize
+22.6,1052,1670,Loamy,6.2,Soybean
+10.7,1348,2418,Loamy,5.7,Irish Potato
+41.3,259,301,Loamy,6.6,Green Gram
+40.5,212,570,Sandy,5.7,Sorghum
+27.2,385,794,Loamy,5.6,Millet
+31.6,622,604,Sandy-Loam,6.2,Millet
+14.4,1337,2421,Loamy,6.7,Beans
+36.0,475,379,Sandy-Loam,5.7,Sorghum
+13.6,1317,2025,Sandy-Loam,6.6,Beans
+35.2,238,256,Fertile,6.1,Cowpea
+36.3,274,244,Sandy,7.1,Green Gram
+7.7,785,2430,Clay,6.1,Carrot
+32.7,595,1039,Sandy-Loam,5.6,Millet
+30.2,187,126,Sandy,5.8,Cowpea
+32.6,442,468,Fertile,5.8,Millet
+32.7,406,1020,Sandy,5.7,Millet
+12.9,1236,2503,Loamy,7.0,Beans
+35.5,340,655,Loamy,6.3,Sorghum
+36.2,197,200,Sandy-Loam,6.1,Green Gram
+15.0,354,1610,Clay,7.1,Onion
+22.2,1064,1671,Loamy,6.4,Soybean
+17.2,1085,2519,Clay,6.8,Beans
+12.4,1164,1894,Sandy-Loam,6.2,Kale
+21.2,984,1864,Sandy-Loam,6.7,Soybean
+36.6,228,209,Loamy,5.6,Cowpea
+24.4,593,500,Clay,6.5,Tomato
+30.4,371,679,Sandy-Loam,6.5,Millet
+20.9,983,1715,Loamy,6.6,Soybean
+16.4,236,2071,Fertile,6.5,Onion
+35.4,406,385,Sandy,5.7,Cowpea
+17.3,1134,1202,Fertile,5.8,Maize
+22.4,975,1625,Loamy,6.4,Soybean
+26.1,709,806,Sandy-Loam,5.7,Millet
+10.0,1347,2611,Clay,5.6,Irish Potato
+27.1,394,1045,Sandy,6.1,Millet
+14.9,530,1352,Sandy-Loam,7.1,Onion
+9.2,825,2387,Sandy-Loam,6.8,Carrot
+11.1,1596,2008,Clay,6.8,Beans
+22.5,720,631,Clay,6.1,Tomato
+17.7,1603,2227,Fertile,6.2,Beans
+28.0,897,283,Sandy-Loam,5.8,Groundnut
+11.6,855,2215,Loamy,6.1,Carrot
+7.4,753,2946,Fertile,6.6,Carrot
+29.7,923,757,Sandy,6.3,Groundnut
+33.1,308,67,Fertile,6.3,Sorghum
+13.4,950,2190,Loamy,6.3,Kale
+36.8,336,247,Sandy,6.4,Green Gram
+11.8,1287,3039,Fertile,6.0,Irish Potato
+41.6,150,123,Sandy-Loam,6.2,Green Gram
+26.3,1045,404,Sandy,6.0,Groundnut
+20.9,1134,1422,Loamy,6.3,Soybean
+16.5,1279,1782,Sandy,6.6,Beans
+40.0,292,252,Sandy,6.1,Sorghum
+5.1,1384,2143,Fertile,5.9,Irish Potato
+11.2,1196,2779,Fertile,5.9,Irish Potato
+29.4,544,496,Sandy,6.1,Millet
+37.2,138,270,Loamy,7.1,Green Gram
+22.6,1081,1789,Fertile,6.4,Soybean
+33.0,409,413,Sandy-Loam,6.4,Cowpea
+22.9,864,1583,Loamy,6.3,Soybean
+28.9,582,451,Sandy-Loam,6.4,Millet
+25.6,1089,1545,Sandy-Loam,6.8,Soybean
+27.8,727,456,Loamy,6.8,Tomato
+9.9,1288,2202,Sandy,6.4,Kale
+24.1,1024,1974,Sandy-Loam,6.2,Soybean
+15.4,395,1906,Sandy-Loam,6.8,Onion
+13.4,1383,2290,Sandy-Loam,7.1,Beans
+19.1,1039,1012,Clay,5.8,Maize
+28.6,618,730,Sandy-Loam,5.9,Groundnut
+12.5,781,2584,Fertile,6.4,Carrot
+13.4,1096,2138,Loamy,6.4,Beans
+27.5,666,691,Loamy,6.0,Millet
+11.1,698,2551,Fertile,6.7,Carrot
+23.5,943,370,Sandy,6.2,Groundnut
+41.1,121,327,Sandy,6.8,Green Gram
+27.7,810,616,Fertile,7.0,Tomato
+31.2,382,569,Sandy,6.0,Millet
+16.3,544,2059,Loamy,7.1,Onion
+23.4,1340,1781,Sandy-Loam,6.3,Maize
+26.0,774,426,Sandy,6.6,Tomato
+36.2,336,38,Sandy,6.1,Green Gram
+23.5,1187,1439,Sandy,6.9,Soybean
+28.2,682,612,Sandy-Loam,6.1,Groundnut
+15.4,1369,2188,Loamy,6.5,Beans
+22.9,896,1605,Loamy,6.8,Soybean
+36.3,322,313,Sandy,6.6,Green Gram
+24.4,906,1389,Fertile,6.6,Maize
+33.9,699,1098,Sandy-Loam,6.3,Millet
+37.9,301,47,Sandy,7.0,Green Gram
+24.4,947,217,Loamy,6.3,Groundnut
+36.1,382,390,Sandy,6.0,Sorghum
+22.3,1101,1530,Sandy-Loam,6.3,Maize
+20.2,797,1566,Sandy-Loam,6.5,Soybean
+15.1,1320,1884,Loamy,6.7,Kale
+14.2,305,1638,Fertile,6.9,Onion
+36.7,371,212,Sandy,6.3,Green Gram
+26.8,1029,235,Sandy,5.9,Groundnut
+34.5,244,298,Sandy-Loam,6.1,Cowpea
+22.5,1117,2002,Clay,6.0,Soybean
+40.8,241,293,Sandy-Loam,6.2,Green Gram
+5.9,1041,2463,Clay,6.0,Irish Potato
+10.6,1041,2277,Fertile,6.1,Irish Potato
+28.5,906,551,Fertile,6.2,Groundnut
+13.7,921,1974,Fertile,6.0,Kale
+14.9,202,1408,Fertile,6.3,Onion
+21.3,858,1518,Fertile,6.1,Soybean
+33.0,662,410,Sandy,5.8,Millet
+40.7,222,201,Sandy-Loam,6.7,Green Gram
+11.5,518,2068,Loamy,6.7,Onion
+21.4,880,1778,Loamy,6.1,Soybean
+12.9,241,1538,Fertile,6.8,Onion
+37.3,197,26,Sandy,6.9,Green Gram
+28.4,574,900,Sandy,6.2,Millet
+10.8,786,2458,Sandy-Loam,6.6,Carrot
+20.3,905,1643,Sandy-Loam,6.3,Soybean
+13.0,633,2880,Loamy,6.8,Carrot
+31.4,278,117,Sandy,6.0,Cowpea
+32.6,691,553,Loamy,6.2,Millet
+24.0,786,1041,Sandy-Loam,6.2,Tomato
+19.5,1165,959,Fertile,6.2,Maize
+34.1,247,229,Clay,6.5,Green Gram
+22.5,846,1590,Loamy,6.7,Soybean
+33.9,163,534,Sandy,6.5,Sorghum
+40.4,358,314,Clay,7.1,Green Gram
+11.7,281,1881,Fertile,7.1,Onion
+8.3,679,2176,Sandy-Loam,6.1,Carrot
+27.2,483,552,Sandy-Loam,6.6,Tomato
+34.4,244,109,Sandy,5.9,Cowpea
+30.3,969,145,Fertile,5.7,Groundnut
+25.5,915,669,Sandy,6.4,Groundnut
+26.1,628,1031,Clay,6.1,Tomato
+20.3,1136,1580,Loamy,6.5,Soybean
+7.2,924,2001,Clay,6.7,Carrot
+29.2,188,111,Loamy,6.1,Cowpea
+30.4,922,621,Sandy-Loam,5.7,Groundnut
+13.5,1242,2372,Clay,5.9,Kale
+13.0,1600,1769,Sandy,7.1,Beans
+33.8,383,1030,Loamy,5.9,Millet
+30.9,704,517,Sandy-Loam,5.5,Groundnut
+7.3,1112,2607,Loamy,5.6,Irish Potato
+24.6,831,1684,Sandy-Loam,6.8,Soybean
+21.8,839,2073,Sandy,6.7,Soybean
+27.8,527,676,Sandy-Loam,6.0,Tomato
+11.0,659,2029,Loamy,6.9,Carrot
+9.5,1060,2248,Fertile,6.5,Kale
+25.4,805,103,Sandy,5.7,Groundnut
+31.1,208,389,Clay,6.1,Cowpea
+14.0,1339,2255,Sandy-Loam,6.2,Kale
+24.5,1006,198,Loamy,5.5,Groundnut
+9.9,1006,2236,Loamy,5.8,Irish Potato
+11.9,1252,2480,Loamy,6.5,Kale
+11.2,1377,2962,Fertile,6.0,Irish Potato
+9.6,1106,2476,Fertile,6.0,Kale
+31.1,162,30,Sandy-Loam,5.7,Cowpea
+40.6,195,418,Clay,6.0,Sorghum
+11.4,500,1693,Sandy-Loam,6.4,Onion
+30.9,250,459,Sandy,6.2,Cowpea
+30.5,293,73,Clay,5.8,Cowpea
+16.1,227,1429,Sandy,6.4,Onion
+36.5,427,483,Sandy,6.0,Sorghum
+15.9,1467,2036,Fertile,6.2,Beans
+7.5,1259,2397,Clay,5.9,Irish Potato
+12.7,386,1711,Clay,6.3,Onion
+11.8,1100,2329,Fertile,6.6,Beans
+24.8,717,433,Sandy-Loam,5.7,Groundnut
+20.2,571,1136,Sandy-Loam,6.3,Tomato
+6.7,937,2228,Loamy,5.6,Irish Potato
+15.2,932,2083,Loamy,6.0,Kale
+19.8,906,2013,Loamy,6.1,Soybean
+6.3,1052,2624,Sandy,5.7,Irish Potato
+5.7,909,2194,Fertile,5.6,Irish Potato
+19.9,1188,1561,Fertile,6.3,Soybean
+9.7,732,2319,Loamy,6.4,Carrot
+10.5,999,2614,Clay,5.5,Irish Potato
+21.6,1396,1398,Loamy,6.2,Maize
+15.5,1608,1935,Sandy-Loam,6.5,Beans
+10.8,1073,2778,Clay,5.7,Irish Potato
+20.6,1017,1762,Loamy,6.4,Maize
+8.0,1125,2263,Fertile,6.1,Irish Potato
+27.2,682,648,Sandy-Loam,6.3,Millet
+19.4,910,1144,Fertile,6.2,Maize
+35.0,180,229,Loamy,5.5,Cowpea
+23.9,691,660,Fertile,6.7,Tomato
+23.2,780,582,Sandy,6.8,Tomato
+38.2,131,126,Loamy,6.5,Green Gram
+38.2,351,139,Clay,6.5,Green Gram
+35.0,389,175,Sandy-Loam,5.8,Cowpea
+41.4,283,411,Sandy,6.2,Sorghum
+20.8,898,1588,Sandy,6.4,Soybean
+34.3,313,259,Sandy-Loam,6.3,Cowpea
+33.7,726,535,Sandy-Loam,5.7,Millet
+19.6,776,1660,Fertile,6.6,Soybean
+24.9,936,1937,Loamy,6.1,Soybean
+18.0,208,1976,Sandy-Loam,7.0,Onion
+20.2,671,1009,Sandy,6.8,Tomato
+13.5,933,2371,Loamy,6.0,Kale
+33.5,166,357,Loamy,6.2,Cowpea
+13.7,492,1838,Sandy,6.5,Onion
+8.6,1326,2651,Clay,6.2,Irish Potato
+29.6,647,726,Sandy-Loam,5.7,Millet
+29.4,514,1091,Sandy-Loam,5.8,Millet
+18.9,976,1562,Sandy-Loam,6.3,Maize
+29.4,288,169,Sandy-Loam,6.4,Cowpea
+10.8,964,2435,Fertile,5.6,Irish Potato
+7.5,1278,2114,Loamy,5.5,Irish Potato
+36.0,440,441,Sandy,6.0,Sorghum
+30.0,999,768,Clay,5.5,Groundnut
+25.5,835,414,Sandy-Loam,6.3,Groundnut
+10.9,1259,1811,Sandy-Loam,6.1,Kale
+7.6,1131,2847,Loamy,5.7,Irish Potato
+24.1,601,233,Sandy,5.6,Groundnut
+13.5,524,1399,Sandy,6.8,Onion
+35.7,155,82,Fertile,5.8,Cowpea
+22.0,1004,1655,Fertile,6.1,Soybean
+30.5,237,269,Clay,5.9,Cowpea
+31.2,159,152,Sandy-Loam,6.3,Cowpea
+26.9,680,434,Sandy,6.2,Groundnut
+8.1,559,2706,Sandy,6.3,Carrot
+22.7,493,455,Clay,6.5,Tomato
+37.7,451,682,Sandy-Loam,5.7,Sorghum
+33.1,546,819,Loamy,5.9,Millet
+41.1,132,56,Loamy,7.0,Green Gram
+25.4,810,1870,Loamy,6.9,Soybean
+15.0,1205,2153,Loamy,6.6,Beans
+21.6,630,1037,Clay,6.1,Tomato
+21.5,1158,989,Loamy,6.8,Maize
+19.5,971,1717,Fertile,6.5,Maize
+11.5,1053,2286,Clay,6.6,Beans
+17.0,421,1539,Sandy,6.7,Onion
+28.2,481,855,Sandy,6.2,Millet
+8.4,598,2565,Fertile,6.6,Carrot
+28.2,977,443,Sandy-Loam,6.0,Groundnut
+7.3,1159,2803,Sandy-Loam,6.3,Irish Potato
+7.3,599,2508,Sandy-Loam,6.7,Carrot
+15.7,849,2349,Clay,6.2,Kale
+10.8,800,2496,Fertile,6.4,Kale
+8.5,1299,2749,Fertile,6.1,Irish Potato
+11.2,1302,2562,Sandy-Loam,6.2,Kale
+12.7,837,2905,Loamy,6.2,Carrot
+40.5,348,155,Sandy,5.8,Sorghum
+15.2,385,1370,Sandy-Loam,6.7,Onion
+36.9,423,347,Sandy,6.2,Sorghum
+10.9,936,1850,Clay,6.5,Kale
+26.8,880,672,Sandy-Loam,5.9,Groundnut
+15.8,508,1502,Fertile,6.3,Onion
+21.7,1328,1677,Sandy-Loam,6.3,Maize
+9.4,940,2590,Fertile,6.1,Carrot
+10.1,1040,2124,Clay,5.6,Irish Potato
+10.7,1399,3096,Clay,6.1,Irish Potato
+30.7,460,522,Sandy,6.4,Millet
+20.0,905,1312,Sandy-Loam,6.7,Maize
+27.5,600,1085,Sandy-Loam,6.3,Millet
+26.4,731,499,Sandy,5.6,Millet
+17.8,1103,1616,Loamy,5.9,Maize
+31.9,273,274,Sandy,6.2,Cowpea
+30.8,505,790,Sandy,5.7,Millet
+22.0,933,1479,Clay,6.7,Soybean
+24.6,1106,1489,Sandy-Loam,6.2,Soybean
+18.5,1152,1190,Loamy,6.3,Maize
+25.0,1196,1605,Fertile,6.1,Soybean
+36.9,287,539,Sandy-Loam,5.8,Sorghum
+9.7,998,2016,Fertile,6.1,Kale
+27.2,531,1016,Sandy-Loam,6.3,Millet
+17.6,246,1931,Sandy-Loam,7.1,Onion
+35.7,335,197,Sandy,5.6,Sorghum
+11.3,1202,2123,Loamy,6.6,Kale
+16.0,395,1542,Clay,6.3,Onion
+32.7,215,306,Clay,6.2,Cowpea
+5.4,1165,2640,Clay,6.1,Irish Potato
+34.7,287,287,Sandy,6.3,Sorghum
+9.5,1182,2106,Fertile,6.5,Kale
+5.8,1224,2846,Clay,6.3,Irish Potato
+13.3,1208,1935,Loamy,6.7,Kale
+21.1,1076,1560,Loamy,6.7,Soybean
+8.2,617,1986,Fertile,6.7,Carrot
+24.3,661,678,Sandy,6.7,Tomato
+7.6,836,2022,Loamy,6.0,Carrot
+15.3,1416,1856,Loamy,6.6,Beans
+23.1,1176,1448,Sandy,6.3,Soybean
+19.5,1189,2069,Loamy,6.4,Soybean
+33.6,335,368,Sandy-Loam,5.6,Cowpea
+13.1,1753,2404,Fertile,6.5,Beans
+29.3,752,664,Sandy-Loam,5.7,Groundnut
+36.8,170,357,Sandy,5.6,Sorghum
+8.8,1245,2751,Loamy,6.1,Irish Potato
+30.8,617,615,Sandy-Loam,5.8,Groundnut
+9.9,1048,3024,Fertile,6.3,Irish Potato
+13.6,372,1784,Loamy,7.1,Onion
+23.3,611,604,Sandy-Loam,6.2,Groundnut
+8.4,1136,2273,Sandy,5.8,Irish Potato
+20.7,1062,1686,Fertile,6.3,Soybean
+34.3,294,108,Fertile,5.8,Cowpea
+25.5,1024,184,Sandy,6.1,Groundnut
+8.9,1185,2379,Fertile,5.6,Irish Potato
+16.8,1654,1929,Loamy,7.0,Beans
+27.1,864,642,Sandy,6.0,Groundnut
+27.6,1002,406,Fertile,5.7,Groundnut
+12.5,1100,2225,Fertile,6.2,Beans
+14.7,866,2012,Loamy,6.1,Kale
+20.5,1356,1136,Sandy-Loam,5.8,Maize
+31.2,702,549,Fertile,5.6,Millet
+11.4,1073,2446,Fertile,5.9,Irish Potato
+11.1,1288,2870,Fertile,6.1,Irish Potato
+13.9,287,1590,Loamy,6.5,Onion
+27.9,922,362,Sandy,5.7,Groundnut
+12.2,569,2852,Fertile,6.7,Carrot
+16.8,306,1648,Sandy-Loam,6.7,Onion
+26.2,767,391,Sandy-Loam,6.1,Groundnut
+13.9,514,2022,Clay,7.1,Onion
+37.7,334,116,Sandy,7.1,Green Gram
+26.4,872,468,Sandy,5.6,Groundnut
+11.8,577,2124,Fertile,6.2,Carrot
+27.3,938,155,Sandy-Loam,5.9,Groundnut
+15.6,1078,2127,Fertile,6.6,Kale
+32.6,387,319,Sandy-Loam,5.9,Cowpea
+37.1,321,572,Sandy,6.2,Sorghum
+26.8,371,998,Clay,5.6,Millet
+21.3,1062,1889,Fertile,6.5,Soybean
+15.8,1393,1931,Clay,6.5,Beans
+7.4,683,2734,Fertile,6.8,Carrot
+8.8,1289,2206,Fertile,5.9,Irish Potato
+39.5,335,682,Sandy,6.4,Sorghum
+20.9,1141,1823,Clay,6.5,Soybean
+11.6,629,2630,Loamy,6.0,Carrot
+13.9,1137,2240,Fertile,6.9,Beans
+27.0,611,743,Clay,6.0,Groundnut
+13.6,898,2716,Fertile,6.7,Carrot
+13.5,978,2015,Loamy,6.5,Kale
+9.4,965,2132,Fertile,6.0,Irish Potato
+30.6,888,707,Sandy,5.8,Groundnut
+26.7,462,1152,Fertile,6.5,Tomato
+27.4,729,755,Sandy,6.4,Groundnut
+24.2,721,492,Sandy,5.6,Groundnut
+37.3,252,613,Sandy-Loam,5.9,Sorghum
+35.3,418,444,Sandy,6.0,Sorghum
+36.0,150,236,Sandy-Loam,5.9,Sorghum
+12.6,563,2532,Fertile,6.9,Carrot
+12.9,359,1703,Clay,7.1,Onion
+12.4,1261,2089,Fertile,6.2,Kale
+36.3,414,32,Sandy,5.5,Cowpea
+38.7,367,223,Sandy-Loam,5.7,Sorghum
+27.4,696,406,Sandy-Loam,5.7,Groundnut
+22.2,789,1826,Loamy,6.2,Soybean
+35.9,382,162,Sandy,5.6,Cowpea
+20.3,936,984,Loamy,6.7,Maize
+7.2,1375,3050,Clay,6.0,Irish Potato
+35.5,282,240,Sandy,6.0,Green Gram
+11.9,350,1556,Fertile,6.2,Onion
+25.7,1166,2036,Sandy,6.4,Soybean
+26.6,671,543,Sandy,7.0,Tomato
+26.0,749,182,Sandy,5.9,Groundnut
+8.9,672,2738,Sandy-Loam,6.8,Carrot
+13.4,839,2346,Loamy,6.5,Kale
+13.7,774,2886,Loamy,6.4,Carrot
+11.9,551,2569,Sandy-Loam,6.8,Carrot
+31.5,301,354,Sandy-Loam,6.3,Cowpea
+23.4,783,578,Sandy-Loam,6.2,Groundnut
+22.9,470,948,Sandy-Loam,6.2,Tomato
+40.9,213,120,Sandy,6.1,Green Gram
+11.4,1090,1969,Fertile,6.8,Kale
+22.6,1091,1728,Clay,5.9,Maize
+8.1,939,2125,Fertile,6.2,Irish Potato
+11.8,1712,2081,Sandy-Loam,6.9,Beans
+34.1,407,273,Sandy,6.0,Sorghum
+32.7,171,481,Clay,6.2,Cowpea
+13.5,383,1853,Sandy-Loam,6.5,Onion
+9.1,945,2977,Sandy-Loam,5.6,Irish Potato
+24.3,667,482,Sandy,5.7,Groundnut
+13.6,567,2114,Loamy,6.7,Carrot
+25.2,960,1860,Fertile,6.4,Soybean
+31.7,239,479,Sandy,6.2,Cowpea
+34.7,134,137,Sandy,6.7,Green Gram
+38.9,276,480,Sandy,5.7,Sorghum
+34.5,313,345,Fertile,5.9,Sorghum
+9.6,1055,2620,Clay,5.6,Irish Potato
+27.7,507,444,Sandy-Loam,6.3,Millet
+24.4,958,1899,Fertile,6.1,Soybean
+25.3,757,2053,Fertile,6.8,Soybean
+10.5,1244,1917,Sandy-Loam,6.7,Kale
+7.7,646,2936,Loamy,6.5,Carrot
+25.3,830,983,Loamy,6.9,Tomato
+10.6,726,2097,Sandy-Loam,6.4,Carrot
+27.9,502,1036,Sandy-Loam,6.5,Tomato
+17.0,1623,1867,Clay,7.1,Beans
+29.6,269,474,Sandy-Loam,5.7,Cowpea
+28.4,811,340,Sandy-Loam,6.1,Groundnut
+33.5,328,377,Sandy-Loam,6.4,Cowpea
+17.4,918,903,Fertile,6.6,Maize
+31.0,175,382,Sandy-Loam,5.8,Cowpea
+20.0,1086,1728,Fertile,6.7,Soybean
+9.2,1328,2334,Fertile,6.1,Kale
+9.5,942,2261,Fertile,6.0,Irish Potato
+14.1,1086,2406,Fertile,6.8,Beans
+12.6,1172,2049,Fertile,6.6,Kale
+32.3,305,144,Loamy,6.3,Cowpea
+13.3,419,1556,Fertile,6.8,Onion
+22.1,968,987,Loamy,6.7,Maize
+19.4,960,1580,Sandy-Loam,6.0,Maize
+12.4,812,2127,Clay,7.0,Carrot
+14.2,1299,2406,Clay,6.5,Kale
+13.3,804,2563,Loamy,6.5,Carrot
+11.6,1333,2080,Loamy,6.5,Beans
+17.3,541,1524,Fertile,6.5,Onion
+23.5,1381,978,Sandy-Loam,6.7,Maize
+11.5,915,2562,Fertile,6.7,Carrot
+12.4,387,2051,Fertile,7.0,Onion
+33.8,254,616,Sandy-Loam,6.1,Sorghum
+24.8,518,993,Sandy-Loam,6.7,Tomato
+16.8,396,1921,Clay,6.4,Onion
+27.6,983,654,Sandy-Loam,6.1,Groundnut
+20.2,586,1042,Fertile,6.5,Tomato
+41.2,278,429,Sandy,6.5,Sorghum
+14.2,260,1603,Loamy,6.6,Onion
+27.8,847,844,Loamy,6.3,Tomato
+11.8,498,1467,Fertile,7.0,Onion
+40.0,156,238,Sandy-Loam,6.5,Green Gram
+11.5,1329,2528,Fertile,6.1,Irish Potato
+20.6,1160,906,Sandy-Loam,6.5,Maize
+13.3,1557,2225,Clay,6.9,Beans
+22.2,978,1881,Clay,6.8,Soybean
+25.2,993,624,Sandy-Loam,6.2,Groundnut
+37.9,320,35,Loamy,5.6,Sorghum
+29.1,862,103,Clay,5.5,Groundnut
+6.1,1022,2260,Loamy,5.7,Irish Potato
+19.4,1062,1408,Loamy,6.7,Maize
+16.0,1129,2421,Clay,6.9,Beans
+17.6,1284,2436,Loamy,6.9,Beans
+13.4,1737,2075,Loamy,6.9,Beans
+26.0,736,935,Sandy,6.6,Tomato
+24.6,1033,1051,Sandy-Loam,6.1,Maize
+13.8,873,2039,Sandy-Loam,6.6,Kale
+40.1,212,348,Sandy,6.0,Green Gram
+32.9,529,1041,Sandy-Loam,5.8,Millet
+21.5,1021,1618,Fertile,6.9,Soybean
+28.9,701,427,Fertile,6.2,Millet
+20.8,982,1410,Loamy,6.5,Soybean
+17.5,216,1507,Sandy,6.8,Onion
+17.3,1793,1916,Sandy-Loam,6.9,Beans
+13.4,1150,1825,Fertile,7.1,Beans
+38.0,191,203,Sandy,6.5,Green Gram
+34.2,172,93,Sandy-Loam,6.1,Cowpea
+20.4,760,856,Fertile,6.1,Tomato
+36.2,445,77,Fertile,6.1,Sorghum
+34.2,380,335,Sandy,5.6,Sorghum
+30.2,255,351,Sandy-Loam,5.9,Cowpea
+10.4,1079,2135,Loamy,6.6,Kale
+10.4,1126,2624,Sandy,5.8,Irish Potato
+5.7,1348,3000,Clay,5.8,Irish Potato
+34.4,321,218,Loamy,6.6,Green Gram
+14.1,1115,2333,Fertile,6.7,Kale
+10.4,1179,2524,Fertile,5.6,Irish Potato
+38.9,222,338,Sandy,7.1,Green Gram
+19.1,1374,1016,Fertile,5.9,Maize
+34.0,278,133,Sandy,6.5,Green Gram
+39.5,170,343,Sandy,6.0,Sorghum
+22.9,1047,1626,Sandy-Loam,6.6,Soybean
+20.0,1226,1031,Fertile,6.0,Maize
+11.8,342,1713,Sandy,7.0,Onion
+10.5,944,2517,Fertile,6.3,Irish Potato
+11.4,861,2446,Fertile,5.9,Kale
+24.0,822,866,Sandy,6.5,Tomato
+10.4,780,2815,Fertile,6.4,Carrot
+29.9,411,166,Sandy,5.9,Cowpea
+21.9,1174,1905,Loamy,6.8,Soybean
+16.7,503,1854,Loamy,6.8,Onion
+27.9,533,409,Fertile,6.3,Tomato
+31.5,576,454,Sandy-Loam,5.9,Millet
+35.3,310,365,Sandy-Loam,6.1,Sorghum
+29.3,918,240,Clay,6.3,Groundnut
+28.0,750,915,Sandy-Loam,6.0,Tomato
+20.7,1305,1085,Fertile,5.8,Maize
+13.3,467,1674,Sandy,6.8,Onion
+26.1,1007,470,Sandy-Loam,6.1,Groundnut
+33.1,283,333,Sandy,6.1,Cowpea
+24.1,518,930,Fertile,6.3,Tomato
+17.1,1190,1739,Clay,6.6,Maize
+20.3,596,589,Sandy-Loam,6.1,Tomato
+33.9,192,422,Clay,5.6,Cowpea
+17.9,1693,1827,Fertile,6.5,Beans
+34.9,362,227,Sandy-Loam,5.9,Cowpea
+17.3,1731,2001,Clay,6.5,Beans
+9.3,1390,2731,Sandy-Loam,6.0,Irish Potato
+12.6,1075,1840,Loamy,6.4,Kale
+40.2,320,86,Fertile,7.2,Green Gram
+22.2,1093,1436,Loamy,5.8,Maize
+34.7,162,54,Sandy,6.1,Sorghum
+29.9,484,457,Sandy,5.8,Millet
+23.1,913,1355,Fertile,6.7,Maize
+21.6,899,1039,Sandy-Loam,6.3,Maize
+30.7,826,737,Sandy,6.2,Groundnut
+19.7,1219,1734,Fertile,6.3,Maize
+31.2,197,257,Sandy,5.7,Cowpea
+21.8,1381,1269,Clay,6.4,Maize
+14.4,328,2035,Sandy-Loam,6.6,Onion
+31.8,331,444,Sandy-Loam,6.3,Cowpea
+11.7,1767,2229,Fertile,6.5,Beans
+11.5,1315,3065,Loamy,6.1,Irish Potato
+41.0,160,302,Sandy-Loam,6.4,Green Gram
+13.6,1096,2021,Sandy-Loam,6.4,Beans
+11.3,1049,2409,Loamy,6.0,Kale
+39.2,338,254,Sandy,6.2,Green Gram
+31.6,427,104,Sandy,6.2,Cowpea
+8.7,613,2821,Loamy,7.0,Carrot
+7.2,1322,2123,Fertile,5.7,Irish Potato
+27.4,654,1093,Sandy,5.8,Millet
+13.6,653,2379,Fertile,6.8,Carrot
+42.0,154,267,Sandy-Loam,5.8,Sorghum
+29.0,692,328,Sandy,5.5,Groundnut
+39.6,341,334,Sandy-Loam,6.6,Green Gram
+8.3,871,2408,Sandy,6.1,Carrot
+16.7,269,1510,Clay,6.6,Onion
+32.8,394,54,Clay,5.7,Cowpea
+20.3,961,1904,Sandy,6.4,Soybean
+9.2,1261,1809,Fertile,6.8,Kale
+26.3,1028,699,Sandy-Loam,5.6,Groundnut
+15.1,368,1816,Loamy,6.4,Onion
+21.0,815,1967,Loamy,6.7,Soybean
+11.4,1503,2360,Sandy-Loam,6.4,Beans
+40.7,292,100,Sandy-Loam,6.0,Green Gram
+33.4,714,900,Clay,5.8,Millet
+24.8,515,988,Sandy-Loam,6.5,Tomato
+7.4,956,3024,Fertile,5.7,Irish Potato
+36.5,387,426,Sandy,6.2,Cowpea
+23.3,728,196,Loamy,5.7,Groundnut
+34.8,297,95,Sandy,6.8,Green Gram
+17.2,1307,2297,Loamy,6.9,Beans
+23.4,614,585,Loamy,6.2,Tomato
+17.6,1252,1639,Loamy,6.2,Maize
+25.1,975,295,Sandy-Loam,6.3,Groundnut
+29.4,385,334,Sandy-Loam,5.5,Cowpea
+23.8,758,1914,Sandy-Loam,6.8,Soybean
+14.4,1218,1950,Loamy,6.5,Kale
+10.7,1299,2174,Clay,6.6,Kale
+7.4,755,2756,Sandy,6.1,Carrot
+25.4,607,401,Loamy,6.5,Tomato
+25.4,536,872,Fertile,6.8,Tomato
+15.7,1559,2506,Loamy,6.2,Beans
+14.2,1285,1962,Clay,6.5,Kale
+8.6,1291,2496,Clay,6.2,Irish Potato
+10.5,592,2606,Fertile,6.4,Carrot
+20.0,500,1146,Fertile,6.2,Tomato
+35.0,241,344,Sandy,6.0,Cowpea
+35.0,362,59,Sandy-Loam,6.3,Green Gram
+11.6,1393,2853,Sandy-Loam,5.6,Irish Potato
+29.3,953,227,Sandy-Loam,6.3,Groundnut
+13.1,1497,2097,Loamy,6.3,Beans
+30.7,241,325,Sandy-Loam,5.7,Cowpea
+24.3,779,482,Fertile,6.8,Tomato
+11.5,944,2295,Loamy,5.8,Irish Potato
+26.6,379,537,Sandy-Loam,6.3,Millet
+9.2,752,1991,Loamy,7.0,Carrot
+19.1,1039,978,Sandy-Loam,6.8,Maize
+22.0,1035,1231,Fertile,6.6,Maize
+13.6,247,1738,Loamy,7.1,Onion
+35.3,132,76,Sandy,6.9,Green Gram
+37.5,257,162,Sandy,6.4,Green Gram
+40.6,410,251,Sandy,5.6,Sorghum
+24.5,625,453,Sandy,6.8,Tomato
+28.8,655,825,Loamy,6.4,Millet
+41.3,175,316,Sandy,6.4,Sorghum
+22.0,630,417,Clay,6.4,Tomato
+15.6,1798,2111,Sandy-Loam,6.6,Beans
+30.6,873,240,Fertile,6.2,Groundnut
+14.4,1363,2036,Sandy,6.8,Beans
+8.9,900,2894,Loamy,6.5,Carrot
+32.1,394,986,Sandy,6.2,Millet
+24.1,1099,2010,Loamy,6.1,Soybean
+9.1,582,2352,Loamy,6.7,Carrot
+13.5,1338,2282,Sandy-Loam,6.4,Kale
+12.2,239,1777,Fertile,6.7,Onion
+21.1,1218,1112,Sandy-Loam,6.2,Maize
+39.1,255,157,Sandy-Loam,6.6,Green Gram
+39.7,204,108,Sandy,6.1,Green Gram
+23.4,1037,1840,Sandy,7.0,Soybean
+31.2,414,445,Loamy,6.0,Cowpea
+23.2,1017,1514,Loamy,7.0,Soybean
+27.6,910,130,Sandy,5.9,Groundnut
+7.3,910,2411,Clay,6.7,Carrot
+38.5,278,33,Clay,6.3,Green Gram
+12.7,313,1487,Sandy,6.4,Onion
+22.3,544,984,Loamy,6.1,Tomato
+11.7,1170,2007,Sandy-Loam,6.7,Kale
+26.7,401,567,Clay,6.4,Millet
+28.9,590,509,Sandy,5.7,Millet
+32.6,319,450,Clay,6.3,Cowpea
+28.5,527,480,Sandy,5.5,Millet
+17.8,1096,1739,Clay,6.6,Maize
+36.5,402,328,Sandy-Loam,6.0,Sorghum
+13.6,1706,2474,Sandy-Loam,6.5,Beans
+23.9,938,1795,Clay,6.4,Soybean
+27.7,881,453,Sandy,5.6,Groundnut
+23.1,1205,1072,Clay,6.4,Maize
+23.4,994,961,Sandy-Loam,6.1,Maize
+36.1,252,636,Sandy,5.7,Sorghum
+32.7,359,134,Sandy-Loam,6.4,Cowpea
+17.8,1231,2280,Fertile,6.8,Beans
+25.6,685,759,Fertile,7.0,Tomato
+9.0,1281,2976,Sandy-Loam,6.2,Irish Potato
+39.5,127,220,Sandy-Loam,7.1,Green Gram
+9.9,1221,1800,Sandy,6.3,Kale
+13.3,214,1722,Sandy,6.4,Onion
+15.6,846,2108,Loamy,6.0,Kale
+20.2,1049,1342,Sandy,6.0,Maize
+12.1,1403,2192,Sandy,6.4,Beans
+9.7,704,2290,Clay,6.2,Carrot
+13.2,840,2297,Fertile,6.0,Kale
+19.1,1387,993,Clay,6.7,Maize
+20.8,1063,1514,Clay,6.5,Maize
+14.6,1188,1840,Loamy,6.2,Kale
+12.4,1309,1884,Fertile,6.2,Kale
+40.0,264,310,Sandy-Loam,6.8,Green Gram
+21.0,728,564,Sandy-Loam,6.1,Tomato
+24.5,1403,1352,Sandy-Loam,6.5,Maize
+22.9,1175,1536,Clay,6.8,Soybean
+18.9,1329,996,Fertile,6.7,Maize
+39.4,230,183,Sandy-Loam,6.7,Green Gram
+8.2,1390,2592,Sandy-Loam,6.0,Irish Potato
+13.3,1173,2054,Fertile,6.7,Kale
+39.4,443,589,Sandy,5.9,Sorghum
+21.0,982,1584,Loamy,6.6,Soybean
+24.2,1429,1299,Sandy-Loam,6.3,Maize
+24.7,996,1428,Sandy-Loam,6.6,Soybean
+11.8,1050,2319,Sandy-Loam,6.5,Beans
+8.3,1233,2272,Loamy,5.5,Irish Potato
+12.2,900,2483,Fertile,6.3,Kale
+41.1,465,619,Sandy,5.9,Sorghum
+41.5,405,592,Sandy,6.3,Sorghum
+34.7,376,209,Sandy-Loam,6.7,Green Gram
+10.3,1165,2505,Fertile,6.5,Kale
+8.7,598,2147,Fertile,6.6,Carrot
+8.8,735,2818,Fertile,6.7,Carrot
+33.4,280,466,Sandy-Loam,5.7,Cowpea
+10.6,1151,2676,Clay,5.7,Irish Potato
+16.2,1317,2257,Loamy,6.9,Beans
+11.4,1103,2209,Sandy,7.1,Beans
+13.5,1359,2290,Clay,6.3,Beans
+22.9,881,1667,Loamy,6.7,Maize
+23.1,1199,1067,Loamy,6.0,Maize
+9.3,969,2392,Sandy-Loam,5.9,Irish Potato
+21.2,818,1005,Fertile,6.7,Tomato
+30.5,694,975,Loamy,6.3,Millet
+34.7,290,319,Loamy,6.3,Green Gram
+27.2,440,728,Sandy-Loam,5.8,Millet
+21.1,1117,1770,Sandy,6.7,Maize
+15.4,1146,2212,Clay,6.9,Beans
+14.6,1271,2598,Loamy,5.8,Kale
+20.6,721,538,Sandy-Loam,6.1,Tomato
+31.6,394,795,Sandy-Loam,5.9,Millet
+29.0,246,485,Sandy,5.9,Cowpea
+26.9,640,436,Loamy,5.6,Millet
+24.7,617,82,Clay,6.1,Groundnut
+24.1,1191,1649,Fertile,6.0,Maize
+15.3,1320,2514,Sandy,6.6,Kale
+7.1,1092,2951,Sandy-Loam,5.6,Irish Potato
+14.1,1536,1799,Fertile,7.1,Beans
+21.3,1158,1467,Clay,6.5,Soybean
+40.0,252,460,Clay,5.9,Sorghum
+22.3,1021,2090,Fertile,6.9,Soybean
+13.7,1230,1825,Loamy,6.3,Beans
+18.0,1240,1784,Fertile,6.2,Maize
+25.0,1134,1634,Sandy-Loam,6.6,Maize
+36.1,328,212,Sandy-Loam,5.6,Cowpea
+19.5,1170,1654,Fertile,6.4,Soybean
+12.3,1159,2500,Fertile,7.1,Beans
+36.4,304,404,Sandy-Loam,6.0,Cowpea
+11.6,932,2018,Loamy,6.3,Carrot
+36.6,380,256,Sandy,5.9,Cowpea
+26.1,587,1020,Sandy,6.5,Millet
+8.5,1161,2527,Loamy,5.6,Irish Potato
+14.4,1143,2409,Loamy,6.6,Kale
+6.2,1245,2486,Fertile,5.6,Irish Potato
+34.6,276,326,Clay,6.1,Green Gram
+14.5,1290,2147,Fertile,6.2,Kale
+29.1,646,821,Sandy,5.9,Millet
+12.4,1637,2477,Sandy-Loam,7.0,Beans
+19.5,975,1880,Fertile,6.6,Soybean
+22.1,1031,1502,Loamy,6.9,Soybean
+9.1,868,2130,Clay,6.2,Kale
+36.8,418,625,Sandy-Loam,6.1,Sorghum
+20.2,627,1025,Fertile,6.6,Tomato
+40.8,356,162,Sandy-Loam,6.2,Green Gram
+9.5,1098,2374,Fertile,5.8,Irish Potato
+17.6,1350,2376,Loamy,7.2,Beans
+13.7,455,1365,Sandy-Loam,6.7,Onion
+36.4,329,111,Sandy,5.9,Cowpea
+5.8,1323,2227,Sandy-Loam,6.1,Irish Potato
+21.6,685,451,Fertile,7.0,Tomato
+13.2,1170,1864,Fertile,6.6,Kale
+36.0,274,163,Clay,6.3,Cowpea
+37.9,199,44,Loamy,6.4,Green Gram
+14.2,278,2050,Sandy-Loam,6.4,Onion
+11.5,1233,2000,Clay,6.2,Kale
+34.6,327,324,Clay,6.4,Green Gram
+25.3,776,1498,Fertile,6.4,Soybean
+21.4,961,1631,Fertile,6.3,Soybean
+24.9,786,224,Sandy-Loam,6.3,Groundnut
+8.1,1166,2342,Sandy-Loam,5.8,Irish Potato
+40.6,296,90,Sandy,6.6,Green Gram
+23.0,1043,708,Clay,6.1,Groundnut
+11.0,1412,1848,Loamy,7.1,Beans
+36.6,242,281,Loamy,6.2,Green Gram
+9.2,1232,2275,Fertile,5.8,Irish Potato
+19.5,1118,1264,Fertile,6.1,Maize
+14.8,1203,1983,Fertile,6.7,Beans
+10.5,1274,2508,Loamy,6.5,Kale
+10.4,1030,2400,Loamy,6.1,Kale
+6.5,913,2281,Clay,5.8,Irish Potato
+9.8,782,2483,Clay,6.8,Carrot
+33.5,173,454,Clay,6.1,Cowpea
+39.2,366,24,Clay,6.7,Green Gram
+23.3,856,1585,Fertile,6.2,Maize
+41.4,323,71,Sandy,6.8,Green Gram
+40.1,323,323,Sandy,6.6,Green Gram
+30.6,364,41,Sandy-Loam,5.6,Cowpea
+21.3,858,1131,Sandy-Loam,6.5,Maize
+34.9,390,472,Sandy-Loam,5.8,Cowpea
+27.5,667,401,Sandy,5.5,Groundnut
+23.4,942,1229,Sandy-Loam,6.0,Maize
+11.0,1211,2430,Loamy,5.7,Irish Potato
+37.8,232,227,Clay,6.1,Green Gram
+14.2,1060,1846,Fertile,6.7,Kale
+9.5,1282,2111,Clay,6.8,Kale
+37.6,259,215,Sandy,5.6,Sorghum
+40.5,245,155,Sandy,6.2,Sorghum
+23.0,652,848,Fertile,6.4,Tomato
+13.2,1173,2376,Loamy,6.8,Beans
+30.9,730,1099,Sandy-Loam,5.8,Millet
+17.5,1121,2110,Loamy,7.1,Beans
+8.9,943,2508,Sandy-Loam,5.7,Irish Potato
+25.9,1007,427,Sandy-Loam,6.4,Groundnut
+22.6,824,2084,Loamy,6.9,Soybean
+32.7,533,815,Sandy-Loam,6.1,Millet
+38.4,219,285,Sandy,6.5,Green Gram
+29.9,367,972,Fertile,5.9,Millet
+29.7,745,678,Sandy-Loam,6.3,Groundnut
+22.0,624,816,Sandy-Loam,6.0,Tomato
+36.4,153,220,Sandy-Loam,5.6,Sorghum
+17.5,1199,1695,Loamy,6.4,Maize
+11.7,821,2311,Clay,6.0,Carrot
+11.0,1352,1937,Fertile,6.5,Beans
+41.1,363,125,Sandy-Loam,6.3,Green Gram
+33.5,254,447,Sandy,5.8,Cowpea
+12.5,1317,2501,Loamy,6.2,Kale
+38.7,157,161,Sandy,6.6,Green Gram
+20.4,1315,1204,Sandy,6.0,Maize
+19.1,1247,1768,Fertile,6.3,Maize
+12.3,400,1828,Sandy,6.9,Onion
+37.7,157,510,Sandy-Loam,6.3,Sorghum
+20.4,580,898,Loamy,6.0,Tomato
+34.9,156,289,Clay,6.3,Green Gram
+12.4,228,1705,Loamy,6.3,Onion
+41.7,298,133,Clay,6.8,Green Gram
+40.3,443,600,Sandy,6.3,Sorghum
+26.2,639,894,Sandy,6.9,Tomato
+10.0,976,2676,Clay,5.8,Irish Potato
+23.6,619,525,Sandy-Loam,6.5,Tomato
+11.5,1190,2194,Loamy,6.6,Beans
+33.4,199,313,Sandy-Loam,5.9,Sorghum
+39.2,358,228,Loamy,7.2,Green Gram
+14.9,1769,1788,Loamy,6.2,Beans
+21.6,973,1640,Loamy,6.4,Soybean
+25.5,997,1808,Sandy-Loam,6.9,Soybean
+27.3,662,493,Sandy-Loam,5.5,Groundnut
+8.2,1210,2377,Loamy,5.9,Irish Potato
+40.3,354,84,Sandy,6.5,Green Gram
+35.4,160,492,Sandy,5.8,Cowpea
+7.5,706,2429,Clay,6.3,Carrot
+5.2,1088,2910,Fertile,5.6,Irish Potato
+17.8,500,1432,Fertile,6.6,Onion
+15.3,398,1886,Fertile,7.1,Onion
+25.7,720,419,Sandy-Loam,6.3,Tomato
+13.1,1163,1862,Clay,6.5,Kale
+13.3,1208,2390,Clay,5.9,Kale
+20.0,549,1142,Fertile,6.7,Tomato
+26.5,803,434,Sandy,5.7,Groundnut
+25.9,1017,573,Sandy-Loam,6.0,Groundnut
+9.9,688,2849,Loamy,6.7,Carrot
+22.1,1282,1131,Fertile,5.8,Maize
+28.4,462,822,Sandy,6.3,Millet
+39.5,191,62,Clay,5.6,Sorghum
+23.6,842,680,Sandy,6.1,Tomato
+26.3,768,744,Sandy,5.6,Groundnut
+39.2,180,95,Sandy,7.1,Green Gram
+12.4,790,2842,Sandy-Loam,6.6,Carrot
+32.7,703,512,Sandy-Loam,5.8,Millet
+13.4,517,1790,Loamy,6.6,Onion
+38.5,181,267,Sandy-Loam,6.4,Sorghum
+30.7,672,640,Fertile,5.5,Groundnut
+11.9,1438,1946,Sandy-Loam,7.2,Beans
+40.4,239,77,Sandy,6.2,Green Gram
+15.1,1206,1810,Loamy,6.0,Kale
+29.6,701,470,Sandy-Loam,6.3,Millet
+35.8,187,202,Sandy,6.2,Green Gram
+23.5,789,2025,Sandy-Loam,6.3,Soybean
+7.6,907,2497,Fertile,6.5,Carrot
+26.5,771,789,Sandy-Loam,6.6,Tomato
+14.9,370,1728,Loamy,7.0,Onion
+28.3,876,686,Sandy-Loam,6.3,Groundnut
+21.8,1131,1657,Sandy,6.5,Soybean
+31.2,283,251,Sandy-Loam,6.2,Cowpea
+21.0,915,1458,Loamy,6.3,Soybean
+12.9,1076,1955,Fertile,6.5,Kale
+36.3,269,163,Sandy,6.2,Green Gram
+33.0,351,414,Sandy-Loam,5.7,Millet
+36.3,295,65,Loamy,5.8,Cowpea
+41.9,301,65,Loamy,6.2,Green Gram
+23.0,1166,1851,Sandy-Loam,6.9,Soybean
+40.4,216,418,Sandy,5.9,Sorghum
+10.9,766,2711,Fertile,6.4,Carrot
+21.3,991,2037,Fertile,6.1,Soybean
+27.6,504,798,Loamy,6.1,Tomato
+36.7,314,387,Sandy,5.5,Sorghum
+6.1,1307,2765,Clay,5.8,Irish Potato
+26.2,674,1106,Sandy,6.5,Tomato
+24.8,796,1559,Loamy,6.3,Soybean
+12.4,345,1686,Sandy,6.3,Onion
+31.3,661,943,Sandy,6.3,Millet
+35.6,298,128,Sandy,7.1,Green Gram
+40.6,312,581,Sandy,6.5,Sorghum
+9.5,1156,1859,Sandy-Loam,6.6,Kale
+19.8,1018,1592,Loamy,6.4,Soybean
+33.2,341,329,Clay,6.0,Cowpea
+6.0,1317,3084,Clay,5.6,Irish Potato
+22.5,1227,1139,Loamy,6.3,Maize
+10.3,1333,1890,Sandy,6.5,Kale
+29.9,781,576,Sandy,6.3,Groundnut
+36.8,452,363,Sandy,6.3,Sorghum
+21.0,822,1574,Loamy,6.5,Soybean
+8.5,1244,2534,Loamy,6.2,Irish Potato
+40.5,373,488,Sandy-Loam,6.5,Sorghum
+29.0,595,836,Sandy-Loam,5.9,Millet
+7.3,940,2356,Fertile,6.8,Carrot
+13.7,1656,2408,Sandy-Loam,6.7,Beans
+8.8,648,2856,Loamy,6.3,Carrot
+5.3,1299,2727,Loamy,6.2,Irish Potato
+6.5,1393,3044,Loamy,6.1,Irish Potato
+18.0,1487,2399,Loamy,6.5,Beans
+26.5,436,1098,Sandy-Loam,6.2,Millet
+14.8,245,1924,Fertile,7.1,Onion
+24.5,732,541,Sandy-Loam,6.8,Tomato
+25.6,484,920,Fertile,7.0,Tomato
+38.6,362,119,Sandy,6.1,Green Gram
+22.6,504,1110,Sandy,6.9,Tomato
+35.4,284,219,Sandy,6.3,Green Gram
+22.9,1001,960,Loamy,6.7,Maize
+21.6,521,670,Sandy-Loam,6.5,Tomato
+29.0,601,783,Sandy-Loam,5.8,Millet
+21.8,811,1754,Loamy,6.5,Soybean
+15.5,1765,1871,Sandy-Loam,6.8,Beans
+21.1,699,983,Fertile,6.3,Tomato
+30.5,475,524,Clay,5.9,Millet
+14.9,1272,2398,Sandy,6.4,Kale
+6.1,929,2966,Clay,6.1,Irish Potato
+25.8,976,100,Fertile,6.4,Groundnut
+9.6,1133,2504,Fertile,6.5,Kale
+38.9,208,64,Sandy,5.8,Sorghum
+20.1,511,455,Fertile,6.3,Tomato
+12.3,415,1654,Loamy,6.5,Onion
+36.7,241,115,Sandy,6.4,Green Gram
+26.0,553,1098,Sandy,5.8,Millet
+25.3,520,864,Fertile,6.3,Tomato
+19.3,883,1596,Loamy,6.3,Soybean
+18.9,1146,1723,Loamy,5.9,Maize
+40.3,361,50,Sandy-Loam,7.1,Green Gram
+21.5,734,707,Sandy-Loam,6.8,Tomato
+22.2,896,1729,Fertile,6.1,Soybean
+13.6,1066,1804,Fertile,6.6,Kale
+13.0,972,2323,Loamy,5.8,Kale
+15.0,503,1674,Fertile,6.7,Onion
+8.0,828,2354,Sandy-Loam,6.7,Carrot
+11.9,1035,2232,Fertile,6.5,Kale
+14.4,510,1633,Clay,6.3,Onion
+11.4,256,2021,Clay,6.4,Onion
+10.1,845,2187,Sandy-Loam,6.4,Kale
+11.3,323,1992,Sandy-Loam,6.4,Onion
+23.0,1134,1569,Fertile,6.0,Soybean
+15.4,1656,1805,Loamy,6.5,Beans
+33.5,401,485,Sandy,6.2,Cowpea
+36.9,334,201,Sandy,5.7,Cowpea
+14.9,515,2044,Loamy,6.3,Onion
+11.3,265,1973,Clay,6.6,Onion
+16.5,338,1834,Loamy,7.1,Onion
+30.9,640,550,Sandy-Loam,6.1,Groundnut
+13.4,248,1679,Sandy,6.6,Onion
+28.0,735,63,Clay,5.7,Groundnut
+25.5,655,560,Sandy-Loam,6.6,Tomato
+22.4,796,997,Fertile,6.5,Tomato
+11.8,504,1827,Loamy,6.6,Onion
+34.5,345,279,Sandy,6.1,Green Gram
+34.3,216,68,Sandy-Loam,7.1,Green Gram
+24.1,675,650,Sandy-Loam,6.7,Tomato
+20.8,891,1394,Sandy-Loam,6.7,Maize
+17.3,1331,2189,Loamy,6.6,Beans
+33.6,298,426,Sandy-Loam,5.9,Cowpea
+41.9,244,87,Sandy,6.8,Green Gram
+26.3,763,762,Fertile,6.8,Tomato
+33.7,392,478,Sandy,6.0,Cowpea
+33.9,351,332,Sandy,6.1,Cowpea
+29.2,198,295,Sandy,5.7,Cowpea
+25.1,880,1460,Fertile,6.4,Soybean
+23.3,814,1194,Loamy,6.2,Tomato
+17.7,1440,1499,Loamy,6.4,Maize
+31.7,418,274,Sandy-Loam,6.0,Cowpea
+18.1,1130,1445,Sandy-Loam,5.8,Maize
+12.6,1336,1900,Loamy,6.6,Kale
+24.8,485,1167,Fertile,6.8,Tomato
+34.0,428,203,Sandy-Loam,6.5,Sorghum
+37.4,240,342,Sandy,6.5,Green Gram
+31.1,318,344,Sandy,5.9,Cowpea
+22.3,973,1912,Loamy,6.7,Soybean
+25.0,1059,2057,Fertile,6.2,Soybean
+12.0,936,2653,Fertile,5.9,Irish Potato
+20.6,1196,1413,Sandy-Loam,6.1,Maize
+14.4,1074,1809,Loamy,6.2,Kale
+42.0,398,680,Sandy,6.5,Sorghum
+12.2,1591,1782,Sandy-Loam,6.7,Beans
+12.4,441,1642,Sandy-Loam,6.7,Onion
+35.7,193,286,Sandy-Loam,6.1,Sorghum
+21.9,854,1774,Loamy,6.5,Soybean
+19.7,1270,1588,Fertile,6.0,Maize
+5.3,1198,2330,Loamy,5.6,Irish Potato
+7.8,713,2789,Sandy-Loam,6.6,Carrot
+33.5,466,215,Clay,5.9,Sorghum
+16.5,1498,2081,Fertile,6.7,Beans
+7.6,841,2446,Sandy-Loam,6.7,Carrot
+37.9,209,262,Clay,5.6,Sorghum
+41.5,223,80,Sandy,6.1,Green Gram
+21.6,925,1423,Fertile,6.2,Maize
+35.3,316,449,Sandy-Loam,5.9,Cowpea
+13.6,235,1582,Clay,6.9,Onion
+33.1,209,282,Sandy,6.1,Cowpea
+11.9,1102,2477,Loamy,7.0,Beans
+22.4,729,1032,Sandy-Loam,6.5,Tomato
+39.0,413,202,Sandy,6.0,Sorghum
+24.7,1190,2016,Loamy,6.1,Soybean
+36.8,251,215,Sandy-Loam,5.6,Cowpea
+25.9,983,617,Sandy,5.8,Groundnut
+13.9,1230,2287,Fertile,6.9,Beans
+25.0,853,1629,Loamy,6.5,Soybean
+33.4,381,1051,Sandy,5.8,Millet
+9.4,1285,2158,Clay,6.4,Kale
+34.1,377,133,Sandy,6.6,Green Gram
+41.0,294,80,Clay,6.4,Sorghum
+16.8,1159,2416,Sandy-Loam,7.0,Beans
+19.7,1112,1658,Clay,6.7,Soybean
+6.3,1170,2972,Fertile,6.1,Irish Potato
+23.0,893,201,Clay,6.3,Groundnut
+40.5,225,18,Loamy,7.0,Green Gram
+28.5,941,689,Fertile,5.7,Groundnut
+38.4,287,67,Fertile,6.6,Green Gram
+26.1,417,856,Sandy,6.3,Millet
+24.3,1041,1846,Sandy,6.0,Soybean
+7.7,710,2750,Loamy,6.6,Carrot
+27.3,444,751,Sandy-Loam,6.4,Millet
+12.4,935,2153,Clay,6.3,Carrot
+26.5,504,774,Fertile,6.2,Tomato
+13.5,807,2371,Clay,6.8,Carrot
+29.0,292,291,Sandy,6.0,Cowpea
+22.5,521,1121,Sandy-Loam,6.2,Tomato
+18.3,1441,1638,Loamy,5.9,Maize
+38.9,298,77,Sandy,7.1,Green Gram
+14.5,433,1359,Fertile,6.6,Onion
+29.2,175,352,Sandy-Loam,6.3,Cowpea
+23.1,653,536,Sandy,6.0,Groundnut
+23.1,1411,1746,Loamy,6.7,Maize
+12.1,328,1814,Loamy,7.2,Onion
+35.8,310,243,Loamy,5.9,Cowpea
+8.8,1257,2760,Sandy-Loam,6.3,Irish Potato
+30.8,726,765,Loamy,6.1,Groundnut
+22.1,1175,1016,Sandy-Loam,5.9,Maize
+38.2,177,281,Sandy-Loam,6.3,Green Gram
+14.0,902,2573,Clay,6.6,Carrot
+12.1,796,2138,Sandy-Loam,6.8,Carrot
+27.4,870,782,Sandy,5.5,Groundnut
+15.0,1319,2408,Fertile,6.7,Beans
+30.8,581,562,Loamy,6.4,Millet
+17.1,1744,2085,Loamy,6.2,Beans
+18.8,1152,1134,Loamy,6.4,Maize
+12.3,1455,2266,Loamy,7.1,Beans
+13.0,919,2437,Clay,6.8,Carrot
+38.6,467,587,Sandy,6.2,Sorghum
+29.2,380,886,Sandy-Loam,5.8,Millet
+17.6,913,1653,Loamy,6.0,Maize
+11.3,459,1970,Fertile,7.1,Onion
+11.2,847,2456,Clay,6.1,Carrot
+15.0,1371,1970,Fertile,6.4,Beans
+31.3,515,431,Sandy,6.2,Millet
+14.1,1142,1914,Loamy,6.2,Beans
+21.7,1130,1400,Loamy,6.0,Soybean
+9.6,1246,2949,Loamy,5.9,Irish Potato
+10.2,1367,3025,Clay,5.6,Irish Potato
+26.8,732,792,Sandy-Loam,6.9,Tomato
+41.3,371,39,Sandy-Loam,6.2,Sorghum
+26.9,363,473,Sandy-Loam,6.5,Millet
+11.3,836,2580,Fertile,6.7,Kale
+24.3,783,500,Loamy,6.6,Tomato
+19.2,865,1561,Clay,6.4,Maize
+33.8,320,293,Clay,6.1,Cowpea
+17.9,1070,989,Fertile,6.8,Maize
+34.1,344,163,Loamy,6.5,Green Gram
+22.1,791,1090,Fertile,6.2,Tomato
+22.3,991,2096,Sandy-Loam,6.6,Soybean
+34.9,196,197,Loamy,6.2,Green Gram
+33.2,619,543,Clay,5.8,Millet
+9.7,908,2612,Loamy,6.0,Irish Potato
+13.9,1176,2453,Sandy,6.4,Beans
+34.4,401,94,Sandy-Loam,6.0,Cowpea
+15.5,208,1957,Sandy,6.5,Onion
+40.8,252,250,Sandy-Loam,6.8,Green Gram
+16.3,365,1685,Loamy,7.0,Onion
+29.5,1035,408,Sandy,5.8,Groundnut
+11.9,282,2049,Fertile,6.9,Onion
+40.7,341,378,Clay,6.4,Sorghum
+35.4,230,121,Fertile,5.8,Cowpea
+39.0,272,462,Sandy,6.2,Sorghum
+24.6,954,175,Loamy,6.1,Groundnut
+10.4,1241,2545,Sandy-Loam,6.3,Irish Potato
+28.8,1008,226,Fertile,5.8,Groundnut
+30.1,577,555,Sandy,5.8,Millet
+13.7,1238,2000,Fertile,6.4,Kale
+31.4,365,823,Sandy-Loam,5.6,Millet
+14.4,532,1637,Sandy-Loam,6.9,Onion
+25.1,1010,326,Loamy,5.8,Groundnut
+35.9,290,127,Sandy,5.8,Sorghum
+24.0,854,156,Sandy,6.3,Groundnut
+12.6,1134,1996,Loamy,6.2,Kale
+34.4,207,143,Fertile,6.2,Green Gram
+23.6,583,750,Sandy-Loam,6.2,Tomato
+37.7,455,51,Sandy,5.6,Sorghum
+16.2,258,1492,Sandy,6.5,Onion
+22.2,972,1699,Fertile,6.2,Soybean
+10.7,1152,2333,Loamy,6.4,Kale
+40.1,256,222,Sandy,7.0,Green Gram
+30.3,157,72,Sandy-Loam,6.4,Cowpea
+41.0,199,232,Sandy,6.4,Green Gram
+5.1,968,3000,Fertile,6.0,Irish Potato
+21.4,1069,1654,Fertile,6.5,Soybean
+15.5,1500,2306,Sandy-Loam,7.0,Beans
+30.5,404,419,Sandy-Loam,6.3,Cowpea
+27.6,947,299,Sandy,5.7,Groundnut
+31.3,198,402,Fertile,5.9,Cowpea
+22.5,1014,1562,Loamy,5.8,Maize
+11.6,888,2642,Sandy-Loam,6.7,Carrot
+40.1,460,617,Sandy-Loam,6.0,Sorghum
+12.3,1164,2400,Fertile,6.4,Kale
+28.5,703,873,Sandy-Loam,6.0,Millet
+6.7,1105,2855,Loamy,5.6,Irish Potato
+7.1,637,1986,Loamy,6.3,Carrot
+17.9,1429,1057,Clay,6.0,Maize
+30.4,459,445,Loamy,5.6,Millet
+16.8,1050,1996,Loamy,6.4,Beans
+17.3,1043,1389,Sandy,6.2,Maize
+30.9,694,927,Sandy,5.9,Millet
+34.9,463,70,Clay,5.8,Sorghum
+21.3,682,971,Fertile,6.7,Tomato
+32.8,621,1067,Sandy,6.4,Millet
+15.6,1778,2199,Fertile,6.3,Beans
+22.5,496,1188,Sandy-Loam,6.1,Tomato
+5.6,1168,2686,Fertile,5.8,Irish Potato
+40.5,458,692,Sandy,6.5,Sorghum
+36.3,341,165,Loamy,6.6,Green Gram
+29.2,993,510,Sandy-Loam,5.8,Groundnut
+14.0,356,1540,Fertile,6.7,Onion
+7.3,671,2213,Sandy-Loam,6.1,Carrot
+22.6,1235,1604,Fertile,6.5,Maize
+8.8,573,2553,Fertile,6.1,Carrot
+29.8,864,716,Fertile,5.5,Groundnut
+27.0,607,668,Loamy,6.4,Tomato
+35.4,332,135,Sandy-Loam,7.0,Green Gram
+20.3,1047,1524,Fertile,6.1,Maize
+22.9,1255,1085,Sandy-Loam,5.9,Maize
+15.6,488,1835,Fertile,6.9,Onion
+11.6,1754,2354,Sandy,7.0,Beans
+36.6,129,231,Sandy,6.6,Green Gram

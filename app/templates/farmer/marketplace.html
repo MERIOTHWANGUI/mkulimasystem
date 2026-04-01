@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% block title %}Marketplace — AgroSense{% endblock %}
+{% block navbar %}{% endblock %}
+{% block flash %}{% endblock %}
+
+{% block page_css %}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gd:#1a4d2e;--gm:#2d7a4f;--gl:#4caf7d;--gp:#e8f5ee;
+  --am:#c8860a;--al:#f5a623;--ap:#fef3dc;
+  --bg:#f4f7f2;--td:#1c2617;--tm:#4a5e42;--tl:#8a9e82;
+  --bd:#d4e2ce;--sh:0 1px 4px rgba(26,77,46,.08);--r:14px;--rs:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-height:100vh;}
+.page{display:flex;min-height:100vh;}
+
+/* SIDEBAR */
+.sidebar{width:230px;background:var(--gd);flex-shrink:0;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.main-wrap{flex:1;margin-left:230px;display:flex;flex-direction:column;min-height:100vh;}
+.sb-logo{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}
+.sb-icon{width:36px;height:36px;background:var(--gl);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.sb-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;}
+.sb-name span{color:var(--al);}
+.sb-section{padding:16px 12px 4px;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 6px;margin-bottom:6px;}
+.sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;cursor:pointer;transition:all .18s;margin-bottom:2px;text-decoration:none;}
+.sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
+.sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-item.active .sb-ico{background:var(--gl);}
+.sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
+.sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
+.sb-avatar{width:34px;height:34px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.sb-uname{font-size:13px;font-weight:600;color:#fff;}
+.sb-urole{font-size:11px;color:rgba(255,255,255,.5);}
+.sb-logout{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:rgba(255,100,100,.8);font-size:13px;font-weight:500;text-decoration:none;transition:all .18s;margin-top:6px;}
+.sb-logout:hover{background:rgba(255,100,100,.1);color:#ff6b6b;}
+
+/* TOPBAR */
+.topbar{background:#fff;border-bottom:1px solid var(--bd);padding:14px 28px;position:sticky;top:0;z-index:50;}
+.tb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.tb-title{font-family:'Playfair Display',serif;font-size:17px;}
+.tb-count{font-size:13px;color:var(--tl);}
+
+/* SEARCH & FILTER BAR */
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;}
+.search-wrap{flex:1;min-width:200px;display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--bd);border-radius:24px;padding:6px 14px;}
+.search-wrap input{border:none;background:none;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--td);outline:none;flex:1;}
+.filter-select{border:1.5px solid var(--bd);border-radius:20px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--td);background:var(--bg);outline:none;cursor:pointer;}
+.filter-select:focus{border-color:var(--gm);}
+.btn-clear{background:none;border:1.5px solid var(--bd);border-radius:20px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--tl);cursor:pointer;}
+.btn-clear:hover{border-color:var(--red);color:var(--red);}
+
+/* CONTENT */
+.content{flex:1;padding:24px 32px;}
+
+/* HERO BANNER */
+.hero{background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:var(--r);padding:28px 32px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;}
+.hero-text{}
+.hero-title{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:6px;}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.75);}
+.hero-icon{font-size:64px;opacity:.8;}
+
+/* CAT PILLS */
+.cat-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.pill{background:#fff;border:1.5px solid var(--bd);color:var(--tm);border-radius:20px;padding:6px 16px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;}
+.pill:hover,.pill.active{background:var(--gd);color:#fff;border-color:var(--gd);}
+
+/* PRODUCT GRID */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+.product-card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);overflow:hidden;box-shadow:var(--sh);transition:all .25s;animation:fadeUp .3s ease both;}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,77,46,.13);}
+.product-img{width:100%;height:150px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:52px;overflow:hidden;}
+.product-img img{width:100%;height:100%;object-fit:cover;}
+.product-body{padding:16px;}
+.product-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:8px;}
+.product-name{font-family:'Playfair Display',serif;font-size:15px;color:var(--td);}
+.cat-badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:var(--gp);color:var(--gd);white-space:nowrap;flex-shrink:0;}
+.product-desc{font-size:12.5px;color:var(--tm);line-height:1.5;margin-bottom:12px;}
+.price-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.price{font-family:'Playfair Display',serif;font-size:20px;color:var(--gd);}
+.price span{font-size:12px;font-weight:400;color:var(--tl);}
+.product-meta{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.meta-row{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--tl);}
+.meta-row strong{color:var(--td);}
+.contact-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--gd);color:#fff;border:none;border-radius:9px;padding:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;}
+.contact-btn:hover{background:var(--gm);}
+.no-results{text-align:center;padding:60px 20px;color:var(--tl);}
+.no-results-icon{font-size:56px;margin-bottom:14px;}
+.no-results-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--tm);margin-bottom:8px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:700px){
+  .sidebar{width:60px;}
+  .sb-name,.sb-label,.sb-uname,.sb-urole,.sb-logout span,.sb-item span{display:none;}
+  .main-wrap{margin-left:60px;}
+  .hero{flex-direction:column;gap:12px;}
+  .hero-icon{display:none;}
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sb-logo">
+      <div class="sb-icon">🌿</div>
+      <div class="sb-name">Agro<span>Sense</span></div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">Menu</div>
+      <a href="{{ url_for('farmer.dashboard') }}" class="sb-item">
+        <div class="sb-ico">🤖</div><span>Crop Advisor</span>
+      </a>
+      <a href="{{ url_for('farmer.chatbot') }}" class="sb-item">
+        <div class="sb-ico">💬</div><span>AgriBot Chat</span>
+      </a>
+      <a href="{{ url_for('farmer.marketplace') }}" class="sb-item active">
+        <div class="sb-ico">🏪</div><span>Marketplace</span>
+      </a>
+       <a href="{{ url_for('farmer.reports') }}" class="sb-item"><div class="sb-ico">📊</div><span>My Reports</span></a>
+    </div>
+    <div class="sb-bottom">
+      <div class="sb-user">
+        <div class="sb-avatar">🧑‍🌾</div>
+        <div>
+          <div class="sb-uname">{{ current_user.first_name }}</div>
+          <div class="sb-urole">Farmer</div>
+        </div>
+      </div>
+      <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main-wrap">
+
+    <!-- TOPBAR WITH SEARCH -->
+    <div class="topbar">
+      <div class="tb-top">
+        <div class="tb-title">🏪 Marketplace</div>
+        <div class="tb-count" id="result-count">{{ products|length }} products available</div>
+      </div>
+      <div class="filter-bar">
+        <div class="search-wrap">
+          🔍 <input type="text" id="search-input" placeholder="Search seeds, fertilizer, tools…" oninput="filterProducts()">
+        </div>
+        <select class="filter-select" id="cat-filter" onchange="filterProducts()">
+          <option value="">All Categories</option>
+          {% for c in categories %}
+          <option value="{{ c }}">{{ c }}</option>
+          {% endfor %}
+        </select>
+        <select class="filter-select" id="loc-filter" onchange="filterProducts()">
+          <option value="">All Locations</option>
+          {% for loc in locations %}
+          <option value="{{ loc }}">{{ loc }}</option>
+          {% endfor %}
+        </select>
+        <button class="btn-clear" onclick="clearFilters()">✕ Clear</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-text">
+          <div class="hero-title">Find Seeds, Fertilizer & Tools Near You</div>
+          <div class="hero-sub">Connect directly with local suppliers — no middlemen, better prices</div>
+        </div>
+        <div class="hero-icon">🛒</div>
+      </div>
+
+      <!-- CATEGORY PILLS -->
+      <div class="cat-pills">
+        <div class="pill active" onclick="setPill(this,'')">All</div>
+        {% for c in categories %}
+        <div class="pill" onclick="setPill(this,'{{ c }}')">
+          {% if c == 'Seeds' %}🌱
+          {% elif c == 'Fertilizer' %}🌿
+          {% elif c == 'Pesticide' %}🧪
+          {% elif c == 'Tools' %}🔧
+          {% elif c == 'Equipment' %}⚙️
+          {% else %}📦{% endif %}
+          {{ c }}
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="product-grid" id="product-grid">
+        {% for p in products %}
+        <div class="product-card"
+             data-name="{{ p.name|lower }}"
+             data-desc="{{ p.description|lower }}"
+             data-cat="{{ p.category }}"
+             data-loc="{{ p.location }}">
+          <div class="product-img">
+            {% if p.image_url %}
+              <img src="{{ p.image_url }}" alt="{{ p.name }}" onerror="this.parentElement.innerHTML='🌾'">
+            {% else %}
+              {% if p.category == 'Seeds' %}🌱
+              {% elif p.category == 'Fertilizer' %}🌿
+              {% elif p.category == 'Pesticide' %}🧪
+              {% elif p.category == 'Tools' %}🔧
+              {% elif p.category == 'Equipment' %}⚙️
+              {% else %}📦{% endif %}
+            {% endif %}
+          </div>
+          <div class="product-body">
+            <div class="product-top">
+              <div class="product-name">{{ p.name }}</div>
+              <span class="cat-badge">{{ p.category }}</span>
+            </div>
+            <div class="product-desc">{{ p.description[:90] }}{% if p.description|length > 90 %}…{% endif %}</div>
+            <div class="price-row">
+              <div class="price">KSh {{ "{:,.0f}".format(p.price) }} <span>{{ p.unit }}</span></div>
+            </div>
+            <div class="product-meta">
+              <div class="meta-row">📍 <strong>{{ p.location }}</strong></div>
+              <div class="meta-row">🏪 <strong>{{ p.supplier.first_name }} {{ p.supplier.last_name }}</strong></div>
+            </div>
+            <a href="tel:{{ p.phone }}" class="contact-btn">
+              📞 Call {{ p.phone }}
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="no-results" id="no-results" style="display:none;">
+        <div class="no-results-icon">🔍</div>
+        <div class="no-results-title">No products found</div>
+        <div>Try a different search or category.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script>
+function filterProducts() {
+  const search  = document.getElementById('search-input').value.toLowerCase();
+  const cat     = document.getElementById('cat-filter').value;
+  const loc     = document.getElementById('loc-filter').value;
+  const cards   = document.querySelectorAll('.product-card');
+  let   visible = 0;
+
+  cards.forEach(card => {
+    const matchSearch = !search || card.dataset.name.includes(search) || card.dataset.desc.includes(search);
+    const matchCat    = !cat    || card.dataset.cat  === cat;
+    const matchLoc    = !loc    || card.dataset.loc  === loc;
+    const show        = matchSearch && matchCat && matchLoc;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  document.getElementById('result-count').textContent = `${visible} products available`;
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+  document.getElementById('product-grid').style.display = visible === 0 ? 'none' : 'grid';
+}
+
+function setPill(el, cat) {
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('cat-filter').value = cat;
+  filterProducts();
+}
+
+function clearFilters() {
+  document.getElementById('search-input').value = '';
+  document.getElementById('cat-filter').value   = '';
+  document.getElementById('loc-filter').value   = '';
+  document.querySelectorAll('.pill').forEach((p,i) => p.classList.toggle('active', i===0));
+  filterProducts();
+}
+</script>
+{% endblock %}

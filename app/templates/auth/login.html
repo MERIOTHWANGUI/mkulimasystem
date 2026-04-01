@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block title %}Login — AgroSense{% endblock %}
+
+{% block body_class %}class="auth-page"{% endblock %}
+{% block navbar %}{% endblock %}
+{% block page_css %}
+<style>
+    /* Testimonial card inside left panel */
+    .testimonial {
+        background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 16px; padding: 20px; backdrop-filter: blur(10px);
+    }
+    .testimonial p { font-size: 0.88rem; color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 12px; line-height: 1.7; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+        width: 38px; height: 38px; border-radius: 50%;
+        background: linear-gradient(135deg, var(--g-mid), var(--g-pale));
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1rem; flex-shrink: 0;
+    }
+    .author-name { font-size: 0.82rem; font-weight: 600; color: #fff; }
+    .author-loc  { font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+    .stars       { color: #f1c40f; font-size: 0.75rem; margin-bottom: 2px; }
+
+    /* Remember / forgot row */
+    .remember-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+    .remember-row label { font-size: 0.82rem; color: #555; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .remember-row input[type="checkbox"] { accent-color: var(--g-mid); }
+    .forgot-link { font-size: 0.82rem; color: var(--g-mid); text-decoration: none; font-weight: 600; }
+    .forgot-link:hover { color: var(--g-dark); }
+
+    /* "or" divider */
+    .divider { display: flex; align-items: center; gap: 12px; margin: 1.5rem 0; }
+    .divider span { font-size: 0.78rem; color: #aaa; white-space: nowrap; }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--g-border); }
+
+    /* Secondary outlined button */
+    .btn-outline-auth {
+        width: 100%; padding: 13px; display: block; text-align: center;
+        background: #fff; color: var(--g-dark);
+        border: 2px solid var(--g-mid); border-radius: 12px;
+        font-size: 0.92rem; font-weight: 600; cursor: pointer;
+        transition: all 0.3s; text-decoration: none;
+    }
+    .btn-outline-auth:hover { background: var(--g-light); color: var(--g-dark); }
+</style>
+{% endblock %}
+
+{% block flash %}{% endblock %}
+
+{% block content %}
+
+<!-- LEFT PANEL -->
+<div class="left-panel d-none d-lg-flex flex-column">
+    <div class="left-brand">🌿 AgroSense</div>
+    <h2 class="left-title">Welcome<br><span>back, farmer</span></h2>
+    <p class="left-sub">Log back in to access your crop recommendations, suppliers, and farm advisory dashboard.</p>
+
+    <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"AgroSense told me to plant beans instead of maize this season. I harvested 3× more than my neighbours. This app is a blessing."</p>
+        <div class="testimonial-author">
+            <div class="avatar">👨‍🌾</div>
+            <div>
+                <div class="author-name">James Mwangi</div>
+                <div class="author-loc">📍 Nakuru, Kenya</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="right-panel">
+    <div class="form-box">
+        <h2>Welcome Back 👋</h2>
+        <p class="sub">Log in to your AgroSense account</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <div class="field-wrap">
+                <label>Username or Email</label>
+                <input type="text" name="username" placeholder="john_kamau or john@example.com" required>
+            </div>
+            <div class="field-wrap">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="remember-row">
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+                <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn-auth">Login to Dashboard →</button>
+        </form>
+
+        <div class="divider"><span>or</span></div>
+        <a href="/register" class="btn-outline-auth">Create a Free Account 🌱</a>
+
+        <div class="form-footer">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

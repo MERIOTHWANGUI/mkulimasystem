@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% block title %}🌾 Smart Farming Support System{% endblock %}
+
+{% block page_css %}
+<style>
+    /* ── NAVBAR ── */
+    .navbar {
+        background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08); padding: 14px 0;
+        position: sticky; top: 0; z-index: 100;
+    }
+    .navbar-brand { font-size: 1.4rem; font-weight: 800; color: var(--g-dark) !important; letter-spacing: -0.5px; }
+    .nav-link { color: #444 !important; font-weight: 500; }
+    .nav-link:hover { color: var(--g-dark) !important; }
+    .btn-nav-login {
+        border: 2px solid var(--g-dark); color: var(--g-dark) !important;
+        border-radius: 25px; padding: 6px 22px; font-weight: 600;
+        transition: all 0.3s; text-decoration: none;
+    }
+    .btn-nav-login:hover { background: var(--g-dark); color: #fff !important; }
+    .btn-nav-register {
+        background: var(--g-dark); color: #fff !important;
+        border-radius: 25px; padding: 6px 22px; font-weight: 600;
+        transition: all 0.3s; text-decoration: none;
+    }
+    .btn-nav-register:hover { background: var(--g-darkest); }
+
+    /* ── HERO ── */
+    .hero-section {
+        min-height: 92vh;
+        background:
+            linear-gradient(135deg, rgba(15,60,30,0.85) 0%, rgba(30,100,55,0.72) 60%, rgba(0,0,0,0.45) 100%),
+            url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+        display: flex; align-items: center; position: relative; overflow: hidden;
+    }
+    .hero-section::after {
+        content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+        height: 80px; background: linear-gradient(to top, var(--g-bg), transparent);
+    }
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35);
+        color: #fff; font-size: 0.78rem; font-weight: 600;
+        letter-spacing: 1.8px; text-transform: uppercase;
+        padding: 7px 20px; border-radius: 100px; margin-bottom: 1.5rem;
+    }
+    .hero-title { font-size: clamp(2.6rem,5.5vw,4.2rem); font-weight: 800; line-height: 1.15; color: #fff; margin-bottom: 1.2rem; letter-spacing: -1px; }
+    .hero-title span { color: var(--g-pale); }
+    .hero-sub { font-size: 1.08rem; font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 2.5rem; max-width: 540px; }
+
+    .btn-hero-primary {
+        background: var(--g-bright); color: var(--g-darkest);
+        font-size: 1rem; font-weight: 700; padding: 15px 38px;
+        border-radius: 50px; border: none; text-decoration: none;
+        box-shadow: 0 8px 25px rgba(46,204,113,0.4);
+        transition: all 0.3s; display: inline-block;
+    }
+    .btn-hero-primary:hover { background: var(--g-mid); color: #fff; transform: translateY(-3px); box-shadow: 0 12px 35px rgba(46,204,113,0.5); }
+    .btn-hero-outline {
+        background: transparent; border: 2px solid rgba(255,255,255,0.6);
+        color: #fff; font-size: 1rem; font-weight: 600;
+        padding: 13px 34px; border-radius: 50px;
+        text-decoration: none; transition: all 0.3s; display: inline-block; margin-left: 12px;
+    }
+    .btn-hero-outline:hover { background: rgba(255,255,255,0.12); color: #fff; border-color: #fff; }
+
+    .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; }
+    .stat-num   { font-size: 1.8rem; font-weight: 800; color: var(--g-pale); }
+    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Floating AI cards */
+    .hero-visual { position: relative; height: 460px; }
+    .floating-card {
+        background: rgba(255,255,255,0.96); border-radius: 16px;
+        padding: 16px 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        position: absolute; animation: float 4s ease-in-out infinite;
+    }
+    .floating-card:nth-child(2) { animation-delay: 1.5s; }
+    .floating-card:nth-child(3) { animation-delay: 3s; }
+    .fc-top { top: 8%;  right: -10px; min-width: 200px; }
+    .fc-mid { top: 40%; left: -20px;  min-width: 185px; }
+    .fc-bot { bottom: 8%; right: 20px; min-width: 195px; }
+    .fc-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 5px; }
+    .fc-val   { font-size: 1.05rem; font-weight: 700; color: var(--g-dark); }
+    .fc-sub   { font-size: 0.73rem; color: #777; }
+    .fc-bar   { height: 6px; background: #e8f5e9; border-radius: 10px; margin-top: 8px; }
+    .fc-fill  { height: 100%; border-radius: 10px; background: linear-gradient(90deg, var(--g-mid), var(--g-bright)); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+    /* ── FEATURES ── */
+    .features-section { padding: 90px 0; background: var(--g-bg); }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--g-mid); margin-bottom: 10px; }
+    .section-title { font-size: clamp(1.8rem,3.5vw,2.5rem); font-weight: 800; color: var(--g-darkest); line-height: 1.2; }
+    .section-sub   { color: #666; font-size: 0.97rem; max-width: 520px; margin: 0 auto; }
+
+    .feature-card {
+        background: #fff; border-radius: 20px; padding: 2.2rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        border: 1.5px solid var(--g-border); transition: all 0.35s; height: 100%;
+    }
+    .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(26,107,60,0.13); border-color: var(--g-mid); }
+    .feat-icon { width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; margin-bottom: 1.1rem; }
+    .feature-card h5 { font-size: 1.05rem; font-weight: 700; color: var(--g-darkest); margin-bottom: 0.5rem; }
+    .feature-card p  { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 0; }
+    .feat-link { font-size: 0.8rem; font-weight: 600; color: var(--g-mid); text-decoration: none; margin-top: 1rem; display: inline-block; }
+    .feat-link:hover { color: var(--g-dark); }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { padding: 80px 0; background: #fff; }
+    .step-num {
+        width: 52px; height: 52px; border-radius: 50%;
+        background: linear-gradient(135deg, var(--g-dark), var(--g-bright));
+        color: #fff; font-size: 1.2rem; font-weight: 800;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 1rem; box-shadow: 0 6px 20px rgba(26,107,60,0.25);
+    }
+    .step-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--g-bright), #a8edba); margin: 26px 8px 0; }
+    .step-card { text-align: center; flex: 1; }
+    .step-card h6 { font-weight: 700; color: var(--g-darkest); margin-bottom: 0.3rem; }
+    .step-card p  { font-size: 0.82rem; color: #777; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+        padding: 90px 0;
+        background: linear-gradient(135deg, var(--g-darkest) 0%, var(--g-dark) 60%, var(--g-mid) 100%);
+        position: relative; overflow: hidden;
+    }
+    .cta-section h2 { font-size: 2.4rem; font-weight: 800; color: #fff; }
+    .cta-section p  { color: rgba(255,255,255,0.78); font-size: 1.05rem; }
+
+    /* ── FOOTER ── */
+    .site-footer { background: var(--g-darkest); color: rgba(255,255,255,0.55); padding: 28px 0; text-align: center; font-size: 0.84rem; }
+    .site-footer a { color: var(--g-pale); text-decoration: none; }
+</style>
+{% endblock %}
+
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">🌿 AgroSense</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav me-auto ms-4 gap-1">
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
+            </ul>
+            <div class="d-flex gap-2 align-items-center">
+    {% if current_user.is_authenticated %}
+        <span style="font-size:0.85rem;color:#555;">
+            👋 {{ current_user.first_name }}
+            <span class="badge ms-1" style="background:var(--g-mid);font-size:0.7rem;">{{ current_user.role }}</span>
+        </span>
+        <a href="{{ url_for('auth.logout') }}" class="btn-nav-login">Logout</a>
+    {% else %}
+        <a href="/login" class="btn-nav-login">Login</a>
+        <a href="/register" class="btn-nav-register">Register Free</a>
+    {% endif %}
+</div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero-section">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-badge">🌍 Built for Kenyan Farmers</div>
+                <h1 class="hero-title">Grow Smarter,<br>Harvest <span>More</span></h1>
+                <p class="hero-sub">
+                    AI-powered crop recommendations, expert advisories, and access to agricultural
+                    suppliers — all in one platform designed for your farm.
+                </p>
+                <div>
+                    <a href="/register" class="btn-hero-primary">Get Started Free 🌱</a>
+                    <a href="/login" class="btn-hero-outline">Login</a>
+                </div>
+                <div class="hero-stats">
+                    <div><div class="stat-num">8+</div><div class="stat-label">Crops Supported</div></div>
+                    <div><div class="stat-num">94%</div><div class="stat-label">AI Accuracy</div></div>
+                    <div><div class="stat-num">Free</div><div class="stat-label">For Farmers</div></div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
+                <div class="hero-visual">
+                    <div class="floating-card fc-top">
+                        <div class="fc-label">🌽 Top Recommendation</div>
+                        <div class="fc-val">Maize — 85%</div>
+                        <div class="fc-sub">Best match for your farm</div>
+                        <div class="fc-bar"><div class="fc-fill" style="width:85%"></div></div>
+                    </div>
+                    <div class="floating-card fc-mid">
+                        <div class="fc-label">🌧️ Rainfall Detected</div>
+                        <div class="fc-val">820 mm / year</div>
+                        <div class="fc-sub">Suitable for 6 crops</div>
+                    </div>
+                    <div class="floating-card fc-bot">
+                        <div class="fc-label">🤖 AI Confidence</div>
+                        <div class="fc-val">High Match ✅</div>
+                        <div class="fc-sub">Beans · Sorghum · Maize</div>
+                        <div class="fc-bar"><div class="fc-fill" style="width:92%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">What We Offer</div>
+            <h2 class="section-title">Everything your farm needs,<br>in one place</h2>
+            <p class="section-sub mt-3">From AI crop picks to supplier connections — we've got you covered.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feat-icon" style="background:#e8f5e9;">🌽</div>
+                    <h5>Smart Crop Recommendation</h5>
+                    <p>Enter your soil, altitude, rainfall and temperature. Our AI ranks the best crops with suitability percentages.</p>
+                    <a href="/register" class="feat-link">Try it now →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feat-icon" style="background:#fff3e0;">💬</div>
+                    <h5>Farming Chatbot Assistant</h5>
+                    <p>Ask questions in plain language and get real-time advisory on planting schedules, pest control and more.</p>
+                    <a href="/register" class="feat-link">Ask a question →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feat-icon" style="background:#e3f2fd;">🛒</div>
+                    <h5>Agricultural Suppliers</h5>
+                    <p>Browse verified suppliers offering seeds, fertilizers and tools. Find who's near you with pricing and contacts.</p>
+                    <a href="/register" class="feat-link">Find suppliers →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feat-icon" style="background:#fce4ec;">📊</div>
+                    <h5>Farm Reports & Insights</h5>
+                    <p>Get detailed reports on your farm history, soil trends, and seasonal planning for better decisions.</p>
+                    <a href="/register" class="feat-link">View sample →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feat-icon" style="background:#f3e5f5;">👩‍🌾</div>
+                    <h5>Farmer & Supplier Profiles</h5>
+                    <p>Register as a farmer or input supplier. Suppliers list their products for farmers to discover and contact.</p>
+                    <a href="/register" class="feat-link">Create profile →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="feat-icon" style="background:#e0f7fa;">🤖</div>
+                    <h5>AI Trained on Local Data</h5>
+                    <p>Our model is trained on East African crop data — Maize, Beans, Tea, Coffee, Sorghum and more.</p>
+                    <a href="/register" class="feat-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">Your recommendation in 4 steps</h2>
+        </div>
+        <div class="d-flex align-items-start justify-content-center flex-wrap gap-2">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <h6>Create Account</h6>
+                <p>Register free as a farmer or supplier in under a minute</p>
+            </div>
+            <div class="step-line d-none d-md-block"></div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <h6>Enter Farm Data</h6>
+                <p>Input soil type, pH, temperature, rainfall & altitude</p>
+            </div>
+            <div class="step-line d-none d-md-block"></div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <h6>Get Recommendations</h6>
+                <p>Receive ranked crop suggestions with suitability %</p>
+            </div>
+            <div class="step-line d-none d-md-block"></div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <h6>Find Suppliers</h6>
+                <p>Locate nearby seed and fertilizer suppliers for your crop</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container text-center position-relative">
+        <div class="mb-3" style="font-size:3rem;">🚀</div>
+        <h2 class="mb-3">Ready to farm smarter?</h2>
+        <p class="mb-4">Join Kenyan farmers using AI to make better decisions every season.</p>
+        <a href="/register" class="btn-hero-primary me-2">Register Now — It's Free</a>
+        <a href="/login" class="btn-hero-outline">I have an account</a>
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer %}
+<footer class="site-footer">
+    <div class="container">
+        <p class="mb-1">🌿 <strong style="color:var(--g-pale);">AgroSense</strong> — Smart Farming Support System</p>
+        <p class="mb-0">Made with ❤️ for Kenyan Farmers &nbsp;·&nbsp; <a href="/register">Register</a> &nbsp;·&nbsp; <a href="/login">Login</a></p>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "topic": "Maize",
+    "content": "Plant maize at the start of long rains in March or short rains in October. Use H614 or DK8031 seeds, 2 seeds per hole, rows 75cm apart. Add CAN fertilizer when the plant reaches your knee. Harvest in 3 to 4 months when husks turn brown."
+  },
+  {
+    "id": 2,
+    "topic": "Beans",
+    "content": "Plant beans during rainy seasons, rows 45cm apart, 15cm between plants. Use Rosecoco or Mwitemania varieties. Ready to harvest in 60 to 90 days when pods turn yellow. Store with ash to keep weevils away."
+  },
+  {
+    "id": 3,
+    "topic": "Kale",
+    "content": "Kale grows fast and sells every week at local markets. Plant anytime with water, ready in 6 weeks. Harvest outer leaves continuously without uprooting. Water 2 to 3 times a week and watch for aphids."
+  },
+  {
+    "id": 4,
+    "topic": "Irish Potato",
+    "content": "Best in cool highlands like Nyandarua and Nyeri. Plant Shangi or Tigoni varieties March to May or August to October. Spray copper fungicide every 2 weeks to prevent blight. Ready in 90 to 120 days."
+  },
+  {
+    "id": 5,
+    "topic": "Tomato",
+    "content": "Start seeds in nursery then transplant after 4 weeks, 45cm apart. Stake plants when 30cm tall. Water at the base not the leaves. Spray copper fungicide every 10 days to prevent blight. Ready in 60 to 90 days."
+  },
+  {
+    "id": 6,
+    "topic": "Fertilizer",
+    "content": "Use DAP at planting, put it in the hole and cover with soil before adding seeds. Top dress maize with CAN when knee high, one bottle cap per plant. Use compost or manure for vegetables. Too much fertilizer burns plants."
+  },
+  {
+    "id": 7,
+    "topic": "Pests",
+    "content": "Walk your shamba every week to catch pests early. For fall armyworm spray Coragen or Ampligo early morning. For aphids spray soapy water or Actara. For stalk borer spray Bulldock. Always spray early morning never midday."
+  },
+  {
+    "id": 8,
+    "topic": "Soil pH",
+    "content": "Most crops grow best at pH 6 to 7. Test soil with a kit from agro-vet for 200 shillings. If soil is too acidic below 5.5 add agricultural lime 2 bags per acre. Do this 3 months before planting."
+  },
+  {
+    "id": 9,
+    "topic": "Seasons",
+    "content": "Long rains are March to May, plant maize and beans now. Short rains are October to December, good for beans kale and tomatoes. Dry season is June to September, use irrigation and sell vegetables at high prices."
+  },
+  {
+    "id": 10,
+    "topic": "Markets",
+    "content": "Sell at local market early morning for best prices. Group with other farmers to bargain better and share transport. Avoid selling at harvest time when prices are lowest. Wait 2 to 3 months and prices usually double."
+  },
+  {
+    "id": 11,
+    "topic": "Water",
+    "content": "Water early morning or evening, never midday. Mulch around plants with dry grass to keep moisture in. Collect rainwater in tanks during rainy season for dry months. Drip irrigation saves water and reduces disease."
+  },
+  {
+    "id": 12,
+    "topic": "Sorghum",
+    "content": "Best crop for dry areas where maize fails. Plant Serena variety at start of rains, rows 75cm apart. Scare birds away when grain matures. Ready in 3 to 5 months. Stores well for up to 2 years."
+  },
+  {
+    "id": 13,
+    "topic": "Groundnut",
+    "content": "Good for warm lowland areas with sandy soil. Plant at start of rains, rows 60cm apart, 15cm between plants. Harvest when leaves turn yellow. Dry in sun for a week before storing. Roast and sell for higher profit."
+  },
+  {
+    "id": 14,
+    "topic": "Composting",
+    "content": "Compost is free fertilizer from kitchen peels, crop residues and manure. Make a pile, keep moist, turn every 2 weeks. Ready in 6 to 8 weeks when it looks dark and crumbly. Apply 2 handfuls per planting hole."
+  },
+  {
+    "id": 15,
+    "topic": "Intercropping",
+    "content": "Plant maize with beans together, beans add nitrogen to soil and maize gives beans support. Plant kale between maize rows to use all your land. If one crop fails the other still grows. Plant main crop first then companion 2 weeks later."
+  },
+  {
+    "id": 16,
+    "topic": "Storage",
+    "content": "Dry grain well before storing, maize should be hard not soft. Store in sacks raised off the ground. Mix 1 cup of ash per bag to keep weevils away. Check every month for pests. Never use polythene bags as they trap moisture."
+  },
+  {
+    "id": 17,
+    "topic": "Cowpea",
+    "content": "Very drought tolerant, good for dry areas with little rain. Plant at start of rains, rows 60cm apart. Eat green leaves as vegetables while pods mature. Ready in 60 to 90 days. Improves soil for next season."
+  },
+  {
+    "id": 18,
+    "topic": "Crop Rotation",
+    "content": "Never plant the same crop in the same place every season. After maize plant beans, after beans plant kale or tomato. Rotation breaks pests and disease cycles. Your soil will stay healthy and yields stay high."
+  },
+  {
+    "id": 19,
+    "topic": "Planting",
+    "content": "Plant at the start of rains not the middle. Put fertilizer in hole first, cover with soil, then add seeds. Plant 2 seeds per hole and remove the weaker one after 2 weeks. Plant 3 to 5cm deep for most crops."
+  },
+  {
+    "id": 20,
+    "topic": "Weeding",
+    "content": "Weed in the first 3 to 6 weeks when crops are young, this is the most critical time. Use a jembe to remove weeds by the root. Mulch between rows to stop weeds growing. One more weeding 3 weeks later keeps your crop clean to harvest."
+  },
+  {
+    "id": 21,
+    "topic": "Onion",
+    "content": "Plant Red Pinoy or Jambar F1 seeds in a nursery first. Move to the shamba after 6 weeks. Space them 15cm apart in rows. Do not plant too deep or the bulb stays small. Ready in 4 months when the tops fall over and turn brown."
+  },
+  {
+    "id": 22,
+    "topic": "Manure",
+    "content": "Never use fresh manure; it burns plant roots. Let it sit in a pile for 3 months until it turns black and cold. Mix with dry grass to make it better. Use 2 handfuls per hole. Manure helps your soil stay soft and keep water."
+  }
+]

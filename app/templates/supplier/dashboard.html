@@ -1,0 +1,414 @@
+{% extends 'base.html' %}
+{% block title %}Supplier Dashboard — AgroSense{% endblock %}
+{% block navbar %}{% endblock %}
+{% block flash %}{% endblock %}
+
+{% block page_css %}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gd:#1a4d2e;--gm:#2d7a4f;--gl:#4caf7d;--gp:#e8f5ee;
+  --am:#c8860a;--al:#f5a623;--ap:#fef3dc;
+  --bg:#f4f7f2;--td:#1c2617;--tm:#4a5e42;--tl:#8a9e82;
+  --bd:#d4e2ce;--red:#c0392b;--rp:#fdecea;
+  --sh:0 1px 4px rgba(26,77,46,.08);--r:14px;--rs:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-height:100vh;}
+.page{display:flex;min-height:100vh;}
+
+/* SIDEBAR */
+.sidebar{width:230px;background:var(--gd);flex-shrink:0;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;overflow-y:auto;}
+.main-wrap{flex:1;margin-left:230px;display:flex;flex-direction:column;min-height:100vh;}
+.sb-logo{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}
+.sb-icon{width:36px;height:36px;background:var(--al);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.sb-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;}
+.sb-name span{color:var(--al);}
+.sb-section{padding:16px 12px 4px;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 6px;margin-bottom:6px;}
+.sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;cursor:pointer;transition:all .18s;margin-bottom:2px;text-decoration:none;}
+.sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
+.sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-item.active .sb-ico{background:var(--al);}
+.sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
+.sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
+.sb-avatar{width:34px;height:34px;background:var(--al);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.sb-uname{font-size:13px;font-weight:600;color:#fff;}
+.sb-urole{font-size:11px;color:rgba(255,255,255,.5);}
+.sb-logout{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:rgba(255,100,100,.8);font-size:13px;font-weight:500;cursor:pointer;margin-top:6px;text-decoration:none;transition:all .18s;}
+.sb-logout:hover{background:rgba(255,100,100,.1);color:#ff6b6b;}
+
+/* TOPBAR */
+.topbar{background:#fff;border-bottom:1px solid var(--bd);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50;}
+.tb-title{font-family:'Playfair Display',serif;font-size:17px;}
+.btn-primary{background:var(--gd);color:#fff;border:none;border-radius:9px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-primary:hover{background:var(--gm);}
+
+/* CONTENT */
+.content{flex:1;padding:28px 32px;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;}
+.stat{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:20px 22px;box-shadow:var(--sh);}
+.stat-num{font-family:'Playfair Display',serif;font-size:32px;color:var(--gd);line-height:1;}
+.stat-label{font-size:12px;color:var(--tl);margin-top:4px;}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-full{grid-column:1/-1;}
+.field-label{font-size:12px;font-weight:700;color:var(--tm);margin-bottom:5px;display:block;}
+.ifield{border:1.5px solid var(--bd);border-radius:var(--rs);padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--td);outline:none;width:100%;transition:border .2s;}
+.ifield:focus{border-color:var(--gm);background:#fff;}
+textarea.ifield{resize:vertical;min-height:80px;}
+select.ifield{cursor:pointer;}
+.required{color:var(--red);}
+
+/* PRODUCT GRID */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
+.product-card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);overflow:hidden;box-shadow:var(--sh);transition:all .2s;}
+.product-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,77,46,.12);}
+.product-img{width:100%;height:160px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:48px;overflow:hidden;}
+.product-img img{width:100%;height:100%;object-fit:cover;}
+.product-body{padding:16px;}
+.product-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;}
+.product-name{font-family:'Playfair Display',serif;font-size:16px;color:var(--td);}
+.cat-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--gp);color:var(--gd);white-space:nowrap;}
+.product-desc{font-size:13px;color:var(--tm);line-height:1.5;margin-bottom:12px;}
+.product-meta{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.meta-row{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--tl);}
+.meta-row strong{color:var(--td);}
+.price-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.price{font-family:'Playfair Display',serif;font-size:22px;color:var(--gd);}
+.price span{font-size:13px;font-weight:400;color:var(--tl);}
+.stock-badge{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;}
+.in-stock{background:#e8f5ee;color:var(--gd);}
+.out-stock{background:var(--rp);color:var(--red);}
+.product-actions{display:flex;gap:8px;}
+.btn-sm{border:none;border-radius:8px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-edit{background:var(--ap);color:var(--am);}
+.btn-edit:hover{background:var(--al);color:#fff;}
+.btn-del{background:var(--rp);color:var(--red);}
+.btn-del:hover{background:var(--red);color:#fff;}
+.btn-toggle{background:var(--gp);color:var(--gd);flex:1;}
+.btn-toggle:hover{background:var(--gl);color:#fff;}
+
+/* EMPTY */
+.empty{text-align:center;padding:60px 20px;color:var(--tl);}
+.empty-icon{font-size:56px;margin-bottom:14px;}
+.empty-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--tm);margin-bottom:8px;}
+
+/* ALERT */
+.alert{border-radius:9px;padding:12px 16px;font-size:13px;margin-bottom:18px;}
+.alert-success{background:#e8f5ee;border:1px solid #b3d9bf;color:var(--gd);}
+.alert-danger{background:var(--rp);border:1px solid #f5c6cb;color:var(--red);}
+.alert-info{background:var(--ap);border:1px solid #f5a62340;color:var(--am);}
+
+/* MODAL — using modal-box NOT modal (Bootstrap conflict) */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center;}
+.modal-bg.show{display:flex !important;}
+.modal-box{background:#fff;border-radius:var(--r);padding:28px;width:560px;max-height:90vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.2);}
+.modal-title{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:18px;}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;}
+.btn-cancel{background:var(--bg);color:var(--td);border:1px solid var(--bd);border-radius:9px;padding:9px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+
+@media(max-width:1000px){.stats{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){
+  .sidebar{width:60px;}
+  .sb-name,.sb-label,.sb-uname,.sb-urole,.sb-logout span,.sb-item span{display:none;}
+  .main-wrap{margin-left:60px;}
+  .stats{grid-template-columns:1fr 1fr;}
+  .form-grid{grid-template-columns:1fr;}
+  .modal-box{width:95vw;}
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sb-logo">
+      <div class="sb-icon">🏪</div>
+      <div class="sb-name">Agro<span>Sense</span></div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">Supplier Menu</div>
+      <a href="{{ url_for('supplier.dashboard') }}" class="sb-item active">
+        <div class="sb-ico">📦</div><span>My Products</span>
+      </a>
+      <a href="{{ url_for('supplier.insights') }}" class="sb-item active">
+        <div class="sb-ico">📊</div><span>Demand Insights</span>
+      </a>
+    </div>
+    <div class="sb-bottom">
+      <div class="sb-user">
+        <div class="sb-avatar">🏪</div>
+        <div>
+          <div class="sb-uname">{{ current_user.first_name }}</div>
+          <div class="sb-urole">Supplier</div>
+        </div>
+      </div>
+      <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main-wrap">
+    <div class="topbar">
+      <div class="tb-title">📦 My Product Listings</div>
+      <button class="btn-primary" onclick="document.getElementById('add-modal').classList.add('show')">
+        + Add New Product
+      </button>
+    </div>
+
+    <div class="content">
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for cat, msg in messages %}
+        <div class="alert alert-{{ cat }}">{{ msg }}</div>
+        {% endfor %}
+      {% endwith %}
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">{{ products|length }}</div>
+          <div class="stat-label">Total Listings</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{{ products|selectattr('in_stock')|list|length }}</div>
+          <div class="stat-label">In Stock</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{{ products|rejectattr('in_stock')|list|length }}</div>
+          <div class="stat-label">Out of Stock</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{{ products|map(attribute='category')|unique|list|length }}</div>
+          <div class="stat-label">Categories</div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS -->
+      {% if products %}
+      <div class="product-grid">
+        {% for p in products %}
+        <div class="product-card">
+          <div class="product-img">
+            {% if p.image_url %}
+              <img src="{{ p.image_url }}" alt="{{ p.name }}" onerror="this.parentElement.innerHTML='🌾'">
+            {% else %}
+              {% if p.category == 'Seeds' %}🌱
+              {% elif p.category == 'Fertilizer' %}🌿
+              {% elif p.category == 'Pesticide' %}🧪
+              {% elif p.category == 'Tools' %}🔧
+              {% elif p.category == 'Equipment' %}⚙️
+              {% else %}📦{% endif %}
+            {% endif %}
+          </div>
+          <div class="product-body">
+            <div class="product-top">
+              <div class="product-name">{{ p.name }}</div>
+              <span class="cat-badge">{{ p.category }}</span>
+            </div>
+            <div class="product-desc">{{ p.description[:100] }}{% if p.description|length > 100 %}…{% endif %}</div>
+            <div class="product-meta">
+              <div class="meta-row">📍 <strong>{{ p.location }}</strong></div>
+              <div class="meta-row">📞 <strong>{{ p.phone }}</strong></div>
+              <div class="meta-row">📅 Listed {{ p.created_at.strftime('%d %b %Y') }}</div>
+            </div>
+            <div class="price-row">
+              <div class="price">KSh {{ "{:,.0f}".format(p.price) }} <span>{{ p.unit }}</span></div>
+              <span class="stock-badge {{ 'in-stock' if p.in_stock else 'out-stock' }}">
+                {{ '✓ In Stock' if p.in_stock else '✗ Out of Stock' }}
+              </span>
+            </div>
+            <div class="product-actions">
+              <form method="POST" action="{{ url_for('supplier.toggle_stock', product_id=p.id) }}" style="flex:1">
+                <button type="submit" class="btn-sm btn-toggle" style="width:100%">
+                  {{ '📦 Mark Out of Stock' if p.in_stock else '✓ Mark In Stock' }}
+                </button>
+              </form>
+              <button class="btn-sm btn-edit"
+                data-id="{{ p.id }}"
+                data-name="{{ p.name|e }}"
+                data-category="{{ p.category|e }}"
+                data-description="{{ p.description|e }}"
+                data-price="{{ p.price }}"
+                data-unit="{{ p.unit|e }}"
+                data-location="{{ p.location|e }}"
+                data-phone="{{ p.phone|e }}"
+                data-image="{{ p.image_url|default('', true)|e }}"
+                data-stock="{{ 'true' if p.in_stock else 'false' }}"
+                onclick="openEdit(this)">✏️</button>
+              <form method="POST" action="{{ url_for('supplier.delete_product', product_id=p.id) }}"
+                    onsubmit="return confirm('Delete {{ p.name }}?')">
+                <button type="submit" class="btn-sm btn-del">🗑️</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty">
+        <div class="empty-icon">📭</div>
+        <div class="empty-title">No products listed yet</div>
+        <div>Click "Add New Product" to list your first item and connect with farmers!</div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+<!-- ADD MODAL -->
+<div class="modal-bg" id="add-modal">
+  <div class="modal-box">
+    <div class="modal-title">➕ List a New Product</div>
+    <form method="POST" action="{{ url_for('supplier.add_product') }}">
+      <div class="form-grid">
+        <div>
+          <label class="field-label">Product Name <span class="required">*</span></label>
+          <input type="text" name="name" class="ifield" placeholder="e.g. H614 Maize Seeds" required>
+        </div>
+        <div>
+          <label class="field-label">Category <span class="required">*</span></label>
+          <select name="category" class="ifield" required>
+            <option value="">Select category…</option>
+            {% for c in categories %}
+            <option value="{{ c }}">{{ c }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Price (KSh) <span class="required">*</span></label>
+          <input type="number" name="price" class="ifield" placeholder="e.g. 500" min="1" step="0.01" required>
+        </div>
+        <div>
+          <label class="field-label">Unit <span class="required">*</span></label>
+          <select name="unit" class="ifield" required>
+            <option value="">Select unit…</option>
+            {% for u in units %}
+            <option value="{{ u }}">{{ u }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Your Location <span class="required">*</span></label>
+          <select name="location" class="ifield" required>
+            <option value="">Select county…</option>
+            {% for county in counties %}
+            <option value="{{ county }}">{{ county }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Phone Number <span class="required">*</span></label>
+          <input type="text" name="phone" class="ifield" placeholder="e.g. 0712 345 678" required>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Description <span class="required">*</span></label>
+          <textarea name="description" class="ifield" placeholder="Describe your product — quality, quantity available, delivery options…" required></textarea>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Image URL <span style="color:var(--tl);font-weight:400">(optional)</span></label>
+          <input type="url" name="image_url" class="ifield" placeholder="https://…">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" onclick="document.getElementById('add-modal').classList.remove('show')">Cancel</button>
+        <button type="submit" class="btn-primary">List Product</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="modal-bg" id="edit-modal">
+  <div class="modal-box">
+    <div class="modal-title">✏️ Edit Product</div>
+    <form method="POST" id="edit-form">
+      <div class="form-grid">
+        <div>
+          <label class="field-label">Product Name</label>
+          <input type="text" name="name" id="e-name" class="ifield" required>
+        </div>
+        <div>
+          <label class="field-label">Category</label>
+          <select name="category" id="e-category" class="ifield">
+            {% for c in categories %}
+            <option value="{{ c }}">{{ c }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Price (KSh)</label>
+          <input type="number" name="price" id="e-price" class="ifield" min="1" step="0.01" required>
+        </div>
+        <div>
+          <label class="field-label">Unit</label>
+          <select name="unit" id="e-unit" class="ifield">
+            {% for u in units %}
+            <option value="{{ u }}">{{ u }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Location</label>
+          <select name="location" id="e-location" class="ifield">
+            {% for county in counties %}
+            <option value="{{ county }}">{{ county }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div>
+          <label class="field-label">Phone</label>
+          <input type="text" name="phone" id="e-phone" class="ifield" required>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Description</label>
+          <textarea name="description" id="e-description" class="ifield"></textarea>
+        </div>
+        <div class="form-full">
+          <label class="field-label">Image URL</label>
+          <input type="url" name="image_url" id="e-image" class="ifield">
+        </div>
+        <div class="form-full" style="display:flex;align-items:center;gap:10px;">
+          <input type="checkbox" name="in_stock" id="e-stock" style="width:18px;height:18px;accent-color:var(--gd)">
+          <label for="e-stock" class="field-label" style="margin:0">In Stock</label>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel" onclick="document.getElementById('edit-modal').classList.remove('show')">Cancel</button>
+        <button type="submit" class="btn-primary">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script>
+function openEdit(btn) {
+  const d = btn.dataset;
+  document.getElementById('e-name').value        = d.name;
+  document.getElementById('e-category').value    = d.category;
+  document.getElementById('e-description').value = d.description;
+  document.getElementById('e-price').value       = d.price;
+  document.getElementById('e-unit').value        = d.unit;
+  document.getElementById('e-location').value    = d.location;
+  document.getElementById('e-phone').value       = d.phone;
+  document.getElementById('e-image').value       = d.image;
+  document.getElementById('e-stock').checked     = d.stock === 'true';
+  document.getElementById('edit-form').action    = `/supplier/product/edit/${d.id}`;
+  document.getElementById('edit-modal').classList.add('show');
+}
+['add-modal','edit-modal'].forEach(id => {
+  document.getElementById(id).addEventListener('click', function(e){
+    if (e.target === this) this.classList.remove('show');
+  });
+});
+</script>
+{% endblock %}

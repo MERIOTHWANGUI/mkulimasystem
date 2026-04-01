@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+{% block title %}My Reports — AgroSense{% endblock %}
+{% block navbar %}{% endblock %}
+{% block flash %}{% endblock %}
+
+{% block page_css %}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gd:#1a4d2e;--gm:#2d7a4f;--gl:#4caf7d;--gp:#e8f5ee;
+  --am:#c8860a;--al:#f5a623;--ap:#fef3dc;
+  --bg:#f4f7f2;--td:#1c2617;--tm:#4a5e42;--tl:#8a9e82;
+  --bd:#d4e2ce;--red:#c0392b;--rp:#fdecea;
+  --sh:0 1px 4px rgba(26,77,46,.08);--r:14px;--rs:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-height:100vh;}
+.page{display:flex;min-height:100vh;}
+
+/* SIDEBAR */
+.sidebar{width:230px;background:var(--gd);flex-shrink:0;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;}
+.main-wrap{flex:1;margin-left:230px;display:flex;flex-direction:column;min-height:100vh;}
+.sb-logo{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}
+.sb-icon{width:36px;height:36px;background:var(--gl);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.sb-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;}
+.sb-name span{color:var(--al);}
+.sb-section{padding:16px 12px 4px;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 6px;margin-bottom:6px;}
+.sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;transition:all .18s;margin-bottom:2px;text-decoration:none;}
+.sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
+.sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-item.active .sb-ico{background:var(--gl);}
+.sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
+.sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
+.sb-avatar{width:34px;height:34px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.sb-uname{font-size:13px;font-weight:600;color:#fff;}
+.sb-urole{font-size:11px;color:rgba(255,255,255,.5);}
+.sb-logout{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:rgba(255,100,100,.8);font-size:13px;font-weight:500;text-decoration:none;transition:all .18s;margin-top:6px;}
+.sb-logout:hover{background:rgba(255,100,100,.1);color:#ff6b6b;}
+
+/* TOPBAR */
+.topbar{background:#fff;border-bottom:1px solid var(--bd);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50;}
+.tb-title{font-family:'Playfair Display',serif;font-size:17px;}
+.btn-pdf{background:var(--gd);color:#fff;border:none;border-radius:9px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;display:flex;align-items:center;gap:6px;}
+.btn-pdf:hover{background:var(--gm);color:#fff;}
+
+/* CONTENT */
+.content{flex:1;padding:28px 32px;}
+
+/* TABS */
+.tabs{display:flex;gap:4px;background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:6px;margin-bottom:24px;box-shadow:var(--sh);}
+.tab{flex:1;padding:10px;border-radius:10px;font-size:13px;font-weight:600;color:var(--tl);cursor:pointer;text-align:center;transition:all .2s;border:none;background:none;}
+.tab.active{background:var(--gd);color:#fff;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.stat{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:20px 22px;box-shadow:var(--sh);}
+.stat-num{font-family:'Playfair Display',serif;font-size:28px;color:var(--gd);line-height:1;}
+.stat-label{font-size:12px;color:var(--tl);margin-top:4px;}
+.stat-sub{font-size:11px;color:var(--gl);margin-top:2px;font-weight:600;}
+
+/* FREQ CHART */
+.card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:22px;box-shadow:var(--sh);margin-bottom:20px;}
+.card-title{font-family:'Playfair Display',serif;font-size:15px;color:var(--td);margin-bottom:14px;}
+.freq-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.freq-label{font-size:13px;font-weight:600;color:var(--td);width:110px;flex-shrink:0;}
+.freq-bar-wrap{flex:1;background:var(--bg);border-radius:20px;height:12px;overflow:hidden;}
+.freq-bar{height:100%;background:linear-gradient(90deg,var(--gd),var(--gl));border-radius:20px;}
+.freq-count{font-size:12px;color:var(--tl);width:70px;text-align:right;flex-shrink:0;}
+
+/* RECOMMENDATION ITEMS */
+.rec-item{border:1.5px solid var(--bd);border-radius:var(--rs);margin-bottom:12px;overflow:hidden;}
+.rec-item:hover{border-color:var(--gl);}
+.rec-header{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;background:var(--gp);cursor:pointer;}
+.rec-left{display:flex;align-items:center;gap:10px;}
+.rec-num{width:30px;height:30px;background:var(--gd);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.rec-crop{font-family:'Playfair Display',serif;font-size:14px;color:var(--gd);}
+.rec-date{font-size:11px;color:var(--tl);}
+.rec-conf{font-family:'Playfair Display',serif;font-size:17px;color:var(--gm);}
+.rec-body{padding:14px 16px;border-top:1px solid var(--bd);display:none;}
+.rec-body.open{display:block;}
+.conditions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
+.cond-item{background:var(--bg);border-radius:8px;padding:8px 10px;}
+.cond-label{font-size:10px;font-weight:700;color:var(--tl);text-transform:uppercase;}
+.cond-value{font-size:13px;font-weight:600;color:var(--td);margin-top:2px;}
+.crops-list{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.crop-pill{background:#fff;border:1.5px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600;color:var(--tm);}
+.crop-pill.top{background:var(--gd);color:#fff;border-color:var(--gd);}
+.rec-actions{display:flex;justify-content:flex-end;}
+.btn-del{background:var(--rp);color:var(--red);border:none;border-radius:8px;padding:6px 14px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;}
+.btn-del:hover{background:var(--red);color:#fff;}
+
+/* CHAT HISTORY */
+.chat-day{margin-bottom:20px;}
+.chat-day-label{font-size:11px;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;padding:4px 0;border-bottom:1px solid var(--bd);}
+.chat-msg{display:flex;gap:8px;margin-bottom:8px;align-items:flex-end;}
+.chat-msg.user{flex-direction:row-reverse;}
+.chat-avatar{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.chat-avatar.bot{background:var(--gd);}
+.chat-avatar.usr{background:var(--gm);}
+.chat-bubble{max-width:70%;padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.5;}
+.chat-bubble.bot{background:#fff;border:1px solid var(--bd);color:var(--td);border-bottom-left-radius:4px;}
+.chat-bubble.user{background:var(--gd);color:#fff;border-bottom-right-radius:4px;}
+.chat-time{font-size:10px;color:var(--tl);margin-top:3px;text-align:right;}
+.chat-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;}
+
+/* EMPTY */
+.empty{text-align:center;padding:50px 20px;color:var(--tl);}
+.empty-icon{font-size:48px;margin-bottom:12px;}
+.empty-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--tm);margin-bottom:8px;}
+.btn-go{background:var(--gd);color:#fff;border:none;border-radius:9px;padding:11px 22px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;margin-top:10px;}
+
+/* ALERT */
+.alert{border-radius:9px;padding:12px 16px;font-size:13px;margin-bottom:18px;}
+.alert-info{background:var(--ap);border:1px solid #f5a62340;color:var(--am);}
+
+@media(max-width:900px){
+  .stats{grid-template-columns:1fr 1fr;}
+  .conditions-grid{grid-template-columns:1fr 1fr;}
+  .chat-stats{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:700px){
+  .sidebar{width:60px;}
+  .sb-name,.sb-label,.sb-uname,.sb-urole,.sb-logout span,.sb-item span{display:none;}
+  .main-wrap{margin-left:60px;}
+  .stats{grid-template-columns:1fr 1fr;}
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page">
+  <nav class="sidebar">
+    <div class="sb-logo">
+      <div class="sb-icon">🌿</div>
+      <div class="sb-name">Agro<span>Sense</span></div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">Menu</div>
+      <a href="{{ url_for('farmer.dashboard') }}" class="sb-item">
+        <div class="sb-ico">🤖</div><span>Crop Advisor</span>
+      </a>
+      <a href="{{ url_for('farmer.chatbot') }}" class="sb-item">
+        <div class="sb-ico">💬</div><span>AgriBot Chat</span>
+      </a>
+      <a href="{{ url_for('farmer.marketplace') }}" class="sb-item">
+        <div class="sb-ico">🏪</div><span>Marketplace</span>
+      </a>
+      <a href="{{ url_for('farmer.reports') }}" class="sb-item active">
+        <div class="sb-ico">📊</div><span>My Reports</span>
+      </a>
+    </div>
+    <div class="sb-bottom">
+      <div class="sb-user">
+        <div class="sb-avatar">🧑‍🌾</div>
+        <div>
+          <div class="sb-uname">{{ current_user.first_name }}</div>
+          <div class="sb-urole">Farmer</div>
+        </div>
+      </div>
+      <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+    </div>
+  </nav>
+
+  <div class="main-wrap">
+    <div class="topbar">
+      <div class="tb-title">📊 My Farming Reports</div>
+      {% if history %}
+      <a href="{{ url_for('farmer.download_report_pdf') }}" class="btn-pdf">
+        📄 Download PDF Report
+      </a>
+      {% endif %}
+    </div>
+
+    <div class="content">
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for cat, msg in messages %}
+        <div class="alert alert-{{ cat }}">{{ msg }}</div>
+        {% endfor %}
+      {% endwith %}
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('crops', this)">🌾 Crop Recommendations ({{ total_checks }})</button>
+        <button class="tab" onclick="switchTab('chats', this)">💬 AgriBot Chat History ({{ chat_count }})</button>
+      </div>
+
+      <!-- ══ TAB 1: CROP RECOMMENDATIONS ══ -->
+      <div id="tab-crops" class="tab-content active">
+        {% if history %}
+
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">{{ total_checks }}</div>
+            <div class="stat-label">Total Checks</div>
+            <div class="stat-sub">Your crop sessions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{{ most_recommended or '—' }}</div>
+            <div class="stat-label">Top Recommended</div>
+            <div class="stat-sub">{{ crop_counts.get(most_recommended, 0) }}x recommended</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{{ avg_confidence }}%</div>
+            <div class="stat-label">Avg Confidence</div>
+            <div class="stat-sub">Across all sessions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{{ history[0].top_crop }}</div>
+            <div class="stat-label">Latest Crop</div>
+            <div class="stat-sub">{{ history[0].created_at.strftime('%d %b %Y') }}</div>
+          </div>
+        </div>
+
+        <!-- FREQUENCY CHART -->
+        {% if crop_counts %}
+        <div class="card">
+          <div class="card-title">🌾 Crop Recommendation Frequency</div>
+          {% set max_count = crop_counts.values()|max %}
+          {% for crop, count in crop_counts|dictsort(by='value', reverse=true) %}
+          <div class="freq-row">
+            <div class="freq-label">{{ crop }}</div>
+            <div class="freq-bar-wrap">
+              <div class="freq-bar" style="width:{{ (count / max_count * 100)|round }}%"></div>
+            </div>
+            <div class="freq-count">{{ count }}x</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- HISTORY LIST -->
+        <div class="card">
+          <div class="card-title">📋 Full Recommendation History</div>
+          {% for rec in history %}
+          <div class="rec-item">
+            <div class="rec-header" onclick="toggleRec({{ loop.index }})">
+              <div class="rec-left">
+                <div class="rec-num">{{ loop.index }}</div>
+                <div>
+                  <div class="rec-crop">{{ rec.top_crop }}</div>
+                  <div class="rec-date">{{ rec.created_at.strftime('%d %B %Y at %I:%M %p') }}</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;">
+                <div>
+                  <div class="rec-conf">{{ rec.top_confidence|round(1) }}%</div>
+                  <div style="font-size:10px;color:var(--tl);text-align:right;">confidence</div>
+                </div>
+                <div style="color:var(--tl);" id="arrow-{{ loop.index }}">▼</div>
+              </div>
+            </div>
+            <div class="rec-body" id="rec-body-{{ loop.index }}">
+              <div style="font-size:11px;font-weight:700;color:var(--tl);margin-bottom:8px;text-transform:uppercase;">Field Conditions</div>
+              <div class="conditions-grid">
+                <div class="cond-item"><div class="cond-label">🌡 Temperature</div><div class="cond-value">{{ rec.temperature }}°C</div></div>
+                <div class="cond-item"><div class="cond-label">🌧 Rainfall</div><div class="cond-value">{{ rec.rainfall }}mm</div></div>
+                <div class="cond-item"><div class="cond-label">⛰ Altitude</div><div class="cond-value">{{ rec.altitude }}m</div></div>
+                <div class="cond-item"><div class="cond-label">🌿 Soil Type</div><div class="cond-value">{{ rec.soil_type }}</div></div>
+                <div class="cond-item"><div class="cond-label">🧪 Soil pH</div><div class="cond-value">{{ rec.soil_ph }}</div></div>
+              </div>
+              <div style="font-size:11px;font-weight:700;color:var(--tl);margin-bottom:8px;text-transform:uppercase;">All Recommended Crops</div>
+              <div class="crops-list">
+                {% for r in rec.results %}
+                <div class="crop-pill {{ 'top' if loop.first else '' }}">
+                  {% if loop.first %}🥇{% elif loop.index == 2 %}🥈{% elif loop.index == 3 %}🥉{% endif %}
+                  {{ r.crop }} — {{ r.percentage }}%
+                </div>
+                {% endfor %}
+              </div>
+              <div class="rec-actions">
+                <form method="POST" action="{{ url_for('farmer.delete_record', rec_id=rec.id) }}"
+                      onsubmit="return confirm('Delete this record?')">
+                  <button type="submit" class="btn-del">🗑️ Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        {% else %}
+        <div class="empty">
+          <div class="empty-icon">📭</div>
+          <div class="empty-title">No crop checks yet</div>
+          <div>Use the Crop Advisor to get your first recommendation — it saves automatically.</div>
+          <a href="{{ url_for('farmer.dashboard') }}" class="btn-go">🌾 Go to Crop Advisor</a>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- ══ TAB 2: CHAT HISTORY ══ -->
+      <div id="tab-chats" class="tab-content">
+
+        {% if chat_days %}
+
+        <!-- CHAT STATS -->
+        <div class="stats" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:20px;">
+          <div class="stat">
+            <div class="stat-num">{{ chat_count }}</div>
+            <div class="stat-label">Total Messages</div>
+            <div class="stat-sub">You + AgriBot combined</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{{ chat_days|length }}</div>
+            <div class="stat-label">Days Chatted</div>
+            <div class="stat-sub">Unique conversation days</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">{{ (chat_count / 2)|int }}</div>
+            <div class="stat-label">Questions Asked</div>
+            <div class="stat-sub">Farming questions to AgriBot</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">💬 AgriBot Conversation History</div>
+
+          {% for day, messages in chat_days.items() %}
+          <div class="chat-day">
+            <div class="chat-day-label">{{ day }}</div>
+            {% for msg in messages %}
+            <div class="chat-msg {{ 'user' if msg.role == 'user' else 'bot' }}">
+              <div class="chat-avatar {{ 'usr' if msg.role == 'user' else 'bot' }}">
+                {{ '🧑‍🌾' if msg.role == 'user' else '🤖' }}
+              </div>
+              <div>
+                <div class="chat-bubble {{ 'user' if msg.role == 'user' else 'bot' }}">
+                  {{ msg.message }}
+                </div>
+                <div class="chat-time">{{ msg.created_at.strftime('%I:%M %p') }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+
+        {% else %}
+        <div class="empty">
+          <div class="empty-icon">💬</div>
+          <div class="empty-title">No chat history yet</div>
+          <div>Chat with AgriBot and your conversations will be saved here automatically.</div>
+          <a href="{{ url_for('farmer.chatbot') }}" class="btn-go">💬 Open AgriBot Chat</a>
+        </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script>
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+function toggleRec(idx) {
+  const body  = document.getElementById(`rec-body-${idx}`);
+  const arrow = document.getElementById(`arrow-${idx}`);
+  const open  = body.classList.toggle('open');
+  arrow.textContent = open ? '▲' : '▼';
+}
+</script>
+{% endblock %}

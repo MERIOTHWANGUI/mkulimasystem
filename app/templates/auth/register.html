@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}Register — AgroSense{% endblock %}
+{% block navbar %}{% endblock %}
+{% block body_class %}class="auth-page"{% endblock %}
+
+{% block page_css %}
+<style>
+    /* Role selector cards */
+    .role-selector { display: flex; gap: 12px; margin-bottom: 1.8rem; }
+    .role-btn {
+        flex: 1; padding: 14px 10px; border-radius: 14px;
+        border: 2px solid var(--g-border); background: #fff;
+        text-align: center; cursor: pointer; transition: all 0.25s;
+    }
+    .role-btn input[type="radio"] { display: none; }
+    .role-btn .role-icon  { font-size: 1.6rem; display: block; margin-bottom: 4px; }
+    .role-btn .role-label { font-size: 0.78rem; font-weight: 600; color: #555; }
+    .role-btn.active      { border-color: var(--g-mid); background: var(--g-light); }
+    .role-btn.active .role-label { color: var(--g-dark); }
+
+    /* Two-column field row */
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+</style>
+{% endblock %}
+
+{% block flash %}{% endblock %}
+
+{% block content %}
+
+<!-- LEFT PANEL -->
+<div class="left-panel d-none d-lg-flex flex-column">
+    <div class="left-brand">🌿 AgroSense</div>
+    <h2 class="left-title">Start farming<br><span>smarter today</span></h2>
+    <p class="left-sub">Join thousands of Kenyan farmers using AI-powered recommendations to grow better crops every season.</p>
+    <ul class="left-features">
+        <li><span class="chk">✓</span> AI Crop Recommendations</li>
+        <li><span class="chk">✓</span> Connect with Input Suppliers</li>
+        <li><span class="chk">✓</span> Smart Farming Chatbot</li>
+        <li><span class="chk">✓</span> Farm Reports & Analytics</li>
+        <li><span class="chk">✓</span> 100% Free for Farmers</li>
+    </ul>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="right-panel">
+    <div class="form-box">
+        <h2>Create Account 🌱</h2>
+        <p class="sub">Fill in your details to get started</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Role selector -->
+        <p style="font-size:0.82rem;font-weight:600;color:#333;margin-bottom:10px;">I am a:</p>
+        <div class="role-selector">
+            <label class="role-btn active" onclick="setRole('farmer', this)">
+                <input type="radio" name="role_display" value="farmer" checked>
+                <span class="role-icon">👩‍🌾</span>
+                <span class="role-label">Farmer</span>
+            </label>
+            <label class="role-btn" onclick="setRole('supplier', this)">
+                <input type="radio" name="role_display" value="supplier">
+                <span class="role-icon">🏪</span>
+                <span class="role-label">Supplier</span>
+            </label>
+        </div>
+
+        <form method="POST">
+            <input type="hidden" name="role" id="roleInput" value="farmer">
+
+            <div class="field-row">
+                <div class="field-wrap">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" placeholder="John" required>
+                </div>
+                <div class="field-wrap">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" placeholder="Kamau" required>
+                </div>
+            </div>
+
+            <div class="field-wrap">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="john_kamau" required>
+            </div>
+            <div class="field-wrap">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="field-wrap">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Create a strong password" required>
+            </div>
+
+            <button type="submit" class="btn-auth">Create My Account →</button>
+        </form>
+
+        <div class="form-footer">
+            Already have an account? <a href="/login">Login here</a><br>
+            <a href="/" style="color:#aaa;">← Back to Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block page_js %}
+<script>
+    function setRole(value, el) {
+        document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+        document.getElementById('roleInput').value = value;
+    }
+</script>
+{% endblock %}

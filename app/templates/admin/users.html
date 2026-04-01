@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% block title %}Manage Users — AgroSense Admin{% endblock %}
+{% block navbar %}{% endblock %}
+{% block flash %}{% endblock %}
+
+{% block page_css %}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gd:#1a4d2e;--gm:#2d7a4f;--gl:#4caf7d;--gp:#e8f5ee;
+  --am:#c8860a;--al:#f5a623;--ap:#fef3dc;
+  --bg:#f4f7f2;--td:#1c2617;--tm:#4a5e42;--tl:#8a9e82;
+  --bd:#d4e2ce;--red:#c0392b;--rp:#fdecea;
+  --sh:0 1px 4px rgba(26,77,46,.08);--r:14px;--rs:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-height:100vh;}
+.page{display:flex;min-height:100vh;}
+
+/* SIDEBAR */
+.sidebar{width:230px;background:var(--gd);flex-shrink:0;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;overflow-y:auto;}
+.main-wrap{flex:1;margin-left:230px;display:flex;flex-direction:column;min-height:100vh;}
+.sb-logo{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}
+.sb-icon{width:36px;height:36px;background:var(--al);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.sb-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;}
+.sb-name span{color:var(--al);}
+.sb-section{padding:16px 12px 4px;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 6px;margin-bottom:6px;}
+.sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;transition:all .18s;margin-bottom:2px;text-decoration:none;}
+.sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
+.sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-item.active .sb-ico{background:var(--al);}
+.sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
+.sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
+.sb-avatar{width:34px;height:34px;background:var(--al);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.sb-uname{font-size:13px;font-weight:600;color:#fff;}
+.sb-urole{font-size:11px;color:rgba(255,255,255,.5);}
+.sb-logout{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:rgba(255,100,100,.8);font-size:13px;font-weight:500;text-decoration:none;transition:all .18s;margin-top:6px;}
+.sb-logout:hover{background:rgba(255,100,100,.1);color:#ff6b6b;}
+
+/* TOPBAR */
+.topbar{background:#fff;border-bottom:1px solid var(--bd);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50;}
+.tb-title{font-family:'Playfair Display',serif;font-size:17px;}
+
+/* CONTENT */
+.content{flex:1;padding:28px 32px;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;}
+.stat{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:20px 22px;box-shadow:var(--sh);}
+.stat-num{font-family:'Playfair Display',serif;font-size:32px;color:var(--gd);line-height:1;}
+.stat-label{font-size:12px;color:var(--tl);margin-top:4px;}
+
+/* SEARCH */
+.search-bar{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;box-shadow:var(--sh);}
+.search-input{flex:1;border:none;background:none;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--td);outline:none;}
+.filter-btns{display:flex;gap:6px;}
+.filter-btn{border:1.5px solid var(--bd);background:#fff;color:var(--tm);border-radius:20px;padding:6px 16px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
+.filter-btn.active,.filter-btn:hover{background:var(--gd);color:#fff;border-color:var(--gd);}
+
+/* USER TABLE */
+.card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);overflow:hidden;box-shadow:var(--sh);}
+.user-table{width:100%;border-collapse:collapse;}
+.user-table th{text-align:left;font-size:11px;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:.7px;padding:12px 16px;border-bottom:2px solid var(--bd);background:var(--gp);}
+.user-table td{padding:14px 16px;border-bottom:1px solid var(--bd);font-size:13px;vertical-align:middle;}
+.user-table tr:last-child td{border-bottom:none;}
+.user-table tr:hover td{background:var(--gp);}
+.user-row{animation:fadeUp .3s ease both;}
+
+/* USER AVATAR */
+.u-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.u-farmer{background:#e8f5ee;}
+.u-supplier{background:var(--ap);}
+.u-admin{background:#fde8f0;}
+.u-info{display:flex;align-items:center;gap:10px;}
+.u-name{font-weight:600;color:var(--td);}
+.u-email{font-size:11px;color:var(--tl);margin-top:2px;}
+
+/* ROLE BADGE */
+.role-badge{font-size:11px;font-weight:700;padding:3px 12px;border-radius:20px;display:inline-block;}
+.role-farmer{background:#e8f5ee;color:var(--gd);}
+.role-supplier{background:var(--ap);color:var(--am);}
+.role-admin{background:#fde8f0;color:#c0392b;}
+
+/* STAT BADGE */
+.stat-badge{font-size:11px;color:var(--tl);background:var(--bg);border-radius:20px;padding:2px 10px;}
+
+/* ACTIONS */
+.actions{display:flex;gap:6px;align-items:center;}
+.btn-sm{border:none;border-radius:7px;padding:6px 12px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-role{background:var(--gp);color:var(--gd);}
+.btn-role:hover{background:var(--gd);color:#fff;}
+.btn-del{background:var(--rp);color:var(--red);}
+.btn-del:hover{background:var(--red);color:#fff;}
+
+/* ROLE SELECT */
+.role-select{border:1.5px solid var(--bd);border-radius:7px;padding:5px 10px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--td);background:var(--bg);outline:none;cursor:pointer;}
+
+/* EMPTY */
+.empty-row td{text-align:center;padding:40px;color:var(--tl);}
+
+/* ALERT */
+.alert{border-radius:9px;padding:12px 16px;font-size:13px;margin-bottom:18px;}
+.alert-success{background:#e8f5ee;border:1px solid #b3d9bf;color:var(--gd);}
+.alert-danger{background:var(--rp);border:1px solid #f5c6cb;color:var(--red);}
+.alert-info{background:var(--ap);border:1px solid #f5a62340;color:var(--am);}
+
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:9999;align-items:center;justify-content:center;}
+.modal-bg.show{display:flex !important;}
+.modal-box{background:#fff;border-radius:var(--r);padding:28px;width:420px;box-shadow:0 8px 40px rgba(0,0,0,.2);}
+.modal-title{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:6px;}
+.modal-sub{font-size:13px;color:var(--tl);margin-bottom:20px;}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;}
+.btn-cancel{background:var(--bg);color:var(--td);border:1px solid var(--bd);border-radius:9px;padding:9px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+.btn-confirm{background:var(--red);color:#fff;border:none;border-radius:9px;padding:9px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:900px){
+  .stats{grid-template-columns:1fr 1fr;}
+  .sidebar{width:60px;}
+  .sb-name,.sb-label,.sb-uname,.sb-urole,.sb-logout span,.sb-item span{display:none;}
+  .main-wrap{margin-left:60px;}
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page">
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sb-logo">
+      <div class="sb-icon">⚙️</div>
+      <div class="sb-name">Agro<span>Admin</span></div>
+    </div>
+    <div class="sb-section">
+      <div class="sb-label">Admin Menu</div>
+      <a href="{{ url_for('admin.dashboard') }}" class="sb-item">
+        <div class="sb-ico">🧠</div><span>Knowledge Base</span>
+      </a>
+      <a href="{{ url_for('admin.users') }}" class="sb-item active">
+        <div class="sb-ico">👥</div><span>Manage Users</span>
+      </a>
+    </div>
+    <div class="sb-bottom">
+      <div class="sb-user">
+        <div class="sb-avatar">👤</div>
+        <div>
+          <div class="sb-uname">{{ current_user.first_name }}</div>
+          <div class="sb-urole">Admin</div>
+        </div>
+      </div>
+      <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main-wrap">
+    <div class="topbar">
+      <div class="tb-title">👥 Manage Users</div>
+      <div style="font-size:13px;color:var(--tl);">{{ all_users|length }} total users</div>
+    </div>
+
+    <div class="content">
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for cat, msg in messages %}
+        <div class="alert alert-{{ cat }}">{{ msg }}</div>
+        {% endfor %}
+      {% endwith %}
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">{{ all_users|length }}</div>
+          <div class="stat-label">Total Users</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{{ farmers|length }}</div>
+          <div class="stat-label">Farmers</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{{ suppliers|length }}</div>
+          <div class="stat-label">Suppliers</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{{ admins|length }}</div>
+          <div class="stat-label">Admins</div>
+        </div>
+      </div>
+
+      <!-- SEARCH & FILTER -->
+      <div class="search-bar">
+        <span style="color:var(--tl);">🔍</span>
+        <input type="text" class="search-input" id="search-input"
+               placeholder="Search by name, username or email…" oninput="filterUsers()">
+        <div class="filter-btns">
+          <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+          <button class="filter-btn" onclick="setFilter('farmer', this)">🌾 Farmers</button>
+          <button class="filter-btn" onclick="setFilter('supplier', this)">🏪 Suppliers</button>
+          <button class="filter-btn" onclick="setFilter('admin', this)">⚙️ Admins</button>
+        </div>
+      </div>
+
+      <!-- USERS TABLE -->
+      <div class="card">
+        <table class="user-table" id="user-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Activity</th>
+              <th>Joined</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="user-tbody">
+            {% for u in all_users %}
+            <tr class="user-row" data-name="{{ u.first_name|lower }} {{ u.last_name|lower }}"
+                data-username="{{ u.username|lower }}" data-email="{{ u.email|lower }}"
+                data-role="{{ u.role }}">
+              <td style="color:var(--tl);font-size:12px;">{{ loop.index }}</td>
+              <td>
+                <div class="u-info">
+                  <div class="u-avatar u-{{ u.role }}">
+                    {{ '🧑‍🌾' if u.role == 'farmer' else ('🏪' if u.role == 'supplier' else '⚙️') }}
+                  </div>
+                  <div>
+                    <div class="u-name">{{ u.first_name }} {{ u.last_name }}</div>
+                    <div class="u-email">@{{ u.username }} · {{ u.email }}</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="role-badge role-{{ u.role }}">{{ u.role }}</span>
+              </td>
+              <td>
+                {% if u.role == 'farmer' %}
+                  <span class="stat-badge">{{ u.rec_count }} crop checks</span>
+                {% elif u.role == 'supplier' %}
+                  <span class="stat-badge">{{ u.product_count }} products</span>
+                {% else %}
+                  <span class="stat-badge">Admin</span>
+                {% endif %}
+              </td>
+              <td style="color:var(--tl);font-size:12px;">
+                {{ u.created_at.strftime('%d %b %Y') }}
+              </td>
+              <td>
+                {% if u.id != current_user.id %}
+                <div class="actions">
+                  <!-- CHANGE ROLE -->
+                  <form method="POST" action="{{ url_for('admin.change_role', user_id=u.id) }}"
+                        style="display:flex;gap:4px;align-items:center;">
+                    <select name="role" class="role-select">
+                      <option value="farmer"   {{ 'selected' if u.role=='farmer' }}>Farmer</option>
+                      <option value="supplier" {{ 'selected' if u.role=='supplier' }}>Supplier</option>
+                      <option value="admin"    {{ 'selected' if u.role=='admin' }}>Admin</option>
+                    </select>
+                    <button type="submit" class="btn-sm btn-role">Save</button>
+                  </form>
+                  <!-- DELETE -->
+                  <button class="btn-sm btn-del"
+                    onclick="confirmDelete({{ u.id }}, '{{ u.first_name }} {{ u.last_name }}')">
+                    🗑️
+                  </button>
+                </div>
+                {% else %}
+                <span style="font-size:12px;color:var(--tl);">— You —</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% else %}
+            <tr class="empty-row">
+              <td colspan="6">No users found.</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM MODAL -->
+<div class="modal-bg" id="delete-modal">
+  <div class="modal-box">
+    <div class="modal-title">🗑️ Delete User</div>
+    <div class="modal-sub" id="delete-modal-sub">Are you sure you want to delete this user?</div>
+    <form method="POST" id="delete-form">
+      <div class="modal-actions">
+        <button type="button" class="btn-cancel"
+                onclick="document.getElementById('delete-modal').classList.remove('show')">
+          Cancel
+        </button>
+        <button type="submit" class="btn-confirm">Yes, Delete</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script>
+let currentFilter = 'all';
+
+function filterUsers() {
+  const search = document.getElementById('search-input').value.toLowerCase();
+  const rows   = document.querySelectorAll('#user-tbody .user-row');
+  let   visible = 0;
+
+  rows.forEach(row => {
+    const matchSearch = !search ||
+      row.dataset.name.includes(search) ||
+      row.dataset.username.includes(search) ||
+      row.dataset.email.includes(search);
+    const matchRole = currentFilter === 'all' || row.dataset.role === currentFilter;
+    const show = matchSearch && matchRole;
+    row.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+}
+
+function setFilter(role, btn) {
+  currentFilter = role;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterUsers();
+}
+
+function confirmDelete(userId, userName) {
+  document.getElementById('delete-modal-sub').textContent =
+    `Are you sure you want to delete "${userName}"? This cannot be undone.`;
+  document.getElementById('delete-form').action = `/admin/users/delete/${userId}`;
+  document.getElementById('delete-modal').classList.add('show');
+}
+
+document.getElementById('delete-modal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('show');
+});
+</script>
+{% endblock %}

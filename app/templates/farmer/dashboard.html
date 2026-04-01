@@ -1,0 +1,916 @@
+{% extends 'base.html' %}
+{% block title %}Farmer Dashboard — AgroSense{% endblock %}
+{% block navbar %}{% endblock %}
+{% block flash %}{% endblock %}
+
+{% block page_css %}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gd: #1a4d2e; --gm: #2d7a4f; --gl: #4caf7d; --gp: #e8f5ee;
+  --am: #c8860a; --al: #f5a623; --ap: #fef3dc;
+  --bg: #f4f7f2; --white: #fff;
+  --td: #1c2617; --tm: #4a5e42; --tl: #8a9e82;
+  --bd: #d4e2ce; --blue: #2471a3; --bp: #eaf3fb;
+  --red: #c0392b; --rp: #fdecea;
+  --sh: 0 1px 4px rgba(26,77,46,.08);
+  --shm: 0 4px 20px rgba(26,77,46,.13);
+  --r: 14px; --rs: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-height:100vh;}
+.page{display:flex;min-height:100vh;}
+.sidebar{width:230px;background:var(--gd);flex-shrink:0;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;overflow-y:auto;}
+.main-wrap{flex:1;margin-left:230px;display:flex;flex-direction:column;min-height:100vh;}
+.sb-logo{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}
+.sb-icon{width:36px;height:36px;background:var(--gl);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.sb-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;}
+.sb-name span{color:var(--al);}
+.sb-section{padding:16px 12px 4px;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 6px;margin-bottom:6px;}
+.sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;cursor:pointer;transition:all .18s;margin-bottom:2px;text-decoration:none;}
+.sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
+.sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-item.active .sb-ico{background:var(--gl);}
+.sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
+.sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
+.sb-avatar{width:34px;height:34px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.sb-uname{font-size:13px;font-weight:600;color:#fff;}
+.sb-urole{font-size:11px;color:rgba(255,255,255,.5);}
+.sb-logout{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:rgba(255,100,100,.8);font-size:13px;font-weight:500;cursor:pointer;margin-top:6px;text-decoration:none;transition:all .18s;}
+.sb-logout:hover{background:rgba(255,100,100,.1);color:#ff6b6b;}
+.topbar{background:#fff;border-bottom:1px solid var(--bd);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;flex-shrink:0;position:sticky;top:0;z-index:50;}
+.tb-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--td);}
+.tb-right{display:flex;align-items:center;gap:12px;}
+.tb-loc{font-size:12px;color:var(--tl);background:var(--bg);padding:6px 12px;border-radius:20px;border:1px solid var(--bd);}
+.tb-avatar{width:36px;height:36px;background:var(--gm);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.content{flex:1;overflow-y:auto;padding:28px 32px;}
+.welcome{background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:var(--r);padding:24px 28px;color:#fff;display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+.wlc-text h2{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:4px;}
+.wlc-text p{font-size:13px;color:rgba(255,255,255,.75);}
+.wlc-btn{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);color:#fff;padding:10px 20px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;}
+.wlc-btn:hover{background:rgba(255,255,255,.25);}
+.card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:24px;box-shadow:var(--sh);margin-bottom:20px;}
+.sh{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--gp);border-radius:9px;margin-bottom:16px;}
+.sh-ico{width:32px;height:32px;background:var(--gd);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sh-title{font-weight:700;font-size:13px;color:var(--gd);}
+.sh-desc{font-size:11.5px;color:var(--tm);}
+.gps-banner{display:flex;align-items:center;gap:12px;background:var(--gp);border:1px solid #b3d9bf;border-radius:10px;padding:12px 16px;margin-bottom:18px;}
+.gps-status{flex:1;}
+.gps-status .gs-title{font-weight:700;font-size:13px;color:var(--gd);}
+.gps-status .gs-sub{font-size:11.5px;color:var(--tm);margin-top:2px;}
+.btn-gps{background:var(--gd);color:#fff;border:none;padding:9px 18px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .2s;flex-shrink:0;}
+.btn-gps:hover{background:var(--gm);}
+.btn-gps:disabled{background:#aaa;cursor:not-allowed;}
+.gps-loading{display:none;align-items:center;gap:8px;font-size:12px;color:var(--tm);margin-top:8px;}
+.mini-spin{width:16px;height:16px;border:2px solid var(--bd);border-top-color:var(--gm);border-radius:50%;animation:spin .6s linear infinite;}
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px;}
+.igroup{display:flex;flex-direction:column;gap:5px;}
+.ilabel{font-size:12px;font-weight:700;color:var(--tm);display:flex;align-items:center;gap:5px;}
+.ihint{font-size:10px;color:var(--tl);font-weight:400;background:var(--bg);border-radius:4px;padding:1px 5px;}
+.ifield{border:1.5px solid var(--bd);border-radius:var(--rs);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--td);outline:none;transition:border .2s,box-shadow .2s;width:100%;}
+.ifield:focus{border-color:var(--gm);box-shadow:0 0 0 3px rgba(45,122,79,.1);background:#fff;}
+.ifield.auto{border-color:var(--gl);background:#fff;}
+.slider-wrap{display:flex;flex-direction:column;gap:4px;}
+.range-row{display:flex;align-items:center;gap:8px;}
+.range-input{flex:1;-webkit-appearance:none;height:5px;border-radius:3px;background:var(--bd);outline:none;cursor:pointer;}
+.range-input::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--gd);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+.range-val{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:var(--gd);width:48px;text-align:right;}
+.range-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--tl);}
+.soil-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-bottom:4px;}
+.soil-opt{border:2px solid var(--bd);border-radius:10px;padding:12px 6px;text-align:center;cursor:pointer;transition:all .18s;}
+.soil-opt:hover{border-color:var(--gm);background:var(--gp);}
+.soil-opt.sel{border-color:var(--gd);background:var(--gp);}
+.s-ico{font-size:24px;display:block;margin-bottom:5px;}
+.s-name{font-size:12px;font-weight:700;color:var(--td);}
+.s-trait{font-size:10px;color:var(--tl);margin-top:2px;}
+.ph-wrap{background:var(--bg);border-radius:10px;padding:16px;border:1px solid var(--bd);}
+.ph-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.ph-big{font-family:'Playfair Display',serif;font-size:36px;color:var(--gd);}
+.submit-card{background:linear-gradient(135deg,var(--gd),var(--gm));border:none;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.sc-text h3{font-family:'Playfair Display',serif;font-size:19px;margin-bottom:5px;}
+.sc-text p{font-size:13px;color:rgba(255,255,255,.75);}
+.btn-submit{background:var(--al);color:#fff;border:none;padding:14px 32px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all .2s;}
+.btn-submit:hover{background:#e0951f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.results-wrap{animation:fadeUp .4s ease;}
+.result-hero{background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:var(--r);padding:28px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:24px;}
+.rh-emoji{font-size:64px;flex-shrink:0;}
+.rh-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px;}
+.rh-name{font-family:'Playfair Display',serif;font-size:32px;line-height:1.1;margin-bottom:6px;}
+.rh-conf{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:10px;}
+.conf-bar{background:rgba(255,255,255,.2);border-radius:4px;height:8px;width:260px;overflow:hidden;}
+.conf-fill{height:100%;background:var(--gl);border-radius:4px;}
+.rh-tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:7px;}
+.rh-tag{background:rgba(255,255,255,.15);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600;}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px;}
+.rc{background:#fff;border:2px solid var(--bd);border-radius:var(--r);padding:18px;text-align:center;position:relative;transition:all .2s;}
+.rc:hover{transform:translateY(-3px);box-shadow:var(--shm);border-color:var(--gl);}
+.rc.best{border-color:var(--gm);}
+.best-tag{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gd);color:#fff;font-size:10px;font-weight:700;padding:2px 10px;border-radius:0 0 8px 8px;}
+.rc-emoji{font-size:40px;display:block;margin:10px 0 8px;}
+.rc-name{font-family:'Playfair Display',serif;font-size:15px;color:var(--td);margin-bottom:6px;}
+.rc-pct{font-size:14px;font-weight:700;color:var(--gm);margin-bottom:6px;}
+.rc-bar{height:5px;background:var(--bd);border-radius:3px;overflow:hidden;}
+.rc-fill{height:100%;border-radius:3px;background:var(--gm);}
+.rc-desc{font-size:11px;color:var(--tl);margin-top:7px;line-height:1.4;}
+.btn-edit{background:#fff;color:var(--gd);border:1.5px solid var(--bd);padding:10px 20px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-edit:hover{border-color:var(--gm);background:var(--gp);}
+.tip-box{background:var(--ap);border:1px solid #f5a62340;border-radius:10px;padding:14px 16px;margin-bottom:20px;}
+.tip-title{font-size:13px;font-weight:700;color:var(--am);margin-bottom:8px;}
+.tip-box ul{padding-left:16px;}
+.tip-box li{font-size:12.5px;color:var(--tm);margin-bottom:4px;line-height:1.5;}
+.alert-danger{background:var(--rp);border:1px solid #f5c6cb;border-radius:9px;padding:12px 16px;color:var(--red);font-size:13px;margin-bottom:18px;}
+#loading-overlay{display:none;position:fixed;inset:0;background:rgba(26,77,46,.85);z-index:999;flex-direction:column;align-items:center;justify-content:center;color:#fff;}
+#loading-overlay.show{display:flex;}
+.big-spin{width:60px;height:60px;border:5px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;margin-bottom:20px;}
+.lo-title{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:8px;}
+.lo-sub{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:24px;}
+.lo-steps{display:flex;flex-direction:column;gap:8px;width:280px;}
+.lo-step{background:rgba(255,255,255,.1);border-radius:8px;padding:10px 14px;font-size:13px;display:flex;align-items:center;gap:10px;}
+.lo-step.done{color:#7be29b;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px;}
+@media(max-width:900px){
+  .sidebar{width:60px;}
+  .sb-name,.sb-label,.sb-uname,.sb-urole,.sb-logout span,.sb-item span{display:none;}
+  .main-wrap{margin-left:60px;}
+  .soil-grid{grid-template-columns:repeat(3,1fr);}
+  .results-grid{grid-template-columns:repeat(2,1fr);}
+  .igrid{grid-template-columns:1fr 1fr;}
+}
+.support-panel{background:#fff;border-radius:14px;border:1.5px solid var(--bd);margin-top:24px;overflow:hidden;box-shadow:0 2px 12px rgba(26,77,46,.08);}
+.sp-tabs{display:flex;background:var(--gp);border-bottom:1px solid var(--bd);}
+.sp-tab{flex:1;padding:13px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--tm);background:none;border:none;cursor:pointer;transition:all .2s;border-bottom:3px solid transparent;}
+.sp-tab.active{color:var(--gd);border-bottom-color:var(--gd);background:#fff;}
+.sp-tab:hover{background:rgba(255,255,255,.5);}
+.sp-content{display:none;padding:24px;}
+.sp-content.active{display:block;}
+.sp-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--gd);margin-bottom:18px;}
+ 
+/* CALENDAR */
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+.cal-item{background:var(--bg);border-radius:10px;padding:14px;border:1px solid var(--bd);}
+.cal-week{font-size:10px;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:.6px;}
+.cal-icon{font-size:24px;margin:6px 0;}
+.cal-stage{font-size:13px;font-weight:700;color:var(--td);margin-bottom:4px;}
+.cal-action{font-size:12px;color:var(--tm);line-height:1.5;}
+ 
+/* INPUTS */
+.inputs-list{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.input-item{display:flex;align-items:center;gap:14px;background:var(--bg);border-radius:10px;padding:14px;border:1px solid var(--bd);}
+.input-icon{font-size:28px;flex-shrink:0;}
+.input-body{flex:1;}
+.input-cat{font-size:10px;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:.6px;}
+.input-product{font-size:13px;font-weight:600;color:var(--td);margin-top:2px;}
+.input-qty{font-size:12px;color:var(--tm);margin-top:2px;}
+.input-find{background:var(--gd);color:#fff;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:all .2s;}
+.input-find:hover{background:var(--gm);color:#fff;}
+.input-tip{background:var(--ap);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--am);line-height:1.6;}
+ 
+/* YIELD */
+.yield-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:16px;}
+.yield-card{background:var(--bg);border-radius:10px;padding:18px;text-align:center;border:1px solid var(--bd);}
+.yield-card.highlight{background:var(--gp);border-color:var(--gl);}
+.yield-num{font-family:'Playfair Display',serif;font-size:22px;color:var(--gd);}
+.yield-unit{font-size:11px;color:var(--tl);margin-top:2px;}
+.yield-label{font-size:11px;font-weight:700;color:var(--tm);margin-top:6px;text-transform:uppercase;letter-spacing:.5px;}
+.yield-note{background:var(--ap);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--am);line-height:1.6;}
+ 
+@media(max-width:700px){
+  .sp-tabs{flex-direction:column;}
+  .cal-grid{grid-template-columns:1fr;}
+  .yield-grid{grid-template-columns:1fr;}
+  .input-item{flex-wrap:wrap;}
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="loading-overlay">
+  <div class="big-spin"></div>
+  <div class="lo-title">Analyzing your farm…</div>
+  <div class="lo-sub">Our AI is finding your best crops</div>
+  <div class="lo-steps">
+    <div class="lo-step done" id="lo1">✅ Reading location & climate data</div>
+    <div class="lo-step" id="lo2">⏳ Processing soil conditions…</div>
+    <div class="lo-step" id="lo3">⏳ Running prediction model…</div>
+    <div class="lo-step" id="lo4">⏳ Ranking best crops for you…</div>
+  </div>
+</div>
+
+<div class="page">
+<nav class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-icon">🌿</div>
+    <div class="sb-name">Agro<span>Sense</span></div>
+  </div>
+  <div class="sb-section">
+    <div class="sb-label">Menu</div>
+    <a href="{{ url_for('farmer.dashboard') }}" class="sb-item active">
+      <div class="sb-ico">🤖</div><span>Crop Advisor</span>
+    </a>
+   <a href="{{ url_for('farmer.chatbot') }}" class="sb-item">
+        <div class="sb-ico">💬</div><span>AgriBot Chat</span>
+      </a>
+    <a href="{{ url_for('farmer.reports') }}" class="sb-item active">
+        <div class="sb-ico">📊</div><span>My Reports</span>
+      </a>
+    <a href="{{ url_for('farmer.marketplace') }}" class="sb-item">
+      <div class="sb-ico">🏪</div><span>Marketplace</span>
+    </a>
+    
+  </div>
+  <div class="sb-bottom">
+    <div class="sb-user">
+      <div class="sb-avatar">🧑‍🌾</div>
+      <div>
+        <div class="sb-uname">{{ current_user.first_name }}</div>
+        <div class="sb-urole">Farmer</div>
+      </div>
+    </div>
+    <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+  </div>
+</nav>
+
+  <div class="main-wrap">
+    <div class="topbar">
+      <div class="tb-title">🤖 Crop Recommendation Advisor</div>
+      <div class="tb-right">
+        <div class="tb-loc" id="location-display">📍 Location not set</div>
+        <div class="tb-avatar">🧑‍🌾</div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      {% if not results %}
+      <div class="welcome">
+        <div class="wlc-text">
+          <h2>Welcome back, {{ current_user.first_name }}! 🌱</h2>
+          <p>Enter your farm conditions below and our AI will recommend the best crops for you.</p>
+        </div>
+        <a href="#form" class="wlc-btn">Start Recommendation →</a>
+      </div>
+      {% endif %}
+
+      {% if error %}
+      <div class="alert-danger">⚠️ {{ error }}</div>
+      {% endif %}
+
+      {% if results %}
+      <div class="results-wrap">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+          <div>
+            <div style="font-size:12px;color:var(--tl);margin-bottom:3px;">
+              Results · Temp {{ form_data.temperature }}°C · Rainfall {{ form_data.rainfall }}mm · Alt {{ form_data.altitude }}m · {{ form_data.soil_type }} soil · pH {{ form_data.soil_ph }}
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:20px;">{{ results|length }} Crops Ranked for Your Farm</div>
+          </div>
+          <form method="GET" action="{{ url_for('farmer.dashboard') }}">
+            <button type="submit" class="btn-edit">← Edit My Inputs</button>
+          </form>
+        </div>
+
+        {% set top = results[0] %}
+        <div class="result-hero">
+          <div class="rh-emoji">{{ top.emoji }}</div>
+          <div>
+            <div class="rh-label">🏆 Top Recommendation for Your Farm</div>
+            <div class="rh-name">{{ top.crop }}</div>
+            <div class="rh-conf">{{ top.percentage }}% suitability match for your conditions</div>
+            <div class="conf-bar"><div class="conf-fill" style="width:{{ top.percentage }}%;"></div></div>
+            <div class="rh-tags">
+              <span class="rh-tag">✅ Temp {{ form_data.temperature }}°C</span>
+              <span class="rh-tag">✅ Rainfall {{ form_data.rainfall }}mm</span>
+              <span class="rh-tag">✅ {{ form_data.soil_type }} soil</span>
+              <span class="rh-tag">✅ pH {{ form_data.soil_ph }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-grid">
+          {% for r in results %}
+          <div class="rc {% if loop.first %}best{% endif %}">
+            {% if loop.first %}<div class="best-tag">Best Match</div>{% endif %}
+            <span class="rc-emoji">{{ r.emoji }}</span>
+            <div class="rc-name">{{ r.crop }}</div>
+            <div class="rc-pct">{{ r.percentage }}%</div>
+            <div class="rc-bar">
+              <div class="rc-fill" style="width:{{ r.percentage }}%;{% if r.percentage < 40 %}background:var(--am);{% endif %}"></div>
+            </div>
+            <div class="rc-desc">{{ r.desc }}</div>
+          </div>
+          {% if results %}
+{% set top_crop = results[0].crop %}
+ 
+<!-- SUPPORT PANEL -->
+<div class="support-panel">
+ 
+  <!-- TABS -->
+  <div class="sp-tabs">
+    
+    <button class="sp-tab" onclick="spTab('inputs', this)">🛒 What to Buy</button>
+    <button class="sp-tab" onclick="spTab('yield', this)">📊 Yield Estimate</button>
+  </div>
+ 
+  
+ 
+  <!-- TAB 2: WHAT TO BUY -->
+  {% set inputs_map = {
+    'Maize':        [
+      ('🌱', 'Seeds',       'H614, H513 or DK8031 certified maize seeds', '1 x 2kg packet per acre'),
+      ('🌿', 'Fertilizer',  'DAP (planting) + CAN (top dressing)',         '50kg DAP + 50kg CAN per acre'),
+      ('🧪', 'Pesticide',   'Bulldock or Coragen for stalk borer',         '1 litre per acre'),
+    ],
+    'Beans':        [
+      ('🌱', 'Seeds',       'Rosecoco, Mwitemania or Lyamungu certified',  '15-20kg per acre'),
+      ('🌿', 'Fertilizer',  'DAP at planting only',                        '25kg DAP per acre'),
+      ('🧪', 'Pesticide',   'Actara or soapy water for aphids',            'As needed'),
+    ],
+    'Kale':         [
+      ('🌱', 'Seeds',       'Certified Kale / Sukuma Wiki seeds',          '200g per acre'),
+      ('🌿', 'Fertilizer',  'Compost or DAP + CAN',                        '2 bags compost per planting hole'),
+      ('🧪', 'Pesticide',   'Soapy water or Actara for aphids',            'Spray weekly'),
+    ],
+    'Irish Potato': [
+      ('🥔', 'Seed Potato', 'Shangi, Tigoni or Dutch Robyjn certified',    '1000-1500kg per acre'),
+      ('🌿', 'Fertilizer',  'DAP at planting + CAN at earthing up',        '50kg DAP + 50kg CAN per acre'),
+      ('🧪', 'Fungicide',   'Copper oxychloride for blight',               'Spray every 2 weeks'),
+    ],
+    'Tomato':       [
+      ('🍅', 'Seeds',       'Anna F1, Tylka or Cal J hybrid seeds',        '25g per acre'),
+      ('🌿', 'Fertilizer',  'DAP + CAN + foliar feed',                     '50kg DAP per acre'),
+      ('🧪', 'Fungicide',   'Copper oxychloride every 10 days',            '500g per 20 litres water'),
+    ],
+    'Sorghum':      [
+      ('🌾', 'Seeds',       'Serena or E6518 certified sorghum',           '5-8kg per acre'),
+      ('🌿', 'Fertilizer',  'Small amount of DAP at planting',             '25kg DAP per acre'),
+    ],
+    'Groundnut':    [
+      ('🥜', 'Seeds',       'Homa Bay Red or Manipinta certified',         '50-60kg per acre'),
+      ('🌿', 'Fertilizer',  'Minimal — no excess nitrogen',                '25kg DAP per acre only'),
+    ],
+    'Cowpea':       [
+      ('🌱', 'Seeds',       'Any certified cowpea variety',                '8-10kg per acre'),
+    ],
+    'Millet':       [
+      ('🌾', 'Seeds',       'Serena millet certified variety',             '3-5kg per acre'),
+      ('🌿', 'Fertilizer',  'Small DAP at planting',                       '25kg per acre'),
+    ],
+    'Green Gram':   [
+      ('🌱', 'Seeds',       'N26 or KS20 certified green gram',            '8-10kg per acre'),
+    ],
+    'Soybean':      [
+      ('🌱', 'Seeds',       'SB19 or Gazelle certified soybean',           '25-30kg per acre'),
+      ('🌿', 'Fertilizer',  'Rhizobium inoculant + DAP',                   '25kg DAP per acre'),
+    ],
+    'Onion':        [
+      ('🧅', 'Seeds',       'Red Creole or Bombay Red certified',          '3-4kg per acre'),
+      ('🌿', 'Fertilizer',  'DAP + CAN + potassium',                       '50kg DAP per acre'),
+      ('🧪', 'Fungicide',   'Mancozeb for purple blotch',                  'Spray every 2 weeks'),
+    ],
+    'Carrot':       [
+      ('🥕', 'Seeds',       'Nantes or Chantenay certified carrot',        '1-2kg per acre'),
+      ('🌿', 'Fertilizer',  'Compost + DAP',                               '2 bags compost per bed'),
+    ],
+  } %}
+ 
+  <div class="sp-content" id="sp-inputs">
+    <div class="sp-title">What to Buy for {{ top_crop }}</div>
+    <div class="inputs-list">
+      {% for icon, cat, product, qty in inputs_map.get(top_crop, [('🌱','Seeds','Certified seeds for your crop','As recommended')]) %}
+      <div class="input-item">
+        <div class="input-icon">{{ icon }}</div>
+        <div class="input-body">
+          <div class="input-cat">{{ cat }}</div>
+          <div class="input-product">{{ product }}</div>
+          <div class="input-qty">📦 {{ qty }}</div>
+        </div>
+        <a href="{{ url_for('farmer.marketplace') }}?category={{ cat }}"
+           class="input-find">find→</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="input-tip">
+      💡 <strong>Tip:</strong> Buy certified seeds from registered agro-vets or the marketplace.
+      Avoid fake seeds — they look the same but give poor harvests.
+    </div>
+  </div>
+ 
+  <!-- TAB 3: YIELD ESTIMATE -->
+  <div class="sp-content" id="sp-yield">
+    <div class="sp-title">Expected Yield for {{ top_crop }}</div>
+    {% set yields = {
+      'Maize':        ('18–30 bags', '90kg bags', 'per acre', 'Ksh 900–1,500', 'per 90kg bag', 'Ksh 16,200 – 45,000'),
+      'Beans':        ('8–15 bags',  '90kg bags', 'per acre', 'Ksh 6,000–9,000', 'per 90kg bag', 'Ksh 48,000 – 135,000'),
+      'Kale':         ('400–600 bundles', 'per month', 'per 1/8 acre', 'Ksh 10–20', 'per bundle', 'Ksh 4,000 – 12,000/month'),
+      'Irish Potato': ('30–60 bags',  '110kg bags', 'per acre', 'Ksh 1,500–3,000', 'per bag', 'Ksh 45,000 – 180,000'),
+      'Tomato':       ('800–1,500 crates', '20kg crates', 'per acre', 'Ksh 400–1,200', 'per crate', 'Ksh 320,000 – 1,800,000'),
+      'Sorghum':      ('8–15 bags',  '90kg bags', 'per acre', 'Ksh 2,000–3,500', 'per bag', 'Ksh 16,000 – 52,500'),
+      'Groundnut':    ('6–12 bags',  '90kg bags', 'per acre', 'Ksh 5,000–8,000', 'per bag', 'Ksh 30,000 – 96,000'),
+      'Cowpea':       ('5–10 bags',  '90kg bags', 'per acre', 'Ksh 4,000–6,000', 'per bag', 'Ksh 20,000 – 60,000'),
+      'Millet':       ('8–14 bags',  '90kg bags', 'per acre', 'Ksh 2,500–4,000', 'per bag', 'Ksh 20,000 – 56,000'),
+      'Green Gram':   ('4–8 bags',   '90kg bags', 'per acre', 'Ksh 7,000–11,000', 'per bag', 'Ksh 28,000 – 88,000'),
+      'Soybean':      ('8–15 bags',  '90kg bags', 'per acre', 'Ksh 3,000–5,000', 'per bag', 'Ksh 24,000 – 75,000'),
+      'Onion':        ('40–80 bags', '50kg bags', 'per acre', 'Ksh 1,500–4,000', 'per bag', 'Ksh 60,000 – 320,000'),
+      'Carrot':       ('120–200 bags','50kg bags', 'per acre', 'Ksh 800–1,500', 'per bag', 'Ksh 96,000 – 300,000'),
+    } %}
+    {% set y = yields.get(top_crop, ('Varies', '', 'per acre', 'Market price', '', 'Depends on market')) %}
+    <div class="yield-grid">
+      <div class="yield-card">
+        <div class="yield-num">{{ y[0] }}</div>
+        <div class="yield-unit">{{ y[1] }} {{ y[2] }}</div>
+        <div class="yield-label">Expected Yield</div>
+      </div>
+      <div class="yield-card">
+        <div class="yield-num">{{ y[5] }}</div>
+        <div class="yield-unit">{{ y[4] }}</div>
+        <div class="yield-label">Market Price</div>
+      </div>
+      <div class="yield-card highlight">
+        <div class="yield-num">{{ y[5] }}</div>
+        <div class="yield-unit">per acre</div>
+        <div class="yield-label">Potential Revenue</div>
+      </div>
+    </div>
+    <div class="yield-note">
+      ⚠️ Estimates are based on average Kenya farm data. Actual yield depends on your soil, rainfall,
+      seed quality and crop management. Good inputs and proper care can increase yield by 30–50%.
+    </div>
+  </div>
+ 
+</div>
+{% endif %}
+          {% endfor %}
+        </div>
+
+        <div style="text-align:center;margin-bottom:28px;">
+          <form method="GET" action="{{ url_for('farmer.dashboard') }}">
+            <button type="submit" class="btn-edit">🔄 Run Another Recommendation</button>
+          </form>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if not results %}
+      <form method="POST" action="{{ url_for('farmer.dashboard') }}" id="recommend-form" onsubmit="return showLoading()">
+        <input type="hidden" name="temperature" id="temperature" value="{{ form_data.temperature or '' }}">
+        <input type="hidden" name="rainfall"    id="rainfall"    value="{{ form_data.rainfall or '' }}">
+        <input type="hidden" name="altitude"    id="altitude"    value="{{ form_data.altitude or '' }}">
+        <input type="hidden" name="soil_type"   id="soil_type"   value="{{ form_data.soil_type or 'Loamy' }}">
+        <input type="hidden" name="soil_ph"     id="soil_ph"     value="{{ form_data.soil_ph or 6.5 }}">
+
+        <div class="tip-box">
+          <div class="tip-title">💡 How this works</div>
+          <ul>
+            <li>Click <strong>"Use My Location"</strong> — we auto-fill Temperature, Rainfall and Altitude from your GPS.</li>
+            <li>Select your <strong>Soil Type</strong> and adjust <strong>Soil pH</strong> — these are the only things you need to know.</li>
+            <li>Click <strong>"Get My Recommendations"</strong> — our AI ranks all 13 crops by suitability for your farm.</li>
+          </ul>
+        </div>
+
+        <div class="card" id="form">
+          <div class="sh">
+            <div class="sh-ico">🌍</div>
+            <div>
+              <div class="sh-title">Section 1 — Location & Climate</div>
+              <div class="sh-desc">We fetch Temperature, Rainfall and Altitude automatically from your GPS.</div>
+            </div>
+          </div>
+
+          <div class="gps-banner">
+            <span style="font-size:28px;">📡</span>
+            <div class="gps-status">
+              <div class="gs-title" id="gps-title">Ready to detect your location</div>
+              <div class="gs-sub" id="gps-sub">Click the button to auto-fill climate data for your farm</div>
+            </div>
+            <button type="button" class="btn-gps" id="gps-btn" onclick="getLocation()">
+              📍 Use My Location
+            </button>
+          </div>
+
+          <div class="gps-loading" id="gps-loading">
+            <div class="mini-spin"></div>
+            <span id="gps-loading-text">Getting your GPS coordinates…</span>
+          </div>
+
+          <div class="igrid" id="climate-display" style="display:grid;">
+            <div class="igroup">
+              <div class="ilabel">🌡️ Temperature <span class="ihint">°C</span></div>
+              <input class="ifield auto" type="number" id="temp-display" placeholder="Auto-filled" readonly value="{{ form_data.temperature or '' }}">
+              <div style="font-size:11px;color:var(--tl);margin-top:3px;">Average temperature for your area</div>
+            </div>
+            <div class="igroup">
+              <div class="ilabel">🌧️ Annual Rainfall <span class="ihint">mm</span></div>
+              <input class="ifield auto" type="number" id="rain-display" placeholder="Auto-filled" readonly value="{{ form_data.rainfall or '' }}">
+              <div style="font-size:11px;color:var(--tl);margin-top:3px;">Estimated annual rainfall</div>
+            </div>
+            <div class="igroup">
+              <div class="ilabel">⛰️ Altitude <span class="ihint">metres</span></div>
+              <input class="ifield auto" type="number" id="alt-display" placeholder="Auto-filled" readonly value="{{ form_data.altitude or '' }}">
+              <div style="font-size:11px;color:var(--tl);margin-top:3px;">Elevation above sea level</div>
+            </div>
+          </div>
+
+          <div style="margin-top:10px;">
+            <button type="button" onclick="toggleManual()"
+                    style="background:none;border:none;color:var(--gm);font-size:12px;font-weight:600;cursor:pointer;text-decoration:underline;">
+              ✏️ Edit manually instead
+            </button>
+          </div>
+
+          <div id="manual-inputs" style="display:none;margin-top:16px;">
+            <div class="igrid">
+              <div class="igroup">
+                <div class="ilabel">🌡️ Temperature <span class="ihint">°C</span></div>
+                <div class="slider-wrap">
+                  <div class="range-row">
+                    <input type="range" class="range-input" min="8" max="45" value="20" id="temp-slider"
+                           oninput="syncSlider('temp-slider','temp-sv','temperature','temp-display')">
+                    <span class="range-val" id="temp-sv">20</span>
+                  </div>
+                  <div class="range-labels"><span>8°C Cool</span><span>45°C Hot</span></div>
+                </div>
+              </div>
+              <div class="igroup">
+                <div class="ilabel">🌧️ Annual Rainfall <span class="ihint">mm</span></div>
+                <div class="slider-wrap">
+                  <div class="range-row">
+                    <input type="range" class="range-input" min="200" max="1800" value="800" id="rain-slider"
+                           oninput="syncSlider('rain-slider','rain-sv','rainfall','rain-display')">
+                    <span class="range-val" id="rain-sv">800</span>
+                  </div>
+                  <div class="range-labels"><span>200 Dry</span><span>1800 Wet</span></div>
+                </div>
+              </div>
+              <div class="igroup">
+                <div class="ilabel">⛰️ Altitude <span class="ihint">metres</span></div>
+                <div class="slider-wrap">
+                  <div class="range-row">
+                    <input type="range" class="range-input" min="0" max="3000" value="1200" id="alt-slider"
+                           oninput="syncSlider('alt-slider','alt-sv','altitude','alt-display')">
+                    <span class="range-val" id="alt-sv">1200</span>
+                  </div>
+                  <div class="range-labels"><span>0 Lowland</span><span>3000 Highland</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sh">
+            <div class="sh-ico">🪨</div>
+            <div>
+              <div class="sh-title">Section 2 — Soil Type</div>
+              <div class="sh-desc">Select the soil type on your farm. Not sure? Loamy is most common in Kenya.</div>
+            </div>
+          </div>
+          <div class="soil-grid">
+            <div class="soil-opt {% if not form_data.soil_type or form_data.soil_type == 'Loamy' %}sel{% endif %}" onclick="selectSoil(this,'Loamy')">
+              <span class="s-ico">🟫</span><div class="s-name">Loamy</div><div class="s-trait">Best all-round</div>
+            </div>
+            <div class="soil-opt {% if form_data.soil_type == 'Sandy-Loam' %}sel{% endif %}" onclick="selectSoil(this,'Sandy-Loam')">
+              <span class="s-ico">🏖️</span><div class="s-name">Sandy-Loam</div><div class="s-trait">Good drainage</div>
+            </div>
+            <div class="soil-opt {% if form_data.soil_type == 'Sandy' %}sel{% endif %}" onclick="selectSoil(this,'Sandy')">
+              <span class="s-ico">⚗️</span><div class="s-name">Sandy</div><div class="s-trait">Drains fast</div>
+            </div>
+            <div class="soil-opt {% if form_data.soil_type == 'Clay' %}sel{% endif %}" onclick="selectSoil(this,'Clay')">
+              <span class="s-ico">🧱</span><div class="s-name">Clay</div><div class="s-trait">Holds water</div>
+            </div>
+            <div class="soil-opt {% if form_data.soil_type == 'Fertile' %}sel{% endif %}" onclick="selectSoil(this,'Fertile')">
+              <span class="s-ico">🌿</span><div class="s-name">Fertile</div><div class="s-trait">Rich nutrients</div>
+            </div>
+          </div>
+          <div style="font-size:11.5px;color:var(--tl);margin-top:8px;">
+            💡 Not sure? Ask your local agro-vet or rub soil between fingers — Loamy feels smooth and holds shape.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sh">
+            <div class="sh-ico">⚗️</div>
+            <div>
+              <div class="sh-title">Section 3 — Soil pH</div>
+              <div class="sh-desc">Most Kenya farms are 5.5–7.0. Default 6.5 works if you don't know yours.</div>
+            </div>
+          </div>
+          <div class="ph-wrap">
+            <div class="ph-top">
+              <div>
+                <div class="ilabel" style="margin-bottom:4px;">⚗️ Soil pH Level</div>
+                <div style="font-size:11.5px;color:var(--tl);">Acidic ← → Alkaline. Most crops prefer 6.0–7.0.</div>
+              </div>
+              <div class="ph-big" id="ph-display">{{ form_data.soil_ph or '6.5' }}</div>
+            </div>
+            <div class="range-row" style="gap:14px;">
+              <span style="font-size:11px;color:var(--red);font-weight:700;">5.0<br>Acidic</span>
+              <input type="range" class="range-input" min="50" max="80"
+                     value="{{ ((form_data.soil_ph or 6.5)|float * 10)|int }}"
+                     id="ph-slider" oninput="updatePH(this.value)" style="flex:1;">
+              <span style="font-size:11px;color:var(--blue);font-weight:700;text-align:right;">8.0<br>Alkaline</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:8px;padding:0 36px;">
+              <span style="font-size:10px;color:var(--red);">Very Acidic</span>
+              <span style="font-size:10px;color:var(--gm);font-weight:700;">✅ Best range (6–7)</span>
+              <span style="font-size:10px;color:var(--blue);">Alkaline</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card submit-card">
+          <div class="sc-text">
+            <h3>Ready to find your best crops? 🌾</h3>
+            <p>Our AI will analyze your conditions and rank all 13 crops by suitability for your farm.</p>
+          </div>
+          <button type="submit" class="btn-submit">🤖 Get My Recommendations →</button>
+        </div>
+
+      </form>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+<!-- ── AGRIBOT FLOATING CHAT ── -->
+<div id="chat-bubble" onclick="toggleChat()"
+     style="position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:var(--gd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.25);z-index:500;transition:transform .2s;">
+  💬
+</div>
+
+<div id="chat-panel"
+     style="display:none;position:fixed;bottom:96px;right:28px;width:340px;height:480px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.18);z-index:500;flex-direction:column;overflow:hidden;border:1px solid var(--bd);">
+  <!-- Header -->
+  <div style="background:var(--gd);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:36px;height:36px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;">🤖</div>
+      <div>
+        <div style="font-weight:700;font-size:14px;color:#fff;">AgriBot</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.6);">Kenya Farming Expert</div>
+      </div>
+    </div>
+    <button onclick="toggleChat()" style="background:none;border:none;color:rgba(255,255,255,.7);font-size:20px;cursor:pointer;">✕</button>
+  </div>
+
+  <!-- Messages -->
+  <div id="chat-messages"
+       style="flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#f9fbf7;">
+    <div class="bot-msg" style="background:var(--gp);border-radius:10px 10px 10px 2px;padding:10px 14px;font-size:13px;color:var(--td);max-width:85%;line-height:1.5;">
+      👋 Habari! I'm AgriBot. Ask me anything about farming — planting, soil, pests, markets, or your crop results!
+    </div>
+  </div>
+
+  <!-- Input -->
+  <div style="padding:12px;border-top:1px solid var(--bd);background:#fff;display:flex;gap:8px;">
+    <input id="chat-input" type="text" placeholder="Ask a farming question…"
+           style="flex:1;border:1.5px solid var(--bd);border-radius:8px;padding:9px 12px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;"
+           onkeydown="if(event.key==='Enter') sendChat()">
+    <button onclick="sendChat()"
+            style="background:var(--gd);color:#fff;border:none;border-radius:8px;padding:9px 14px;font-size:16px;cursor:pointer;">➤</button>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_js %}
+<script>
+function selectSoil(el, val) {
+  document.querySelectorAll('.soil-opt').forEach(o => o.classList.remove('sel'));
+  el.classList.add('sel');
+  document.getElementById('soil_type').value = val;
+}
+
+function updatePH(raw) {
+  const ph = (raw / 10).toFixed(1);
+  document.getElementById('ph-display').textContent = ph;
+  document.getElementById('soil_ph').value = ph;
+}
+
+function syncSlider(sliderId, displayId, hiddenId, displayInputId) {
+  const val = document.getElementById(sliderId).value;
+  document.getElementById(displayId).textContent = val;
+  document.getElementById(hiddenId).value = val;
+  if (displayInputId) {
+    const el = document.getElementById(displayInputId);
+    if (el) el.value = val;
+  }
+  document.getElementById('climate-display').style.display = 'grid';
+}
+
+function toggleManual() {
+  const m = document.getElementById('manual-inputs');
+  const isHidden = m.style.display === 'none';
+  m.style.display = isHidden ? 'block' : 'none';
+  if (isHidden) {
+    const t = document.getElementById('temp-slider').value;
+    const r = document.getElementById('rain-slider').value;
+    const a = document.getElementById('alt-slider').value;
+    document.getElementById('temperature').value = t;
+    document.getElementById('rainfall').value    = r;
+    document.getElementById('altitude').value    = a;
+    document.getElementById('temp-sv').textContent = t;
+    document.getElementById('rain-sv').textContent = r;
+    document.getElementById('alt-sv').textContent  = a;
+    const td = document.getElementById('temp-display');
+    const rd = document.getElementById('rain-display');
+    const ad = document.getElementById('alt-display');
+    if (td) td.value = t;
+    if (rd) rd.value = r;
+    if (ad) ad.value = a;
+    document.getElementById('climate-display').style.display = 'grid';
+  }
+}
+
+function setField(hiddenId, displayId, value) {
+  document.getElementById(hiddenId).value = value;
+  const el = document.getElementById(displayId);
+  if (el) { el.value = value; el.style.borderColor = '#27ae60'; }
+}
+
+function setGPSStatus(title, sub) {
+  document.getElementById('gps-title').textContent = title;
+  document.getElementById('gps-sub').textContent   = sub;
+}
+
+async function getLocation() {
+  if (!navigator.geolocation) { toggleManual(); return; }
+  const btn     = document.getElementById('gps-btn');
+  const loading = document.getElementById('gps-loading');
+  btn.disabled  = true;
+  btn.textContent = '⏳ Detecting…';
+  loading.style.display = 'flex';
+  setGPSStatus('Getting your GPS coordinates…', 'Please wait…');
+
+  navigator.geolocation.getCurrentPosition(
+    async (pos) => {
+      const lat = pos.coords.latitude;
+      const lng = pos.coords.longitude;
+
+      try {
+        setGPSStatus('📡 Fetching weather data…', 'Connecting to Open-Meteo…');
+        const wUrl  = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&hourly=temperature_2m&daily=precipitation_sum&past_days=30&forecast_days=1&timezone=auto`;
+        const wData = await (await fetch(wUrl)).json();
+        const temps = wData.hourly?.temperature_2m || [];
+        const temp  = Math.round(temps.slice(0,24).reduce((a,b)=>a+b,0) / Math.min(temps.slice(0,24).length,24));
+        const daily = wData.daily?.precipitation_sum || [];
+        const rain  = Math.min(Math.round(daily.reduce((a,b)=>a+(b||0),0)*12),1800);
+        setField('temperature','temp-display',temp);
+        setField('rainfall','rain-display',rain);
+        document.getElementById('climate-display').style.display = 'grid';
+        setGPSStatus('🌤️ Weather loaded! Fetching altitude…',`Temp: ${temp}°C | Rain: ${rain}mm`);
+      } catch(e) {
+        setField('temperature','temp-display',20);
+        setField('rainfall','rain-display',800);
+        document.getElementById('climate-display').style.display = 'grid';
+      }
+
+      try {
+        const altPromise = fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat},${lng}`).then(r=>r.json());
+        const timeout    = new Promise((_,rej)=>setTimeout(()=>rej(new Error('timeout')),5000));
+        const altData    = await Promise.race([altPromise,timeout]);
+        const alt        = Math.round(altData.results[0].elevation);
+        setField('altitude','alt-display',alt);
+        setGPSStatus('✅ All data loaded!',
+          `Temp: ${document.getElementById('temperature').value}°C | Rain: ${document.getElementById('rainfall').value}mm | Alt: ${alt}m`);
+      } catch(e) {
+        const est = (lat > -1 && lat < 1) ? 1600 : 1000;
+        setField('altitude','alt-display',est);
+        setGPSStatus('✅ Data loaded! (Altitude estimated)',
+          `Temp: ${document.getElementById('temperature').value}°C | Rain: ${document.getElementById('rainfall').value}mm`);
+      }
+
+      try {
+        const nData = await (await fetch(
+          `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`,
+          {headers:{'Accept-Language':'en'}}
+        )).json();
+        const name = nData.address?.county || nData.address?.state || 'Your Location';
+        document.getElementById('location-display').textContent = '📍 ' + name;
+      } catch(e) {}
+
+      btn.textContent = '✅ Location Detected';
+      btn.disabled    = false;
+      loading.style.display = 'none';
+    },
+    () => {
+      btn.disabled    = false;
+      btn.textContent = '📍 Use My Location';
+      loading.style.display = 'none';
+      setGPSStatus('⚠️ GPS denied. Enter values manually.','Click "Edit manually" below.');
+      toggleManual();
+    },
+    { timeout: 12000 }
+  );
+}
+
+function showLoading() {
+  if (!document.getElementById('temperature').value)
+    document.getElementById('temperature').value = document.getElementById('temp-slider').value;
+  if (!document.getElementById('rainfall').value)
+    document.getElementById('rainfall').value = document.getElementById('rain-slider').value;
+  if (!document.getElementById('altitude').value)
+    document.getElementById('altitude').value = document.getElementById('alt-slider').value;
+
+  const t = document.getElementById('temperature').value;
+  const r = document.getElementById('rainfall').value;
+  const a = document.getElementById('altitude').value;
+
+  if (!t || !r || !a) {
+    alert('Please use GPS or move the sliders to set your farm values first.');
+    return false;
+  }
+
+  document.getElementById('loading-overlay').classList.add('show');
+  ['lo2','lo3','lo4'].forEach((id,i) => {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      el.classList.add('done');
+      el.textContent = '✅ ' + el.textContent.replace('⏳ ','');
+    }, 600*(i+1));
+  });
+  return true;
+}
+// ── AGRIBOT CHAT ──
+let chatHistory = [];
+let chatOpen    = false;
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const panel  = document.getElementById('chat-panel');
+  const bubble = document.getElementById('chat-bubble');
+  panel.style.display  = chatOpen ? 'flex' : 'none';
+  bubble.style.transform = chatOpen ? 'scale(0.9)' : 'scale(1)';
+  if (chatOpen) document.getElementById('chat-input').focus();
+}
+
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const msg   = input.value.trim();
+  if (!msg) return;
+
+  input.value = '';
+  appendMsg('user', msg);
+  chatHistory.push({ role: 'user', content: msg });
+
+  // Build context from results if available
+  const context = buildChatContext();
+
+  appendMsg('bot', '⏳ Thinking…', 'thinking');
+
+  try {
+    const res  = await fetch('/farmer/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: msg, history: chatHistory, context })
+    });
+    const data = await res.json();
+    removeLast();
+    appendMsg('bot', data.reply);
+    chatHistory.push({ role: 'assistant', content: data.reply });
+  } catch(e) {
+    removeLast();
+    appendMsg('bot', '⚠️ Could not reach AgriBot. Check your connection.');
+  }
+}
+
+function buildChatContext() {
+  // Pull recommendation data from results page if visible
+  const hero = document.querySelector('.rh-name');
+  const conf = document.querySelector('.rh-conf');
+  const tags = document.querySelectorAll('.rh-tag');
+  if (!hero) return '';
+  let ctx = `Top crop: ${hero.textContent}. ${conf?.textContent || ''}. `;
+  tags.forEach(t => ctx += t.textContent + ' ');
+  return ctx;
+}
+
+function appendMsg(role, text, id='') {
+  const box = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.id = id;
+  if (role === 'user') {
+    div.style.cssText = 'background:var(--gd);color:#fff;border-radius:10px 10px 2px 10px;padding:10px 14px;font-size:13px;max-width:85%;align-self:flex-end;line-height:1.5;';
+  } else {
+    div.style.cssText = 'background:var(--gp);color:var(--td);border-radius:10px 10px 10px 2px;padding:10px 14px;font-size:13px;max-width:85%;line-height:1.5;';
+  }
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+}
+
+function removeLast() {
+  const box = document.getElementById('chat-messages');
+  const el  = document.getElementById('thinking');
+  if (el) el.remove();
+}
+function spTab(name, btn) {
+  document.querySelectorAll('.sp-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.sp-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('sp-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+{% endblock %}

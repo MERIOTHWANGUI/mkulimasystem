@@ -1,0 +1,16 @@
+# Ignore Python virtual environment
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Flask instance folder
+instance/
+
+# Local environment variables
+.env
+
+# Optional: system files
+.DS_Store
+Thumbs.db
