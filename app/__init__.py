@@ -2,10 +2,15 @@ from flask import Flask
 from werkzeug.middleware.proxy_fix import ProxyFix
 from config import config
 from app.extensions import db, login_manager
+from flask_migrate import Migrate
+
+# Import models so migrations can detect them
 from app.models.product import Product  # noqa
 from app.models.recommendation_history import RecommendationHistory  # noqa
 from app.models.chat_history import ChatHistory  # noqa
+from app.models.user import User  # noqa
 
+migrate = Migrate()
 
 def create_app(config_name='default'):
     app = Flask(__name__)
@@ -15,19 +20,18 @@ def create_app(config_name='default'):
 
     db.init_app(app)
     login_manager.init_app(app)
+    migrate.init_app(app, db)
 
-    from app.routes.main     import main_bp
-    from app.routes.auth     import auth_bp
-    from app.routes.farmer   import farmer_bp
+    from app.routes.main import main_bp
+    from app.routes.auth import auth_bp
+    from app.routes.farmer import farmer_bp
     from app.routes.supplier import supplier_bp
     from app.routes.admin import admin_bp
+
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(farmer_bp)
     app.register_blueprint(supplier_bp)
     app.register_blueprint(admin_bp)
-    with app.app_context():
-        from app.models.user import User  # noqa
-        db.create_all()
 
     return app
