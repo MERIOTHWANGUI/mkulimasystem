@@ -70,6 +70,7 @@ def dashboard():
             # ── AUTO-SAVE ──
             if top:
                 top_score = top.get('final_score', top.get('score', top.get('ml_prob', 0)))
+                top_score = float(top_score) if top_score is not None else 0.0
                 rec = RecommendationHistory(
                     farmer_id      = current_user.id,
                     temperature    = temperature,
@@ -85,6 +86,7 @@ def dashboard():
                 db.session.commit()
 
         except Exception as e:
+            db.session.rollback()
             error = f'Could not get recommendation: {str(e)}'
 
     return render_template(

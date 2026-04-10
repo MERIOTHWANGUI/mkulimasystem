@@ -134,10 +134,11 @@ def predict_crops(temperature, rainfall, altitude, soil_type, soil_ph):
 
         entry = {
             'crop': crop,
-            'ml_prob': round(prob * 100, 2),
-            'suitability': round(suit, 2),
-            'final_score': round(final_score * 100, 2),
-            'risk': rsk,
+            # Cast to native Python float for DB/JSON compatibility
+            'ml_prob': float(round(prob * 100, 2)),
+            'suitability': float(round(suit, 2)),
+            'final_score': float(round(final_score * 100, 2)),
+            'risk': int(rsk),
             'confidence': confidence(prob, suit),
             'reasons': explain(suit, rsk)
         }
