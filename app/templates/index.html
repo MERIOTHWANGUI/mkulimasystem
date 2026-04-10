@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}🌾 Smart Farming Support System{% endblock %}
+{% block title %} Smart Farming Support System{% endblock %}
 
 {% block page_css %}
 <style>
@@ -30,7 +30,7 @@
         min-height: 92vh;
         background:
             linear-gradient(135deg, rgba(15,60,30,0.85) 0%, rgba(30,100,55,0.72) 60%, rgba(0,0,0,0.45) 100%),
-            url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+            url('https://media.istockphoto.com/id/529194829/photo/rural-scenic.jpg?s=612x612&w=0&k=20&c=-MLHljAui0pYAT2HkzyBAiNgtwoE5ISyMKbagKyrTX4=') center/cover no-repeat;
         display: flex; align-items: center; position: relative; overflow: hidden;
     }
     .hero-section::after {
@@ -44,7 +44,7 @@
         letter-spacing: 1.8px; text-transform: uppercase;
         padding: 7px 20px; border-radius: 100px; margin-bottom: 1.5rem;
     }
-    .hero-title { font-size: clamp(2.6rem,5.5vw,4.2rem); font-weight: 800; line-height: 1.15; color: #fff; margin-bottom: 1.2rem; letter-spacing: -1px; }
+    .hero-title { font-size: clamp(2.7rem,5.5vw,4.2rem); font-weight: 800; line-height: 1.15; color: #fff; margin-bottom: 1.2rem; letter-spacing: -1px; }
     .hero-title span { color: var(--g-pale); }
     .hero-sub { font-size: 1.08rem; font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 2.5rem; max-width: 540px; }
 
@@ -99,7 +99,7 @@
         border: 1.5px solid var(--g-border); transition: all 0.35s; height: 100%;
     }
     .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(26,107,60,0.13); border-color: var(--g-mid); }
-    .feat-icon { width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; margin-bottom: 1.1rem; }
+    .feat-icon { width: 60px; height: 50px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; margin-bottom: 1.1rem; }
     .feature-card h5 { font-size: 1.05rem; font-weight: 700; color: var(--g-darkest); margin-bottom: 0.5rem; }
     .feature-card p  { font-size: 0.85rem; color: #666; line-height: 1.7; margin: 0; }
     .feat-link { font-size: 0.8rem; font-weight: 600; color: var(--g-mid); text-decoration: none; margin-top: 1rem; display: inline-block; }
@@ -131,6 +131,15 @@
     /* ── FOOTER ── */
     .site-footer { background: var(--g-darkest); color: rgba(255,255,255,0.55); padding: 28px 0; text-align: center; font-size: 0.84rem; }
     .site-footer a { color: var(--g-pale); text-decoration: none; }
+    /* icon*/
+    .fc-label i {
+    margin-right: 8px;
+    color: #4CAF50;
+}
+.feat-icon{
+   margin-right: 8px;
+     
+}
 </style>
 {% endblock %}
 
@@ -138,7 +147,7 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand" href="/">🌿 AgroSense</a>
+        <a class="navbar-brand" href="/">AgroSense</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -150,7 +159,7 @@
             <div class="d-flex gap-2 align-items-center">
     {% if current_user.is_authenticated %}
         <span style="font-size:0.85rem;color:#555;">
-            👋 {{ current_user.first_name }}
+             {{ current_user.first_name }}
             <span class="badge ms-1" style="background:var(--g-mid);font-size:0.7rem;">{{ current_user.role }}</span>
         </span>
         <a href="{{ url_for('auth.logout') }}" class="btn-nav-login">Logout</a>
@@ -172,14 +181,14 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="hero-badge">🌍 Built for Kenyan Farmers</div>
+                
                 <h1 class="hero-title">Grow Smarter,<br>Harvest <span>More</span></h1>
                 <p class="hero-sub">
                     AI-powered crop recommendations, expert advisories, and access to agricultural
                     suppliers — all in one platform designed for your farm.
                 </p>
                 <div>
-                    <a href="/register" class="btn-hero-primary">Get Started Free 🌱</a>
+                    <a href="/register" class="btn-hero-primary">Get Started Free </a>
                     <a href="/login" class="btn-hero-outline">Login</a>
                 </div>
                 <div class="hero-stats">
@@ -191,18 +200,18 @@
             <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
                 <div class="hero-visual">
                     <div class="floating-card fc-top">
-                        <div class="fc-label">🌽 Top Recommendation</div>
+                        <div class="fc-label"><i class="fas fa-seedling"></i>Top Recommendation</div>
                         <div class="fc-val">Maize — 85%</div>
                         <div class="fc-sub">Best match for your farm</div>
                         <div class="fc-bar"><div class="fc-fill" style="width:85%"></div></div>
                     </div>
                     <div class="floating-card fc-mid">
-                        <div class="fc-label">🌧️ Rainfall Detected</div>
+                        <div class="fc-label"><i class="fas fa-cloud-rain"></i>Rainfall Detected</div>
                         <div class="fc-val">820 mm / year</div>
                         <div class="fc-sub">Suitable for 6 crops</div>
                     </div>
                     <div class="floating-card fc-bot">
-                        <div class="fc-label">🤖 AI Confidence</div>
+                        <div class="fc-label"><i class="fas fa-robot"></i> AI Confidence</div>
                         <div class="fc-val">High Match ✅</div>
                         <div class="fc-sub">Beans · Sorghum · Maize</div>
                         <div class="fc-bar"><div class="fc-fill" style="width:92%"></div></div>
@@ -224,7 +233,7 @@
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feat-icon" style="background:#e8f5e9;">🌽</div>
+                    <div class="feat-icon" style="background:#ffffff; color: #4CAF50;"><i class="fa-solid fa-seedling"></i></div>
                     <h5>Smart Crop Recommendation</h5>
                     <p>Enter your soil, altitude, rainfall and temperature. Our AI ranks the best crops with suitability percentages.</p>
                     <a href="/register" class="feat-link">Try it now →</a>
@@ -232,7 +241,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feat-icon" style="background:#fff3e0;">💬</div>
+                    <div class="feat-icon" style="background:#ffffff;color: #369b60"><i class="fa-brands fa-rocketchat"></i></div>
                     <h5>Farming Chatbot Assistant</h5>
                     <p>Ask questions in plain language and get real-time advisory on planting schedules, pest control and more.</p>
                     <a href="/register" class="feat-link">Ask a question →</a>
@@ -240,7 +249,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feat-icon" style="background:#e3f2fd;">🛒</div>
+                    <div class="feat-icon" style="background:#ffffff;"><i class="fa-solid fa-cart-shopping"></i></div>
                     <h5>Agricultural Suppliers</h5>
                     <p>Browse verified suppliers offering seeds, fertilizers and tools. Find who's near you with pricing and contacts.</p>
                     <a href="/register" class="feat-link">Find suppliers →</a>
@@ -248,7 +257,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feat-icon" style="background:#fce4ec;">📊</div>
+                    <div class="feat-icon" style="background:#ffffff;"><i class="fa-solid fa-chart-simple"></i></div>
                     <h5>Farm Reports & Insights</h5>
                     <p>Get detailed reports on your farm history, soil trends, and seasonal planning for better decisions.</p>
                     <a href="/register" class="feat-link">View sample →</a>
@@ -256,7 +265,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feat-icon" style="background:#f3e5f5;">👩‍🌾</div>
+                    <div class="feat-icon" style="background:#ffffff"><i class="fa-solid fa-users"></i></div>
                     <h5>Farmer & Supplier Profiles</h5>
                     <p>Register as a farmer or input supplier. Suppliers list their products for farmers to discover and contact.</p>
                     <a href="/register" class="feat-link">Create profile →</a>
@@ -264,7 +273,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="feature-card">
-                    <div class="feat-icon" style="background:#e0f7fa;">🤖</div>
+                    <div class="feat-icon" style="background:#ffffff;"><i class="fa-solid fa-robot"></i></div>
                     <h5>AI Trained on Local Data</h5>
                     <p>Our model is trained on East African crop data — Maize, Beans, Tea, Coffee, Sorghum and more.</p>
                     <a href="/register" class="feat-link">Learn more →</a>
@@ -310,11 +319,10 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" style="background-image: linear-gradient(135deg, rgba(15,60,30,0.85) 0%, rgba(30,100,55,0.72) 60%, rgba(0,0,0,0.45) 100%), url('https://media.istockphoto.com/id/1270570904/photo/harvesting-machine-approaching-wheat.jpg?s=612x612&w=0&k=20&c=jwDSrUojVqrpsjiSpIaHStrJWUnLHlXKlJlXXu2dhGE='); background-size: cover; background-position: center 30%;">
     <div class="container text-center position-relative">
-        <div class="mb-3" style="font-size:3rem;">🚀</div>
-        <h2 class="mb-3">Ready to farm smarter?</h2>
-        <p class="mb-4">Join Kenyan farmers using AI to make better decisions every season.</p>
+        <h2 class="mb-3 text-white">Ready to farm smarter?</h2>
+        <p class="mb-4 text-white-50" style="font-size:1.1rem;">Join thousands of Kenyan farmers using AI to make better decisions every season.</p>
         <a href="/register" class="btn-hero-primary me-2">Register Now — It's Free</a>
         <a href="/login" class="btn-hero-outline">I have an account</a>
     </div>
@@ -326,8 +334,8 @@
 {% block footer %}
 <footer class="site-footer">
     <div class="container">
-        <p class="mb-1">🌿 <strong style="color:var(--g-pale);">AgroSense</strong> — Smart Farming Support System</p>
-        <p class="mb-0">Made with ❤️ for Kenyan Farmers &nbsp;·&nbsp; <a href="/register">Register</a> &nbsp;·&nbsp; <a href="/login">Login</a></p>
+        <p class="mb-1"> <strong style="color:var(--g-pale);">AgroSense</strong> — Smart Farming Support System</p>
+        <p class="mb-0">Made for Kenyan Farmers &nbsp;·&nbsp; <a href="/register">Register</a> &nbsp;·&nbsp; <a href="/login">Login</a></p>
     </div>
 </footer>
 {% endblock %}

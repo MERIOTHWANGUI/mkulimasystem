@@ -106,7 +106,10 @@ def generate_history_pdf(farmer, history, crop_counts):
     story.append(HRFlowable(width='100%', thickness=1.5, color=GREEN_LIGHT, spaceAfter=10))
 
     most_rec = max(crop_counts, key=crop_counts.get) if crop_counts else 'N/A'
-    avg_conf = round(sum(r.top_confidence for r in history) / len(history), 1)
+    if history:
+        avg_conf = round(sum(r.top_confidence for r in history) / len(history), 1)
+    else:
+        avg_conf = 0
 
     stats_data = [[
         _stat_cell('Total Checks', str(len(history)), 'Your farming sessions'),
@@ -174,7 +177,11 @@ def generate_history_pdf(farmer, history, crop_counts):
 
     for i, rec in enumerate(history):
         results = rec.get_results()
-        top     = results[0] if results else {}
+        if isinstance(results, dict):
+            results_list = results.get('top_options', [])
+        else:
+            results_list = results or []
+        top     = results_list[0] if results_list else {}
         advice  = ADVICE.get(rec.top_crop, 'Follow standard planting practices for your region.')
 
         # Record header
@@ -213,9 +220,20 @@ def generate_history_pdf(farmer, history, crop_counts):
         ]))
 
         # All crops
+        def _score_from_result(result):
+            if not isinstance(result, dict):
+                return 0.0
+            if 'score' in result:
+                return float(result.get('score') or 0)
+            if 'final_score' in result:
+                return float(result.get('final_score') or 0)
+            if 'ml_prob' in result:
+                return float(result.get('ml_prob') or 0)
+            return 0.0
+
         crops_str = '  |  '.join([
-            f"{'#'+str(j+1)} {r['crop']} ({r['percentage']:.1f}%)"
-            for j, r in enumerate(results[:5])
+            f"{'#'+str(j+1)} {r.get('crop', 'Unknown')} ({_score_from_result(r):.1f}%)"
+            for j, r in enumerate(results_list[:5])
         ])
         crops_row = Table([[
             Paragraph('Recommended Crops:', _style('CRL', fontName='Helvetica-Bold', fontSize=9, textColor=GRAY_MID)),

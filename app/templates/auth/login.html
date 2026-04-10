@@ -3,77 +3,359 @@
 
 {% block body_class %}class="auth-page"{% endblock %}
 {% block navbar %}{% endblock %}
+
 {% block page_css %}
 <style>
-    /* Testimonial card inside left panel */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body.auth-page {
+        background: #f0f2f5;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        padding: 2rem;
+    }
+
+    /* Two panel container with gap */
+    .auth-wrapper {
+        max-width: 1050px;
+        width: 100%;
+        display: flex;
+        gap: 28px;
+        align-items: stretch;
+    }
+
+    /* LEFT PANEL */
+    .auth-left {
+        flex: 1.1;
+        background: #1a3c2c;
+        border-radius: 28px;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Image overlay - subtle */
+    .auth-left::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('https://media.istockphoto.com/id/1421187500/photo/a-field-of-corn-at-dusk.jpg?s=612x612&w=0&k=20&c=Mv220j7hl1_pX1SvViqk3noNJPF1SkDZQiBDX1gO44w=');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        z-index: 0;
+    }
+
+    .auth-left > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .left-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        letter-spacing: -0.3px;
+        margin-bottom: 2rem;
+    }
+
+    .left-quote {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left-quote p {
+        color: white;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+    }
+    .left-quote small {
+        color: rgba(255,255,255,0.7);
+        font-size: 0.85rem;
+        display: block;
+    }
+
+    /* Testimonial - simpler, not over-designed */
     .testimonial {
-        background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-        border-radius: 16px; padding: 20px; backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.08);
+        border-radius: 20px;
+        padding: 1.2rem;
+        margin-top: 1.5rem;
     }
-    .testimonial p { font-size: 0.88rem; color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 12px; line-height: 1.7; }
-    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial p {
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.85);
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
     .avatar {
-        width: 38px; height: 38px; border-radius: 50%;
-        background: linear-gradient(135deg, var(--g-mid), var(--g-pale));
-        display: flex; align-items: center; justify-content: center;
-        font-size: 1rem; flex-shrink: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
     }
-    .author-name { font-size: 0.82rem; font-weight: 600; color: #fff; }
-    .author-loc  { font-size: 0.72rem; color: rgba(255,255,255,0.6); }
-    .stars       { color: #f1c40f; font-size: 0.75rem; margin-bottom: 2px; }
+    .author-name {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: white;
+    }
+    .author-loc {
+        font-size: 0.65rem;
+        color: rgba(255,255,255,0.6);
+    }
+    .stars {
+        color: #f9a825;
+        font-size: 0.7rem;
+        margin-bottom: 6px;
+    }
 
-    /* Remember / forgot row */
-    .remember-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-    .remember-row label { font-size: 0.82rem; color: #555; display: flex; align-items: center; gap: 6px; cursor: pointer; }
-    .remember-row input[type="checkbox"] { accent-color: var(--g-mid); }
-    .forgot-link { font-size: 0.82rem; color: var(--g-mid); text-decoration: none; font-weight: 600; }
-    .forgot-link:hover { color: var(--g-dark); }
+    /* RIGHT PANEL */
+    .auth-right {
+        flex: 1;
+        background: white;
+        border-radius: 28px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
 
-    /* "or" divider */
-    .divider { display: flex; align-items: center; gap: 12px; margin: 1.5rem 0; }
-    .divider span { font-size: 0.78rem; color: #aaa; white-space: nowrap; }
-    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--g-border); }
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #111;
+        margin-bottom: 0.3rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    h2 i {
+        color: #f9a825;
+        font-size: 1.5rem;
+    }
+    .sub {
+        color: #6b6b6b;
+        font-size: 0.85rem;
+        margin-bottom: 1.8rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #eee;
+    }
 
-    /* Secondary outlined button */
+    /* Form fields */
+    .field-wrap {
+        margin-bottom: 1.2rem;
+    }
+    .field-wrap label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 5px;
+    }
+    .field-wrap input {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        background: #fefefe;
+        transition: all 0.2s;
+    }
+    .field-wrap input:focus {
+        outline: none;
+        border-color: #1a3c2c;
+        background: white;
+    }
+
+    /* Remember row */
+    .remember-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+    .remember-row label {
+        font-size: 0.75rem;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+    }
+    .remember-row input {
+        width: auto;
+        accent-color: #1a3c2c;
+    }
+    .forgot-link {
+        font-size: 0.75rem;
+        color: #1a3c2c;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .forgot-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Buttons */
+    .btn-auth {
+        width: 100%;
+        background: #1a3c2c;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 40px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        transition: background 0.2s;
+    }
+    .btn-auth:hover {
+        background: #0f2b1f;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 1.5rem 0;
+    }
+    .divider span {
+        font-size: 0.7rem;
+        color: #aaa;
+    }
+    .divider::before,
+    .divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: #e5e7eb;
+    }
+
     .btn-outline-auth {
-        width: 100%; padding: 13px; display: block; text-align: center;
-        background: #fff; color: var(--g-dark);
-        border: 2px solid var(--g-mid); border-radius: 12px;
-        font-size: 0.92rem; font-weight: 600; cursor: pointer;
-        transition: all 0.3s; text-decoration: none;
+        width: 100%;
+        padding: 12px;
+        display: block;
+        text-align: center;
+        background: white;
+        color: #1a3c2c;
+        border: 1.5px solid #1a3c2c;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-decoration: none;
     }
-    .btn-outline-auth:hover { background: var(--g-light); color: var(--g-dark); }
+    .btn-outline-auth:hover {
+        background: #f0f5f0;
+    }
+
+    .form-footer {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    .form-footer a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.7rem;
+    }
+    .form-footer a:hover {
+        color: #1a3c2c;
+    }
+
+    /* Error messages */
+    .alert {
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        margin-bottom: 1.2rem;
+    }
+    .alert-danger, .alert-error {
+        background: #ffebee;
+        color: #c62828;
+        border-left: 3px solid #c62828;
+    }
+    .alert-success {
+        background: #e8f5e9;
+        color: #1e7b2e;
+        border-left: 3px solid #1e7b2e;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+        .auth-wrapper {
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+        }
+        .auth-left {
+            padding: 1.8rem;
+        }
+        .left-quote p {
+            font-size: 1.2rem;
+        }
+        body.auth-page {
+            padding: 1rem;
+        }
+    }
 </style>
 {% endblock %}
 
 {% block flash %}{% endblock %}
 
 {% block content %}
+<div class="auth-wrapper">
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+        <div class="left-logo">AgroSense</div>
+        <div class="left-quote">
+            <p>"Welcome back,<br>farmer."</p>
+            <small>Access your AI-powered farm advisor</small>
+        </div>
 
-<!-- LEFT PANEL -->
-<div class="left-panel d-none d-lg-flex flex-column">
-    <div class="left-brand">🌿 AgroSense</div>
-    <h2 class="left-title">Welcome<br><span>back, farmer</span></h2>
-    <p class="left-sub">Log back in to access your crop recommendations, suppliers, and farm advisory dashboard.</p>
-
-    <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"AgroSense told me to plant beans instead of maize this season. I harvested 3× more than my neighbours. This app is a blessing."</p>
-        <div class="testimonial-author">
-            <div class="avatar">👨‍🌾</div>
-            <div>
-                <div class="author-name">James Mwangi</div>
-                <div class="author-loc">📍 Nakuru, Kenya</div>
+        <!-- Simple testimonial - no star rating, just real -->
+        <div class="testimonial">
+            <p>"AgroSense told me to plant beans instead of maize this season. I harvested 3× more than my neighbours."</p>
+            <div class="testimonial-author">
+                <div class="avatar"><i class="fa-regular fa-user"></i></div>
+                <div>
+                    <div class="author-name">James Mwangi</div>
+                    <div class="author-loc">Nakuru, Kenya</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- RIGHT PANEL -->
-<div class="right-panel">
-    <div class="form-box">
-        <h2>Welcome Back 👋</h2>
-        <p class="sub">Log in to your AgroSense account</p>
+    <!-- RIGHT PANEL -->
+    <div class="auth-right">
+        <h2>Welcome back <i class="fa-regular fa-hand-peace"></i></h2>
+        <div class="sub">Log in to your account</div>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -85,31 +367,34 @@
 
         <form method="POST">
             <div class="field-wrap">
-                <label>Username or Email</label>
-                <input type="text" name="username" placeholder="john_kamau or john@example.com" required>
+                <label>Username or email</label>
+                <input type="text" name="username" placeholder="john_kamau" required>
             </div>
+
             <div class="field-wrap">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Enter your password" required>
+                <input type="password" name="password" placeholder="••••••••" required>
             </div>
 
             <div class="remember-row">
                 <label>
-                    <input type="checkbox" name="remember"> Remember me
+                    <input type="checkbox" name="remember"> Keep me logged in
                 </label>
                 <a href="#" class="forgot-link">Forgot password?</a>
             </div>
 
-            <button type="submit" class="btn-auth">Login to Dashboard →</button>
+            <button type="submit" class="btn-auth">Log in →</button>
         </form>
 
         <div class="divider"><span>or</span></div>
-        <a href="/register" class="btn-outline-auth">Create a Free Account 🌱</a>
+        
+        <a href="/register" class="btn-outline-auth">Create new account</a>
 
         <div class="form-footer">
-            <a href="/">← Back to Home</a>
+            <a href="/">← Back to home</a>
         </div>
     </div>
 </div>
-
 {% endblock %}
+
+{% block page_js %}{% endblock %}

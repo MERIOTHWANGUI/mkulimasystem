@@ -245,78 +245,82 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
     <div class="content">
 
-      {% if not results %}
-      <div class="welcome">
-        <div class="wlc-text">
-          <h2>Welcome back, {{ current_user.first_name }}! 🌱</h2>
-          <p>Enter your farm conditions below and our AI will recommend the best crops for you.</p>
-        </div>
-        <a href="#form" class="wlc-btn">Start Recommendation →</a>
-      </div>
-      {% endif %}
-
-      {% if error %}
-      <div class="alert-danger">⚠️ {{ error }}</div>
-      {% endif %}
-
-      {% if results %}
+     {% if results %}
       <div class="results-wrap">
+
+        {# --- System Alerts --- #}
+        {% if results.alerts %}
+        <div class="alerts-section" style="margin-bottom: 20px;">
+          {% for alert in results.alerts %}
+            <div class="alert-item" style="background:#fff3cd; color:#856404; padding:12px; border-radius:8px; margin-bottom:8px; border-left:5px solid #ffeeba; font-size:14px;">
+              {{ alert }}
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
           <div>
             <div style="font-size:12px;color:var(--tl);margin-bottom:3px;">
               Results · Temp {{ form_data.temperature }}°C · Rainfall {{ form_data.rainfall }}mm · Alt {{ form_data.altitude }}m · {{ form_data.soil_type }} soil · pH {{ form_data.soil_ph }}
             </div>
-            <div style="font-family:'Playfair Display',serif;font-size:20px;">{{ results|length }} Crops Ranked for Your Farm</div>
+            <div style="font-family:'Playfair Display',serif;font-size:20px;">AI Recommended Crops for Your Farm</div>
           </div>
           <form method="GET" action="{{ url_for('farmer.dashboard') }}">
             <button type="submit" class="btn-edit">← Edit My Inputs</button>
           </form>
         </div>
 
-        {% set top = results[0] %}
+        {# --- Top Recommendation Card --- #}
+        {% if top %}
         <div class="result-hero">
           <div class="rh-emoji">{{ top.emoji }}</div>
           <div>
-            <div class="rh-label">🏆 Top Recommendation for Your Farm</div>
+            <div class="rh-label">🏆 Top Recommendation ({{ top.confidence }} Confidence)</div>
             <div class="rh-name">{{ top.crop }}</div>
-            <div class="rh-conf">{{ top.percentage }}% suitability match for your conditions</div>
-            <div class="conf-bar"><div class="conf-fill" style="width:{{ top.percentage }}%;"></div></div>
+            <div class="rh-conf">{{ top.final_score }}% suitability match</div>
+            <div class="conf-bar"><div class="conf-fill" style="width:{{ top.final_score }}%;"></div></div>
             <div class="rh-tags">
-              <span class="rh-tag">✅ Temp {{ form_data.temperature }}°C</span>
-              <span class="rh-tag">✅ Rainfall {{ form_data.rainfall }}mm</span>
-              <span class="rh-tag">✅ {{ form_data.soil_type }} soil</span>
-              <span class="rh-tag">✅ pH {{ form_data.soil_ph }}</span>
+              {% for reason in top.reasons %}
+                <span class="rh-tag">✅ {{ reason }}</span>
+              {% endfor %}
+              <span class="rh-tag" style="background: #f8d7da; color: #721c24;">Risk Factor: {{ top.risk }}</span>
             </div>
           </div>
         </div>
+        {% endif %}
 
+        {# --- Alternatives Grid --- #}
         <div class="results-grid">
-          {% for r in results %}
+          {% for r in alternatives %}
           <div class="rc {% if loop.first %}best{% endif %}">
             {% if loop.first %}<div class="best-tag">Best Match</div>{% endif %}
             <span class="rc-emoji">{{ r.emoji }}</span>
             <div class="rc-name">{{ r.crop }}</div>
-            <div class="rc-pct">{{ r.percentage }}%</div>
+            <div class="rc-pct">{{ r.final_score }}%</div>
             <div class="rc-bar">
-              <div class="rc-fill" style="width:{{ r.percentage }}%;{% if r.percentage < 40 %}background:var(--am);{% endif %}"></div>
+              <div class="rc-fill" style="width:{{ r.final_score }}%;{% if r.final_score < 40 %}background:var(--am);{% endif %}"></div>
             </div>
             <div class="rc-desc">{{ r.desc }}</div>
           </div>
-          {% if results %}
-{% set top_crop = results[0].crop %}
- 
+          {% endfor %}
+        </div>
+
+      </div> {# Closes .results-wrap #}
+
+
 <!-- SUPPORT PANEL -->
 <div class="support-panel">
- 
+
   <!-- TABS -->
   <div class="sp-tabs">
-    
+
     <button class="sp-tab" onclick="spTab('inputs', this)">🛒 What to Buy</button>
     <button class="sp-tab" onclick="spTab('yield', this)">📊 Yield Estimate</button>
   </div>
- 
-  
- 
+
+
+
   <!-- TAB 2: WHAT TO BUY -->
   {% set inputs_map = {
     'Maize':        [
@@ -376,7 +380,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
       ('🌿', 'Fertilizer',  'Compost + DAP',                               '2 bags compost per bed'),
     ],
   } %}
- 
+
   <div class="sp-content" id="sp-inputs">
     <div class="sp-title">What to Buy for {{ top_crop }}</div>
     <div class="inputs-list">
@@ -398,7 +402,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
       Avoid fake seeds — they look the same but give poor harvests.
     </div>
   </div>
- 
+
   <!-- TAB 3: YIELD ESTIMATE -->
   <div class="sp-content" id="sp-yield">
     <div class="sp-title">Expected Yield for {{ top_crop }}</div>
@@ -440,11 +444,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
       seed quality and crop management. Good inputs and proper care can increase yield by 30–50%.
     </div>
   </div>
- 
+
 </div>
-{% endif %}
-          {% endfor %}
-        </div>
 
         <div style="text-align:center;margin-bottom:28px;">
           <form method="GET" action="{{ url_for('farmer.dashboard') }}">

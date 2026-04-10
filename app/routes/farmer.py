@@ -34,6 +34,8 @@ def dashboard():
     from app.models.recommendation_history import RecommendationHistory
 
     results   = None
+    top       = None
+    alternatives = []
     form_data = {}
     error     = None
 
@@ -53,11 +55,21 @@ def dashboard():
                 'soil_ph':     soil_ph,
             }
 
-            results = predict_crops(temperature, rainfall, altitude, soil_type, soil_ph)
+            prediction = predict_crops(
+                temperature, rainfall, altitude, soil_type, soil_ph
+            )
 
-            # ── AUTO-SAVE recommendation to history ──
-            if results:
-                top = results[0]
+            # 🔥 unpack properly
+            # 🔥 unpack properly - using the keys that actually exist in predict.py
+            top = prediction.get("primary")
+            alternatives = prediction.get("top_options", [])
+
+            # keep full results if you still need them
+            results = prediction
+
+            # ── AUTO-SAVE ──
+            if top:
+                top_score = top.get('final_score', top.get('score', top.get('ml_prob', 0)))
                 rec = RecommendationHistory(
                     farmer_id      = current_user.id,
                     temperature    = temperature,
@@ -66,9 +78,9 @@ def dashboard():
                     soil_type      = soil_type,
                     soil_ph        = soil_ph,
                     top_crop       = top['crop'],
-                    top_confidence = top['percentage'],
+                    top_confidence = top_score,
                 )
-                rec.set_results(results)
+                rec.set_results(prediction)  # store structured data
                 db.session.add(rec)
                 db.session.commit()
 
@@ -77,7 +89,9 @@ def dashboard():
 
     return render_template(
         'farmer/dashboard.html',
-        results=results,
+        top=top,
+        alternatives=alternatives,
+        results=results,  # optional
         form_data=form_data,
         error=error
     )
