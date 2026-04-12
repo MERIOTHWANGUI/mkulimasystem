@@ -7,7 +7,10 @@ def create_admin():
     admin = User.query.filter_by(username='admin').first()
     if not admin:
         admin = User(
+            first_name='Admin',
+            last_name='User',
             username='admin',
+            email='admin@agrosense.com',
             password=generate_password_hash('admin123'),
             role='admin'
         )
