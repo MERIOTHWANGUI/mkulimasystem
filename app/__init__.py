@@ -10,6 +10,9 @@ from app.models.recommendation_history import RecommendationHistory  # noqa
 from app.models.chat_history import ChatHistory  # noqa
 from app.models.user import User  # noqa
 
+# 👇 ADD THIS IMPORT
+from app.utils.seed import create_admin
+
 migrate = Migrate()
 
 def create_app(config_name='default'):
@@ -33,5 +36,10 @@ def create_app(config_name='default'):
     app.register_blueprint(farmer_bp)
     app.register_blueprint(supplier_bp)
     app.register_blueprint(admin_bp)
+
+    # 👇 ADD THIS BLOCK - Creates admin on startup
+    with app.app_context():
+        db.create_all()
+        create_admin()
 
     return app
