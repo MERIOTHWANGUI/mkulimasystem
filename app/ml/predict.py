@@ -7,19 +7,19 @@ MODEL_DIR = os.path.join(os.path.dirname(__file__), 'model')
 
 # ── METADATA ─────────────────────────────────────────────
 CROP_META = {
-    'Maize':        {'emoji': '🌽', 'desc': 'Staple grain ideal for mid-altitude warm regions.'},
-    'Beans':        {'emoji': '🫘', 'desc': 'Legume crop that improves soil nitrogen.'},
-    'Sorghum':      {'emoji': '🌾', 'desc': 'Drought-tolerant grain for dry lowland areas.'},
-    'Tomato':       {'emoji': '🍅', 'desc': 'High-value vegetable for warm humid conditions.'},
-    'Onion':        {'emoji': '🧅', 'desc': 'Cash crop suited for well-drained sandy soils.'},
-    'Carrot':       {'emoji': '🥕', 'desc': 'Cool weather root crop for highland areas.'},
-    'Millet':       {'emoji': '🌾', 'desc': 'Drought-resistant grain for arid regions.'},
-    'Groundnut':    {'emoji': '🥜', 'desc': 'Legume cash crop rich in protein and oil.'},
-    'Soybean':      {'emoji': '🌿', 'desc': 'High-protein legume for warm climates.'},
-    'Cowpea':       {'emoji': '🫘', 'desc': 'Drought-tolerant legume for semi-arid areas.'},
-    'Green Gram':   {'emoji': '🟢', 'desc': 'Fast-maturing legume for hot dry conditions.'},
-    'Irish Potato': {'emoji': '🥔', 'desc': 'High-yield tuber for cool highland areas.'},
-    'kale':         {'emoji': '🥬', 'desc': 'Nutritious leafy vegetable for highland farms.'},
+    'Maize':        {'image': 'maize.png','emoji':'🌽', 'desc': 'Staple grain ideal for mid-altitude warm regions.'},
+    'Beans':        {'image':'beans.png','emoji': '🫘', 'desc': 'Legume crop that improves soil nitrogen.'},
+    'Sorghum':      {'image':'sorghum.png','emoji': '🌾', 'desc': 'Drought-tolerant grain for dry lowland areas.'},
+    'Tomato':       {'image':'tomato.png','emoji': '🍅', 'desc': 'High-value vegetable for warm humid conditions.'},
+    'Onion':        {'image':'onion.png','emoji': '🧅', 'desc': 'Cash crop suited for well-drained sandy soils.'},
+    'Carrot':       {'image':'carrots.png','emoji': '🥕', 'desc': 'Cool weather root crop for highland areas.'},
+    'Millet':       {'image':'millet.png','emoji': '🌾', 'desc': 'Drought-resistant grain for arid regions.'},
+    'Groundnut':    {'image':'groundnuts.png','emoji': '🥜', 'desc': 'Legume cash crop rich in protein and oil.'},
+    'Soybean':      {'image':'soybean.png','emoji': '🌿', 'desc': 'High-protein legume for warm climates.'},
+    'Cowpea':       {'image':'cowpea.png','emoji': '🫘', 'desc': 'Drought-tolerant legume for semi-arid areas.'},
+    'Green Gram':   {'image':'greengrams.png','emoji': '🟢', 'desc': 'Fast-maturing legume for hot dry conditions.'},
+    'Irish Potato': {'image':'irishpotatoes.png','emoji': '🥔', 'desc': 'High-yield tuber for cool highland areas.'},
+    'kale':         {'image':'kale.png','emoji': '🥬', 'desc': 'Nutritious leafy vegetable for highland farms.'},
 }
 
 SOIL_MAPPING = {
@@ -60,6 +60,25 @@ def predict_crops(temperature, rainfall, altitude, soil_type, soil_ph):
     features_scaled = scaler.transform(features)
     raw_probs = model.predict_proba(features_scaled)[0]
     classes = label_encoder.classes_
+    # Mild probability smoothing to reduce dominance by a single class.
+    def _normalize_probs(probs):
+        total = float(np.sum(probs))
+        if total <= 0:
+            return np.ones_like(probs) / len(probs)
+        return probs / total
+
+    def _smooth_probs(probs, temperature=1.25, uniform_mix=0.06):
+        # Temperature > 1.0 flattens overconfident distributions.
+        probs = np.clip(probs, 1e-9, 1.0)
+        if temperature and temperature != 1.0:
+            probs = probs ** (1.0 / temperature)
+        probs = _normalize_probs(probs)
+        if uniform_mix and uniform_mix > 0:
+            uniform = np.full_like(probs, 1.0 / len(probs))
+            probs = (1.0 - uniform_mix) * probs + uniform_mix * uniform
+        return _normalize_probs(probs)
+
+    balanced_probs = _smooth_probs(raw_probs)
 
     # ── AGRONOMIC RULES ───────────────────────────────────
     RULES = {
@@ -126,11 +145,11 @@ def predict_crops(temperature, rainfall, altitude, soil_type, soil_ph):
     # ── DECISION ENGINE ───────────────────────────────────
     results = []
 
-    for crop, prob in zip(classes, raw_probs):
+    for crop, prob in zip(classes, balanced_probs):
         suit = suitability(crop)
         rsk = risk(crop)
 
-        final_score = (0.6 * prob) + (0.4 * suit)
+        final_score = (0.4 * prob) + (0.6 * suit)
 
         entry = {
             'crop': crop,
@@ -143,11 +162,15 @@ def predict_crops(temperature, rainfall, altitude, soil_type, soil_ph):
             'reasons': explain(suit, rsk)
         }
 
-        meta = CROP_META.get(crop, {'emoji': '🌿', 'desc': ''})
+        meta = CROP_META.get(crop, {
+            'image': 'default.png',
+            'emoji': '🌿',
+            'desc': ''
+        })
+
         entry.update(meta)
 
         results.append(entry)
-
     # Sort by decision score
     results = sorted(results, key=lambda x: x['final_score'], reverse=True)
 

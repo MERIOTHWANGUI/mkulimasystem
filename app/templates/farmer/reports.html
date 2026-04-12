@@ -29,7 +29,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;transition:all .18s;margin-bottom:2px;text-decoration:none;}
 .sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
 .sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
-.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#fff;}
+.sb-ico i{font-size:14px;line-height:1;}
 .sb-item.active .sb-ico{background:var(--gl);}
 .sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
 .sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
@@ -135,42 +136,42 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 <div class="page">
   <nav class="sidebar">
     <div class="sb-logo">
-      <div class="sb-icon">🌿</div>
+      <div class="sb-icon"><i class="fas fa-leaf"></i></div>
       <div class="sb-name">Agro<span>Sense</span></div>
     </div>
     <div class="sb-section">
       <div class="sb-label">Menu</div>
       <a href="{{ url_for('farmer.dashboard') }}" class="sb-item">
-        <div class="sb-ico">🤖</div><span>Crop Advisor</span>
+        <div class="sb-ico"><i class="fas fa-seedling"></i></div><span>Crop Advisor</span>
       </a>
       <a href="{{ url_for('farmer.chatbot') }}" class="sb-item">
-        <div class="sb-ico">💬</div><span>AgriBot Chat</span>
+        <div class="sb-ico"><i class="fas fa-comments"></i></div><span>AgriBot Chat</span>
       </a>
       <a href="{{ url_for('farmer.marketplace') }}" class="sb-item">
-        <div class="sb-ico">🏪</div><span>Marketplace</span>
+        <div class="sb-ico"><i class="fas fa-store"></i></div><span>Marketplace</span>
       </a>
       <a href="{{ url_for('farmer.reports') }}" class="sb-item active">
-        <div class="sb-ico">📊</div><span>My Reports</span>
+        <div class="sb-ico"><i class="fas fa-chart-line"></i></div><span>My Reports</span>
       </a>
     </div>
     <div class="sb-bottom">
       <div class="sb-user">
-        <div class="sb-avatar">🧑‍🌾</div>
+        <div class="sb-avatar"><i class="fas fa-user"></i></div>
         <div>
           <div class="sb-uname">{{ current_user.first_name }}</div>
           <div class="sb-urole">Farmer</div>
         </div>
       </div>
-      <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+      <a href="{{ url_for('auth.logout') }}" class="sb-logout"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
     </div>
   </nav>
 
   <div class="main-wrap">
     <div class="topbar">
-      <div class="tb-title">📊 My Farming Reports</div>
+      <div class="tb-title"><i class="fas fa-chart-line"></i> My Farming Reports</div>
       {% if history %}
       <a href="{{ url_for('farmer.download_report_pdf') }}" class="btn-pdf">
-        📄 Download PDF Report
+        <i class="fas fa-file-pdf"></i> Download PDF Report
       </a>
       {% endif %}
     </div>
@@ -185,8 +186,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
       <!-- TABS -->
       <div class="tabs">
-        <button class="tab active" onclick="switchTab('crops', this)">🌾 Crop Recommendations ({{ total_checks }})</button>
-        <button class="tab" onclick="switchTab('chats', this)">💬 AgriBot Chat History ({{ chat_count }})</button>
+        <button class="tab active" onclick="switchTab('crops', this)"><i class="fas fa-seedling"></i> Crop Recommendations ({{ total_checks }})</button>
+        <button class="tab" onclick="switchTab('chats', this)"><i class="fas fa-comments"></i> AgriBot Chat History ({{ chat_count }})</button>
       </div>
 
       <!-- ══ TAB 1: CROP RECOMMENDATIONS ══ -->
@@ -220,7 +221,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
         <!-- FREQUENCY CHART -->
         {% if crop_counts %}
         <div class="card">
-          <div class="card-title">🌾 Crop Recommendation Frequency</div>
+          <div class="card-title"><i class="fas fa-seedling"></i> Crop Recommendation Frequency</div>
           {% set max_count = crop_counts.values()|max %}
           {% for crop, count in crop_counts|dictsort(by='value', reverse=true) %}
           <div class="freq-row">
@@ -236,7 +237,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
         <!-- HISTORY LIST -->
         <div class="card">
-          <div class="card-title">📋 Full Recommendation History</div>
+          <div class="card-title"><i class="fas fa-clipboard-list"></i> Full Recommendation History</div>
           {% for rec in history %}
           <div class="rec-item">
             <div class="rec-header" onclick="toggleRec({{ loop.index }})">
@@ -258,17 +259,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
             <div class="rec-body" id="rec-body-{{ loop.index }}">
               <div style="font-size:11px;font-weight:700;color:var(--tl);margin-bottom:8px;text-transform:uppercase;">Field Conditions</div>
               <div class="conditions-grid">
-                <div class="cond-item"><div class="cond-label">🌡 Temperature</div><div class="cond-value">{{ rec.temperature }}°C</div></div>
-                <div class="cond-item"><div class="cond-label">🌧 Rainfall</div><div class="cond-value">{{ rec.rainfall }}mm</div></div>
-                <div class="cond-item"><div class="cond-label">⛰ Altitude</div><div class="cond-value">{{ rec.altitude }}m</div></div>
-                <div class="cond-item"><div class="cond-label">🌿 Soil Type</div><div class="cond-value">{{ rec.soil_type }}</div></div>
-                <div class="cond-item"><div class="cond-label">🧪 Soil pH</div><div class="cond-value">{{ rec.soil_ph }}</div></div>
+                <div class="cond-item"><div class="cond-label"><i class="fas fa-thermometer-half"></i> Temperature</div><div class="cond-value">{{ rec.temperature }}°C</div></div>
+                <div class="cond-item"><div class="cond-label"><i class="fas fa-cloud-rain"></i> Rainfall</div><div class="cond-value">{{ rec.rainfall }}mm</div></div>
+                <div class="cond-item"><div class="cond-label"><i class="fas fa-mountain"></i> Altitude</div><div class="cond-value">{{ rec.altitude }}m</div></div>
+                <div class="cond-item"><div class="cond-label"><i class="fas fa-leaf"></i> Soil Type</div><div class="cond-value">{{ rec.soil_type }}</div></div>
+                <div class="cond-item"><div class="cond-label"><i class="fas fa-flask"></i> Soil pH</div><div class="cond-value">{{ rec.soil_ph }}</div></div>
               </div>
               <div style="font-size:11px;font-weight:700;color:var(--tl);margin-bottom:8px;text-transform:uppercase;">All Recommended Crops</div>
               <div class="crops-list">
                 {% for r in rec.results %}
                 <div class="crop-pill {{ 'top' if loop.first else '' }}">
-                  {% if loop.first %}🥇{% elif loop.index == 2 %}🥈{% elif loop.index == 3 %}🥉{% endif %}
                   {{ r.crop }} — {{ r.percentage }}%
                 </div>
                 {% endfor %}
@@ -276,7 +276,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
               <div class="rec-actions">
                 <form method="POST" action="{{ url_for('farmer.delete_record', rec_id=rec.id) }}"
                       onsubmit="return confirm('Delete this record?')">
-                  <button type="submit" class="btn-del">🗑️ Delete</button>
+                  <button type="submit" class="btn-del"><i class="fas fa-trash"></i> Delete</button>
                 </form>
               </div>
             </div>
@@ -286,10 +286,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
         {% else %}
         <div class="empty">
-          <div class="empty-icon">📭</div>
+          <div class="empty-icon"><i class="fas fa-clipboard-list"></i></div>
           <div class="empty-title">No crop checks yet</div>
           <div>Use the Crop Advisor to get your first recommendation — it saves automatically.</div>
-          <a href="{{ url_for('farmer.dashboard') }}" class="btn-go">🌾 Go to Crop Advisor</a>
+          <a href="{{ url_for('farmer.dashboard') }}" class="btn-go"><i class="fas fa-seedling"></i> Go to Crop Advisor</a>
         </div>
         {% endif %}
       </div>
@@ -319,7 +319,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
         </div>
 
         <div class="card">
-          <div class="card-title">💬 AgriBot Conversation History</div>
+          <div class="card-title"><i class="fas fa-comments"></i> AgriBot Conversation History</div>
 
           {% for day, messages in chat_days.items() %}
           <div class="chat-day">
@@ -327,7 +327,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
             {% for msg in messages %}
             <div class="chat-msg {{ 'user' if msg.role == 'user' else 'bot' }}">
               <div class="chat-avatar {{ 'usr' if msg.role == 'user' else 'bot' }}">
-                {{ '🧑‍🌾' if msg.role == 'user' else '🤖' }}
+                {% if msg.role == 'user' %}
+                  <i class="fas fa-user"></i>
+                {% else %}
+                  <i class="fas fa-robot"></i>
+                {% endif %}
               </div>
               <div>
                 <div class="chat-bubble {{ 'user' if msg.role == 'user' else 'bot' }}">
@@ -343,10 +347,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
         {% else %}
         <div class="empty">
-          <div class="empty-icon">💬</div>
+          <div class="empty-icon"><i class="fas fa-comments"></i></div>
           <div class="empty-title">No chat history yet</div>
           <div>Chat with AgriBot and your conversations will be saved here automatically.</div>
-          <a href="{{ url_for('farmer.chatbot') }}" class="btn-go">💬 Open AgriBot Chat</a>
+          <a href="{{ url_for('farmer.chatbot') }}" class="btn-go"><i class="fas fa-comments"></i> Open AgriBot Chat</a>
         </div>
         {% endif %}
 

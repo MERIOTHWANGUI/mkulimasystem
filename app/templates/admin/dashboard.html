@@ -5,6 +5,7 @@
 
 {% block page_css %}
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root {
   --gd:#1a4d2e;--gm:#2d7a4f;--gl:#4caf7d;--gp:#e8f5ee;
@@ -77,7 +78,9 @@ textarea.ifield{resize:vertical;min-height:80px;}
 .modal-title{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:18px;}
 .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px;}
 .btn-cancel{background:var(--bg);color:var(--td);border:1px solid var(--bd);}
-
+.modal-bg.show {
+    display: flex !important; /* Forces the modal to appear */
+}
 /* ALERTS */
 .alert{border-radius:9px;padding:12px 16px;font-size:13px;margin-bottom:18px;}
 .alert-success{background:#e8f5ee;border:1px solid #b3d9bf;color:var(--gd);}
@@ -110,12 +113,7 @@ textarea.ifield{resize:vertical;min-height:80px;}
       <a href="{{ url_for('admin.users') }}" class="sb-item">
   <div class="sb-ico">👥</div><span>Manage Users</span>
 </a>
-      <a href="#" class="sb-item">
-        <div class="sb-ico">📊</div><span>Reports</span>
-      </a>
-      <a href="#" class="sb-item">
-        <div class="sb-ico">🌾</div><span>Crop Data</span>
-      </a>
+      
     </div>
     <div class="sb-bottom">
       <div class="sb-user">
@@ -125,14 +123,14 @@ textarea.ifield{resize:vertical;min-height:80px;}
           <div class="sb-urole">Admin</div>
         </div>
       </div>
-      <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+      <a href="{{ url_for('auth.logout') }}" class="sb-logout"><wa-icon name="trash"></wa-icon> <span>Logout</span></a>
     </div>
   </nav>
 
   <!-- MAIN -->
   <div class="main-wrap">
     <div class="topbar">
-      <div class="tb-title">🧠 AgriBot Knowledge Base Manager</div>
+      <div class="tb-title"> AgriBot Knowledge Base Manager</div>
     </div>
 
     <div class="content">
@@ -155,7 +153,7 @@ textarea.ifield{resize:vertical;min-height:80px;}
           <div class="stat-label">Topics Covered</div>
         </div>
         <div class="stat">
-          <div class="stat-num">🤖</div>
+          <div class="stat-num"></div>
           <div class="stat-label">AgriBot reads all entries on every chat</div>
         </div>
       </div>
@@ -174,7 +172,7 @@ textarea.ifield{resize:vertical;min-height:80px;}
 
       <!-- KNOWLEDGE BASE TABLE -->
       <div class="card">
-        <div class="card-title">📚 All Knowledge Entries <span style="font-size:13px;color:var(--tl);font-family:'DM Sans',sans-serif;font-weight:400;">({{ entries|length }} entries — AgriBot uses all of these)</span></div>
+        <div class="card-title"> All Knowledge Entries <span style="font-size:13px;color:var(--tl);font-family:'DM Sans',sans-serif;font-weight:400;">({{ entries|length }} entries — AgriBot uses all of these)</span></div>
 
         {% if entries %}
         <table class="kb-table">
@@ -194,10 +192,10 @@ textarea.ifield{resize:vertical;min-height:80px;}
               <td><div class="content-preview">{{ e.content }}</div></td>
               <td>
                 <div class="actions">
-                  <button class="btn btn-save" onclick="openEdit({{ e.id }}, '{{ e.topic|e }}', `{{ e.content|e }}`)">✏️ Edit</button>
+                  <button class="btn btn-save" onclick="openEdit('{{ e.id }}', '{{ e.topic|e }}', `{{ e.content|e }}`)">✏️ Edit</button>
                   <form method="POST" action="{{ url_for('admin.kb_delete', entry_id=e.id) }}"
                         onsubmit="return confirm('Delete {{ e.topic }}?')">
-                    <button type="submit" class="btn btn-del">🗑️ Delete</button>
+                    <button type="submit" class="btn btn-del"><wa-icon name="trash"></wa-icon>Delete</button>
                   </form>
                 </div>
               </td>
@@ -207,7 +205,7 @@ textarea.ifield{resize:vertical;min-height:80px;}
         </table>
         {% else %}
         <div style="text-align:center;padding:40px;color:var(--tl);">
-          <div style="font-size:48px;margin-bottom:12px;">📭</div>
+          <div style="font-size:48px;margin-bottom:12px;"></div>
           <div>No entries yet. Add your first knowledge entry above!</div>
         </div>
         {% endif %}
@@ -220,7 +218,7 @@ textarea.ifield{resize:vertical;min-height:80px;}
 <!-- EDIT MODAL -->
 <div class="modal-bg" id="edit-modal">
   <div class="modal">
-    <div class="modal-title">✏️ Edit Knowledge Entry</div>
+    <div class="modal-title">🖋Edit Knowledge Entry</div>
     <form method="POST" id="edit-form">
       <div style="display:flex;flex-direction:column;gap:12px;">
         <input type="text" name="topic" id="edit-topic" class="ifield" placeholder="Topic" required>

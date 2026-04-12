@@ -52,7 +52,7 @@ def generate_history_pdf(farmer, history, crop_counts):
 
     # ─── HEADER ───
     hdr = Table([[
-        Paragraph('🌿 AgroSense', _style('B', fontName='Helvetica-Bold',
+        Paragraph('AgroSense', _style('B', fontName='Helvetica-Bold',
             fontSize=24, textColor=AMBER, alignment=TA_CENTER)),
     ]], colWidths=[W])
     hdr.setStyle(TableStyle([

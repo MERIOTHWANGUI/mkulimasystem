@@ -5,6 +5,7 @@
 
 {% block page_css %}
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root{
   --gd:#1a4d2e;--gm:#2d7a4f;--gl:#4caf7d;--gp:#e8f5ee;
@@ -159,7 +160,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
   <!-- MAIN -->
   <div class="main-wrap">
     <div class="topbar">
-      <div class="tb-title">👥 Manage Users</div>
+      <div class="tb-title"><wa-icon name="user"></wa-icon>Manage Users</div>
       <div style="font-size:13px;color:var(--tl);">{{ all_users|length }} total users</div>
     </div>
 
@@ -193,14 +194,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
       <!-- SEARCH & FILTER -->
       <div class="search-bar">
-        <span style="color:var(--tl);">🔍</span>
+        <span style="color:var(--tl);"><wa-icon name="magnifying-glass"></wa-icon></span>
         <input type="text" class="search-input" id="search-input"
                placeholder="Search by name, username or email…" oninput="filterUsers()">
         <div class="filter-btns">
           <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
-          <button class="filter-btn" onclick="setFilter('farmer', this)">🌾 Farmers</button>
-          <button class="filter-btn" onclick="setFilter('supplier', this)">🏪 Suppliers</button>
-          <button class="filter-btn" onclick="setFilter('admin', this)">⚙️ Admins</button>
+          <button class="filter-btn" onclick="setFilter('farmer', this)"><i class="fas fa-seedling"></i>Farmers</button>
+          <button class="filter-btn" onclick="setFilter('supplier', this)"><i class="fas fa-box"></i>Suppliers</button>
+          <button class="filter-btn" onclick="setFilter('admin', this)"><i class="fas fa-cogs"></i>Admins</button>
         </div>
       </div>
 
@@ -289,7 +290,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 <!-- DELETE CONFIRM MODAL -->
 <div class="modal-bg" id="delete-modal">
   <div class="modal-box">
-    <div class="modal-title">🗑️ Delete User</div>
+    <div class="modal-title"><wa-icon name="trash"></wa-icon> Delete User</div>
     <div class="modal-sub" id="delete-modal-sub">Are you sure you want to delete this user?</div>
     <form method="POST" id="delete-form">
       <div class="modal-actions">

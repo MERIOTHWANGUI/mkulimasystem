@@ -5,6 +5,7 @@
 
 {% block page_css %}
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --gd: #1a4d2e; --gm: #2d7a4f; --gl: #4caf7d; --gp: #e8f5ee;
@@ -18,33 +19,148 @@
   --r: 14px; --rs: 10px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-height:100vh;}
+body{
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--td);
+  min-height: 100vh;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .page{display:flex;min-height:100vh;}
 .sidebar{width:230px;background:var(--gd);flex-shrink:0;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;overflow-y:auto;}
 .main-wrap{flex:1;margin-left:230px;display:flex;flex-direction:column;min-height:100vh;}
 .sb-logo{padding:22px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:10px;}
 .sb-icon{width:36px;height:36px;background:var(--gl);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;}
-.sb-name{font-family:'Playfair Display',serif;font-size:18px;color:#fff;}
+.sb-name{font-family:'Playfair Display',serif;font-size:22px;color:#fff;}
 .sb-name span{color:var(--al);}
 .sb-section{padding:16px 12px 4px;}
 .sb-label{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 6px;margin-bottom:6px;}
 .sb-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:9px;color:rgba(255,255,255,.7);font-size:13.5px;font-weight:500;cursor:pointer;transition:all .18s;margin-bottom:2px;text-decoration:none;}
 .sb-item:hover{background:rgba(255,255,255,.09);color:#fff;}
 .sb-item.active{background:rgba(255,255,255,.15);color:#fff;}
-.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:15px;}
+.sb-ico{width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#fff;}
+.sb-ico i{font-size:14px;line-height:1;}
 .sb-item.active .sb-ico{background:var(--gl);}
-.sb-bottom{margin-top:auto;padding:16px 12px;border-top:1px solid rgba(255,255,255,.1);}
-.sb-user{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;background:rgba(255,255,255,.07);}
-.sb-avatar{width:34px;height:34px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
-.sb-uname{font-size:13px;font-weight:600;color:#fff;}
-.sb-urole{font-size:11px;color:rgba(255,255,255,.5);}
-.sb-logout{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:rgba(255,100,100,.8);font-size:13px;font-weight:500;cursor:pointer;margin-top:6px;text-decoration:none;transition:all .18s;}
-.sb-logout:hover{background:rgba(255,100,100,.1);color:#ff6b6b;}
-.topbar{background:#fff;border-bottom:1px solid var(--bd);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;flex-shrink:0;position:sticky;top:0;z-index:50;}
-.tb-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--td);}
-.tb-right{display:flex;align-items:center;gap:12px;}
-.tb-loc{font-size:12px;color:var(--tl);background:var(--bg);padding:6px 12px;border-radius:20px;border:1px solid var(--bd);}
-.tb-avatar{width:36px;height:36px;background:var(--gm);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.sb-bottom {
+    margin-top: auto;
+    padding: 16px 12px;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+.sb-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 9px;
+    background: rgba(255,255,255,.07);
+}
+
+.sb-avatar {
+    width: 34px;
+    height: 34px;
+    background: var(--gl);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.sb-uname {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+.sb-urole {
+    font-size: 11px;
+    color: rgba(255,255,255,.5);
+    letter-spacing: 0.3px;
+}
+
+.sb-logout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 9px;
+    color: rgba(255,100,100,.8);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 6px;
+    text-decoration: none;
+    transition: all .18s;
+}
+
+.sb-logout:hover {
+    background: rgba(255,100,100,.1);
+    color: #ff6b6b;
+}
+
+.sb-logout i {
+    font-size: 12px;
+}
+
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--bd);
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.tb-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 20px;
+    color: var(--td);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.tb-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tb-loc {
+    font-size: 12px;
+    color: var(--tl);
+    background: var(--bg);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--bd);
+    display: flex;
+    align-items: center;
+}
+
+.tb-avatar {
+    width: 36px;
+    height: 36px;
+    background: #1a472a;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tb-avatar i {
+    font-size: 16px;
+    line-height: 1;
+}
 .content{flex:1;overflow-y:auto;padding:28px 32px;}
 .welcome{background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:var(--r);padding:24px 28px;color:#fff;display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
 .wlc-text h2{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:4px;}
@@ -54,9 +170,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .card{background:#fff;border-radius:var(--r);border:1px solid var(--bd);padding:24px;box-shadow:var(--sh);margin-bottom:20px;}
 .sh{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--gp);border-radius:9px;margin-bottom:16px;}
 .sh-ico{width:32px;height:32px;background:var(--gd);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;}
-.sh-title{font-weight:700;font-size:13px;color:var(--gd);}
-.sh-desc{font-size:11.5px;color:var(--tm);}
-.gps-banner{display:flex;align-items:center;gap:12px;background:var(--gp);border:1px solid #b3d9bf;border-radius:10px;padding:12px 16px;margin-bottom:18px;}
+.sh-title{font-weight:900;font-size:20px;color:var(--gd);}
+.sh-desc{font-size:13px;color:var(--tm);}
+.gps-banner{display:flex;align-items:center;gap:12px;background:var(--gp);border:1px solid #16eb59;border-radius:10px;padding:12px 16px;margin-bottom:18px;}
 .gps-status{flex:1;}
 .gps-status .gs-title{font-weight:700;font-size:13px;color:var(--gd);}
 .gps-status .gs-sub{font-size:11.5px;color:var(--tm);margin-top:2px;}
@@ -67,7 +183,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .mini-spin{width:16px;height:16px;border:2px solid var(--bd);border-top-color:var(--gm);border-radius:50%;animation:spin .6s linear infinite;}
 .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px;}
 .igroup{display:flex;flex-direction:column;gap:5px;}
-.ilabel{font-size:12px;font-weight:700;color:var(--tm);display:flex;align-items:center;gap:5px;}
+.ilabel{font-size:14px;font-weight:700;color:var(--tm);display:flex;align-items:center;gap:5px;}
 .ihint{font-size:10px;color:var(--tl);font-weight:400;background:var(--bg);border-radius:4px;padding:1px 5px;}
 .ifield{border:1.5px solid var(--bd);border-radius:var(--rs);padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:14px;background:var(--bg);color:var(--td);outline:none;transition:border .2s,box-shadow .2s;width:100%;}
 .ifield:focus{border-color:var(--gm);box-shadow:0 0 0 3px rgba(45,122,79,.1);background:#fff;}
@@ -79,19 +195,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .range-val{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:var(--gd);width:48px;text-align:right;}
 .range-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--tl);}
 .soil-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-bottom:4px;}
-.soil-opt{border:2px solid var(--bd);border-radius:10px;padding:12px 6px;text-align:center;cursor:pointer;transition:all .18s;}
+.soil-opt{border:2px solid var(--bd);border-radius:5px;padding:6px 6px;text-align:center;cursor:pointer;transition:all .18s;}
 .soil-opt:hover{border-color:var(--gm);background:var(--gp);}
 .soil-opt.sel{border-color:var(--gd);background:var(--gp);}
 .s-ico{font-size:24px;display:block;margin-bottom:5px;}
-.s-name{font-size:12px;font-weight:700;color:var(--td);}
+.s-name{font-size:14px;font-weight:700;color:var(--td);}
 .s-trait{font-size:10px;color:var(--tl);margin-top:2px;}
 .ph-wrap{background:var(--bg);border-radius:10px;padding:16px;border:1px solid var(--bd);}
 .ph-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
 .ph-big{font-family:'Playfair Display',serif;font-size:36px;color:var(--gd);}
 .submit-card{background:linear-gradient(135deg,var(--gd),var(--gm));border:none;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.sc-text h3{font-family:'Playfair Display',serif;font-size:19px;margin-bottom:5px;}
+.sc-text h3{font-family:'Playfair Display',serif;font-size:px;margin-bottom:5px;}
 .sc-text p{font-size:13px;color:rgba(255,255,255,.75);}
-.btn-submit{background:var(--al);color:#fff;border:none;padding:14px 32px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all .2s;}
+.btn-submit{background:var(--al);color:#ffffff;border:none;padding:14px 32px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all .2s;}
 .btn-submit:hover{background:#e0951f;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
 .results-wrap{animation:fadeUp .4s ease;}
 .result-hero{background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:var(--r);padding:28px;margin-bottom:20px;color:#fff;display:flex;align-items:center;gap:24px;}
@@ -117,9 +233,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .btn-edit{background:#fff;color:var(--gd);border:1.5px solid var(--bd);padding:10px 20px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
 .btn-edit:hover{border-color:var(--gm);background:var(--gp);}
 .tip-box{background:var(--ap);border:1px solid #f5a62340;border-radius:10px;padding:14px 16px;margin-bottom:20px;}
-.tip-title{font-size:13px;font-weight:700;color:var(--am);margin-bottom:8px;}
+.tip-title{font-size:15px;font-weight:700;color:var(--am);margin-bottom:8px;}
 .tip-box ul{padding-left:16px;}
-.tip-box li{font-size:12.5px;color:var(--tm);margin-bottom:4px;line-height:1.5;}
+.tip-box li{font-size: 13px;color:var(--tm);margin-bottom:4px;line-height:1.5;}
 .alert-danger{background:var(--rp);border:1px solid #f5c6cb;border-radius:9px;padding:12px 16px;color:var(--red);font-size:13px;margin-bottom:18px;}
 #loading-overlay{display:none;position:fixed;inset:0;background:rgba(26,77,46,.85);z-index:999;flex-direction:column;align-items:center;justify-content:center;color:#fff;}
 #loading-overlay.show{display:flex;}
@@ -131,8 +247,28 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .lo-step.done{color:#7be29b;}
 @keyframes spin{to{transform:rotate(360deg);}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes chatGlow{0%{box-shadow:0 0 0 0 rgba(76,175,125,.55);}70%{box-shadow:0 0 0 14px rgba(76,175,125,0);}100%{box-shadow:0 0 0 0 rgba(76,175,125,0);}}
 ::-webkit-scrollbar{width:5px;}
 ::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px;}
+#chat-bubble{animation:chatGlow 3s ease-out infinite;}
+#chat-hint{
+  position:fixed;
+  right:96px;
+  bottom:42px;
+  background:#fff;
+  color:var(--td);
+  border:1px solid var(--bd);
+  border-radius:12px;
+  padding:6px 10px;
+  font-size:12px;
+  box-shadow:var(--sh);
+  z-index:501;
+  pointer-events:none;
+  transition:opacity .2s, transform .2s;
+}
+@media(max-width:900px){
+  #chat-hint{display:none;}
+}
 @media(max-width:900px){
   .sidebar{width:60px;}
   .sb-name,.sb-label,.sb-uname,.sb-urole,.sb-logout span,.sb-item span{display:none;}
@@ -178,12 +314,34 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 .yield-unit{font-size:11px;color:var(--tl);margin-top:2px;}
 .yield-label{font-size:11px;font-weight:700;color:var(--tm);margin-top:6px;text-transform:uppercase;letter-spacing:.5px;}
 .yield-note{background:var(--ap);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--am);line-height:1.6;}
- 
+ /*  images*/
+.s-ico {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 8px auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.crop-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 @media(max-width:700px){
   .sp-tabs{flex-direction:column;}
   .cal-grid{grid-template-columns:1fr;}
   .yield-grid{grid-template-columns:1fr;}
   .input-item{flex-wrap:wrap;}
+  /* icon styling*/
+  .btn-submit i {
+    font-size: 20px;
+    margin-right: 8px;
+    line-height: 1;
+    color: grey;
+  }
+}
 </style>
 {% endblock %}
 
@@ -203,45 +361,57 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 <div class="page">
 <nav class="sidebar">
   <div class="sb-logo">
-    <div class="sb-icon">🌿</div>
+    <div class="sb-icon"><i class="fas fa-leaf"></i></div>
     <div class="sb-name">Agro<span>Sense</span></div>
   </div>
   <div class="sb-section">
     <div class="sb-label">Menu</div>
     <a href="{{ url_for('farmer.dashboard') }}" class="sb-item active">
-      <div class="sb-ico">🤖</div><span>Crop Advisor</span>
+      <div class="sb-ico"><i class="fas fa-seedling"></i></div><span>Crop Advisor</span>
     </a>
    <a href="{{ url_for('farmer.chatbot') }}" class="sb-item">
-        <div class="sb-ico">💬</div><span>AgriBot Chat</span>
+        <div class="sb-ico"><i class="fas fa-comments"></i></div><span>AgriBot Chat</span>
       </a>
     <a href="{{ url_for('farmer.reports') }}" class="sb-item active">
-        <div class="sb-ico">📊</div><span>My Reports</span>
+        <div class="sb-ico"><i class="fas fa-chart-line"></i></div><span>My Reports</span>
       </a>
     <a href="{{ url_for('farmer.marketplace') }}" class="sb-item">
-      <div class="sb-ico">🏪</div><span>Marketplace</span>
+      <div class="sb-ico"><i class="fas fa-store"></i></div><span>Marketplace</span>
     </a>
     
   </div>
   <div class="sb-bottom">
     <div class="sb-user">
-      <div class="sb-avatar">🧑‍🌾</div>
+      <div class="sb-avatar">
+        <i class="fas fa-seedling"></i>
+      </div>
       <div>
         <div class="sb-uname">{{ current_user.first_name }}</div>
-        <div class="sb-urole">Farmer</div>
+        <div class="sb-urole">Farm Manager</div>
       </div>
     </div>
-    <a href="{{ url_for('auth.logout') }}" class="sb-logout">🚪 <span>Logout</span></a>
+    <a href="{{ url_for('auth.logout') }}" class="sb-logout">
+      <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
+    </a>
   </div>
 </nav>
 
-  <div class="main-wrap">
-    <div class="topbar">
-      <div class="tb-title">🤖 Crop Recommendation Advisor</div>
-      <div class="tb-right">
-        <div class="tb-loc" id="location-display">📍 Location not set</div>
-        <div class="tb-avatar">🧑‍🌾</div>
+<div class="main-wrap">
+  <div class="topbar">
+    <div class="tb-title">
+      <i class="fas fa-tractor" style="margin-right: 8px; font-size: 25px; color:rgb(219, 125, 16);"></i> 
+      Crop Recommendation Advisor
+    </div>
+    <div class="tb-right">
+      <div class="tb-loc" id="location-display">
+        <i class="fas fa-map-marker-alt" style="margin-right: 6px; font-size: 11px;"></i> 
+        Location not set
+      </div>
+      <div class="tb-avatar">
+        <i class="fas fa-user-check"></i>
       </div>
     </div>
+  </div>
 
     <div class="content">
 
@@ -271,40 +441,69 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
           </form>
         </div>
 
-        {# --- Top Recommendation Card --- #}
-        {% if top %}
-        <div class="result-hero">
-          <div class="rh-emoji">{{ top.emoji }}</div>
-          <div>
-            <div class="rh-label">🏆 Top Recommendation ({{ top.confidence }} Confidence)</div>
-            <div class="rh-name">{{ top.crop }}</div>
-            <div class="rh-conf">{{ top.final_score }}% suitability match</div>
-            <div class="conf-bar"><div class="conf-fill" style="width:{{ top.final_score }}%;"></div></div>
-            <div class="rh-tags">
-              {% for reason in top.reasons %}
-                <span class="rh-tag">✅ {{ reason }}</span>
-              {% endfor %}
-              <span class="rh-tag" style="background: #f8d7da; color: #721c24;">Risk Factor: {{ top.risk }}</span>
-            </div>
-          </div>
-        </div>
-        {% endif %}
+       {# --- Top Recommendation Card --- #}
+{% if top %}
+<div class="result-hero">
 
-        {# --- Alternatives Grid --- #}
-        <div class="results-grid">
-          {% for r in alternatives %}
-          <div class="rc {% if loop.first %}best{% endif %}">
-            {% if loop.first %}<div class="best-tag">Best Match</div>{% endif %}
-            <span class="rc-emoji">{{ r.emoji }}</span>
-            <div class="rc-name">{{ r.crop }}</div>
-            <div class="rc-pct">{{ r.final_score }}%</div>
-            <div class="rc-bar">
-              <div class="rc-fill" style="width:{{ r.final_score }}%;{% if r.final_score < 40 %}background:var(--am);{% endif %}"></div>
-            </div>
-            <div class="rc-desc">{{ r.desc }}</div>
-          </div>
-          {% endfor %}
-        </div>
+  <div class="rh-emoji">
+    <img src="{{ url_for('static', filename='images/crops/' + top.image) }}" class="crop-img"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+    <span style="display:none;">{{ top.emoji }}</span>
+  </div>
+
+  <div>
+    <div class="rh-label">🏆 Top Recommendation ({{ top.confidence }} Confidence)</div>
+    <div class="rh-name">{{ top.crop }}</div>
+    <div class="rh-conf">{{ top.final_score }}% suitability match</div>
+
+    <div class="conf-bar">
+      <div class="conf-fill" style="width:{{ top.final_score }}%;"></div>
+    </div>
+
+    <div class="rh-tags">
+      {% for reason in top.reasons %}
+        <span class="rh-tag">✅ {{ reason }}</span>
+      {% endfor %}
+      <span class="rh-tag" style="background: #f8d7da; color: #721c24;">
+        Risk Factor: {{ top.risk }}
+      </span>
+    </div>
+  </div>
+
+</div>
+{% endif %}
+
+       {# --- Alternatives Grid --- #}
+<div class="results-grid">
+
+  {% for r in alternatives %}
+  <div class="rc {% if loop.first %}best{% endif %}">
+
+    {% if loop.first %}
+      <div class="best-tag">Best Match</div>
+    {% endif %}
+
+    <span class="rc-emoji">
+      <img src="{{ url_for('static', filename='images/crops/' + r.image) }}" class="crop-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+      <span style="display:none;">{{ r.emoji }}</span>
+    </span>
+
+    <div class="rc-name">{{ r.crop }}</div>
+    <div class="rc-pct">{{ r.final_score }}%</div>
+
+    <div class="rc-bar">
+      <div class="rc-fill"
+           style="width:{{ r.final_score }}%;{% if r.final_score < 40 %}background:var(--am);{% endif %}">
+      </div>
+    </div>
+
+    <div class="rc-desc">{{ r.desc }}</div>
+
+  </div>
+  {% endfor %}
+
+</div>
 
       </div> {# Closes .results-wrap #}
 
@@ -316,7 +515,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
   <div class="sp-tabs">
 
     <button class="sp-tab" onclick="spTab('inputs', this)">🛒 What to Buy</button>
-    <button class="sp-tab" onclick="spTab('yield', this)">📊 Yield Estimate</button>
+    
   </div>
 
 
@@ -398,58 +597,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
       {% endfor %}
     </div>
     <div class="input-tip">
-      💡 <strong>Tip:</strong> Buy certified seeds from registered agro-vets or the marketplace.
+       <strong>Tip:</strong> Buy certified seeds from registered agro-vets or the marketplace.
       Avoid fake seeds — they look the same but give poor harvests.
     </div>
   </div>
 
-  <!-- TAB 3: YIELD ESTIMATE -->
-  <div class="sp-content" id="sp-yield">
-    <div class="sp-title">Expected Yield for {{ top_crop }}</div>
-    {% set yields = {
-      'Maize':        ('18–30 bags', '90kg bags', 'per acre', 'Ksh 900–1,500', 'per 90kg bag', 'Ksh 16,200 – 45,000'),
-      'Beans':        ('8–15 bags',  '90kg bags', 'per acre', 'Ksh 6,000–9,000', 'per 90kg bag', 'Ksh 48,000 – 135,000'),
-      'Kale':         ('400–600 bundles', 'per month', 'per 1/8 acre', 'Ksh 10–20', 'per bundle', 'Ksh 4,000 – 12,000/month'),
-      'Irish Potato': ('30–60 bags',  '110kg bags', 'per acre', 'Ksh 1,500–3,000', 'per bag', 'Ksh 45,000 – 180,000'),
-      'Tomato':       ('800–1,500 crates', '20kg crates', 'per acre', 'Ksh 400–1,200', 'per crate', 'Ksh 320,000 – 1,800,000'),
-      'Sorghum':      ('8–15 bags',  '90kg bags', 'per acre', 'Ksh 2,000–3,500', 'per bag', 'Ksh 16,000 – 52,500'),
-      'Groundnut':    ('6–12 bags',  '90kg bags', 'per acre', 'Ksh 5,000–8,000', 'per bag', 'Ksh 30,000 – 96,000'),
-      'Cowpea':       ('5–10 bags',  '90kg bags', 'per acre', 'Ksh 4,000–6,000', 'per bag', 'Ksh 20,000 – 60,000'),
-      'Millet':       ('8–14 bags',  '90kg bags', 'per acre', 'Ksh 2,500–4,000', 'per bag', 'Ksh 20,000 – 56,000'),
-      'Green Gram':   ('4–8 bags',   '90kg bags', 'per acre', 'Ksh 7,000–11,000', 'per bag', 'Ksh 28,000 – 88,000'),
-      'Soybean':      ('8–15 bags',  '90kg bags', 'per acre', 'Ksh 3,000–5,000', 'per bag', 'Ksh 24,000 – 75,000'),
-      'Onion':        ('40–80 bags', '50kg bags', 'per acre', 'Ksh 1,500–4,000', 'per bag', 'Ksh 60,000 – 320,000'),
-      'Carrot':       ('120–200 bags','50kg bags', 'per acre', 'Ksh 800–1,500', 'per bag', 'Ksh 96,000 – 300,000'),
-    } %}
-    {% set y = yields.get(top_crop, ('Varies', '', 'per acre', 'Market price', '', 'Depends on market')) %}
-    <div class="yield-grid">
-      <div class="yield-card">
-        <div class="yield-num">{{ y[0] }}</div>
-        <div class="yield-unit">{{ y[1] }} {{ y[2] }}</div>
-        <div class="yield-label">Expected Yield</div>
-      </div>
-      <div class="yield-card">
-        <div class="yield-num">{{ y[5] }}</div>
-        <div class="yield-unit">{{ y[4] }}</div>
-        <div class="yield-label">Market Price</div>
-      </div>
-      <div class="yield-card highlight">
-        <div class="yield-num">{{ y[5] }}</div>
-        <div class="yield-unit">per acre</div>
-        <div class="yield-label">Potential Revenue</div>
-      </div>
-    </div>
-    <div class="yield-note">
-      ⚠️ Estimates are based on average Kenya farm data. Actual yield depends on your soil, rainfall,
-      seed quality and crop management. Good inputs and proper care can increase yield by 30–50%.
-    </div>
-  </div>
-
-</div>
+  
 
         <div style="text-align:center;margin-bottom:28px;">
           <form method="GET" action="{{ url_for('farmer.dashboard') }}">
-            <button type="submit" class="btn-edit">🔄 Run Another Recommendation</button>
+            <button type="submit" class="btn-edit"><i class="fas fa-rotate"></i> Run Another Recommendation</button>
           </form>
         </div>
       </div>
@@ -474,7 +631,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
         <div class="card" id="form">
           <div class="sh">
-            <div class="sh-ico">🌍</div>
+            
             <div>
               <div class="sh-title">Section 1 — Location & Climate</div>
               <div class="sh-desc">We fetch Temperature, Rainfall and Altitude automatically from your GPS.</div>
@@ -482,13 +639,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
           </div>
 
           <div class="gps-banner">
-            <span style="font-size:28px;">📡</span>
+            <span style="font-size:28px;"><i class="fas fa-broadcast-tower"></i></span>
             <div class="gps-status">
               <div class="gs-title" id="gps-title">Ready to detect your location</div>
               <div class="gs-sub" id="gps-sub">Click the button to auto-fill climate data for your farm</div>
             </div>
             <button type="button" class="btn-gps" id="gps-btn" onclick="getLocation()">
-              📍 Use My Location
+              <i class="fa-solid fa-location-dot"></i>Use My Location
             </button>
           </div>
 
@@ -499,17 +656,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
           <div class="igrid" id="climate-display" style="display:grid;">
             <div class="igroup">
-              <div class="ilabel">🌡️ Temperature <span class="ihint">°C</span></div>
+              <div class="ilabel"><i class="fa-solid fa-temperature-empty"></i>Temperature <span class="ihint">°C</span></div>
               <input class="ifield auto" type="number" id="temp-display" placeholder="Auto-filled" readonly value="{{ form_data.temperature or '' }}">
               <div style="font-size:11px;color:var(--tl);margin-top:3px;">Average temperature for your area</div>
             </div>
             <div class="igroup">
-              <div class="ilabel">🌧️ Annual Rainfall <span class="ihint">mm</span></div>
+              <div class="ilabel"><i class="fa-solid fa-cloud-showers-water"></i> Annual Rainfall <span class="ihint">mm</span></div>
               <input class="ifield auto" type="number" id="rain-display" placeholder="Auto-filled" readonly value="{{ form_data.rainfall or '' }}">
               <div style="font-size:11px;color:var(--tl);margin-top:3px;">Estimated annual rainfall</div>
             </div>
             <div class="igroup">
-              <div class="ilabel">⛰️ Altitude <span class="ihint">metres</span></div>
+              <div class="ilabel"><wa-icon name="mound"></wa-icon> Altitude <span class="ihint">metres</span></div>
               <input class="ifield auto" type="number" id="alt-display" placeholder="Auto-filled" readonly value="{{ form_data.altitude or '' }}">
               <div style="font-size:11px;color:var(--tl);margin-top:3px;">Elevation above sea level</div>
             </div>
@@ -518,14 +675,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
           <div style="margin-top:10px;">
             <button type="button" onclick="toggleManual()"
                     style="background:none;border:none;color:var(--gm);font-size:12px;font-weight:600;cursor:pointer;text-decoration:underline;">
-              ✏️ Edit manually instead
+              <i class="fas fa-pen-to-square"></i> Edit manually instead
             </button>
           </div>
 
           <div id="manual-inputs" style="display:none;margin-top:16px;">
             <div class="igrid">
               <div class="igroup">
-                <div class="ilabel">🌡️ Temperature <span class="ihint">°C</span></div>
+                <div class="ilabel"><i class="fa-solid fa-temperature-empty"></i>Temperature <span class="ihint">°C</span></div>
                 <div class="slider-wrap">
                   <div class="range-row">
                     <input type="range" class="range-input" min="8" max="45" value="20" id="temp-slider"
@@ -536,7 +693,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
                 </div>
               </div>
               <div class="igroup">
-                <div class="ilabel">🌧️ Annual Rainfall <span class="ihint">mm</span></div>
+                <div class="ilabel"><i class="fa-solid fa-cloud-showers-water"></i>Annual Rainfall <span class="ihint">mm</span></div>
                 <div class="slider-wrap">
                   <div class="range-row">
                     <input type="range" class="range-input" min="200" max="1800" value="800" id="rain-slider"
@@ -547,7 +704,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
                 </div>
               </div>
               <div class="igroup">
-                <div class="ilabel">⛰️ Altitude <span class="ihint">metres</span></div>
+                <div class="ilabel"><wa-icon name="mound"></wa-icon> Altitude <span class="ihint">metres</span></div>
                 <div class="slider-wrap">
                   <div class="range-row">
                     <input type="range" class="range-input" min="0" max="3000" value="1200" id="alt-slider"
@@ -563,7 +720,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
         <div class="card">
           <div class="sh">
-            <div class="sh-ico">🪨</div>
+            
             <div>
               <div class="sh-title">Section 2 — Soil Type</div>
               <div class="sh-desc">Select the soil type on your farm. Not sure? Loamy is most common in Kenya.</div>
@@ -571,29 +728,29 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
           </div>
           <div class="soil-grid">
             <div class="soil-opt {% if not form_data.soil_type or form_data.soil_type == 'Loamy' %}sel{% endif %}" onclick="selectSoil(this,'Loamy')">
-              <span class="s-ico">🟫</span><div class="s-name">Loamy</div><div class="s-trait">Best all-round</div>
+              <img class="s-ico" src="https://www.shutterstock.com/image-photo/closeup-fertile-loam-background-600w-1701145015.jpg" alt="Loamy soil"><div class="s-name">Loamy</div><div class="s-trait">Best all-round</div>
             </div>
             <div class="soil-opt {% if form_data.soil_type == 'Sandy-Loam' %}sel{% endif %}" onclick="selectSoil(this,'Sandy-Loam')">
-              <span class="s-ico">🏖️</span><div class="s-name">Sandy-Loam</div><div class="s-trait">Good drainage</div>
+              <img class="s-ico" src="https://www.shutterstock.com/image-photo/sandy-loam-soil-background-texture-600w-788474494.jpg" alt="Sandy loam"><div class="s-name">Sandy-Loam</div><div class="s-trait">Good drainage</div>
             </div>
             <div class="soil-opt {% if form_data.soil_type == 'Sandy' %}sel{% endif %}" onclick="selectSoil(this,'Sandy')">
-              <span class="s-ico">⚗️</span><div class="s-name">Sandy</div><div class="s-trait">Drains fast</div>
+            <img class="s-ico" src="https://www.shutterstock.com/image-photo/sand-closeup-surface-nature-landscape-600w-2616069837.jpg" alt="Sandy soil"><div class="s-name">Sandy</div><div class="s-trait">Drains fast</div>
             </div>
             <div class="soil-opt {% if form_data.soil_type == 'Clay' %}sel{% endif %}" onclick="selectSoil(this,'Clay')">
-              <span class="s-ico">🧱</span><div class="s-name">Clay</div><div class="s-trait">Holds water</div>
+             <img class="s-ico" src="https://www.shutterstock.com/image-photo/closeup-texture-thick-wet-mud-600w-2711928353.jpg" alt="Clay soil"><div class="s-name">Clay</div><div class="s-trait">Holds water</div>
             </div>
             <div class="soil-opt {% if form_data.soil_type == 'Fertile' %}sel{% endif %}" onclick="selectSoil(this,'Fertile')">
-              <span class="s-ico">🌿</span><div class="s-name">Fertile</div><div class="s-trait">Rich nutrients</div>
+              <img class="s-ico" src="https://www.shutterstock.com/image-photo/dark-soil-texture-rich-organic-600w-2599771719.jpg" alt="Fertile soil"><div class="s-name">Fertile</div><div class="s-trait">Rich nutrients</div>
             </div>
           </div>
           <div style="font-size:11.5px;color:var(--tl);margin-top:8px;">
-            💡 Not sure? Ask your local agro-vet or rub soil between fingers — Loamy feels smooth and holds shape.
+            <i class="fas fa-circle-question"></i> Not sure? Ask your local agro-vet or rub soil between fingers — Loamy feels smooth and holds shape.
           </div>
         </div>
 
         <div class="card">
           <div class="sh">
-            <div class="sh-ico">⚗️</div>
+           
             <div>
               <div class="sh-title">Section 3 — Soil pH</div>
               <div class="sh-desc">Most Kenya farms are 5.5–7.0. Default 6.5 works if you don't know yours.</div>
@@ -602,7 +759,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
           <div class="ph-wrap">
             <div class="ph-top">
               <div>
-                <div class="ilabel" style="margin-bottom:4px;">⚗️ Soil pH Level</div>
+                <div class="ilabel" style="margin-bottom:4px;"><i class="fas fa-flask"></i> Soil pH Level</div>
                 <div style="font-size:11.5px;color:var(--tl);">Acidic ← → Alkaline. Most crops prefer 6.0–7.0.</div>
               </div>
               <div class="ph-big" id="ph-display">{{ form_data.soil_ph or '6.5' }}</div>
@@ -616,7 +773,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
             </div>
             <div style="display:flex;justify-content:space-between;margin-top:8px;padding:0 36px;">
               <span style="font-size:10px;color:var(--red);">Very Acidic</span>
-              <span style="font-size:10px;color:var(--gm);font-weight:700;">✅ Best range (6–7)</span>
+              <span style="font-size:10px;color:var(--gm);font-weight:700;"><i class="fas fa-circle-check "></i>Best range (6–7)</span>
               <span style="font-size:10px;color:var(--blue);">Alkaline</span>
             </div>
           </div>
@@ -624,10 +781,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 
         <div class="card submit-card">
           <div class="sc-text">
-            <h3>Ready to find your best crops? 🌾</h3>
+            <h3>Ready to find your best crops? </h3>
             <p>Our AI will analyze your conditions and rank all 13 crops by suitability for your farm.</p>
           </div>
-          <button type="submit" class="btn-submit">🤖 Get My Recommendations →</button>
+          <button type="submit" class="btn-submit"><i class="fas fa-robot"></i> Get My Recommendations →</button>
         </div>
 
       </form>
@@ -640,15 +797,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--td);min-h
 <!-- ── AGRIBOT FLOATING CHAT ── -->
 <div id="chat-bubble" onclick="toggleChat()"
      style="position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:var(--gd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.25);z-index:500;transition:transform .2s;">
-  💬
+  <i class="fas fa-comments"></i>
 </div>
+<div id="chat-hint">How can I help you?</div>
 
 <div id="chat-panel"
      style="display:none;position:fixed;bottom:96px;right:28px;width:340px;height:480px;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.18);z-index:500;flex-direction:column;overflow:hidden;border:1px solid var(--bd);">
   <!-- Header -->
   <div style="background:var(--gd);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
     <div style="display:flex;align-items:center;gap:10px;">
-      <div style="width:36px;height:36px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;">🤖</div>
+      <div style="width:36px;height:36px;background:var(--gl);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;"><i class="fas fa-robot"></i></div>
       <div>
         <div style="font-weight:700;font-size:14px;color:#fff;">AgriBot</div>
         <div style="font-size:11px;color:rgba(255,255,255,.6);">Kenya Farming Expert</div>
@@ -842,8 +1000,13 @@ function toggleChat() {
   chatOpen = !chatOpen;
   const panel  = document.getElementById('chat-panel');
   const bubble = document.getElementById('chat-bubble');
+  const hint   = document.getElementById('chat-hint');
   panel.style.display  = chatOpen ? 'flex' : 'none';
   bubble.style.transform = chatOpen ? 'scale(0.9)' : 'scale(1)';
+  if (hint) {
+    hint.style.opacity = chatOpen ? '0' : '1';
+    hint.style.transform = chatOpen ? 'translateY(6px)' : 'translateY(0)';
+  }
   if (chatOpen) document.getElementById('chat-input').focus();
 }
 
